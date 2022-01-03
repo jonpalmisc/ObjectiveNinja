@@ -43,20 +43,20 @@ constexpr auto DidRunStructureAnalysis = "objectiveNinja.didRunStructureAnalysis
 
 /// Global state/storage interface.
 class GlobalState {
-    /// Get the ID for a `BinaryView`.
+    /// Get the ID for a view.
     static std::uintptr_t id(BinaryViewRef);
 
 public:
-    /// Get the analysis records for a `BinaryView`.
+    /// Get the analysis records for a view.
     static AnalysisRecords* analysisRecords(BinaryViewRef);
 
-    /// Store the analysis records for a `BinaryView`.
+    /// Store the analysis records for a view.
     static void storeAnalysisRecords(BinaryViewRef, AnalysisRecords);
 
-    /// Check if analysis records exist for a `BinaryView`.
+    /// Check if analysis records exist for a view.
     static bool hasAnalysisRecords(BinaryViewRef);
 
-    /// Add a `BinaryView` to the list of ignored views.
+    /// Add a view to the list of ignored views.
     static void addIgnoredView(BinaryViewRef);
 
     /// Check if a view is ignored.
