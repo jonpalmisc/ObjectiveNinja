@@ -163,7 +163,7 @@ MethodListRecord StructureAnalyzer::analyzeMethodList(uint64_t address)
 
     std::vector<MethodRecord> methods;
     methods.reserve(methodCount);
-    for (auto i = 0; i < methodCount; ++i) {
+    for (unsigned i = 0; i < methodCount; ++i) {
         auto methodAddress = address + 8 + (i * methodSize);
 
         auto method = analyzeMethod(methodAddress);
@@ -202,7 +202,7 @@ ClassRecord StructureAnalyzer::analyzeClass(uint64_t address)
     seek(address + 0x20);
     auto dataAddress = readEncodedPointer();
     if (!dataAddress)
-        return { address, 0 };
+        return { address, 0, {} };
 
     auto classData = analyzeClassData(dataAddress);
 
