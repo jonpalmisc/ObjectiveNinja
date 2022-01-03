@@ -19,11 +19,9 @@ useful features.
 > Before/after method call cleanup & symbol creation.
 
 Objective Ninja can replace calls to `objc_msgSend` with direct calls to the
-relevant method's implementation, as shown above.* Also shown is Objective
+relevant method's implementation, as shown above. Also shown is Objective
 Ninja's ability to define symbols for class methods using class and selector
 data.
-
-_\* Feature uses the "Workflows" API, which requires a commercial license._
 
 ### Structure Analysis
 
