@@ -52,8 +52,6 @@ StructureAnalyzer::StructureAnalyzer(BinaryViewRef bv)
         m_methodType = Type::NamedType(m_bv, CustomTypes::Method);
 }
 
-//===-- Helper Methods ----------------------------------------------------===//
-
 uint64_t StructureAnalyzer::readEncodedPointer(bool fix)
 {
     auto pointer = m_reader.Read64() & OffsetMask;
@@ -110,11 +108,16 @@ std::string StructureAnalyzer::defineStringData(uint64_t start)
     return text;
 }
 
-//===-- Analysis Methods --------------------------------------------------===//
-
+//  Offset  Type           Description
+// ---------------------------------------
+//    +0x0  objc_class_t*  Class pointer
+//    +0x8  uint64_t       Flags
+//   +0x10  const char*    String pointer
+//   +0x18  uint64_t       String length
+//
 void StructureAnalyzer::analyzeCFString(uint64_t address)
 {
-    seek(address + 16);
+    seek(address + 0x10);
     auto dataAddress = readEncodedPointer();
     defineStringData(dataAddress);
 
@@ -134,6 +137,14 @@ SelectorRefRecord StructureAnalyzer::analyzeSelectorRef(uint64_t address)
     return { address, rawSelector, nameAddress };
 }
 
+//  Offset  Type         Description
+// ----------------------------------------------------
+//    +0x0  const char*  Name pointer/offset
+//    +0x4  void*        Type info pointer/offset
+//    +0x8  void*        Implementation pointer/offset
+//
+// On ARM64, the values are relative offsets. On x86_64, they are just normal
+// pointers, and every value in the offset column should be doubled.
 MethodRecord StructureAnalyzer::analyzeMethod(uint64_t address)
 {
     seek(address);
@@ -153,6 +164,11 @@ MethodRecord StructureAnalyzer::analyzeMethod(uint64_t address)
     return MethodRecord { address, nameAddress, impAddress, "???" };
 }
 
+//  Offset  Type      Description
+// ------------------------------------
+//    +0x0  uint32_t  Obsolete/unused?
+//    +0x4  uint32_t  Method count
+//
 MethodListRecord StructureAnalyzer::analyzeMethodList(uint64_t address)
 {
     seek(address);
@@ -174,6 +190,12 @@ MethodListRecord StructureAnalyzer::analyzeMethodList(uint64_t address)
     return { address, methods };
 }
 
+//  Offset  Type                 Description
+// --------------------------------------------------
+//   +0x18  const char*          Class name pointer
+//   +0x20  objc_method_list_t*  Method list pointer
+//
+// See full listing in CustomTypes.cpp, some fieleds omitted for brevity.
 ClassDataRecord StructureAnalyzer::analyzeClassData(uint64_t address)
 {
     seek(address + 0x18);
@@ -189,6 +211,14 @@ ClassDataRecord StructureAnalyzer::analyzeClassData(uint64_t address)
     return { address, nameAddress, "???", methodList };
 }
 
+//  Offset  Type              Description
+// ------------------------------------------------------------
+//    +0x0  objc_class_t*     Class pointer
+//    +0x8  objc_class_t*     Superclass pointer
+//   +0x10  void*             Cache pointer? (currently usued)
+//   +0x18  void*             VMT pointer? (currently usused)
+//   +0x20  objc_class_ro_t*  Class data pointer
+//
 ClassRecord StructureAnalyzer::analyzeClass(uint64_t address)
 {
     seek(address);
