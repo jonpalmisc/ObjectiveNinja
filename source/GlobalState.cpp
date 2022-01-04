@@ -44,7 +44,7 @@ std::uintptr_t GlobalState::id(BinaryViewRef bv)
 
 void GlobalState::storeAnalysisRecords(BinaryViewRef bv, AnalysisRecords records)
 {
-    g_analysisRecords[id(bv)] = records;
+    g_analysisRecords[id(std::move(bv))] = std::move(records);
 }
 
 AnalysisRecords* GlobalState::analysisRecords(BinaryViewRef bv)
@@ -57,17 +57,17 @@ AnalysisRecords* GlobalState::analysisRecords(BinaryViewRef bv)
 
 bool GlobalState::hasAnalysisRecords(BinaryViewRef bv)
 {
-    return g_analysisRecords.count(id(bv)) > 0;
+    return g_analysisRecords.count(id(std::move(bv))) > 0;
 }
 
 void GlobalState::addIgnoredView(BinaryViewRef bv)
 {
-    g_ignoredViews.insert(id(bv));
+    g_ignoredViews.insert(id(std::move(bv)));
 }
 
 bool GlobalState::viewIsIgnored(BinaryViewRef bv)
 {
-    return g_ignoredViews.count(id(bv)) > 0;
+    return g_ignoredViews.count(id(std::move(bv))) > 0;
 }
 
 bool GlobalState::hasFlag(BinaryViewRef bv, const std::string& flag)

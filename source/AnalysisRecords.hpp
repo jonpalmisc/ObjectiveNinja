@@ -39,25 +39,25 @@
 /// Selector reference record structure.
 struct SelectorRefRecord {
     /// Address where the selector reference is defined.
-    uint64_t address;
+    uint64_t address {};
 
     /// Raw value (with flags) of the selector.
-    uint64_t selector;
+    uint64_t selector {};
 
     /// Address of the selector's name string.
-    uint64_t nameAddress;
+    uint64_t nameAddress {};
 };
 
 /// Method list record structure.
 struct MethodRecord {
     /// Address of the method structure.
-    uint64_t address;
+    uint64_t address {};
 
     /// Address of the related selector reference or method name string.
-    uint64_t nameAddress;
+    uint64_t nameAddress {};
 
     /// Address of the method's implementation.
-    uint64_t impAddress;
+    uint64_t impAddress {};
 
     /// Name of the method; only populated post-analysis.
     std::string name;
@@ -66,7 +66,7 @@ struct MethodRecord {
 /// Method list record structure.
 struct MethodListRecord {
     /// Address of the method list structure.
-    uint64_t address;
+    uint64_t address {};
 
     /// All methods belonging to the method list.
     std::vector<MethodRecord> methods;
@@ -75,10 +75,10 @@ struct MethodListRecord {
 /// Class data record structure.
 struct ClassDataRecord {
     /// Address of the class data structure.
-    uint64_t address;
+    uint64_t address {};
 
     /// Address of the class name string.
-    uint64_t nameAddress;
+    uint64_t nameAddress {};
 
     /// Name of the class; only populated post-analysis.
     std::string name;
@@ -90,10 +90,10 @@ struct ClassDataRecord {
 /// Class record structure.
 struct ClassRecord {
     /// Address of the pointer to this class in the class list section.
-    uint64_t pointerAddress;
+    uint64_t pointerAddress {};
 
     /// Address of the class structure.
-    uint64_t address;
+    uint64_t address {};
 
     /// Associated class data record.
     ClassDataRecord data;
@@ -101,7 +101,7 @@ struct ClassRecord {
 
 /// Record storage interface for data collected during analysis.
 struct AnalysisRecords {
-    AnalysisRecords() {};
+    AnalysisRecords() = default;
 
     /// All classes indexed during analysis.
     std::vector<ClassRecord> classes;

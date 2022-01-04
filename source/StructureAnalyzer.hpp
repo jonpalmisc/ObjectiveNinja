@@ -67,7 +67,7 @@ class StructureAnalyzer {
     /// Mask used to remove flags in high bits of addresses and offsets.
     static constexpr uint64_t OffsetMask = 0xFFFFFFFFF;
 
-    StructureAnalyzer(BinaryViewRef);
+    explicit StructureAnalyzer(BinaryViewRef);
 
     /// Seek the internal reader and writer to the same address.
     void seek(uint64_t address)

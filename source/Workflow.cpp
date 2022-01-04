@@ -47,16 +47,16 @@ std::set<uint64_t> Workflow::findMsgSendFunctions(BinaryViewRef bv)
 {
     std::set<uint64_t> results;
 
-    auto authStubsSection = bv->GetSectionByName("__auth_stubs");
-    auto stubsSection = bv->GetSectionByName("__stubs");
-    auto authGotSection = bv->GetSectionByName("__auth_got");
-    auto gotSection = bv->GetSectionByName("__got");
+    const auto authStubsSection = bv->GetSectionByName("__auth_stubs");
+    const auto stubsSection = bv->GetSectionByName("__stubs");
+    const auto authGotSection = bv->GetSectionByName("__auth_got");
+    const auto gotSection = bv->GetSectionByName("__got");
 
     // Shorthand to check if a symbol lies in a given section.
     auto sectionContains = [](SectionRef section, SymbolRef symbol) {
-        auto start = section->GetStart();
-        auto length = section->GetLength();
-        auto address = symbol->GetAddress();
+        const auto start = section->GetStart();
+        const auto length = section->GetLength();
+        const auto address = symbol->GetAddress();
 
         return (uint64_t)(address - start) <= length;
     };
@@ -75,17 +75,14 @@ std::set<uint64_t> Workflow::findMsgSendFunctions(BinaryViewRef bv)
     // in the `__stubs` section, which will come with an imported symbol of the
     // same name in the `__got` section. Not all `__objc_msgSend` calls will be
     // routed through the stub function, making it important to make note of
-    // both symbols' addreses. Furthermore, on ARM64, the `__auth{stubs,got}`
+    // both symbols' addresses. Furthermore, on ARM64, the `__auth{stubs,got}`
     // sections are preferred over their unauthenticated counterparts.
-    auto candidates = bv->GetSymbolsByName("_objc_msgSend");
+    const auto candidates = bv->GetSymbolsByName("_objc_msgSend");
     for (const auto& c : candidates) {
-        if (authStubsSection && sectionContains(authStubsSection, c))
-            results.insert(c->GetAddress());
-        else if (stubsSection && sectionContains(stubsSection, c))
-            results.insert(c->GetAddress());
-        else if (authGotSection && sectionContains(authGotSection, c))
-            results.insert(c->GetAddress());
-        else if (gotSection && sectionContains(gotSection, c))
+        if ((authStubsSection && sectionContains(authStubsSection, c))
+            || (stubsSection && sectionContains(stubsSection, c))
+            || (authGotSection && sectionContains(authGotSection, c))
+            || (gotSection && sectionContains(gotSection, c)))
             results.insert(c->GetAddress());
     }
 
@@ -94,27 +91,27 @@ std::set<uint64_t> Workflow::findMsgSendFunctions(BinaryViewRef bv)
 
 void Workflow::rewriteMethodCall(LLILFunctionRef ssa, size_t insnIndex)
 {
-    auto bv = ssa->GetFunction()->GetView();
-    auto llil = ssa->GetNonSSAForm();
-    auto insn = ssa->GetInstruction(insnIndex);
-    auto params = insn.GetParameterExprs<LLIL_CALL_SSA>();
+    const auto bv = ssa->GetFunction()->GetView();
+    const auto llil = ssa->GetNonSSAForm();
+    const auto insn = ssa->GetInstruction(insnIndex);
+    const auto params = insn.GetParameterExprs<LLIL_CALL_SSA>();
 
     // The second parameter passed to the objc_msgSend call is the address of
     // either the selector reference or the method's name, which in both cases
     // is dereferenced to retrieve a selector.
-    auto selectorRegister = params[1].GetSourceSSARegister<LLIL_REG_SSA>();
-    auto selector = ssa->GetSSARegisterValue(selectorRegister).value;
+    const auto selectorRegister = params[1].GetSourceSSARegister<LLIL_REG_SSA>();
+    const auto selector = ssa->GetSSARegisterValue(selectorRegister).value;
 
     // Check the analysis records for an implementation address corresponding to
     // the current selector. It is possible that no implementation address
     // exists, for example, when the selector is for a method defined outside
     // the current binary. If this is the case, there are no meaningful changes
     // that can be made to the IL, and the operation should be aborted.
-    auto impAddress = GlobalState::analysisRecords(bv)->impMap[selector];
+    const auto impAddress = GlobalState::analysisRecords(bv)->impMap[selector];
     if (!impAddress)
         return;
 
-    auto llilIndex = ssa->GetNonSSAInstructionIndex(insnIndex);
+    const auto llilIndex = ssa->GetNonSSAInstructionIndex(insnIndex);
     auto llilInsn = llil->GetInstruction(llilIndex);
 
     // Change the destination expression of the LLIL_CALL operation to point to
@@ -124,15 +121,14 @@ void Workflow::rewriteMethodCall(LLILFunctionRef ssa, size_t insnIndex)
     callDestExpr.Replace(llil->ConstPointer(callDestExpr.size, impAddress, callDestExpr));
     llilInsn.Replace(llil->Call(callDestExpr.exprIndex, llilInsn));
 
-    // Re-generate the SSA form for this function.
     llil->GenerateSSAForm();
 }
 
 void Workflow::inlineMethodCalls(AnalysisContextRef ac)
 {
-    auto func = ac->GetFunction();
-    auto arch = func->GetArchitecture();
-    auto bv = func->GetView();
+    const auto func = ac->GetFunction();
+    const auto arch = func->GetArchitecture();
+    const auto bv = func->GetView();
 
     if (GlobalState::viewIsIgnored(bv))
         return;
@@ -164,45 +160,46 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
     //     views list, and the body of the workflow nor structure analysis will
     //     ever run again for this view.
     //
-    std::unique_lock<std::mutex> lock(g_initialAnalysisMutex);
-    if (!GlobalState::hasAnalysisRecords(bv)) {
-        if (GlobalState::hasFlag(bv, Flag::DidRunStructureAnalysis)) {
-            GlobalState::addIgnoredView(bv);
-            return;
+    {
+        std::scoped_lock<std::mutex> lock(g_initialAnalysisMutex);
+
+        if (!GlobalState::hasAnalysisRecords(bv)) {
+            if (GlobalState::hasFlag(bv, Flag::DidRunStructureAnalysis)) {
+                GlobalState::addIgnoredView(bv);
+                return;
+            }
+
+            CustomTypes::defineAll(bv);
+            auto records = StructureAnalyzer::run(bv);
+
+            GlobalState::storeAnalysisRecords(bv, records);
+            GlobalState::setFlag(bv, Flag::DidRunStructureAnalysis);
         }
-
-        CustomTypes::defineAll(bv);
-        auto records = StructureAnalyzer::run(bv);
-
-        GlobalState::storeAnalysisRecords(bv, records);
-        GlobalState::setFlag(bv, Flag::DidRunStructureAnalysis);
     }
-
-    lock.unlock();
 
     // Try to find the `objc_msgSend` functions(s), abort activity if missing.
     //
     // TODO: These results should be cached somehow as it can't be efficient to
     // repeatedly search for all the usable function addresses.
-    auto msgSendFunctions = findMsgSendFunctions(bv);
+    const auto msgSendFunctions = findMsgSendFunctions(bv);
     if (msgSendFunctions.empty()) {
         BinaryNinja::LogError("Cannot perform Objective-C IL cleanup; no objc_msgSend candidates found");
         GlobalState::addIgnoredView(bv);
         return;
     }
 
-    auto llil = ac->GetLowLevelILFunction();
+    const auto llil = ac->GetLowLevelILFunction();
     if (!llil) {
         BinaryNinja::LogError("Bad result from `ac->GetLowLevelILFunction()`");
         return;
     }
-    auto ssa = llil->GetSSAForm();
+    const auto ssa = llil->GetSSAForm();
     if (!ssa) {
         BinaryNinja::LogError("Bad result from `llil->GetSSAForm()`");
         return;
     }
 
-    auto rewriteIfEligible = [msgSendFunctions, ssa](size_t insnIndex) {
+    const auto rewriteIfEligible = [msgSendFunctions, ssa](size_t insnIndex) {
         auto insn = ssa->GetInstruction(insnIndex);
 
         if (insn.operation != LLIL_CALL_SSA)
@@ -225,7 +222,7 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
         rewriteMethodCall(ssa, insnIndex);
     };
 
-    for (auto& block : ssa->GetBasicBlocks())
+    for (const auto& block : ssa->GetBasicBlocks())
         for (size_t i = block->GetStart(), end = block->GetEnd(); i < end; ++i)
             rewriteIfEligible(i);
 }
@@ -238,7 +235,7 @@ static constexpr auto WorkflowInfo = R"({
 
 void Workflow::registerActivities()
 {
-    auto wf = BinaryNinja::Workflow::Instance()->Clone("Objective Ninja");
+    const auto wf = BinaryNinja::Workflow::Instance()->Clone("Objective Ninja");
     wf->RegisterActivity(new BinaryNinja::Activity(
         ActivityID::InlineMethodCalls, &Workflow::inlineMethodCalls));
     wf->Insert("core.function.translateTailCalls", ActivityID::InlineMethodCalls);

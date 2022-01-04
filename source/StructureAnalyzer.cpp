@@ -73,7 +73,7 @@ uint64_t StructureAnalyzer::readEncodedPointer(bool fix)
 void StructureAnalyzer::defineSymbol(uint64_t address, const std::string& prefix,
     const std::string& label)
 {
-    auto formatAddress = [](uint64_t address) {
+    const auto formatAddress = [](uint64_t address) {
         char buffer[32];
         std::sprintf(buffer, "%" PRIx64, address);
 
@@ -98,7 +98,7 @@ std::string StructureAnalyzer::defineStringData(uint64_t start)
     m_reader.Seek(start);
     auto c = m_reader.Read8();
     while (c != 0) {
-        text += c;
+        text += static_cast<char>(c);
         ++size;
 
         c = m_reader.Read8();
@@ -118,7 +118,7 @@ std::string StructureAnalyzer::defineStringData(uint64_t start)
 void StructureAnalyzer::analyzeCFString(uint64_t address)
 {
     seek(address + 0x10);
-    auto dataAddress = readEncodedPointer();
+    const auto dataAddress = readEncodedPointer();
     defineStringData(dataAddress);
 
     m_bv->DefineDataVariable(address, m_cfStringType);
@@ -127,10 +127,10 @@ void StructureAnalyzer::analyzeCFString(uint64_t address)
 SelectorRefRecord StructureAnalyzer::analyzeSelectorRef(uint64_t address)
 {
     seek(address);
-    auto rawSelector = m_reader.Read64();
+    const auto rawSelector = m_reader.Read64();
 
     seek(address);
-    auto nameAddress = readEncodedPointer();
+    const auto nameAddress = readEncodedPointer();
 
     m_bv->DefineDataVariable(address,
         Type::PointerType(8, Type::NamedType(m_bv, CustomTypes::Selector)));
@@ -174,8 +174,8 @@ MethodListRecord StructureAnalyzer::analyzeMethodList(uint64_t address)
     seek(address);
 
     m_reader.Read32();
-    auto methodCount = m_reader.Read32();
-    auto methodSize = m_methodType->GetWidth();
+    const auto methodCount = m_reader.Read32();
+    const auto methodSize = m_methodType->GetWidth();
 
     std::vector<MethodRecord> methods;
     methods.reserve(methodCount);
@@ -195,13 +195,13 @@ MethodListRecord StructureAnalyzer::analyzeMethodList(uint64_t address)
 //   +0x18  const char*          Class name pointer
 //   +0x20  objc_method_list_t*  Method list pointer
 //
-// See full listing in CustomTypes.cpp, some fieleds omitted for brevity.
+// See full listing in CustomTypes.cpp, some fields omitted for brevity.
 ClassDataRecord StructureAnalyzer::analyzeClassData(uint64_t address)
 {
     seek(address + 0x18);
 
-    auto nameAddress = readEncodedPointer();
-    auto methodListAddress = readEncodedPointer();
+    const auto nameAddress = readEncodedPointer();
+    const auto methodListAddress = readEncodedPointer();
 
     MethodListRecord methodList;
     if (methodListAddress)
@@ -212,11 +212,11 @@ ClassDataRecord StructureAnalyzer::analyzeClassData(uint64_t address)
 }
 
 //  Offset  Type              Description
-// ------------------------------------------------------------
+// -------------------------------------------------------------
 //    +0x0  objc_class_t*     Class pointer
 //    +0x8  objc_class_t*     Superclass pointer
-//   +0x10  void*             Cache pointer? (currently usued)
-//   +0x18  void*             VMT pointer? (currently usused)
+//   +0x10  void*             Cache pointer? (currently unused)
+//   +0x18  void*             VMT pointer? (currently unused)
 //   +0x20  objc_class_ro_t*  Class data pointer
 //
 ClassRecord StructureAnalyzer::analyzeClass(uint64_t address)
@@ -225,16 +225,16 @@ ClassRecord StructureAnalyzer::analyzeClass(uint64_t address)
 
     // This address is always encoded as an absolute address, regardless of
     // architecture, therefore `readEncodedPointer()` should not be used here.
-    auto isaAddress = m_reader.Read64() & OffsetMask;
+    const auto isaAddress = m_reader.Read64() & OffsetMask;
     if (isaAddress)
         m_writer.Write64(isaAddress);
 
     seek(address + 0x20);
-    auto dataAddress = readEncodedPointer();
+    const auto dataAddress = readEncodedPointer();
     if (!dataAddress)
         return { address, 0, {} };
 
-    auto classData = analyzeClassData(dataAddress);
+    const auto classData = analyzeClassData(dataAddress);
 
     m_bv->DefineDataVariable(address, m_classType);
     return { 0, address, classData };
@@ -242,11 +242,11 @@ ClassRecord StructureAnalyzer::analyzeClass(uint64_t address)
 
 void StructureAnalyzer::runPrivate()
 {
-    auto cfStringsSection = m_bv->GetSectionByName(SectionName::CFString);
+    const auto cfStringsSection = m_bv->GetSectionByName(SectionName::CFString);
     if (cfStringsSection) {
-        auto cfStringsStart = cfStringsSection->GetStart();
-        auto cfStringsEnd = cfStringsStart + cfStringsSection->GetLength();
-        auto cfStringSize = m_cfStringType->GetWidth();
+        const auto cfStringsStart = cfStringsSection->GetStart();
+        const auto cfStringsEnd = cfStringsStart + cfStringsSection->GetLength();
+        const auto cfStringSize = m_cfStringType->GetWidth();
 
         for (auto a = cfStringsStart; a < cfStringsEnd; a += cfStringSize)
             analyzeCFString(a);
@@ -254,7 +254,7 @@ void StructureAnalyzer::runPrivate()
 
     // ---
 
-    auto selRefsSection = m_bv->GetSectionByName(SectionName::SelectorRefs);
+    const auto selRefsSection = m_bv->GetSectionByName(SectionName::SelectorRefs);
     if (!selRefsSection) {
         LogError("Cannot analyze Objective-C selectors; missing  __objc_selrefs section");
         return;
@@ -262,16 +262,16 @@ void StructureAnalyzer::runPrivate()
 
     m_records.selectorRefs.reserve(selRefsSection->GetLength() / 8);
 
-    auto selRefsStart = selRefsSection->GetStart();
-    auto selRefsEnd = selRefsStart + selRefsSection->GetLength();
+    const auto selRefsStart = selRefsSection->GetStart();
+    const auto selRefsEnd = selRefsStart + selRefsSection->GetLength();
     for (auto address = selRefsStart; address < selRefsEnd; address += 8) {
-        auto selectorRef = analyzeSelectorRef(address);
+        const auto selectorRef = analyzeSelectorRef(address);
         m_records.selectorRefs.insert({ address, selectorRef });
     }
 
     // ---
 
-    auto classListSection = m_bv->GetSectionByName(SectionName::ClassList);
+    const auto classListSection = m_bv->GetSectionByName(SectionName::ClassList);
     if (!classListSection) {
         LogError("Cannot analyze Objective-C classes; no class list section present");
         return;
@@ -279,13 +279,13 @@ void StructureAnalyzer::runPrivate()
 
     m_records.classes.reserve(classListSection->GetLength() / 8);
 
-    auto classListStart = classListSection->GetStart();
-    auto classListEnd = classListStart + classListSection->GetLength();
+    const auto classListStart = classListSection->GetStart();
+    const auto classListEnd = classListStart + classListSection->GetLength();
     for (auto address = classListStart; address < classListEnd; address += 8) {
         m_bv->DefineDataVariable(address, Type::PointerType(8, m_classType));
 
         seek(address);
-        auto classAddress = readEncodedPointer();
+        const auto classAddress = readEncodedPointer();
         if (!classAddress)
             continue;
 
@@ -308,7 +308,7 @@ void StructureAnalyzer::runPrivate()
         //
         //  1. the pointer to the class in the `__objc_classlist` section;
         //  2. the class structure itself;
-        //  3. the underlying data" structure;
+        //  3. the underlying data structure;
         //  4. the class name string; and
         //  5. the class's associated method list. (if applicable)
         //
@@ -324,10 +324,10 @@ void StructureAnalyzer::runPrivate()
             std::string selectorName = "???";
             uint64_t selectorNameAddress = 0;
 
-            // On x86_64, the method's name address field actually points to
-            // it's name, as one would expect. On ARM64, things are a little
-            // different, and the associated selector needs to be queried to get
-            // the real address of the method's name.
+            // On x86_64, the method's name address field actually points to its
+            // name, as one would expect. On ARM64, things are a bit different,
+            // and the associated selector needs to be queried to get the real
+            // address of the method's name.
             if (!m_isARM64) {
                 selectorNameAddress = m.nameAddress;
             } else if (m_records.selectorRefs.count(m.nameAddress)) {
@@ -345,7 +345,7 @@ void StructureAnalyzer::runPrivate()
 
             // TODO: Support alternate "compatibility" naming scheme.
             selectorName = defineStringData(selectorNameAddress);
-            auto methodName = "[" + c.data.name + " " + selectorName + "]";
+            const auto methodName = "[" + c.data.name + " " + selectorName + "]";
 
             // Define a symbol for the method's implementation, indicating the
             // class and selector the implementation corresponds to.
@@ -360,7 +360,7 @@ void StructureAnalyzer::runPrivate()
 
 AnalysisRecords StructureAnalyzer::run(BinaryViewRef bv)
 {
-    StructureAnalyzer analyzer(bv);
+    StructureAnalyzer analyzer(std::move(bv));
     analyzer.runPrivate();
 
     return analyzer.m_records;
