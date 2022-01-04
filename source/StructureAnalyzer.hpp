@@ -43,6 +43,7 @@ namespace SectionName {
 constexpr auto CFString = "__cfstring";
 constexpr auto ClassList = "__objc_classlist";
 constexpr auto SelectorRefs = "__objc_selrefs";
+constexpr auto ClassRefs = "__objc_classrefs";
 
 }
 
@@ -101,6 +102,9 @@ class StructureAnalyzer {
 
     /// Analyze a selector reference.
     SelectorRefRecord analyzeSelectorRef(uint64_t);
+
+    /// Analyze a class reference.
+    uint64_t analyzeClassRef(uint64_t);
 
     /// Analyze a method.
     MethodRecord analyzeMethod(uint64_t);

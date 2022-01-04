@@ -106,12 +106,15 @@ struct AnalysisRecords {
     /// All classes indexed during analysis.
     std::vector<ClassRecord> classes;
 
-    /// All selector references indexed during analysis.
-    std::unordered_map<uint64_t, SelectorRefRecord> selectorRefs;
+    /// List of all known method implementation functions.
+    std::set<uint64_t> imps;
 
     /// Map of selector name addresses to method implementations.
     std::unordered_map<uint64_t, uint64_t> impMap;
 
-    /// List of all known method implementation functions.
-    std::set<uint64_t> imps;
+    /// All selector references indexed during analysis.
+    std::unordered_map<uint64_t, SelectorRefRecord> selectorRefs;
+
+    /// Map of class addresses to class reference addresses.
+    std::unordered_map<uint64_t, uint64_t> reverseClassRefs;
 };

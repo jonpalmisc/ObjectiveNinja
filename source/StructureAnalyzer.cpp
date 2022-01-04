@@ -137,6 +137,24 @@ SelectorRefRecord StructureAnalyzer::analyzeSelectorRef(uint64_t address)
     return { address, rawSelector, nameAddress };
 }
 
+uint64_t StructureAnalyzer::analyzeClassRef(uint64_t address)
+{
+    seek(address);
+    const auto rawRef = m_reader.Read64();
+
+    // This expression will be true if this is a class reference that points
+    // outside the binary. In those cases, there is nothing that can be done.
+    if (rawRef & 0x8000000000000000)
+        return 0;
+
+    seek(address);
+    const auto classAddress = readEncodedPointer();
+
+    m_bv->DefineDataVariable(address,
+        Type::PointerType(8, Type::NamedType(m_bv, CustomTypes::Class)));
+    return classAddress;
+}
+
 //  Offset  Type         Description
 // ----------------------------------------------------
 //    +0x0  const char*  Name pointer/offset
@@ -254,6 +272,23 @@ void StructureAnalyzer::runPrivate()
 
     // ---
 
+    const auto classRefsSection = m_bv->GetSectionByName(SectionName::ClassRefs);
+    if (classRefsSection) {
+        const auto classRefsStart = classRefsSection->GetStart();
+        const auto classRefsEnd = classRefsStart + classRefsSection->GetLength();
+
+        for (auto a = classRefsStart; a < classRefsEnd; a += 8) {
+            const auto classAddress = analyzeClassRef(a);
+
+            // The call above will return 0 sometimes, such as when the class
+            // reference points outside the binary.
+            if (classAddress)
+                m_records.reverseClassRefs[classAddress] = a;
+        }
+    }
+
+    // ---
+
     const auto selRefsSection = m_bv->GetSectionByName(SectionName::SelectorRefs);
     if (!selRefsSection) {
         LogError("Cannot analyze Objective-C selectors; missing  __objc_selrefs section");
@@ -304,13 +339,14 @@ void StructureAnalyzer::runPrivate()
         if (c.data.nameAddress)
             c.data.name = defineStringData(c.data.nameAddress);
 
-        // Define symbols based on the class's name for:
+        // Define symbols based on the class's name (if applicable) for:
         //
         //  1. the pointer to the class in the `__objc_classlist` section;
         //  2. the class structure itself;
         //  3. the underlying data structure;
-        //  4. the class name string; and
-        //  5. the class's associated method list. (if applicable)
+        //  4. the class name string;
+        //  5. the class's associated method list; and
+        //  6. the pointer to the class in the `__objc_classrefs` section.
         //
         defineSymbol(c.pointerAddress, "ptr", c.data.name);
         defineSymbol(c.address, "cls", c.data.name);
@@ -319,6 +355,10 @@ void StructureAnalyzer::runPrivate()
 
         if (c.data.methodList.address)
             defineSymbol(c.data.methodList.address, "ml", c.data.name);
+
+        const auto refAddress = m_records.reverseClassRefs[c.address];
+        if (refAddress)
+            defineSymbol(refAddress, "ref", c.data.name);
 
         for (const auto& m : c.data.methodList.methods) {
             std::string selectorName = "???";
