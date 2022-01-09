@@ -396,6 +396,13 @@ void StructureAnalyzer::runPrivate()
             defineSymbol(m.address, "mth");
         }
     }
+
+    // Write the implementation map to the database for future use.
+    std::stringstream stream;
+    for (const auto [k, v] : m_records.impMap)
+        stream << k << "," << v << ",";
+
+    m_bv->StoreMetadata(MetadataKey::ImpMap, new Metadata(stream.str()));
 }
 
 AnalysisRecords StructureAnalyzer::run(BinaryViewRef bv)

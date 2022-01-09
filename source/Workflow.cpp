@@ -38,6 +38,8 @@
 #include <binaryninjaapi.h>
 #include <lowlevelilinstruction.h>
 
+#include <queue>
+
 static std::mutex g_initialAnalysisMutex;
 
 using SectionRef = BinaryNinja::Ref<BinaryNinja::Section>;
@@ -156,24 +158,55 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
     //  3. Restored view, any function analyzed by workflow
     //
     //     Analysis records will not be present, but the "did structure
-    //     analysis" flag will be set. This view will be added to the ignored
-    //     views list, and the body of the workflow nor structure analysis will
-    //     ever run again for this view.
-    //
+    //     analysis" flag will be set. Structure analysis will not run, but the
+    //     implementation map will be restored using the serialized map in the
+    //     database's metadata.
     {
         std::scoped_lock<std::mutex> lock(g_initialAnalysisMutex);
 
         if (!GlobalState::hasAnalysisRecords(bv)) {
+            AnalysisRecords analysisRecords;
+
+            // If structure analysis has previously been run, the implementation
+            // map should have been serialized and stored in the database via
+            // metadata. In this case, it should be parsed and restored from the
+            // original structure analysis run.
             if (GlobalState::hasFlag(bv, Flag::DidRunStructureAnalysis)) {
-                GlobalState::addIgnoredView(bv);
-                return;
+                auto csvMetadata = bv->QueryMetadata(MetadataKey::ImpMap);
+                if (!csvMetadata) {
+                    BinaryNinja::LogError("Expected stored implementation map; metadata not found.");
+                    GlobalState::addIgnoredView(bv);
+                    return;
+                }
+
+                auto csv = csvMetadata->GetString();
+                std::stringstream csvStream(csv);
+
+                // Do some crude CSV parsing and build a queue of keys/values.
+                std::queue<uint64_t> items;
+                std::string token;
+                while (std::getline(csvStream, token, ',')) {
+                    auto value = std::stoull(token);
+                    items.push(value);
+                }
+
+                // Populate the implementation map from the parsed metadata.
+                while (!items.empty()) {
+                    auto sel = items.front();
+                    items.pop();
+                    auto imp = items.front();
+                    items.pop();
+
+                    analysisRecords.impMap[sel] = imp;
+                }
+            } else {
+                CustomTypes::defineAll(bv);
+                analysisRecords = StructureAnalyzer::run(bv);
+
+                GlobalState::setFlag(bv, Flag::DidRunStructureAnalysis);
             }
 
-            CustomTypes::defineAll(bv);
-            auto records = StructureAnalyzer::run(bv);
-
-            GlobalState::storeAnalysisRecords(bv, records);
-            GlobalState::setFlag(bv, Flag::DidRunStructureAnalysis);
+            GlobalState::storeAnalysisRecords(bv, analysisRecords);
         }
     }
 

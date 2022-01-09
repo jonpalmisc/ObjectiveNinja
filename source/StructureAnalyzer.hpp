@@ -47,6 +47,13 @@ constexpr auto ClassRefs = "__objc_classrefs";
 
 }
 
+/// Collection of keys to use for metadata storage.
+namespace MetadataKey {
+
+constexpr auto ImpMap = "objectiveNinja.impMap";
+
+}
+
 /// Analyzer for Objective-C structures.
 class StructureAnalyzer {
     BinaryViewRef m_bv;
