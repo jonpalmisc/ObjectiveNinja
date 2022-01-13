@@ -53,6 +53,7 @@ std::set<uint64_t> Workflow::findMsgSendFunctions(BinaryViewRef bv)
     const auto stubsSection = bv->GetSectionByName("__stubs");
     const auto authGotSection = bv->GetSectionByName("__auth_got");
     const auto gotSection = bv->GetSectionByName("__got");
+    const auto laSymbolPtrSection = bv->GetSectionByName("__la_symbol_ptr");
 
     // Shorthand to check if a symbol lies in a given section.
     auto sectionContains = [](SectionRef section, SymbolRef symbol) {
@@ -84,7 +85,8 @@ std::set<uint64_t> Workflow::findMsgSendFunctions(BinaryViewRef bv)
         if ((authStubsSection && sectionContains(authStubsSection, c))
             || (stubsSection && sectionContains(stubsSection, c))
             || (authGotSection && sectionContains(authGotSection, c))
-            || (gotSection && sectionContains(gotSection, c)))
+            || (gotSection && sectionContains(gotSection, c))
+            || (laSymbolPtrSection && sectionContains(laSymbolPtrSection, c)))
             results.insert(c->GetAddress());
     }
 
