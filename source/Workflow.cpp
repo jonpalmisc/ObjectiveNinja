@@ -135,6 +135,15 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
     if (GlobalState::viewIsIgnored(bv))
         return;
 
+    // Ignore the view if it has an unsupported architecture.
+    auto archName = arch->GetName();
+    if (archName != "aarch64" && archName != "x86_64") {
+        BinaryNinja::LogError("Architecture '%s' not supported by Objective Ninja",
+            archName.c_str());
+        GlobalState::addIgnoredView(bv);
+        return;
+    }
+
     // The workflow relies on some data acquired through analysis of Objective-C
     // structures present in the binary. The structure analysis must run exactly
     // once per binary. Until the Workflows API supports a "run once" idiom,
