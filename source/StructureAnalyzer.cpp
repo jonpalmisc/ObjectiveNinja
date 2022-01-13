@@ -35,6 +35,9 @@
 
 using namespace BinaryNinja;
 
+// One day there will be scoped logging in Binary Ninja...
+#define LOG(...) LogInfo("ObjectiveNinja: " __VA_ARGS__)
+
 StructureAnalyzer::StructureAnalyzer(BinaryViewRef bv)
     : m_bv(bv)
     , m_imageBase(bv->GetStart())
@@ -117,20 +120,28 @@ std::string StructureAnalyzer::defineStringData(uint64_t start)
 //
 void StructureAnalyzer::analyzeCFString(uint64_t address)
 {
+    LOG("%s(0x%llx)", __func__, address);
+
     seek(address + 0x10);
     const auto dataAddress = readEncodedPointer();
     defineStringData(dataAddress);
+
+    LOG("  dataAddress=0x%llx", dataAddress);
 
     m_bv->DefineDataVariable(address, m_cfStringType);
 }
 
 SelectorRefRecord StructureAnalyzer::analyzeSelectorRef(uint64_t address)
 {
+    LOG("%s(0x%llx)", __func__, address);
+
     seek(address);
     const auto rawSelector = m_reader.Read64();
 
     seek(address);
     const auto nameAddress = readEncodedPointer();
+
+    LOG("  rawSelector=0x%llx, nameAddress=0x%llx", rawSelector, nameAddress);
 
     m_bv->DefineDataVariable(address,
         Type::PointerType(8, Type::NamedType(m_bv, CustomTypes::Selector)));
@@ -139,16 +150,22 @@ SelectorRefRecord StructureAnalyzer::analyzeSelectorRef(uint64_t address)
 
 uint64_t StructureAnalyzer::analyzeClassRef(uint64_t address)
 {
+    LOG("%s(0x%llx)", __func__, address);
+
     seek(address);
     const auto rawRef = m_reader.Read64();
 
     // This expression will be true if this is a class reference that points
     // outside the binary. In those cases, there is nothing that can be done.
-    if (rawRef & 0x8000000000000000)
+    if (rawRef & 0x8000000000000000) {
+        LOG("  skipped");
         return 0;
+    }
 
     seek(address);
     const auto classAddress = readEncodedPointer();
+
+    LOG("  rawRef=0x%llx, classAddress=0x%llx", rawRef, classAddress);
 
     m_bv->DefineDataVariable(address,
         Type::PointerType(8, Type::NamedType(m_bv, CustomTypes::Class)));
@@ -165,6 +182,8 @@ uint64_t StructureAnalyzer::analyzeClassRef(uint64_t address)
 // pointers, and every value in the offset column should be doubled.
 MethodRecord StructureAnalyzer::analyzeMethod(uint64_t address)
 {
+    LOG("    %s(0x%llx)", __func__, address);
+
     seek(address);
 
     uint64_t nameAddress = 0, impAddress = 0;
@@ -178,6 +197,9 @@ MethodRecord StructureAnalyzer::analyzeMethod(uint64_t address)
         impAddress = readEncodedPointer();
     }
 
+    LOG("      %s, nameAddress=0x%llx, impAddress=0x%llx",
+        m_isARM64 ? "arm64" : "x86_64", nameAddress, impAddress);
+
     m_bv->DefineDataVariable(address, m_methodType);
     return MethodRecord { address, nameAddress, impAddress, "???" };
 }
@@ -189,11 +211,15 @@ MethodRecord StructureAnalyzer::analyzeMethod(uint64_t address)
 //
 MethodListRecord StructureAnalyzer::analyzeMethodList(uint64_t address)
 {
+    LOG("  %s(0x%llx)", __func__, address);
+
     seek(address);
 
     m_reader.Read32();
     const auto methodCount = m_reader.Read32();
     const auto methodSize = m_methodType->GetWidth();
+
+    LOG("    methodCount=0x%x, methodSize=0x%llx", methodCount, methodSize);
 
     std::vector<MethodRecord> methods;
     methods.reserve(methodCount);
@@ -216,14 +242,21 @@ MethodListRecord StructureAnalyzer::analyzeMethodList(uint64_t address)
 // See full listing in CustomTypes.cpp, some fields omitted for brevity.
 ClassDataRecord StructureAnalyzer::analyzeClassData(uint64_t address)
 {
+    LOG("  %s(0x%llx)", __func__, address);
+
     seek(address + 0x18);
 
     const auto nameAddress = readEncodedPointer();
     const auto methodListAddress = readEncodedPointer();
 
+    LOG("    nameAddress=0x%llx, methodListAddress=0x%llx",
+        nameAddress, methodListAddress);
+
     MethodListRecord methodList;
     if (methodListAddress)
         methodList = analyzeMethodList(methodListAddress);
+    else
+        LOG("    skipped, methodListAddress == 0");
 
     m_bv->DefineDataVariable(address, m_classDataType);
     return { address, nameAddress, "???", methodList };
@@ -239,6 +272,8 @@ ClassDataRecord StructureAnalyzer::analyzeClassData(uint64_t address)
 //
 ClassRecord StructureAnalyzer::analyzeClass(uint64_t address)
 {
+    LOG("%s(0x%llx)", __func__, address);
+
     seek(address);
 
     // This address is always encoded as an absolute address, regardless of
@@ -249,8 +284,10 @@ ClassRecord StructureAnalyzer::analyzeClass(uint64_t address)
 
     seek(address + 0x20);
     const auto dataAddress = readEncodedPointer();
-    if (!dataAddress)
+    if (!dataAddress) {
+        LOG("  aborted (dataAddress == 0)");
         return { address, 0, {} };
+    }
 
     const auto classData = analyzeClassData(dataAddress);
 
@@ -260,17 +297,24 @@ ClassRecord StructureAnalyzer::analyzeClass(uint64_t address)
 
 void StructureAnalyzer::runPrivate()
 {
+    size_t totalStrings = 0, totalMethods = 0;
+    size_t totalInvalidClasses = 0, totalInvalidClassRefs = 0;
+
+    LOG("===------------------------------------------------------------------===");
+
     const auto cfStringsSection = m_bv->GetSectionByName(SectionName::CFString);
     if (cfStringsSection) {
         const auto cfStringsStart = cfStringsSection->GetStart();
         const auto cfStringsEnd = cfStringsStart + cfStringsSection->GetLength();
         const auto cfStringSize = m_cfStringType->GetWidth();
 
-        for (auto a = cfStringsStart; a < cfStringsEnd; a += cfStringSize)
+        for (auto a = cfStringsStart; a < cfStringsEnd; a += cfStringSize) {
             analyzeCFString(a);
+            ++totalStrings;
+        }
     }
 
-    // ---
+    LOG("===------------------------------------------------------------------===");
 
     const auto classRefsSection = m_bv->GetSectionByName(SectionName::ClassRefs);
     if (classRefsSection) {
@@ -284,10 +328,12 @@ void StructureAnalyzer::runPrivate()
             // reference points outside the binary.
             if (classAddress)
                 m_records.reverseClassRefs[classAddress] = a;
+            else
+                ++totalInvalidClassRefs;
         }
     }
 
-    // ---
+    LOG("===------------------------------------------------------------------===");
 
     const auto selRefsSection = m_bv->GetSectionByName(SectionName::SelectorRefs);
     if (!selRefsSection) {
@@ -304,7 +350,7 @@ void StructureAnalyzer::runPrivate()
         m_records.selectorRefs.insert({ address, selectorRef });
     }
 
-    // ---
+    LOG("===------------------------------------------------------------------===");
 
     const auto classListSection = m_bv->GetSectionByName(SectionName::ClassList);
     if (!classListSection) {
@@ -321,15 +367,17 @@ void StructureAnalyzer::runPrivate()
 
         seek(address);
         const auto classAddress = readEncodedPointer();
-        if (!classAddress)
+        if (!classAddress) {
+            ++totalInvalidClasses;
             continue;
+        }
 
         auto classRecord = analyzeClass(classAddress);
         classRecord.pointerAddress = address;
         m_records.classes.emplace_back(classRecord);
     }
 
-    // ---
+    LOG("===------------------------------------------------------------------===");
 
     // To keep the structure analysis code cleaner, symbols for structures,
     // methods, etc. are not defined until after all structure analysis is
@@ -361,6 +409,8 @@ void StructureAnalyzer::runPrivate()
             defineSymbol(refAddress, "ref", c.data.name);
 
         for (const auto& m : c.data.methodList.methods) {
+            ++totalMethods;
+
             std::string selectorName = "???";
             uint64_t selectorNameAddress = 0;
 
@@ -396,6 +446,15 @@ void StructureAnalyzer::runPrivate()
             defineSymbol(m.address, "mth");
         }
     }
+
+    LOG("===------------------------------------------------------------------===");
+    LOG("Found %lu classes (%lu invalid)",
+        m_records.classes.size(), totalInvalidClasses);
+    LOG("Found %lu class references (%lu invalid)",
+        m_records.reverseClassRefs.size(), totalInvalidClassRefs);
+    LOG("Found %lu methods, %lu selectors", totalMethods, m_records.selectorRefs.size());
+    LOG("Found %lu CFString instances", totalStrings);
+    LOG("===------------------------------------------------------------------===");
 
     // Write the implementation map to the database for future use.
     std::stringstream stream;
