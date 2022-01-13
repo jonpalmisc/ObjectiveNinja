@@ -73,6 +73,7 @@ std::set<uint64_t> Workflow::findMsgSendFunctions(BinaryViewRef bv)
     //   2. __stubs
     //   3. __auth_got
     //   4. __got
+    //   ?. __la_symbol_ptr
     //
     // There is often an `_objc_msgSend` symbol that is a stub function, found
     // in the `__stubs` section, which will come with an imported symbol of the
