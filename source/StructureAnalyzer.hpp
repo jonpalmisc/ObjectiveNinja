@@ -73,7 +73,7 @@ class StructureAnalyzer {
     AnalysisRecords m_records;
 
     /// Mask used to remove flags in high bits of addresses and offsets.
-    static constexpr uint64_t OffsetMask = 0xFFFFFFFFF;
+    static constexpr uint64_t OffsetMask = 0xFFFFFFFF;
 
     explicit StructureAnalyzer(BinaryViewRef);
 
