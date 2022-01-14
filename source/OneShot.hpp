@@ -36,6 +36,9 @@ class BinaryView;
 
 /// Collection of one-shot analysis commands.
 struct OneShot {
+    /// Define types for Objective-C structures.
+    static void defineTypes(BinaryNinja::BinaryView*);
+
     /// Analyze all Objective-C structures in the binary.
     static void analyzeStructures(BinaryNinja::BinaryView*);
 

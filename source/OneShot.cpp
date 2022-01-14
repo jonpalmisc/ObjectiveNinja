@@ -34,6 +34,11 @@
 #include "GlobalState.hpp"
 #include "StructureAnalyzer.hpp"
 
+void OneShot::defineTypes(BinaryNinja::BinaryView* bv)
+{
+    CustomTypes::defineAll(bv);
+}
+
 void OneShot::analyzeStructures(BinaryNinja::BinaryView* bv)
 {
     if (GlobalState::hasFlag(bv, Flag::DidRunWorkflow)
@@ -51,6 +56,10 @@ void OneShot::analyzeStructures(BinaryNinja::BinaryView* bv)
 
 void OneShot::registerCommands()
 {
+#ifdef DEV_MODE
+    BinaryNinja::PluginCommand::Register("Objective Ninja \\ Define Types",
+        "", OneShot::defineTypes);
+#endif
     BinaryNinja::PluginCommand::Register("Objective Ninja \\ Analyze Structures",
         "", OneShot::analyzeStructures);
 }
