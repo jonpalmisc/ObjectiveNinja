@@ -467,7 +467,13 @@ void StructureAnalyzer::runPrivate()
 AnalysisRecords StructureAnalyzer::run(BinaryViewRef bv)
 {
     StructureAnalyzer analyzer(std::move(bv));
-    analyzer.runPrivate();
+
+    try {
+        analyzer.runPrivate();
+    } catch (...) {
+        LogError("ObjectiveNinja: Exception during structure analysis; please report this issue!");
+        LogError("ObjectiveNinja: Structure analysis failed.");
+    }
 
     return analyzer.m_records;
 }
