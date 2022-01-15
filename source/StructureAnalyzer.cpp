@@ -35,8 +35,8 @@
 
 using namespace BinaryNinja;
 
-// One day there will be scoped logging in Binary Ninja...
-#define LOG(...) LogInfo("ObjectiveNinja: " __VA_ARGS__)
+#define LOG(...) LogDebug("ObjectiveNinja: " __VA_ARGS__)
+#define LOG_BREAK() LOG("===------------------------------------------------------------------===")
 
 StructureAnalyzer::StructureAnalyzer(BinaryViewRef bv)
     : m_bv(bv)
@@ -300,7 +300,7 @@ void StructureAnalyzer::runPrivate()
     size_t totalStrings = 0, totalMethods = 0;
     size_t totalInvalidClasses = 0, totalInvalidClassRefs = 0;
 
-    LOG("===------------------------------------------------------------------===");
+    LOG_BREAK();
 
     const auto cfStringsSection = m_bv->GetSectionByName(SectionName::CFString);
     if (cfStringsSection) {
@@ -314,7 +314,7 @@ void StructureAnalyzer::runPrivate()
         }
     }
 
-    LOG("===------------------------------------------------------------------===");
+    LOG_BREAK();
 
     const auto classRefsSection = m_bv->GetSectionByName(SectionName::ClassRefs);
     if (classRefsSection) {
@@ -333,7 +333,7 @@ void StructureAnalyzer::runPrivate()
         }
     }
 
-    LOG("===------------------------------------------------------------------===");
+    LOG_BREAK();
 
     const auto selRefsSection = m_bv->GetSectionByName(SectionName::SelectorRefs);
     if (!selRefsSection) {
@@ -350,7 +350,7 @@ void StructureAnalyzer::runPrivate()
         m_records.selectorRefs.insert({ address, selectorRef });
     }
 
-    LOG("===------------------------------------------------------------------===");
+    LOG_BREAK();
 
     const auto classListSection = m_bv->GetSectionByName(SectionName::ClassList);
     if (!classListSection) {
@@ -377,7 +377,7 @@ void StructureAnalyzer::runPrivate()
         m_records.classes.emplace_back(classRecord);
     }
 
-    LOG("===------------------------------------------------------------------===");
+    LOG_BREAK();
 
     // To keep the structure analysis code cleaner, symbols for structures,
     // methods, etc. are not defined until after all structure analysis is
@@ -447,14 +447,14 @@ void StructureAnalyzer::runPrivate()
         }
     }
 
-    LOG("===------------------------------------------------------------------===");
+    LOG_BREAK();
     LOG("Found %lu classes (%lu invalid)",
         m_records.classes.size(), totalInvalidClasses);
     LOG("Found %lu class references (%lu invalid)",
         m_records.reverseClassRefs.size(), totalInvalidClassRefs);
     LOG("Found %lu methods, %lu selectors", totalMethods, m_records.selectorRefs.size());
     LOG("Found %lu CFString instances", totalStrings);
-    LOG("===------------------------------------------------------------------===");
+    LOG_BREAK();
 
     // Write the implementation map to the database for future use.
     std::stringstream stream;
