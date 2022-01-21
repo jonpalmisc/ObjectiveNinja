@@ -55,7 +55,7 @@ StructureAnalyzer::StructureAnalyzer(BinaryViewRef bv)
         m_methodType = Type::NamedType(m_bv, CustomTypes::Method);
 }
 
-uint64_t StructureAnalyzer::readEncodedPointer(bool fix)
+uint64_t StructureAnalyzer::readTaggedPointer(bool fix)
 {
     auto pointer = m_reader.Read64() & OffsetMask;
 
@@ -123,7 +123,7 @@ void StructureAnalyzer::analyzeCFString(uint64_t address)
     LOG("%s(0x%llx)", __func__, address);
 
     seek(address + 0x10);
-    const auto dataAddress = readEncodedPointer();
+    const auto dataAddress = readTaggedPointer();
     defineStringData(dataAddress);
 
     LOG("  dataAddress=0x%llx", dataAddress);
@@ -139,7 +139,7 @@ SelectorRefRecord StructureAnalyzer::analyzeSelectorRef(uint64_t address)
     const auto rawSelector = m_reader.Read64();
 
     seek(address);
-    const auto nameAddress = readEncodedPointer();
+    const auto nameAddress = readTaggedPointer();
 
     LOG("  rawSelector=0x%llx, nameAddress=0x%llx", rawSelector, nameAddress);
 
@@ -163,7 +163,7 @@ uint64_t StructureAnalyzer::analyzeClassRef(uint64_t address)
     }
 
     seek(address);
-    const auto classAddress = readEncodedPointer();
+    const auto classAddress = readTaggedPointer();
 
     LOG("  rawRef=0x%llx, classAddress=0x%llx", rawRef, classAddress);
 
@@ -192,9 +192,9 @@ MethodRecord StructureAnalyzer::analyzeMethod(uint64_t address)
         m_reader.Read32();
         impAddress = address + 8 + (int32_t)m_reader.Read32();
     } else {
-        nameAddress = readEncodedPointer();
-        readEncodedPointer();
-        impAddress = readEncodedPointer();
+        nameAddress = readTaggedPointer();
+        readTaggedPointer();
+        impAddress = readTaggedPointer();
     }
 
     LOG("      %s, nameAddress=0x%llx, impAddress=0x%llx",
@@ -246,8 +246,8 @@ ClassDataRecord StructureAnalyzer::analyzeClassData(uint64_t address)
 
     seek(address + 0x18);
 
-    const auto nameAddress = readEncodedPointer();
-    const auto methodListAddress = readEncodedPointer();
+    const auto nameAddress = readTaggedPointer();
+    const auto methodListAddress = readTaggedPointer();
 
     LOG("    nameAddress=0x%llx, methodListAddress=0x%llx",
         nameAddress, methodListAddress);
@@ -283,7 +283,7 @@ ClassRecord StructureAnalyzer::analyzeClass(uint64_t address)
         m_writer.Write64(isaAddress);
 
     seek(address + 0x20);
-    const auto dataAddress = readEncodedPointer();
+    const auto dataAddress = readTaggedPointer();
     if (!dataAddress) {
         LOG("  aborted (dataAddress == 0)");
         return { address, 0, {} };
@@ -366,7 +366,7 @@ void StructureAnalyzer::runPrivate()
         m_bv->DefineDataVariable(address, Type::PointerType(8, m_classType));
 
         seek(address);
-        const auto classAddress = readEncodedPointer();
+        const auto classAddress = readTaggedPointer();
         if (!classAddress) {
             ++totalInvalidClasses;
             continue;

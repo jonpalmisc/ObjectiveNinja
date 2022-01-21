@@ -84,15 +84,15 @@ class StructureAnalyzer {
         m_writer.Seek(address);
     }
 
-    /// Read and decode an encoded pointer.
+    /// Read and un-tag a tagged pointer.
     ///
-    /// Reads a (potentially-encoded) pointer from the current internal reader
+    /// Reads a (potentially-tagged) pointer from the current internal reader
     /// position and applies the appropriate decoding procedure depending on the
-    /// architecture of the binary. Optionally, overwrite the encoded pointer
+    /// architecture of the binary. Optionally, overwrite the tagged pointer
     /// with its decoded value.
     ///
     /// \param fix If true, write the decoded pointer back to the binary.
-    uint64_t readEncodedPointer(bool fix = true);
+    uint64_t readTaggedPointer(bool fix = false);
 
     /// Define a symbol with a prefix and (optional) label.
     ///
