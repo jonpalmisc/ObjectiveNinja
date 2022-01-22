@@ -57,14 +57,14 @@ StructureAnalyzer::StructureAnalyzer(BinaryViewRef bv)
 
 uint64_t StructureAnalyzer::readTaggedPointer(bool fix)
 {
-    auto pointer = m_reader.Read64() & OffsetMask;
+    auto pointer = m_reader.Read64();
 
     // On x86_64, the value in `pointer` at this point should be a valid
     // pointer, as absolute addresses are used in encoding. However, on ARM64,
     // pointers are encoded as an offset from the image base, which must be
     // added to the offset to produce the correct pointer.
     if (m_isARM64 && pointer != 0)
-        pointer += m_imageBase;
+        pointer = (pointer & OffsetMask) + m_imageBase;
 
     // Write back the decoded pointer if requested.
     if (fix)

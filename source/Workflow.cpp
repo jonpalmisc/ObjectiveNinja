@@ -105,7 +105,9 @@ void Workflow::rewriteMethodCall(LLILFunctionRef ssa, size_t insnIndex)
     // either the selector reference or the method's name, which in both cases
     // is dereferenced to retrieve a selector.
     const auto selectorRegister = params[1].GetSourceSSARegister<LLIL_REG_SSA>();
-    const auto selector = ssa->GetSSARegisterValue(selectorRegister).value;
+    uint64_t selector = ssa->GetSSARegisterValue(selectorRegister).value;
+    selector &= 0xFFFFFFFF;
+    selector += bv->GetStart();
 
     // Check the analysis records for an implementation address corresponding to
     // the current selector. It is possible that no implementation address
