@@ -28,77 +28,55 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include "DataRenderers.hpp"
+
 #include "CustomTypes.hpp"
 
-constexpr const char* AllTypesSource = R"(
-struct tagged_ptr_t {
-    uint64_t raw;
-};
-
-typedef void* id;
-typedef char* SEL;
-
-struct CFString {
-    const void* isa;
-    uint64_t flags;
-    const char* data;
-    uint64_t size;
-};
-
-struct objc_small_method_t {
-    int32_t name;
-    int32_t types;
-    int32_t imp;
-};
-
-struct objc_method_t {
-    char const* name;
-    void* types;
-    void* imp;
-};
-
-struct objc_method_list_t {
-    uint32_t obsolete;
-    uint32_t count;
-};
-
-struct objc_class_ro_t {
-    uint32_t flags;
-    uint32_t start;
-    uint32_t size;
-    uint32_t reserved;
-    const unsigned char* ivar_layout;
-    const char* name;
-    const struct objc_method_list_t* methods;
-    const void* protocols;
-    const void* ivars;
-    const unsigned char* weak_ivar_layout;
-    const void* properties;
-};
-
-struct objc_class_t {
-    struct objc_class_t* isa;
-    struct objc_class_t* super;
-    void* cache;
-    void* vtable;
-    struct objc_class_ro_t* data;
-};
-)";
-
-namespace CustomTypes {
+#include <cstdio>
 
 using namespace BinaryNinja;
 
-void defineAll(Ref<BinaryView> bv)
+bool TaggedPointerDataRenderer::IsValidForData(BinaryView* bv, uint64_t,
+    Type* type, std::vector<std::pair<Type*, size_t>>&)
 {
-    std::map<QualifiedName, Ref<Type>> types, variables, functions;
-    std::string errors;
+    auto taggedPointerType = bv->GetTypeByName(CustomTypes::TaggedPointer);
+    if (!taggedPointerType)
+        return false;
 
-    bv->GetDefaultPlatform()->ParseTypesFromSource(AllTypesSource,
-        "ObjectiveNinja.h", types, variables, functions, errors);
-
-    for (const auto& [name, type] : types)
-        bv->DefineUserType(name, type);
+    return type->GetRegisteredName() == taggedPointerType->GetRegisteredName();
 }
 
+std::vector<DisassemblyTextLine> TaggedPointerDataRenderer::GetLinesForData(
+    BinaryView* bv, uint64_t addr, Type*,
+    const std::vector<InstructionTextToken>& prefix, size_t,
+    std::vector<std::pair<Type*, size_t>>&)
+{
+    BinaryReader reader(bv);
+    reader.Seek(addr);
+
+    auto pointer = reader.Read64() & 0xFFFFFFFF;
+    if (bv->GetDefaultArchitecture()->GetName() == "aarch64" && pointer != 0)
+        pointer += bv->GetStart();
+
+    // Format the corrected pointer value in hexadecimal.
+    char addressBuffer[32];
+    sprintf(addressBuffer, "0x%08llx", pointer);
+    std::string address(addressBuffer);
+
+    // Create the token for the pointer and set the `value` field so
+    // double-clicking on the token navigates to the pointer's destination.
+    InstructionTextToken pointerToken(CodeRelativeAddressToken, addressBuffer);
+    pointerToken.value = pointer;
+
+    DisassemblyTextLine line;
+    line.addr = addr;
+    line.tokens = prefix;
+    line.tokens.emplace_back(pointerToken);
+
+    return { line };
+}
+
+void TaggedPointerDataRenderer::Register()
+{
+    DataRendererContainer::RegisterTypeSpecificDataRenderer(new TaggedPointerDataRenderer());
 }

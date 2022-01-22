@@ -32,20 +32,20 @@
 
 #include <binaryninjaapi.h>
 
-/// All type-related things.
-namespace CustomTypes {
+using BinaryViewPtr = BinaryNinja::BinaryView*;
+using TypePtr = BinaryNinja::Type*;
 
-const std::string TaggedPointer = "tagged_ptr_t";
-const std::string ID = "id";
-const std::string Selector = "SEL";
-const std::string CFString = "CFString";
-const std::string SmallMethod = "objc_small_method_t";
-const std::string Method = "objc_method_t";
-const std::string MethodList = "objc_method_list_t";
-const std::string Class = "objc_class_t";
-const std::string ClassData = "objc_class_ro_t";
+class TaggedPointerDataRenderer : public BinaryNinja::DataRenderer {
+    TaggedPointerDataRenderer() = default;
 
-/// Define all Objective-C-related types for a view.
-void defineAll(BinaryNinja::Ref<BinaryNinja::BinaryView>);
+public:
+    bool IsValidForData(BinaryViewPtr, uint64_t addr,
+        TypePtr, std::vector<std::pair<TypePtr, size_t>>& context) override;
 
+    std::vector<BinaryNinja::DisassemblyTextLine> GetLinesForData(
+        BinaryViewPtr, uint64_t addr, TypePtr,
+        const std::vector<BinaryNinja::InstructionTextToken>& prefix,
+        size_t width, std::vector<std::pair<TypePtr, size_t>>& context) override;
+
+    static void Register();
 };

@@ -28,6 +28,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include "DataRenderers.hpp"
 #include "OneShot.hpp"
 #include "Workflow.hpp"
 
@@ -37,6 +38,8 @@ BN_DECLARE_CORE_ABI_VERSION
 
 BINARYNINJAPLUGIN bool CorePluginInit()
 {
+    TaggedPointerDataRenderer::Register();
+
     Workflow::registerActivities();
     OneShot::registerCommands();
 

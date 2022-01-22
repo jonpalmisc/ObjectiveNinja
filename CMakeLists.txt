@@ -9,6 +9,8 @@ set(OBJ_NINJA_SOURCE
   source/AnalysisRecords.hpp
   source/CustomTypes.cpp
   source/CustomTypes.hpp
+  source/DataRenderers.hpp
+  source/DataRenderers.cpp
   source/GlobalState.cpp
   source/GlobalState.hpp
   source/OneShot.cpp
