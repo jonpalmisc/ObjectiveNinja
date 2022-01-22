@@ -154,72 +154,14 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
     // once per binary. Until the Workflows API supports a "run once" idiom,
     // this is accomplished through a mutex and a map of analysis records, which
     // also serves as the list of binaries that have had structure analysis.
-    //
-    // Additionally, there are a few checks here that determine if structure
-    // analysis (or the workflow itself) should be run. The possible cases can
-    // be summarized as follows:
-    //
-    //  1. New view, first function to analyzed by the workflow
-    //
-    //     No analysis records will be present, nor will the "did structure
-    //     analysis" flag be set. Structure analysis will run and the flag will
-    //     be set; workflow will continue normally.
-    //
-    //  2. New view, subsequent function analyzed by the workflow
-    //
-    //     Analysis records will be present; workflow will continue normally.
-    //
-    //  3. Restored view, any function analyzed by workflow
-    //
-    //     Analysis records will not be present, but the "did structure
-    //     analysis" flag will be set. Structure analysis will not run, but the
-    //     implementation map will be restored using the serialized map in the
-    //     database's metadata.
     {
         std::scoped_lock<std::mutex> lock(g_initialAnalysisMutex);
 
         if (!GlobalState::hasAnalysisRecords(bv)) {
-            AnalysisRecords analysisRecords;
+            CustomTypes::defineAll(bv);
+            auto analysisRecords = StructureAnalyzer::run(bv);
 
-            // If structure analysis has previously been run, the implementation
-            // map should have been serialized and stored in the database via
-            // metadata. In this case, it should be parsed and restored from the
-            // original structure analysis run.
-            if (GlobalState::hasFlag(bv, Flag::DidRunStructureAnalysis)) {
-                auto csvMetadata = bv->QueryMetadata(MetadataKey::ImpMap);
-                if (!csvMetadata) {
-                    BinaryNinja::LogError("Expected stored implementation map; metadata not found.");
-                    GlobalState::addIgnoredView(bv);
-                    return;
-                }
-
-                auto csv = csvMetadata->GetString();
-                std::stringstream csvStream(csv);
-
-                // Do some crude CSV parsing and build a queue of keys/values.
-                std::queue<uint64_t> items;
-                std::string token;
-                while (std::getline(csvStream, token, ',')) {
-                    auto value = std::stoull(token);
-                    items.push(value);
-                }
-
-                // Populate the implementation map from the parsed metadata.
-                while (!items.empty()) {
-                    auto sel = items.front();
-                    items.pop();
-                    auto imp = items.front();
-                    items.pop();
-
-                    analysisRecords.impMap[sel] = imp;
-                }
-            } else {
-                CustomTypes::defineAll(bv);
-                analysisRecords = StructureAnalyzer::run(bv);
-
-                GlobalState::setFlag(bv, Flag::DidRunStructureAnalysis);
-            }
-
+            GlobalState::setFlag(bv, Flag::DidRunStructureAnalysis);
             GlobalState::storeAnalysisRecords(bv, analysisRecords);
         }
     }
