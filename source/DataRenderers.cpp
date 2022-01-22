@@ -54,9 +54,7 @@ std::vector<DisassemblyTextLine> TaggedPointerDataRenderer::GetLinesForData(
     BinaryReader reader(bv);
     reader.Seek(addr);
 
-    auto pointer = reader.Read64() & 0xFFFFFFFF;
-    if (bv->GetDefaultArchitecture()->GetName() == "aarch64" && pointer != 0)
-        pointer += bv->GetStart();
+    auto pointer = (reader.Read64() & 0xFFFFFFFF) + bv->GetStart();
 
     std::string tokenText;
     BNInstructionTextTokenType tokenType;
@@ -64,7 +62,10 @@ std::vector<DisassemblyTextLine> TaggedPointerDataRenderer::GetLinesForData(
     // If this tagged pointer points to a symbol, use its name as the token
     // text, otherwise format the address it points to as a hex string.
     Ref<Symbol> symbol = bv->GetSymbolByAddress(pointer);
-    if (symbol) {
+    if (pointer - bv->GetStart() == 0) {
+        tokenText = "NULL";
+        tokenType = KeywordToken;
+    } else if (symbol) {
         tokenText = symbol->GetFullName();
         tokenType = DataSymbolToken;
     } else {
