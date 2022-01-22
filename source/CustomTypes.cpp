@@ -31,7 +31,7 @@
 #include "CustomTypes.hpp"
 
 constexpr const char* AllTypesSource = R"(
-struct tagged_ptr_t {
+struct tptr_t {
     uint64_t raw;
 };
 
@@ -39,9 +39,9 @@ typedef void* id;
 typedef char* SEL;
 
 struct CFString {
-    const void* isa;
+    const tptr_t isa;
     uint64_t flags;
-    const char* data;
+    const tptr_t data;
     uint64_t size;
 };
 
@@ -52,9 +52,9 @@ struct objc_small_method_t {
 };
 
 struct objc_method_t {
-    char const* name;
-    void* types;
-    void* imp;
+    tptr_t name;
+    tptr_t types;
+    tptr_t imp;
 };
 
 struct objc_method_list_t {
@@ -67,21 +67,21 @@ struct objc_class_ro_t {
     uint32_t start;
     uint32_t size;
     uint32_t reserved;
-    const unsigned char* ivar_layout;
-    const char* name;
-    const struct objc_method_list_t* methods;
-    const void* protocols;
-    const void* ivars;
-    const unsigned char* weak_ivar_layout;
-    const void* properties;
+    const tptr_t ivar_layout;
+    const tptr_t name;
+    const tptr_t methods;
+    const tptr_t protocols;
+    const tptr_t vars;
+    const tptr_t weak_ivar_layout;
+    const tptr_t properties;
 };
 
 struct objc_class_t {
-    struct objc_class_t* isa;
-    struct objc_class_t* super;
+    const tptr_t isa;
+    const tptr_t super;
     void* cache;
     void* vtable;
-    struct objc_class_ro_t* data;
+    const tptr_t data;
 };
 )";
 

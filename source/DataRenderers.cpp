@@ -58,20 +58,28 @@ std::vector<DisassemblyTextLine> TaggedPointerDataRenderer::GetLinesForData(
     if (bv->GetDefaultArchitecture()->GetName() == "aarch64" && pointer != 0)
         pointer += bv->GetStart();
 
-    // Format the corrected pointer value in hexadecimal.
-    char addressBuffer[32];
-    sprintf(addressBuffer, "0x%08llx", pointer);
-    std::string address(addressBuffer);
+    std::string tokenText;
+    BNInstructionTextTokenType tokenType;
 
-    // Create the token for the pointer and set the `value` field so
-    // double-clicking on the token navigates to the pointer's destination.
-    InstructionTextToken pointerToken(CodeRelativeAddressToken, addressBuffer);
-    pointerToken.value = pointer;
+    // If this tagged pointer points to a symbol, use its name as the token
+    // text, otherwise format the address it points to as a hex string.
+    Ref<Symbol> symbol = bv->GetSymbolByAddress(pointer);
+    if (symbol) {
+        tokenText = symbol->GetFullName();
+        tokenType = DataSymbolToken;
+    } else {
+        char addressBuffer[32];
+        sprintf(addressBuffer, "0x%llx", pointer);
 
+        tokenText = std::string(addressBuffer);
+        tokenType = CodeRelativeAddressToken;
+    }
+
+    // Create a line using the prefix tokens passed in.
     DisassemblyTextLine line;
     line.addr = addr;
     line.tokens = prefix;
-    line.tokens.emplace_back(pointerToken);
+    line.tokens.emplace_back(tokenType, tokenText, pointer);
 
     return { line };
 }

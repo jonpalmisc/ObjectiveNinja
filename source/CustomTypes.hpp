@@ -35,7 +35,7 @@
 /// All type-related things.
 namespace CustomTypes {
 
-const std::string TaggedPointer = "tagged_ptr_t";
+const std::string TaggedPointer = "tptr_t";
 const std::string ID = "id";
 const std::string Selector = "SEL";
 const std::string CFString = "CFString";
