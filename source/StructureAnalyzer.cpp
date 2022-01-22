@@ -55,7 +55,7 @@ StructureAnalyzer::StructureAnalyzer(BinaryViewRef bv)
         m_methodType = Type::NamedType(m_bv, CustomTypes::Method);
 }
 
-uint64_t StructureAnalyzer::readTaggedPointer(bool fix)
+uint64_t StructureAnalyzer::readTaggedPointer()
 {
     auto pointer = m_reader.Read64();
 
@@ -65,10 +65,6 @@ uint64_t StructureAnalyzer::readTaggedPointer(bool fix)
     // added to the offset to produce the correct pointer.
     if (m_isARM64 && pointer != 0)
         pointer = (pointer & OffsetMask) + m_imageBase;
-
-    // Write back the decoded pointer if requested.
-    if (fix)
-        m_writer.Write64(pointer);
 
     return pointer;
 }

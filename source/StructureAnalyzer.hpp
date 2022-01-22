@@ -88,11 +88,8 @@ class StructureAnalyzer {
     ///
     /// Reads a (potentially-tagged) pointer from the current internal reader
     /// position and applies the appropriate decoding procedure depending on the
-    /// architecture of the binary. Optionally, overwrite the tagged pointer
-    /// with its decoded value.
-    ///
-    /// \param fix If true, write the decoded pointer back to the binary.
-    uint64_t readTaggedPointer(bool fix = false);
+    /// architecture of the binary.
+    uint64_t readTaggedPointer();
 
     /// Define a symbol with a prefix and (optional) label.
     ///
