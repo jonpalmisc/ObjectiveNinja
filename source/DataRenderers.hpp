@@ -49,3 +49,18 @@ public:
 
     static void Register();
 };
+
+class RelativePointerDataRenderer : public BinaryNinja::DataRenderer {
+    RelativePointerDataRenderer() = default;
+
+public:
+    bool IsValidForData(BinaryViewPtr, uint64_t addr,
+        TypePtr, std::vector<std::pair<TypePtr, size_t>>& context) override;
+
+    std::vector<BinaryNinja::DisassemblyTextLine> GetLinesForData(
+        BinaryViewPtr, uint64_t addr, TypePtr,
+        const std::vector<BinaryNinja::InstructionTextToken>& prefix,
+        size_t width, std::vector<std::pair<TypePtr, size_t>>& context) override;
+
+    static void Register();
+};

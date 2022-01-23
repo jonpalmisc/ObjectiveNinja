@@ -35,6 +35,10 @@ struct tptr_t {
     uint64_t raw;
 };
 
+struct rptr_t {
+    int32_t raw;
+};
+
 typedef void* id;
 typedef char* SEL;
 
@@ -46,9 +50,9 @@ struct CFString {
 };
 
 struct objc_small_method_t {
-    int32_t name;
-    int32_t types;
-    int32_t imp;
+    rptr_t name;
+    rptr_t types;
+    rptr_t imp;
 };
 
 struct objc_method_t {

@@ -36,6 +36,7 @@
 namespace CustomTypes {
 
 const std::string TaggedPointer = "tptr_t";
+const std::string RelativePointer = "rptr_t";
 const std::string ID = "id";
 const std::string Selector = "SEL";
 const std::string CFString = "CFString";

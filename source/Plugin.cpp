@@ -39,6 +39,7 @@ BN_DECLARE_CORE_ABI_VERSION
 BINARYNINJAPLUGIN bool CorePluginInit()
 {
     TaggedPointerDataRenderer::Register();
+    RelativePointerDataRenderer::Register();
 
     Workflow::registerActivities();
     OneShot::registerCommands();
