@@ -35,8 +35,8 @@
 
 using namespace BinaryNinja;
 
-#define LOG(...) LogDebug("ObjectiveNinja: " __VA_ARGS__)
-#define LOG_BREAK() LOG("===------------------------------------------------------------------===")
+#define LOG(...) LogInfo("ObjectiveNinja: " __VA_ARGS__)
+#define LOG_BREAK() LOG("===----------------------------------------------===")
 
 StructureAnalyzer::StructureAnalyzer(BinaryViewRef bv)
     : m_bv(bv)
@@ -443,7 +443,6 @@ void StructureAnalyzer::runPrivate()
         }
     }
 
-    LOG_BREAK();
     LOG("Found %lu classes (%lu invalid)",
         m_records.classes.size(), totalInvalidClasses);
     LOG("Found %lu class references (%lu invalid)",
