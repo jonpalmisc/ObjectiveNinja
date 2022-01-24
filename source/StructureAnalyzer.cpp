@@ -44,6 +44,7 @@ StructureAnalyzer::StructureAnalyzer(BinaryViewRef bv)
     , m_reader(bv)
     , m_writer(bv)
     , m_isARM64(bv->GetDefaultArchitecture()->GetName() == "aarch64")
+    , m_taggedPointerType(Type::NamedType(m_bv, CustomTypes::TaggedPointer))
     , m_cfStringType(Type::NamedType(m_bv, CustomTypes::CFString))
     , m_methodListType(Type::NamedType(m_bv, CustomTypes::MethodList))
     , m_classDataType(Type::NamedType(m_bv, CustomTypes::ClassData))
@@ -139,8 +140,7 @@ SelectorRefRecord StructureAnalyzer::analyzeSelectorRef(uint64_t address)
 
     LOG("  rawSelector=0x%llx, nameAddress=0x%llx", rawSelector, nameAddress);
 
-    m_bv->DefineDataVariable(address,
-        Type::PointerType(8, Type::NamedType(m_bv, CustomTypes::Selector)));
+    m_bv->DefineDataVariable(address, m_taggedPointerType);
     return { address, rawSelector, nameAddress };
 }
 
@@ -359,7 +359,7 @@ void StructureAnalyzer::runPrivate()
     const auto classListStart = classListSection->GetStart();
     const auto classListEnd = classListStart + classListSection->GetLength();
     for (auto address = classListStart; address < classListEnd; address += 8) {
-        m_bv->DefineDataVariable(address, Type::PointerType(8, m_classType));
+        m_bv->DefineDataVariable(address, m_taggedPointerType);
 
         seek(address);
         const auto classAddress = readTaggedPointer();

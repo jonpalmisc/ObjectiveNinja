@@ -64,6 +64,7 @@ class StructureAnalyzer {
 
     bool m_isARM64;
 
+    TypeRef m_taggedPointerType;
     TypeRef m_cfStringType;
     TypeRef m_methodType;
     TypeRef m_methodListType;
