@@ -49,7 +49,7 @@ struct CFString {
     uint64_t size;
 };
 
-struct objc_small_method_t {
+struct objc_method_entry_t {
     rptr_t name;
     rptr_t types;
     rptr_t imp;

@@ -51,7 +51,7 @@ StructureAnalyzer::StructureAnalyzer(BinaryViewRef bv)
     , m_classType(Type::NamedType(m_bv, CustomTypes::Class))
 {
     if (m_isARM64)
-        m_methodType = Type::NamedType(m_bv, CustomTypes::SmallMethod);
+        m_methodType = Type::NamedType(m_bv, CustomTypes::MethodListEntry);
     else
         m_methodType = Type::NamedType(m_bv, CustomTypes::Method);
 }

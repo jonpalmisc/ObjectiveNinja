@@ -60,7 +60,7 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
     auto classDataType = namedType(bv, "objc_class_ro_t");
     auto methodListType = bv->GetTypeByName(std::string("objc_method_list_t"));
     auto methodType = bv->GetDefaultArchitecture()->GetName() == "aarch64"
-        ? bv->GetTypeByName(std::string("objc_small_method_t"))
+        ? bv->GetTypeByName(std::string("objc_method_entry_t"))
         : bv->GetTypeByName(std::string("objc_method_t"));
 
     // Create data variables and symbols for all CFString instances.

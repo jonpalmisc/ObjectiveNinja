@@ -40,9 +40,9 @@ const std::string RelativePointer = "rptr_t";
 const std::string ID = "id";
 const std::string Selector = "SEL";
 const std::string CFString = "CFString";
-const std::string SmallMethod = "objc_small_method_t";
-const std::string Method = "objc_method_t";
 const std::string MethodList = "objc_method_list_t";
+const std::string Method = "objc_method_t";
+const std::string MethodListEntry = "objc_method_entry_t";
 const std::string Class = "objc_class_t";
 const std::string ClassData = "objc_class_ro_t";
 
