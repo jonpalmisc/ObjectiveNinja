@@ -22,6 +22,12 @@ using SharedAnalysisInfo = std::shared_ptr<ObjectiveNinja::AnalysisInfo>;
  * create data variables, symbols, etc. in the database.
  */
 class InfoHandler {
+    /**
+     * Sanitize a string by searching for series of alphanumeric characters and
+     * concatenating the matches. The input string will first be truncated.
+     */
+    static std::string sanitizeText(const std::string&);
+
 public:
     /**
      * Apply AnalysisInfo to a BinaryView.
