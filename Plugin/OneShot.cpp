@@ -33,6 +33,9 @@
 #include "CustomTypes.hpp"
 #include "GlobalState.hpp"
 #include "StructureAnalyzer.hpp"
+#include "Support/BinaryViewFile.h"
+
+#include <ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h>
 
 void OneShot::defineTypes(BinaryNinja::BinaryView* bv)
 {
@@ -57,6 +60,24 @@ void OneShot::analyzeStructures(BinaryNinja::BinaryView* bv)
 void OneShot::registerCommands()
 {
 #ifdef DEV_MODE
+    auto runNewAnalysis = [](BinaryNinja::BinaryView* bv) {
+        CustomTypes::defineAll(bv);
+
+        auto bvFile = std::make_shared<BinaryViewFile>(bv);
+        auto info = std::make_shared<ObjectiveNinja::AnalysisInfo>();
+        auto analyzers = {
+            std::make_unique<ObjectiveNinja::CFStringAnalyzer>(info, bvFile),
+        };
+
+        for (const auto& analyzer : analyzers)
+            analyzer->run();
+
+        for (auto cfs : info->cfStrings)
+            BinaryNinja::LogInfo("Found CFString at 0x%llx (%lu bytes at 0x%llx)", cfs.address, cfs.size, cfs.dataAddress);
+    };
+
+    BinaryNinja::PluginCommand::Register("Objective Ninja \\ Run Analysis 2.0",
+        "", runNewAnalysis);
     BinaryNinja::PluginCommand::Register("Objective Ninja \\ Define Types",
         "", OneShot::defineTypes);
 #endif
