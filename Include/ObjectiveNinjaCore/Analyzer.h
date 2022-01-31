@@ -18,12 +18,25 @@ using SharedAnalysisInfo = std::shared_ptr<AnalysisInfo>;
 using SharedAbstractFile = std::shared_ptr<AbstractFile>;
 
 /**
+ * Bitmask used to extract the relevant part of a tagged pointer.
+ */
+constexpr uint64_t PointerMask = 0xFFFFFFFF;
+
+/**
  * Abstract base class for analyzers.
  */
 class Analyzer {
 protected:
     std::shared_ptr<AnalysisInfo> m_info;
     std::shared_ptr<AbstractFile> m_file;
+
+    /**
+     * Untag image-base relative offset.
+     */
+    [[nodiscard]] inline uint64_t uiro(uint64_t address) const
+    {
+        return (address & PointerMask) + m_file->imageBase();
+    }
 
 public:
     Analyzer(SharedAnalysisInfo, SharedAbstractFile);
