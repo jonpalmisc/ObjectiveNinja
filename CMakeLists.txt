@@ -27,6 +27,8 @@ set(PLUGIN_SOURCE
   Plugin/DataRenderers.cpp
   Plugin/GlobalState.cpp
   Plugin/GlobalState.hpp
+  Plugin/InfoHandler.h
+  Plugin/InfoHandler.cpp
   Plugin/OneShot.cpp
   Plugin/OneShot.hpp
   Plugin/Plugin.cpp

@@ -32,6 +32,7 @@
 
 #include "CustomTypes.hpp"
 #include "GlobalState.hpp"
+#include "InfoHandler.h"
 #include "StructureAnalyzer.hpp"
 #include "Support/BinaryViewFile.h"
 
@@ -72,8 +73,7 @@ void OneShot::registerCommands()
         for (const auto& analyzer : analyzers)
             analyzer->run();
 
-        for (auto cfs : info->cfStrings)
-            BinaryNinja::LogInfo("Found CFString at 0x%llx (%lu bytes at 0x%llx)", cfs.address, cfs.size, cfs.dataAddress);
+        InfoHandler::applyInfoToView(info, bv);
     };
 
     BinaryNinja::PluginCommand::Register("Objective Ninja \\ Run Analysis 2.0",
