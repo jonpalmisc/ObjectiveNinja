@@ -5,7 +5,21 @@ project(ObjectiveNinja)
 # Add subdirectory for the Binary Ninja C++ API
 add_subdirectory(vendor/api)
 
-set(OBJ_NINJA_SOURCE
+set(CORE_SOURCE
+  Include/ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h
+  Include/ObjectiveNinjaCore/AbstractFile.h
+  Include/ObjectiveNinjaCore/AnalysisInfo.h
+  Include/ObjectiveNinjaCore/Analyzer.h
+  Core/Analyzers/CFStringAnalyzer.cpp
+  Core/Analyzer.cpp)
+
+add_library(ObjectiveNinjaCore STATIC ${CORE_SOURCE})
+target_compile_features(ObjectiveNinjaCore PRIVATE cxx_std_17)
+target_include_directories(ObjectiveNinjaCore PUBLIC Include)
+
+set(PLUGIN_SOURCE
+  source/Support/BinaryViewFile.h
+  source/Support/BinaryViewFile.cpp
   source/AnalysisRecords.hpp
   source/CustomTypes.cpp
   source/CustomTypes.hpp
@@ -24,8 +38,8 @@ set(OBJ_NINJA_SOURCE
 # Used to enable some debugging actions, etc.
 option(DEV_MODE "Enable developer features" OFF)
 
-add_library(ObjectiveNinja SHARED ${OBJ_NINJA_SOURCE})
-target_link_libraries(ObjectiveNinja binaryninjaapi)
+add_library(ObjectiveNinja SHARED ${PLUGIN_SOURCE})
+target_link_libraries(ObjectiveNinja ObjectiveNinjaCore binaryninjaapi)
 target_compile_features(ObjectiveNinja PRIVATE cxx_std_17 c_std_99)
 target_compile_definitions(ObjectiveNinja PRIVATE DEV_MODE=${DEV_MODE})
 
