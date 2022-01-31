@@ -9,6 +9,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <unordered_map>
 #include <vector>
 
 namespace ObjectiveNinja {
@@ -34,6 +35,14 @@ struct ClassInfo {
 };
 
 /**
+ * A description of an Objective-C method list.
+ */
+struct MethodListInfo {
+    uint64_t address {};
+    uint32_t methodCount {};
+};
+
+/**
  * Analysis info storage.
  *
  * AnalysisInfo is intended to be a common structure for persisting information
@@ -43,6 +52,7 @@ struct ClassInfo {
 struct AnalysisInfo {
     std::vector<CFStringInfo> cfStrings;
     std::vector<ClassInfo> classes;
+    std::unordered_map<uint64_t, MethodListInfo> methodLists;
 };
 
 }

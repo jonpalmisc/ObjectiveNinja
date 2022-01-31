@@ -58,6 +58,10 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
     auto cfStringType = namedType(bv, "CFString");
     auto classType = namedType(bv, "objc_class_t");
     auto classDataType = namedType(bv, "objc_class_ro_t");
+    auto methodListType = bv->GetTypeByName(std::string("objc_method_list_t"));
+    auto methodType = bv->GetDefaultArchitecture()->GetName() == "aarch64"
+        ? bv->GetTypeByName(std::string("objc_small_method_t"))
+        : bv->GetTypeByName(std::string("objc_method_t"));
 
     // Create data variables and symbols for all CFString instances.
     for (auto csi : info->cfStrings) {
@@ -84,6 +88,22 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
         defineSymbol(bv, ci.address, className, "cl_");
         defineSymbol(bv, ci.dataAddress, className, "ro_");
         defineSymbol(bv, ci.nameAddress, className, "nm_");
+
+        auto mli = info->methodLists[ci.methodListAddress];
+        if (mli.address == 0 || mli.methodCount == 0)
+            continue;
+
+        // TODO: Create an anonymous structure for the method list rather than
+        // creating separate variables for the header and each method.
+
+        // Create data variables for each method in the method list.
+        for (auto i = 0; i < mli.methodCount; ++i) {
+            auto address = ci.methodListAddress + 0x8 + (i * methodType->GetWidth());
+            defineVariable(bv, address, methodType);
+        }
+
+        // Create a data variable and symbol for the method list header.
+        defineVariable(bv, ci.methodListAddress, methodListType);
         defineSymbol(bv, ci.methodListAddress, className, "ml_");
     }
 }

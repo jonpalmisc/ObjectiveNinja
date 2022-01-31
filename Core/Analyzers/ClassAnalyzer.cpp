@@ -24,12 +24,18 @@ void ClassAnalyzer::run()
 
     for (auto address = sectionStart; address < sectionEnd; address += 8) {
         ClassInfo ci;
+        MethodListInfo mli;
+
         ci.listPointer = address;
         ci.address = uiro(m_file->readLong(address));
         ci.dataAddress = uiro(m_file->readLong(ci.address + 0x20));
         ci.nameAddress = uiro(m_file->readLong(ci.dataAddress + 0x18));
         ci.methodListAddress = uiro(m_file->readLong(ci.dataAddress + 0x20));
 
+        mli.address = ci.methodListAddress;
+        mli.methodCount = m_file->readInt(mli.address + 0x4);
+
         m_info->classes.emplace_back(ci);
+        m_info->methodLists[mli.address] = mli;
     }
 }
