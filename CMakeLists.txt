@@ -49,3 +49,7 @@ if(AUTO_INSTALL_PLUGIN)
     COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:ObjectiveNinja>
     "~/Library/Application Support/Binary Ninja/plugins/")
 endif()
+
+add_custom_target(format
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  COMMAND clang-format -i --style=WebKit ${CORE_SOURCE} ${PLUGIN_SOURCE})
