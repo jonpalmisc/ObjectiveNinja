@@ -23,6 +23,17 @@ struct CFStringInfo {
 };
 
 /**
+ * A description of an Objective-C class.
+ */
+struct ClassInfo {
+    uint64_t listPointer {};
+    uint64_t address {};
+    uint64_t dataAddress {};
+    uint64_t nameAddress {};
+    uint64_t methodListAddress {};
+};
+
+/**
  * Analysis info storage.
  *
  * AnalysisInfo is intended to be a common structure for persisting information
@@ -31,6 +42,7 @@ struct CFStringInfo {
  */
 struct AnalysisInfo {
     std::vector<CFStringInfo> cfStrings;
+    std::vector<ClassInfo> classes;
 };
 
 }

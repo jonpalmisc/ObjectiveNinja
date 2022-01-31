@@ -37,6 +37,7 @@
 #include "Support/BinaryViewFile.h"
 
 #include <ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h>
+#include <ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h>
 
 void OneShot::defineTypes(BinaryNinja::BinaryView* bv)
 {
@@ -66,9 +67,10 @@ void OneShot::registerCommands()
 
         auto bvFile = std::make_shared<BinaryViewFile>(bv);
         auto info = std::make_shared<ObjectiveNinja::AnalysisInfo>();
-        auto analyzers = {
-            std::make_unique<ObjectiveNinja::CFStringAnalyzer>(info, bvFile),
-        };
+
+        std::vector<std::unique_ptr<ObjectiveNinja::Analyzer>> analyzers;
+        analyzers.emplace_back(new ObjectiveNinja::CFStringAnalyzer(info, bvFile));
+        analyzers.emplace_back(new ObjectiveNinja::ClassAnalyzer(info, bvFile));
 
         for (const auto& analyzer : analyzers)
             analyzer->run();

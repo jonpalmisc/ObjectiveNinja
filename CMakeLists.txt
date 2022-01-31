@@ -7,10 +7,12 @@ add_subdirectory(vendor/api)
 
 set(CORE_SOURCE
   Include/ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h
+  Include/ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h
   Include/ObjectiveNinjaCore/AbstractFile.h
   Include/ObjectiveNinjaCore/AnalysisInfo.h
   Include/ObjectiveNinjaCore/Analyzer.h
   Core/Analyzers/CFStringAnalyzer.cpp
+  Core/Analyzers/ClassAnalyzer.cpp
   Core/Analyzer.cpp)
 
 add_library(ObjectiveNinjaCore STATIC ${CORE_SOURCE})

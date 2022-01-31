@@ -12,6 +12,8 @@
 #include <binaryninjaapi.h>
 
 using BinaryViewRef = BinaryNinja::Ref<BinaryNinja::BinaryView>;
+using TypeRef = BinaryNinja::Ref<BinaryNinja::Type>;
+using SymbolRef = BinaryNinja::Ref<BinaryNinja::Symbol>;
 using SharedAnalysisInfo = std::shared_ptr<ObjectiveNinja::AnalysisInfo>;
 
 /**
@@ -27,6 +29,27 @@ class InfoHandler {
      * concatenating the matches. The input string will first be truncated.
      */
     static std::string sanitizeText(const std::string&);
+
+    /**
+     * Get the type with the given name defined inside the BinaryView.
+     */
+    static inline TypeRef namedType(BinaryViewRef, const std::string&);
+
+    /**
+     * Create a type for a string (character array) of the given size.
+     */
+    static inline TypeRef stringType(size_t);
+
+    /**
+     * Shorthand function for defining a user data variable.
+     */
+    static inline void defineVariable(BinaryViewRef, uint64_t, TypeRef);
+
+    /**
+     * Shorthand function for defining a user symbol, with an optional prefix.
+     */
+    static inline void defineSymbol(BinaryViewRef, uint64_t,
+        const std::string& name, const std::string& prefix = "");
 
 public:
     /**

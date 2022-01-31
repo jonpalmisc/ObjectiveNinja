@@ -29,22 +29,61 @@ std::string InfoHandler::sanitizeText(const std::string& text)
     return result;
 }
 
+TypeRef InfoHandler::namedType(BinaryViewRef bv, const std::string& name)
+{
+    return Type::NamedType(bv, name);
+}
+
+TypeRef InfoHandler::stringType(size_t size)
+{
+    return Type::ArrayType(Type::IntegerType(1, true), size + 1);
+}
+
+void InfoHandler::defineVariable(BinaryViewRef bv, uint64_t address, TypeRef type)
+{
+    bv->DefineUserDataVariable(address, type);
+}
+
+void InfoHandler::defineSymbol(BinaryViewRef bv, uint64_t address, const std::string& name,
+    const std::string& prefix)
+{
+    bv->DefineUserSymbol(new Symbol(DataSymbol, prefix + name, address));
+}
+
 void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
 {
     BinaryReader reader(bv);
 
-    auto cfStringType = Type::NamedType(bv, std::string("CFString"));
+    auto taggedPointerType = namedType(bv, "tptr_t");
+    auto cfStringType = namedType(bv, "CFString");
+    auto classType = namedType(bv, "objc_class_t");
+    auto classDataType = namedType(bv, "objc_class_ro_t");
+
+    // Create data variables and symbols for all CFString instances.
     for (auto csi : info->cfStrings) {
-        bv->DefineUserDataVariable(csi.address, cfStringType);
-
-        auto stringType = Type::ArrayType(Type::IntegerType(1, true), csi.size + 1);
-        bv->DefineUserDataVariable(csi.dataAddress, stringType);
-
         reader.Seek(csi.dataAddress);
         auto text = reader.ReadString(csi.size + 1);
         auto sanitizedText = sanitizeText(text);
 
-        auto s = new Symbol(DataSymbol, "cfs_" + sanitizedText, csi.address);
-        bv->DefineUserSymbol(s);
+        defineVariable(bv, csi.address, cfStringType);
+        defineVariable(bv, csi.dataAddress, stringType(csi.size));
+        defineSymbol(bv, csi.address, sanitizedText, "cf_");
+        defineSymbol(bv, csi.dataAddress, sanitizedText, "as_");
+    }
+
+    // Create data variables and symbols for the analyzed classes.
+    for (auto ci : info->classes) {
+        reader.Seek(ci.nameAddress);
+        auto className = reader.ReadCString();
+
+        defineVariable(bv, ci.listPointer, taggedPointerType);
+        defineVariable(bv, ci.address, classType);
+        defineVariable(bv, ci.dataAddress, classDataType);
+        defineVariable(bv, ci.nameAddress, stringType(className.size()));
+        defineSymbol(bv, ci.listPointer, className, "cp_");
+        defineSymbol(bv, ci.address, className, "cl_");
+        defineSymbol(bv, ci.dataAddress, className, "ro_");
+        defineSymbol(bv, ci.nameAddress, className, "nm_");
+        defineSymbol(bv, ci.methodListAddress, className, "ml_");
     }
 }
