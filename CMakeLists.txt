@@ -18,22 +18,22 @@ target_compile_features(ObjectiveNinjaCore PRIVATE cxx_std_17)
 target_include_directories(ObjectiveNinjaCore PUBLIC Include)
 
 set(PLUGIN_SOURCE
-  source/Support/BinaryViewFile.h
-  source/Support/BinaryViewFile.cpp
-  source/AnalysisRecords.hpp
-  source/CustomTypes.cpp
-  source/CustomTypes.hpp
-  source/DataRenderers.hpp
-  source/DataRenderers.cpp
-  source/GlobalState.cpp
-  source/GlobalState.hpp
-  source/OneShot.cpp
-  source/OneShot.hpp
-  source/Plugin.cpp
-  source/StructureAnalyzer.cpp
-  source/StructureAnalyzer.hpp
-  source/Workflow.cpp
-  source/Workflow.hpp)
+  Plugin/Support/BinaryViewFile.h
+  Plugin/Support/BinaryViewFile.cpp
+  Plugin/AnalysisRecords.hpp
+  Plugin/CustomTypes.cpp
+  Plugin/CustomTypes.hpp
+  Plugin/DataRenderers.hpp
+  Plugin/DataRenderers.cpp
+  Plugin/GlobalState.cpp
+  Plugin/GlobalState.hpp
+  Plugin/OneShot.cpp
+  Plugin/OneShot.hpp
+  Plugin/Plugin.cpp
+  Plugin/StructureAnalyzer.cpp
+  Plugin/StructureAnalyzer.hpp
+  Plugin/Workflow.cpp
+  Plugin/Workflow.hpp)
 
 # Used to enable some debugging actions, etc.
 option(DEV_MODE "Enable developer features" OFF)
