@@ -69,14 +69,19 @@ public:
     }
 
     /**
+     * Get the base offset of the image/file.
+     */
+    virtual uint64_t imageBase() const = 0;
+
+    /**
      * Get the offset corresponding to the start of the given section.
      */
-    virtual uint64_t sectionStart(const std::string&) = 0;
+    virtual uint64_t sectionStart(const std::string&) const = 0;
 
     /**
      * Get the offset corresponding to the end of the given section.
      */
-    virtual uint64_t sectionEnd(const std::string&) = 0;
+    virtual uint64_t sectionEnd(const std::string&) const = 0;
 };
 
 }

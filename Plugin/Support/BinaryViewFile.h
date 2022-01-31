@@ -26,6 +26,7 @@ public:
     uint32_t readInt() override;
     uint64_t readLong() override;
 
-    uint64_t sectionStart(const std::string& name) override;
-    uint64_t sectionEnd(const std::string& name) override;
+    uint64_t imageBase() const override;
+    uint64_t sectionStart(const std::string& name) const override;
+    uint64_t sectionEnd(const std::string& name) const override;
 };

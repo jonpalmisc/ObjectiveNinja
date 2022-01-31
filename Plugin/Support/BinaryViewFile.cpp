@@ -34,7 +34,12 @@ uint64_t BinaryViewFile::readLong()
     return m_reader.Read64();
 }
 
-uint64_t BinaryViewFile::sectionStart(const std::string& name)
+uint64_t BinaryViewFile::imageBase() const
+{
+    return m_bv->GetStart();
+}
+
+uint64_t BinaryViewFile::sectionStart(const std::string& name) const
 {
     auto section = m_bv->GetSectionByName(name);
     if (!section)
@@ -43,7 +48,7 @@ uint64_t BinaryViewFile::sectionStart(const std::string& name)
     return section->GetStart();
 }
 
-uint64_t BinaryViewFile::sectionEnd(const std::string& name)
+uint64_t BinaryViewFile::sectionEnd(const std::string& name) const
 {
     auto section = m_bv->GetSectionByName(name);
     if (!section)
