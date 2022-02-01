@@ -30,10 +30,12 @@
 
 #include "Workflow.hpp"
 
-#include "AnalysisRecords.hpp"
 #include "CustomTypes.hpp"
 #include "GlobalState.hpp"
-#include "StructureAnalyzer.hpp"
+#include "InfoHandler.h"
+
+#include <ObjectiveNinjaCore/AnalysisProvider.h>
+#include <ObjectiveNinjaCore/Support/BinaryViewFile.h>
 
 #include <binaryninjaapi.h>
 #include <lowlevelilinstruction.h>
@@ -105,17 +107,25 @@ void Workflow::rewriteMethodCall(LLILFunctionRef ssa, size_t insnIndex)
     // either the selector reference or the method's name, which in both cases
     // is dereferenced to retrieve a selector.
     const auto selectorRegister = params[1].GetSourceSSARegister<LLIL_REG_SSA>();
-    uint64_t selector = ssa->GetSSARegisterValue(selectorRegister).value;
-    selector &= 0xFFFFFFFF;
-    selector += bv->GetStart();
+    uint64_t rawSelector = ssa->GetSSARegisterValue(selectorRegister).value;
 
-    // Check the analysis records for an implementation address corresponding to
-    // the current selector. It is possible that no implementation address
-    // exists, for example, when the selector is for a method defined outside
-    // the current binary. If this is the case, there are no meaningful changes
-    // that can be made to the IL, and the operation should be aborted.
-    const auto impAddress = GlobalState::analysisRecords(bv)->impMap[selector];
-    if (!impAddress)
+    // Check the analysis info for a selector reference corresponding to the
+    // current selector. It is possible no such selector reference exists, for
+    // example, if the selector is for a method defined outside the current
+    // binary. If this is the case, there are no meaningful changes that can be
+    // made to the IL, and the operation should be aborted.
+    const auto info = GlobalState::analysisInfo(bv);
+    if (!info->selectorRefs.count(rawSelector))
+        return;
+    const auto selectorRef = info->selectorRefs[rawSelector];
+
+    // Attempt to lookup the implementation for the given selector, first by
+    // using the raw selector, then by the address of the selector reference. If
+    // the lookup fails in both cases, abort.
+    uint64_t implAddress = info->methodImpls[selectorRef->rawSelector];
+    if (!implAddress)
+        implAddress = info->methodImpls[selectorRef->address];
+    if (!implAddress)
         return;
 
     const auto llilIndex = ssa->GetNonSSAInstructionIndex(insnIndex);
@@ -125,7 +135,7 @@ void Workflow::rewriteMethodCall(LLILFunctionRef ssa, size_t insnIndex)
     // the method implementation. This turns the "indirect call" piped through
     // `objc_msgSend` and makes it a normal C-style function call.
     auto callDestExpr = llilInsn.GetDestExpr<LLIL_CALL>();
-    callDestExpr.Replace(llil->ConstPointer(callDestExpr.size, impAddress, callDestExpr));
+    callDestExpr.Replace(llil->ConstPointer(callDestExpr.size, implAddress, callDestExpr));
     llilInsn.Replace(llil->Call(callDestExpr.exprIndex, llilInsn));
 
     llil->GenerateSSAForm();
@@ -150,19 +160,23 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
     }
 
     // The workflow relies on some data acquired through analysis of Objective-C
-    // structures present in the binary. The structure analysis must run exactly
-    // once per binary. Until the Workflows API supports a "run once" idiom,
-    // this is accomplished through a mutex and a map of analysis records, which
-    // also serves as the list of binaries that have had structure analysis.
+    // structures present in the binary. The structure analysis must run
+    // exactly once per binary. Until the Workflows API supports a "run once"
+    // idiom, this is accomplished through a mutex and a check for present
+    // analysis information.
     {
         std::scoped_lock<std::mutex> lock(g_initialAnalysisMutex);
 
-        if (!GlobalState::hasAnalysisRecords(bv)) {
+        if (!GlobalState::hasAnalysisInfo(bv)) {
             CustomTypes::defineAll(bv);
-            auto analysisRecords = StructureAnalyzer::run(bv);
+
+            auto file = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
+            auto info = ObjectiveNinja::AnalysisProvider::infoForFile(file);
+
+            InfoHandler::applyInfoToView(info, bv);
 
             GlobalState::setFlag(bv, Flag::DidRunStructureAnalysis);
-            GlobalState::storeAnalysisRecords(bv, analysisRecords);
+            GlobalState::storeAnalysisInfo(bv, info);
         }
     }
 

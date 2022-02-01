@@ -30,8 +30,11 @@
 
 #pragma once
 
-#include "AnalysisRecords.hpp"
+#include <ObjectiveNinjaCore/AnalysisInfo.h>
+
 #include "Workflow.hpp"
+
+using SharedAnalysisInfo = std::shared_ptr<ObjectiveNinja::AnalysisInfo>;
 
 /// Namepace to hold metadata flag key constants.
 namespace Flag {
@@ -47,14 +50,14 @@ class GlobalState {
     static std::uintptr_t id(BinaryViewRef);
 
 public:
-    /// Get the analysis records for a view.
-    static AnalysisRecords* analysisRecords(BinaryViewRef);
+    /// Get the analysis info for a view.
+    static SharedAnalysisInfo analysisInfo(BinaryViewRef);
 
-    /// Store the analysis records for a view.
-    static void storeAnalysisRecords(BinaryViewRef, AnalysisRecords);
+    /// Store analysis info for a view.
+    static void storeAnalysisInfo(BinaryViewRef, SharedAnalysisInfo);
 
-    /// Check if analysis records exist for a view.
-    static bool hasAnalysisRecords(BinaryViewRef);
+    /// Check if analysis info exists for a view.
+    static bool hasAnalysisInfo(BinaryViewRef);
 
     /// Add a view to the list of ignored views.
     static void addIgnoredView(BinaryViewRef);

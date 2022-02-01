@@ -33,7 +33,6 @@
 #include "CustomTypes.hpp"
 #include "GlobalState.hpp"
 #include "InfoHandler.h"
-#include "StructureAnalyzer.hpp"
 
 #include <ObjectiveNinjaCore/AnalysisProvider.h>
 
@@ -58,7 +57,11 @@ void OneShot::analyzeStructures(BinaryNinja::BinaryView* bv)
     }
 
     CustomTypes::defineAll(bv);
-    StructureAnalyzer::run(bv);
+
+    auto file = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
+    auto info = ObjectiveNinja::AnalysisProvider::infoForFile(file);
+
+    InfoHandler::applyInfoToView(info, bv);
 
     GlobalState::setFlag(bv, Flag::DidRunWorkflow);
 }
@@ -66,17 +69,6 @@ void OneShot::analyzeStructures(BinaryNinja::BinaryView* bv)
 void OneShot::registerCommands()
 {
 #ifdef DEV_MODE
-    auto runNewAnalysis = [](BinaryNinja::BinaryView* bv) {
-        CustomTypes::defineAll(bv);
-
-        auto file = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
-        auto info = ObjectiveNinja::AnalysisProvider::infoForFile(file);
-
-        InfoHandler::applyInfoToView(info, bv);
-    };
-
-    BinaryNinja::PluginCommand::Register("Objective Ninja \\ Run Analysis 2.0",
-        "", runNewAnalysis);
     BinaryNinja::PluginCommand::Register("Objective Ninja \\ Define Types",
         "", OneShot::defineTypes);
 #endif

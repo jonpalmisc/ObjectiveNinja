@@ -34,7 +34,7 @@
 #include <set>
 #include <unordered_map>
 
-static std::unordered_map<BinaryViewID, AnalysisRecords> g_analysisRecords;
+static std::unordered_map<BinaryViewID, SharedAnalysisInfo> g_analysisRecords;
 static std::set<BinaryViewID> g_ignoredViews;
 
 std::uintptr_t GlobalState::id(BinaryViewRef bv)
@@ -42,20 +42,20 @@ std::uintptr_t GlobalState::id(BinaryViewRef bv)
     return reinterpret_cast<uintptr_t>(bv->GetObject());
 }
 
-void GlobalState::storeAnalysisRecords(BinaryViewRef bv, AnalysisRecords records)
+void GlobalState::storeAnalysisInfo(BinaryViewRef bv, SharedAnalysisInfo records)
 {
     g_analysisRecords[id(std::move(bv))] = std::move(records);
 }
 
-AnalysisRecords* GlobalState::analysisRecords(BinaryViewRef bv)
+SharedAnalysisInfo GlobalState::analysisInfo(BinaryViewRef bv)
 {
-    if (hasAnalysisRecords(bv))
-        return &g_analysisRecords[id(bv)];
+    if (hasAnalysisInfo(bv))
+        return g_analysisRecords[id(bv)];
 
     return nullptr;
 }
 
-bool GlobalState::hasAnalysisRecords(BinaryViewRef bv)
+bool GlobalState::hasAnalysisInfo(BinaryViewRef bv)
 {
     return g_analysisRecords.count(id(std::move(bv))) > 0;
 }

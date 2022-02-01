@@ -42,7 +42,6 @@ endif()
 # Binary Ninja plugin ----------------------------------------------------------
 
 set(PLUGIN_SOURCE
-  Plugin/AnalysisRecords.hpp
   Plugin/CustomTypes.cpp
   Plugin/CustomTypes.hpp
   Plugin/DataRenderers.hpp
@@ -54,8 +53,6 @@ set(PLUGIN_SOURCE
   Plugin/OneShot.cpp
   Plugin/OneShot.hpp
   Plugin/Plugin.cpp
-  Plugin/StructureAnalyzer.cpp
-  Plugin/StructureAnalyzer.hpp
   Plugin/Workflow.cpp
   Plugin/Workflow.hpp)
 
