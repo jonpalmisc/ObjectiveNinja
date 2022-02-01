@@ -38,6 +38,7 @@
 
 #include <ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h>
 #include <ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h>
+#include <ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h>
 
 void OneShot::defineTypes(BinaryNinja::BinaryView* bv)
 {
@@ -70,6 +71,7 @@ void OneShot::registerCommands()
 
         std::vector<std::unique_ptr<ObjectiveNinja::Analyzer>> analyzers;
         analyzers.emplace_back(new ObjectiveNinja::CFStringAnalyzer(info, bvFile));
+        analyzers.emplace_back(new ObjectiveNinja::SelectorAnalyzer(info, bvFile));
         analyzers.emplace_back(new ObjectiveNinja::ClassAnalyzer(info, bvFile));
 
         for (const auto& analyzer : analyzers)

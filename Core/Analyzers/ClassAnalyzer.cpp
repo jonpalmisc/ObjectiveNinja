@@ -34,7 +34,19 @@ void ClassAnalyzer::run()
         ci.methodListAddress = uiro(m_file->readLong(ci.dataAddress + 0x20));
 
         mli.address = ci.methodListAddress;
-        mli.methodCount = m_file->readInt(mli.address + 0x4);
+
+        auto methodCount = m_file->readInt(mli.address + 0x4);
+        for (auto i = 0; i < methodCount; ++i) {
+            MethodInfo mi;
+            mi.address = mli.address + 8 + (i * 12);
+
+            m_file->seek(mi.address);
+            mi.nameAddress = mi.address + static_cast<int32_t>(m_file->readInt());
+            mi.typeAddress = mi.address + 4 + static_cast<int32_t>(m_file->readInt());
+            mi.implAddress = mi.address + 8 + static_cast<int32_t>(m_file->readInt());
+
+            mli.methods.emplace_back(mi);
+        }
 
         m_info->classes.emplace_back(ci);
         m_info->methodLists[mli.address] = mli;

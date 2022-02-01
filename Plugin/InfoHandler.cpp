@@ -45,9 +45,9 @@ void InfoHandler::defineVariable(BinaryViewRef bv, uint64_t address, TypeRef typ
 }
 
 void InfoHandler::defineSymbol(BinaryViewRef bv, uint64_t address, const std::string& name,
-    const std::string& prefix)
+    const std::string& prefix, BNSymbolType symbolType)
 {
-    bv->DefineUserSymbol(new Symbol(DataSymbol, prefix + name, address));
+    bv->DefineUserSymbol(new Symbol(symbolType, prefix + name, address));
 }
 
 void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
@@ -87,19 +87,24 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
         defineSymbol(bv, ci.nameAddress, ci.name, "nm_");
 
         auto mli = info->methodLists[ci.methodListAddress];
-        if (mli.address == 0 || mli.methodCount == 0)
+        if (mli.address == 0 || mli.methods.empty())
             continue;
 
-        // TODO: Create an anonymous structure for the method list rather than
-        // creating separate variables for the header and each method.
-
         // Create data variables for each method in the method list.
-        for (auto i = 0; i < mli.methodCount; ++i) {
-            auto address = ci.methodListAddress + 0x8 + (i * methodType->GetWidth());
-            defineVariable(bv, address, methodType);
+        for (const auto& mi : mli.methods) {
+            auto sel = info->selectorRefs[mi.nameAddress];
+
+            defineVariable(bv, mi.address, methodType);
+            defineVariable(bv, sel->nameAddress, stringType(sel->name.size()));
+            defineSymbol(bv, mi.address, sel->name, "mt_");
+            defineSymbol(bv, mi.nameAddress, sel->name, "sr_");
+            defineSymbol(bv, sel->nameAddress, sel->name, "sn_");
         }
 
         // Create a data variable and symbol for the method list header.
+        //
+        // TODO: Create an anonymous structure for the entire method list rather
+        // than creating separate variables for the header and each method.
         defineVariable(bv, ci.methodListAddress, methodListType);
         defineSymbol(bv, ci.methodListAddress, ci.name, "ml_");
     }

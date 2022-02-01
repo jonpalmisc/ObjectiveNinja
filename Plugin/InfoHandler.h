@@ -49,7 +49,8 @@ class InfoHandler {
      * Shorthand function for defining a user symbol, with an optional prefix.
      */
     static inline void defineSymbol(BinaryViewRef, uint64_t,
-        const std::string& name, const std::string& prefix = "");
+        const std::string& name, const std::string& prefix = "",
+        BNSymbolType type = DataSymbol);
 
 public:
     /**

@@ -9,6 +9,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <memory>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -25,6 +26,18 @@ struct CFStringInfo {
 };
 
 /**
+ * A description of a selector reference.
+ */
+struct SelectorRefInfo {
+    uint64_t address {};
+    uint64_t rawSelector {};
+    uint64_t nameAddress {};
+    std::string name {};
+};
+
+using SharedSelectorRefInfo = std::shared_ptr<SelectorRefInfo>;
+
+/**
  * A description of an Objective-C class.
  */
 struct ClassInfo {
@@ -37,11 +50,22 @@ struct ClassInfo {
 };
 
 /**
+ * A description of an Objective-C method.
+ */
+struct MethodInfo {
+    uint64_t address {};
+    uint64_t nameAddress {};
+    std::string name {};
+    uint64_t typeAddress {};
+    uint64_t implAddress {};
+};
+
+/**
  * A description of an Objective-C method list.
  */
 struct MethodListInfo {
     uint64_t address {};
-    uint32_t methodCount {};
+    std::vector<MethodInfo> methods {};
 };
 
 /**
@@ -52,9 +76,10 @@ struct MethodListInfo {
  * analysis should be stored here, ideally in the form of other *Info structs.
  */
 struct AnalysisInfo {
-    std::vector<CFStringInfo> cfStrings;
-    std::vector<ClassInfo> classes;
-    std::unordered_map<uint64_t, MethodListInfo> methodLists;
+    std::vector<CFStringInfo> cfStrings {};
+    std::unordered_map<uint64_t, SharedSelectorRefInfo> selectorRefs {};
+    std::vector<ClassInfo> classes {};
+    std::unordered_map<uint64_t, MethodListInfo> methodLists {};
 };
 
 }
