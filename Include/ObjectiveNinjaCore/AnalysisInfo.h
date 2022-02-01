@@ -9,6 +9,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <string>
 #include <unordered_map>
 #include <vector>
 
@@ -31,6 +32,7 @@ struct ClassInfo {
     uint64_t address {};
     uint64_t dataAddress {};
     uint64_t nameAddress {};
+    std::string name {};
     uint64_t methodListAddress {};
 };
 

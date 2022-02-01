@@ -77,17 +77,14 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
 
     // Create data variables and symbols for the analyzed classes.
     for (auto ci : info->classes) {
-        reader.Seek(ci.nameAddress);
-        auto className = reader.ReadCString();
-
         defineVariable(bv, ci.listPointer, taggedPointerType);
         defineVariable(bv, ci.address, classType);
         defineVariable(bv, ci.dataAddress, classDataType);
-        defineVariable(bv, ci.nameAddress, stringType(className.size()));
-        defineSymbol(bv, ci.listPointer, className, "cp_");
-        defineSymbol(bv, ci.address, className, "cl_");
-        defineSymbol(bv, ci.dataAddress, className, "ro_");
-        defineSymbol(bv, ci.nameAddress, className, "nm_");
+        defineVariable(bv, ci.nameAddress, stringType(ci.name.size()));
+        defineSymbol(bv, ci.listPointer, ci.name, "cp_");
+        defineSymbol(bv, ci.address, ci.name, "cl_");
+        defineSymbol(bv, ci.dataAddress, ci.name, "ro_");
+        defineSymbol(bv, ci.nameAddress, ci.name, "nm_");
 
         auto mli = info->methodLists[ci.methodListAddress];
         if (mli.address == 0 || mli.methodCount == 0)
@@ -104,6 +101,6 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
 
         // Create a data variable and symbol for the method list header.
         defineVariable(bv, ci.methodListAddress, methodListType);
-        defineSymbol(bv, ci.methodListAddress, className, "ml_");
+        defineSymbol(bv, ci.methodListAddress, ci.name, "ml_");
     }
 }

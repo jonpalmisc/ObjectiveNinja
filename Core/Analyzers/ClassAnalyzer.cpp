@@ -30,6 +30,7 @@ void ClassAnalyzer::run()
         ci.address = uiro(m_file->readLong(address));
         ci.dataAddress = uiro(m_file->readLong(ci.address + 0x20));
         ci.nameAddress = uiro(m_file->readLong(ci.dataAddress + 0x18));
+        ci.name = m_file->readString(ci.nameAddress);
         ci.methodListAddress = uiro(m_file->readLong(ci.dataAddress + 0x20));
 
         mli.address = ci.methodListAddress;

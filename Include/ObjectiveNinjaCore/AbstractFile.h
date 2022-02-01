@@ -34,11 +34,7 @@ public:
     /**
      * Read a byte at the given offset.
      */
-    uint8_t readByte(uint64_t offset)
-    {
-        seek(offset);
-        return readByte();
-    }
+    uint8_t readByte(uint64_t offset);
 
     /**
      * Read a 32-bit integer at the current reader offset.
@@ -48,11 +44,7 @@ public:
     /**
      * Read a 32-bit integer at the given offset.
      */
-    uint32_t readInt(uint64_t offset)
-    {
-        seek(offset);
-        return readInt();
-    }
+    uint32_t readInt(uint64_t offset);
 
     /**
      * Read a 64-bit integer at the current reader offset.
@@ -62,11 +54,19 @@ public:
     /**
      * Read a 64-bit integer at the given offset.
      */
-    uint64_t readLong(uint64_t offset)
-    {
-        seek(offset);
-        return readLong();
-    }
+    uint64_t readLong(uint64_t offset);
+
+    /**
+     * Read a string starting at the current reader offset. If no max length is
+     * specified, a null-terminated string will be read.
+     */
+    std::string readString(size_t maxLength = 0);
+
+    /**
+     * Read a string starting at the given offset. If no max length is
+     * specified, a null-terminated string will be read.
+     */
+    std::string readString(uint64_t, size_t maxLength = 0);
 
     /**
      * Get the base offset of the image/file.

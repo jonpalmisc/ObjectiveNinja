@@ -13,6 +13,7 @@ set(CORE_SOURCE
   Include/ObjectiveNinjaCore/Analyzer.h
   Core/Analyzers/CFStringAnalyzer.cpp
   Core/Analyzers/ClassAnalyzer.cpp
+  Core/AbstractFile.cpp
   Core/Analyzer.cpp)
 
 add_library(ObjectiveNinjaCore STATIC ${CORE_SOURCE})
