@@ -38,6 +38,8 @@ MethodListInfo ClassAnalyzer::analyzeMethodList(uint64_t address)
             mi.implAddress = m_file->readLong();
         }
 
+        m_info->methodImpls[mi.nameAddress] = mi.implAddress;
+
         mli.methods.emplace_back(mi);
     }
 

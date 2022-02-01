@@ -90,6 +90,7 @@ struct AnalysisInfo {
     std::unordered_map<uint64_t, SharedSelectorRefInfo> selectorRefs {};
     std::vector<ClassInfo> classes {};
     std::unordered_map<uint64_t, MethodListInfo> methodLists {};
+    std::unordered_map<uint64_t, uint64_t> methodImpls;
 
     std::string dump() const;
 };
