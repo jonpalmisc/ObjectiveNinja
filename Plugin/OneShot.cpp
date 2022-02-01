@@ -35,6 +35,8 @@
 #include "InfoHandler.h"
 #include "StructureAnalyzer.hpp"
 
+#include <ObjectiveNinjaCore/AnalysisProvider.h>
+
 #include <ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h>
 #include <ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h>
 #include <ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h>
@@ -67,16 +69,8 @@ void OneShot::registerCommands()
     auto runNewAnalysis = [](BinaryNinja::BinaryView* bv) {
         CustomTypes::defineAll(bv);
 
-        auto bvFile = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
-        auto info = std::make_shared<ObjectiveNinja::AnalysisInfo>();
-
-        std::vector<std::unique_ptr<ObjectiveNinja::Analyzer>> analyzers;
-        analyzers.emplace_back(new ObjectiveNinja::CFStringAnalyzer(info, bvFile));
-        analyzers.emplace_back(new ObjectiveNinja::SelectorAnalyzer(info, bvFile));
-        analyzers.emplace_back(new ObjectiveNinja::ClassAnalyzer(info, bvFile));
-
-        for (const auto& analyzer : analyzers)
-            analyzer->run();
+        auto file = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
+        auto info = ObjectiveNinja::AnalysisProvider::infoForFile(file);
 
         InfoHandler::applyInfoToView(info, bv);
     };

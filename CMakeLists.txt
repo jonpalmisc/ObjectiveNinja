@@ -14,6 +14,7 @@ set(CORE_SOURCE
   Include/ObjectiveNinjaCore/Support/BinaryViewFile.h
   Include/ObjectiveNinjaCore/AbstractFile.h
   Include/ObjectiveNinjaCore/AnalysisInfo.h
+  Include/ObjectiveNinjaCore/AnalysisProvider.h
   Include/ObjectiveNinjaCore/Analyzer.h
   Core/Analyzers/CFStringAnalyzer.cpp
   Core/Analyzers/ClassAnalyzer.cpp
@@ -21,6 +22,7 @@ set(CORE_SOURCE
   Core/Support/BinaryViewFile.cpp
   Core/AbstractFile.cpp
   Core/AnalysisInfo.cpp
+  Core/AnalysisProvider.cpp
   Core/Analyzer.cpp)
 
 add_library(ObjectiveNinjaCore STATIC ${CORE_SOURCE})

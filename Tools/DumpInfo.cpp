@@ -6,6 +6,7 @@
  */
 
 #include <ObjectiveNinjaCore/AnalysisInfo.h>
+#include <ObjectiveNinjaCore/AnalysisProvider.h>
 #include <ObjectiveNinjaCore/Analyzer.h>
 
 #include <ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h>
@@ -49,20 +50,12 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    {
-        auto bvFile = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
-        auto info = std::make_shared<ObjectiveNinja::AnalysisInfo>();
+    // Create a wrapper over the BinaryView and run Objective-C analysis.
+    auto file = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
+    auto info = ObjectiveNinja::AnalysisProvider::infoForFile(file);
 
-        std::vector<std::unique_ptr<ObjectiveNinja::Analyzer>> analyzers;
-        analyzers.emplace_back(new ObjectiveNinja::CFStringAnalyzer(info, bvFile));
-        analyzers.emplace_back(new ObjectiveNinja::SelectorAnalyzer(info, bvFile));
-        analyzers.emplace_back(new ObjectiveNinja::ClassAnalyzer(info, bvFile));
-
-        for (const auto& analyzer : analyzers)
-            analyzer->run();
-
-        std::cout << info->dump() << "\n";
-    }
+    // Dump the analysis results as JSON.
+    std::cout << info->dump() << "\n";
 
     BNShutdown();
 }
