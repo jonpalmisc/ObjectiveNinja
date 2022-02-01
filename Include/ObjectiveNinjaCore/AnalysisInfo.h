@@ -7,12 +7,7 @@
 
 #pragma once
 
-#include <cstddef>
-#include <cstdint>
-#include <memory>
-#include <string>
-#include <unordered_map>
-#include <vector>
+#include "../vendor/json/json.hpp"
 
 namespace ObjectiveNinja {
 
@@ -30,9 +25,11 @@ struct CFStringInfo {
  */
 struct SelectorRefInfo {
     uint64_t address {};
+
+    std::string name {};
+
     uint64_t rawSelector {};
     uint64_t nameAddress {};
-    std::string name {};
 };
 
 using SharedSelectorRefInfo = std::shared_ptr<SelectorRefInfo>;
@@ -41,11 +38,13 @@ using SharedSelectorRefInfo = std::shared_ptr<SelectorRefInfo>;
  * A description of an Objective-C class.
  */
 struct ClassInfo {
-    uint64_t listPointer {};
     uint64_t address {};
+
+    std::string name {};
+
+    uint64_t listPointer {};
     uint64_t dataAddress {};
     uint64_t nameAddress {};
-    std::string name {};
     uint64_t methodListAddress {};
 };
 
@@ -54,8 +53,8 @@ struct ClassInfo {
  */
 struct MethodInfo {
     uint64_t address {};
+
     uint64_t nameAddress {};
-    std::string name {};
     uint64_t typeAddress {};
     uint64_t implAddress {};
 };
@@ -91,6 +90,17 @@ struct AnalysisInfo {
     std::unordered_map<uint64_t, SharedSelectorRefInfo> selectorRefs {};
     std::vector<ClassInfo> classes {};
     std::unordered_map<uint64_t, MethodListInfo> methodLists {};
+
+    std::string dump() const;
 };
+
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(CFStringInfo, address, dataAddress, size);
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(SelectorRefInfo, address, name, rawSelector,
+    nameAddress);
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(ClassInfo, listPointer, address, dataAddress,
+    nameAddress, name, methodListAddress);
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(MethodInfo, address, nameAddress,
+    typeAddress, implAddress);
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(MethodListInfo, address, flags, methods);
 
 }
