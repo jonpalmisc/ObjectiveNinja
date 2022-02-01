@@ -34,11 +34,12 @@
 #include "GlobalState.hpp"
 #include "InfoHandler.h"
 #include "StructureAnalyzer.hpp"
-#include "Support/BinaryViewFile.h"
 
 #include <ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h>
 #include <ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h>
 #include <ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h>
+
+#include <ObjectiveNinjaCore/Support/BinaryViewFile.h>
 
 void OneShot::defineTypes(BinaryNinja::BinaryView* bv)
 {
@@ -66,7 +67,7 @@ void OneShot::registerCommands()
     auto runNewAnalysis = [](BinaryNinja::BinaryView* bv) {
         CustomTypes::defineAll(bv);
 
-        auto bvFile = std::make_shared<BinaryViewFile>(bv);
+        auto bvFile = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
         auto info = std::make_shared<ObjectiveNinja::AnalysisInfo>();
 
         std::vector<std::unique_ptr<ObjectiveNinja::Analyzer>> analyzers;

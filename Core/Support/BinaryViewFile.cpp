@@ -5,8 +5,11 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
-#include "BinaryViewFile.h"
-#include "binaryninjaapi.h"
+#ifdef ONC_BN_SUPPORT
+
+#include <ObjectiveNinjaCore/Support/BinaryViewFile.h>
+
+namespace ObjectiveNinja {
 
 BinaryViewFile::BinaryViewFile(BinaryViewRef bv)
     : m_bv(bv)
@@ -56,3 +59,7 @@ uint64_t BinaryViewFile::sectionEnd(const std::string& name) const
 
     return section->GetStart() + section->GetLength();
 }
+
+}
+
+#endif

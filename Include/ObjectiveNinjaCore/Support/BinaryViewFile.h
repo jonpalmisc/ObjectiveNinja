@@ -7,11 +7,15 @@
 
 #pragma once
 
-#include <ObjectiveNinjaCore/AbstractFile.h>
+#ifdef ONC_BN_SUPPORT
+
+#include "../AbstractFile.h"
 
 #include <binaryninjaapi.h>
 
 using BinaryViewRef = BinaryNinja::Ref<BinaryNinja::BinaryView>;
+
+namespace ObjectiveNinja {
 
 class BinaryViewFile : public ObjectiveNinja::AbstractFile {
     BinaryViewRef m_bv;
@@ -30,3 +34,7 @@ public:
     uint64_t sectionStart(const std::string& name) const override;
     uint64_t sectionEnd(const std::string& name) const override;
 };
+
+}
+
+#endif
