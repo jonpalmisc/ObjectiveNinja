@@ -16,6 +16,7 @@ set(CORE_SOURCE
   Core/Analyzers/ClassAnalyzer.cpp
   Core/Analyzers/SelectorAnalyzer.cpp
   Core/AbstractFile.cpp
+  Core/AnalysisInfo.cpp
   Core/Analyzer.cpp)
 
 add_library(ObjectiveNinjaCore STATIC ${CORE_SOURCE})

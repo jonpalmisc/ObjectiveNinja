@@ -31,6 +31,12 @@ class InfoHandler {
     static std::string sanitizeText(const std::string&);
 
     /**
+     * Sanitize a selector so that it round-trips the type parser. Colon
+     * characters will be replaced underscores.
+     */
+    static std::string sanitizeSelector(const std::string&);
+
+    /**
      * Get the type with the given name defined inside the BinaryView.
      */
     static inline TypeRef namedType(BinaryViewRef, const std::string&);

@@ -65,7 +65,18 @@ struct MethodInfo {
  */
 struct MethodListInfo {
     uint64_t address {};
+    uint32_t flags {};
     std::vector<MethodInfo> methods {};
+
+    /**
+     * Tells whether the method list uses relative offsets or not.
+     */
+    bool hasRelativeOffsets() const;
+
+    /**
+     * Tells whether the method list uses direct selectors or not.
+     */
+    bool hasDirectSelectors() const;
 };
 
 /**

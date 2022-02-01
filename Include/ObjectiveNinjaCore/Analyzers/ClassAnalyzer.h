@@ -19,6 +19,15 @@ namespace ObjectiveNinja {
  * then be analyzed.
  */
 class ClassAnalyzer : public Analyzer {
+    /**
+     * Analyze a method list.
+     *
+     * This function is extracted from the `run()` method since analyzing method
+     * lists can be tricky and has a handful of edge cases. It's easier to see
+     * what's going on when it's separated from the rest of the analysis code.
+     */
+    MethodListInfo analyzeMethodList(uint64_t);
+
 public:
     ClassAnalyzer(SharedAnalysisInfo, SharedAbstractFile);
 

@@ -7,6 +7,7 @@
 
 #include "InfoHandler.h"
 
+#include <algorithm>
 #include <regex>
 
 using namespace BinaryNinja;
@@ -25,6 +26,14 @@ std::string InfoHandler::sanitizeText(const std::string& text)
         result += part;
         input = sm.suffix();
     }
+
+    return result;
+}
+
+std::string InfoHandler::sanitizeSelector(const std::string& text)
+{
+    auto result = text;
+    std::replace(result.begin(), result.end(), ':', '_');
 
     return result;
 }
@@ -59,9 +68,6 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
     auto classType = namedType(bv, "objc_class_t");
     auto classDataType = namedType(bv, "objc_class_ro_t");
     auto methodListType = bv->GetTypeByName(std::string("objc_method_list_t"));
-    auto methodType = bv->GetDefaultArchitecture()->GetName() == "aarch64"
-        ? bv->GetTypeByName(std::string("objc_method_entry_t"))
-        : bv->GetTypeByName(std::string("objc_method_t"));
 
     // Create data variables and symbols for all CFString instances.
     for (auto csi : info->cfStrings) {
@@ -90,15 +96,25 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
         if (mli.address == 0 || mli.methods.empty())
             continue;
 
+        auto methodType = mli.hasRelativeOffsets()
+            ? bv->GetTypeByName(std::string("objc_method_entry_t"))
+            : bv->GetTypeByName(std::string("objc_method_t"));
+
         // Create data variables for each method in the method list.
         for (const auto& mi : mli.methods) {
             auto sel = info->selectorRefs[mi.nameAddress];
+            if (!sel)
+                continue;
+
+            auto sanitizedSelector = sanitizeSelector(sel->name);
+            auto methodName = ci.name + "::" + sanitizedSelector;
 
             defineVariable(bv, mi.address, methodType);
             defineVariable(bv, sel->nameAddress, stringType(sel->name.size()));
             defineSymbol(bv, mi.address, sel->name, "mt_");
             defineSymbol(bv, mi.nameAddress, sel->name, "sr_");
             defineSymbol(bv, sel->nameAddress, sel->name, "sn_");
+            defineSymbol(bv, mi.implAddress, methodName, "", FunctionSymbol);
         }
 
         // Create a data variable and symbol for the method list header.

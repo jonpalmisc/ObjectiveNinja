@@ -15,6 +15,35 @@ ClassAnalyzer::ClassAnalyzer(SharedAnalysisInfo info,
 {
 }
 
+MethodListInfo ClassAnalyzer::analyzeMethodList(uint64_t address)
+{
+    MethodListInfo mli;
+    mli.address = address;
+    mli.flags = m_file->readInt(mli.address);
+
+    auto methodCount = m_file->readInt(mli.address + 0x4);
+    for (auto i = 0; i < methodCount; ++i) {
+        MethodInfo mi;
+        mi.address = mli.address + 8 + (i * 12);
+
+        m_file->seek(mi.address);
+
+        if (mli.hasRelativeOffsets()) {
+            mi.nameAddress = mi.address + static_cast<int32_t>(m_file->readInt());
+            mi.typeAddress = mi.address + 4 + static_cast<int32_t>(m_file->readInt());
+            mi.implAddress = mi.address + 8 + static_cast<int32_t>(m_file->readInt());
+        } else {
+            mi.nameAddress = m_file->readLong();
+            mi.typeAddress = m_file->readLong();
+            mi.implAddress = m_file->readLong();
+        }
+
+        mli.methods.emplace_back(mi);
+    }
+
+    return mli;
+}
+
 void ClassAnalyzer::run()
 {
     const auto sectionStart = m_file->sectionStart("__objc_classlist");
@@ -24,8 +53,6 @@ void ClassAnalyzer::run()
 
     for (auto address = sectionStart; address < sectionEnd; address += 8) {
         ClassInfo ci;
-        MethodListInfo mli;
-
         ci.listPointer = address;
         ci.address = uiro(m_file->readLong(address));
         ci.dataAddress = uiro(m_file->readLong(ci.address + 0x20));
@@ -33,22 +60,11 @@ void ClassAnalyzer::run()
         ci.name = m_file->readString(ci.nameAddress);
         ci.methodListAddress = uiro(m_file->readLong(ci.dataAddress + 0x20));
 
-        mli.address = ci.methodListAddress;
-
-        auto methodCount = m_file->readInt(mli.address + 0x4);
-        for (auto i = 0; i < methodCount; ++i) {
-            MethodInfo mi;
-            mi.address = mli.address + 8 + (i * 12);
-
-            m_file->seek(mi.address);
-            mi.nameAddress = mi.address + static_cast<int32_t>(m_file->readInt());
-            mi.typeAddress = mi.address + 4 + static_cast<int32_t>(m_file->readInt());
-            mi.implAddress = mi.address + 8 + static_cast<int32_t>(m_file->readInt());
-
-            mli.methods.emplace_back(mi);
-        }
-
         m_info->classes.emplace_back(ci);
-        m_info->methodLists[mli.address] = mli;
+
+        if (ci.methodListAddress) {
+            auto mli = analyzeMethodList(ci.methodListAddress);
+            m_info->methodLists[mli.address] = mli;
+        }
     }
 }
