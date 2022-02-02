@@ -38,6 +38,13 @@ MethodListInfo ClassAnalyzer::analyzeMethodList(uint64_t address)
             mi.implAddress = m_file->readLong();
         }
 
+        if (mli.hasDirectSelectors()) {
+            mi.selector = m_file->readString(mi.nameAddress);
+        } else {
+            auto selectorNamePointer = uiro(m_file->readLong(mi.nameAddress));
+            mi.selector = m_file->readString(selectorNamePointer);
+        }
+
         m_info->methodImpls[mi.nameAddress] = mi.implAddress;
 
         mli.methods.emplace_back(mi);
@@ -60,13 +67,11 @@ void ClassAnalyzer::run()
         ci.dataAddress = uiro(m_file->readLong(ci.address + 0x20));
         ci.nameAddress = uiro(m_file->readLong(ci.dataAddress + 0x18));
         ci.name = m_file->readString(ci.nameAddress);
+
         ci.methodListAddress = uiro(m_file->readLong(ci.dataAddress + 0x20));
+        if (ci.methodListAddress)
+            ci.methodList = analyzeMethodList(ci.methodListAddress);
 
         m_info->classes.emplace_back(ci);
-
-        if (ci.methodListAddress) {
-            auto mli = analyzeMethodList(ci.methodListAddress);
-            m_info->methodLists[mli.address] = mli;
-        }
     }
 }

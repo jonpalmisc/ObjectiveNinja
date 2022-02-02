@@ -92,28 +92,20 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
         defineSymbol(bv, ci.dataAddress, ci.name, "ro_");
         defineSymbol(bv, ci.nameAddress, ci.name, "nm_");
 
-        auto mli = info->methodLists[ci.methodListAddress];
-        if (mli.address == 0 || mli.methods.empty())
+        if (ci.methodList.address == 0 || ci.methodList.methods.empty())
             continue;
 
-        auto methodType = mli.hasRelativeOffsets()
+        auto methodType = ci.methodList.hasRelativeOffsets()
             ? bv->GetTypeByName(std::string("objc_method_entry_t"))
             : bv->GetTypeByName(std::string("objc_method_t"));
 
         // Create data variables for each method in the method list.
-        for (const auto& mi : mli.methods) {
-            auto sel = info->selectorRefs[mi.nameAddress];
-            if (!sel)
-                continue;
-
-            auto sanitizedSelector = sanitizeSelector(sel->name);
+        for (const auto& mi : ci.methodList.methods) {
+            auto sanitizedSelector = sanitizeSelector(mi.selector);
             auto methodName = ci.name + "::" + sanitizedSelector;
 
             defineVariable(bv, mi.address, methodType);
-            defineVariable(bv, sel->nameAddress, stringType(sel->name.size()));
-            defineSymbol(bv, mi.address, sel->name, "mt_");
-            defineSymbol(bv, mi.nameAddress, sel->name, "sr_");
-            defineSymbol(bv, sel->nameAddress, sel->name, "sn_");
+            defineSymbol(bv, mi.address, sanitizedSelector, "mt_");
             defineSymbol(bv, mi.implAddress, methodName, "", FunctionSymbol);
         }
 

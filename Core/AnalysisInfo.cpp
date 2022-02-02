@@ -23,25 +23,11 @@ bool MethodListInfo::hasDirectSelectors() const
 
 std::string AnalysisInfo::dump() const
 {
-    std::vector<MethodListInfo> methodListValues;
-    for (const auto& p : methodLists)
-        methodListValues.emplace_back(p.second);
+    nlohmann::json json;
+    json["classes"] = classes;
+    json["cfStrings"] = cfStrings;
 
-    std::vector<SelectorRefInfo> filteredSelectorRefs;
-    for (const auto& [k, v] : selectorRefs) {
-        if (k < 0x200000000)
-            continue;
-
-        filteredSelectorRefs.emplace_back(*v);
-    }
-
-    nlohmann::json j;
-    j["classes"] = classes;
-    j["methodLists"] = methodListValues;
-    j["selectorRefs"] = filteredSelectorRefs;
-    j["cfStrings"] = cfStrings;
-
-    return j.dump(2);
+    return json.dump(2);
 }
 
 }

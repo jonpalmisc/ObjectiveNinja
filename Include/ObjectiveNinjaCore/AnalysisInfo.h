@@ -35,24 +35,12 @@ struct SelectorRefInfo {
 using SharedSelectorRefInfo = std::shared_ptr<SelectorRefInfo>;
 
 /**
- * A description of an Objective-C class.
- */
-struct ClassInfo {
-    uint64_t address {};
-
-    std::string name {};
-
-    uint64_t listPointer {};
-    uint64_t dataAddress {};
-    uint64_t nameAddress {};
-    uint64_t methodListAddress {};
-};
-
-/**
  * A description of an Objective-C method.
  */
 struct MethodInfo {
     uint64_t address {};
+
+    std::string selector;
 
     uint64_t nameAddress {};
     uint64_t typeAddress {};
@@ -79,6 +67,21 @@ struct MethodListInfo {
 };
 
 /**
+ * A description of an Objective-C class.
+ */
+struct ClassInfo {
+    uint64_t address {};
+
+    std::string name {};
+    MethodListInfo methodList {};
+
+    uint64_t listPointer {};
+    uint64_t dataAddress {};
+    uint64_t nameAddress {};
+    uint64_t methodListAddress {};
+};
+
+/**
  * Analysis info storage.
  *
  * AnalysisInfo is intended to be a common structure for persisting information
@@ -89,7 +92,6 @@ struct AnalysisInfo {
     std::vector<CFStringInfo> cfStrings {};
     std::unordered_map<uint64_t, SharedSelectorRefInfo> selectorRefs {};
     std::vector<ClassInfo> classes {};
-    std::unordered_map<uint64_t, MethodListInfo> methodLists {};
     std::unordered_map<uint64_t, uint64_t> methodImpls;
 
     std::string dump() const;
@@ -98,10 +100,9 @@ struct AnalysisInfo {
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(CFStringInfo, address, dataAddress, size);
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(SelectorRefInfo, address, name, rawSelector,
     nameAddress);
-NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(ClassInfo, listPointer, address, dataAddress,
-    nameAddress, name, methodListAddress);
-NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(MethodInfo, address, nameAddress,
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(MethodInfo, address, selector, nameAddress,
     typeAddress, implAddress);
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(MethodListInfo, address, flags, methods);
-
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(ClassInfo, listPointer, address, dataAddress,
+    nameAddress, name, methodListAddress, methodList);
 }
