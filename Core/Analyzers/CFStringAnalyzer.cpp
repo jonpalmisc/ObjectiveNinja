@@ -25,7 +25,7 @@ void CFStringAnalyzer::run()
     for (auto address = sectionStart; address < sectionEnd; address += 0x20) {
         CFStringInfo cfString;
         cfString.address = address;
-        cfString.dataAddress = uiro(m_file->readLong(address + 0x10));
+        cfString.dataAddress = arp(m_file->readLong(address + 0x10));
         cfString.size = m_file->readLong(address + 0x18);
 
         m_info->cfStrings.emplace_back(cfString);

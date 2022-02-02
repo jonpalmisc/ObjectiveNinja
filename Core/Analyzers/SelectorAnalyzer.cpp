@@ -26,7 +26,7 @@ void SelectorAnalyzer::run()
         auto ssri = std::make_shared<SelectorRefInfo>();
         ssri->address = address;
         ssri->rawSelector = m_file->readLong(address);
-        ssri->nameAddress = uiro(ssri->rawSelector);
+        ssri->nameAddress = arp(ssri->rawSelector);
         ssri->name = m_file->readString(ssri->nameAddress);
 
         m_info->selectorRefs[ssri->rawSelector] = ssri;

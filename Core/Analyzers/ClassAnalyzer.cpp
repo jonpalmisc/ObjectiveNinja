@@ -9,6 +9,11 @@
 
 using namespace ObjectiveNinja;
 
+/**
+ * Mask used to extract the flags from a Swift class data structure pointer.
+ */
+constexpr uint64_t SwiftClassDataPointerFlagsMask = 0b11;
+
 ClassAnalyzer::ClassAnalyzer(SharedAnalysisInfo info,
     SharedAbstractFile file)
     : Analyzer(std::move(info), std::move(file))
@@ -41,7 +46,7 @@ MethodListInfo ClassAnalyzer::analyzeMethodList(uint64_t address)
         if (mli.hasDirectSelectors()) {
             mi.selector = m_file->readString(mi.nameAddress);
         } else {
-            auto selectorNamePointer = uiro(m_file->readLong(mi.nameAddress));
+            auto selectorNamePointer = arp(m_file->readLong(mi.nameAddress));
             mi.selector = m_file->readString(selectorNamePointer);
         }
 
@@ -63,12 +68,18 @@ void ClassAnalyzer::run()
     for (auto address = sectionStart; address < sectionEnd; address += 8) {
         ClassInfo ci;
         ci.listPointer = address;
-        ci.address = uiro(m_file->readLong(address));
-        ci.dataAddress = uiro(m_file->readLong(ci.address + 0x20));
-        ci.nameAddress = uiro(m_file->readLong(ci.dataAddress + 0x18));
+        ci.address = arp(m_file->readLong(address));
+        ci.dataAddress = arp(m_file->readLong(ci.address + 0x20));
+
+        // Sometimes the lower two bits of the data address are used as flags
+        // for Swift/Objective-C classes. They should be ignored, unless you
+        // want incorrect analysis...
+        ci.dataAddress &= ~SwiftClassDataPointerFlagsMask;
+
+        ci.nameAddress = arp(m_file->readLong(ci.dataAddress + 0x18));
         ci.name = m_file->readString(ci.nameAddress);
 
-        ci.methodListAddress = uiro(m_file->readLong(ci.dataAddress + 0x20));
+        ci.methodListAddress = arp(m_file->readLong(ci.dataAddress + 0x20));
         if (ci.methodListAddress)
             ci.methodList = analyzeMethodList(ci.methodListAddress);
 
