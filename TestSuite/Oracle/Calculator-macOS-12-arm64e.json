@@ -1,0 +1,4928 @@
+{
+  "cfStrings": [
+    {
+      "address": 4295132224,
+      "dataAddress": 4295122896,
+      "size": 1
+    },
+    {
+      "address": 4295132256,
+      "dataAddress": 4295122898,
+      "size": 3
+    },
+    {
+      "address": 4295132288,
+      "dataAddress": 4295122902,
+      "size": 1
+    },
+    {
+      "address": 4295132320,
+      "dataAddress": 4295122904,
+      "size": 1
+    },
+    {
+      "address": 4295132352,
+      "dataAddress": 4295122906,
+      "size": 1
+    },
+    {
+      "address": 4295132384,
+      "dataAddress": 4295122908,
+      "size": 0
+    },
+    {
+      "address": 4295132416,
+      "dataAddress": 4295122909,
+      "size": 1
+    },
+    {
+      "address": 4295132448,
+      "dataAddress": 4295122911,
+      "size": 8
+    },
+    {
+      "address": 4295132480,
+      "dataAddress": 4295122920,
+      "size": 20
+    },
+    {
+      "address": 4295132512,
+      "dataAddress": 4295122941,
+      "size": 3
+    },
+    {
+      "address": 4295132544,
+      "dataAddress": 4295122945,
+      "size": 24
+    },
+    {
+      "address": 4295132576,
+      "dataAddress": 4295122970,
+      "size": 3
+    },
+    {
+      "address": 4295132608,
+      "dataAddress": 4295122974,
+      "size": 24
+    },
+    {
+      "address": 4295132640,
+      "dataAddress": 4295122999,
+      "size": 3
+    },
+    {
+      "address": 4295132672,
+      "dataAddress": 4295123003,
+      "size": 11
+    },
+    {
+      "address": 4295132704,
+      "dataAddress": 4295123015,
+      "size": 6
+    },
+    {
+      "address": 4295132736,
+      "dataAddress": 4295123022,
+      "size": 4
+    },
+    {
+      "address": 4295132768,
+      "dataAddress": 4295123027,
+      "size": 9
+    },
+    {
+      "address": 4295132800,
+      "dataAddress": 4295123037,
+      "size": 3
+    },
+    {
+      "address": 4295132832,
+      "dataAddress": 4295123041,
+      "size": 4
+    },
+    {
+      "address": 4295132864,
+      "dataAddress": 4295123046,
+      "size": 3
+    },
+    {
+      "address": 4295132896,
+      "dataAddress": 4295123050,
+      "size": 4
+    },
+    {
+      "address": 4295132928,
+      "dataAddress": 4295123055,
+      "size": 5
+    },
+    {
+      "address": 4295132960,
+      "dataAddress": 4295123061,
+      "size": 5
+    },
+    {
+      "address": 4295132992,
+      "dataAddress": 4295123067,
+      "size": 29
+    },
+    {
+      "address": 4295133024,
+      "dataAddress": 4295123097,
+      "size": 6
+    },
+    {
+      "address": 4295133056,
+      "dataAddress": 4295123104,
+      "size": 8
+    },
+    {
+      "address": 4295133088,
+      "dataAddress": 4295123113,
+      "size": 14
+    },
+    {
+      "address": 4295133120,
+      "dataAddress": 4295123128,
+      "size": 4
+    },
+    {
+      "address": 4295133152,
+      "dataAddress": 4295123142,
+      "size": 1
+    },
+    {
+      "address": 4295133184,
+      "dataAddress": 4295123144,
+      "size": 35
+    },
+    {
+      "address": 4295133216,
+      "dataAddress": 4295123180,
+      "size": 37
+    },
+    {
+      "address": 4295133248,
+      "dataAddress": 4295123218,
+      "size": 3
+    },
+    {
+      "address": 4295133280,
+      "dataAddress": 4295123222,
+      "size": 3
+    },
+    {
+      "address": 4295133312,
+      "dataAddress": 4295123226,
+      "size": 3
+    },
+    {
+      "address": 4295133344,
+      "dataAddress": 4295123230,
+      "size": 5
+    },
+    {
+      "address": 4295133376,
+      "dataAddress": 4295123236,
+      "size": 7
+    },
+    {
+      "address": 4295133408,
+      "dataAddress": 4295123244,
+      "size": 8
+    },
+    {
+      "address": 4295133440,
+      "dataAddress": 4295123253,
+      "size": 3
+    },
+    {
+      "address": 4295133472,
+      "dataAddress": 4295123257,
+      "size": 2
+    },
+    {
+      "address": 4295133504,
+      "dataAddress": 4295123260,
+      "size": 4
+    },
+    {
+      "address": 4295133536,
+      "dataAddress": 4295123272,
+      "size": 2
+    },
+    {
+      "address": 4295133568,
+      "dataAddress": 4295123275,
+      "size": 4
+    },
+    {
+      "address": 4295133600,
+      "dataAddress": 4295123280,
+      "size": 8
+    },
+    {
+      "address": 4295133632,
+      "dataAddress": 4295123289,
+      "size": 5
+    },
+    {
+      "address": 4295133664,
+      "dataAddress": 4295123295,
+      "size": 7
+    },
+    {
+      "address": 4295133696,
+      "dataAddress": 4295123303,
+      "size": 7
+    },
+    {
+      "address": 4295133728,
+      "dataAddress": 4295123311,
+      "size": 5
+    },
+    {
+      "address": 4295133760,
+      "dataAddress": 4295123317,
+      "size": 8
+    },
+    {
+      "address": 4295133792,
+      "dataAddress": 4295123326,
+      "size": 9
+    },
+    {
+      "address": 4295133824,
+      "dataAddress": 4295123336,
+      "size": 8
+    },
+    {
+      "address": 4295133856,
+      "dataAddress": 4295123345,
+      "size": 22
+    },
+    {
+      "address": 4295133888,
+      "dataAddress": 4295123368,
+      "size": 22
+    },
+    {
+      "address": 4295133920,
+      "dataAddress": 4295123391,
+      "size": 15
+    },
+    {
+      "address": 4295133952,
+      "dataAddress": 4295123407,
+      "size": 19
+    },
+    {
+      "address": 4295133984,
+      "dataAddress": 4295123427,
+      "size": 19
+    },
+    {
+      "address": 4295134016,
+      "dataAddress": 4295123447,
+      "size": 16
+    },
+    {
+      "address": 4295134048,
+      "dataAddress": 4295123464,
+      "size": 14
+    },
+    {
+      "address": 4295134080,
+      "dataAddress": 4295123479,
+      "size": 15
+    },
+    {
+      "address": 4295134112,
+      "dataAddress": 4295123495,
+      "size": 21
+    },
+    {
+      "address": 4295134144,
+      "dataAddress": 4295123517,
+      "size": 20
+    },
+    {
+      "address": 4295134176,
+      "dataAddress": 4295123538,
+      "size": 17
+    },
+    {
+      "address": 4295134208,
+      "dataAddress": 4295123556,
+      "size": 11
+    },
+    {
+      "address": 4295134240,
+      "dataAddress": 4295123568,
+      "size": 4
+    },
+    {
+      "address": 4295134272,
+      "dataAddress": 4295123573,
+      "size": 18
+    },
+    {
+      "address": 4295134304,
+      "dataAddress": 4295123592,
+      "size": 8
+    },
+    {
+      "address": 4295134336,
+      "dataAddress": 4295123601,
+      "size": 47
+    },
+    {
+      "address": 4295134368,
+      "dataAddress": 4295123649,
+      "size": 1
+    },
+    {
+      "address": 4295134400,
+      "dataAddress": 4295123651,
+      "size": 16
+    },
+    {
+      "address": 4295134432,
+      "dataAddress": 4295123668,
+      "size": 13
+    },
+    {
+      "address": 4295134464,
+      "dataAddress": 4295123682,
+      "size": 22
+    },
+    {
+      "address": 4295134496,
+      "dataAddress": 4295123705,
+      "size": 2
+    },
+    {
+      "address": 4295134528,
+      "dataAddress": 4295123708,
+      "size": 1
+    },
+    {
+      "address": 4295134560,
+      "dataAddress": 4295123710,
+      "size": 2
+    },
+    {
+      "address": 4295134592,
+      "dataAddress": 4295123713,
+      "size": 2
+    },
+    {
+      "address": 4295134624,
+      "dataAddress": 4295123716,
+      "size": 4
+    },
+    {
+      "address": 4295134656,
+      "dataAddress": 4295123721,
+      "size": 5
+    },
+    {
+      "address": 4295134688,
+      "dataAddress": 4295123727,
+      "size": 5
+    },
+    {
+      "address": 4295134720,
+      "dataAddress": 4295123739,
+      "size": 8
+    },
+    {
+      "address": 4295134752,
+      "dataAddress": 4295123748,
+      "size": 2
+    },
+    {
+      "address": 4295134784,
+      "dataAddress": 4295123751,
+      "size": 32
+    },
+    {
+      "address": 4295134816,
+      "dataAddress": 4295123784,
+      "size": 42
+    },
+    {
+      "address": 4295134848,
+      "dataAddress": 4295123827,
+      "size": 41
+    },
+    {
+      "address": 4295134880,
+      "dataAddress": 4295123869,
+      "size": 42
+    },
+    {
+      "address": 4295134912,
+      "dataAddress": 4295123912,
+      "size": 42
+    },
+    {
+      "address": 4295134944,
+      "dataAddress": 4295123955,
+      "size": 50
+    },
+    {
+      "address": 4295134976,
+      "dataAddress": 4295124006,
+      "size": 49
+    },
+    {
+      "address": 4295135008,
+      "dataAddress": 4295124056,
+      "size": 49
+    },
+    {
+      "address": 4295135040,
+      "dataAddress": 4295124106,
+      "size": 48
+    },
+    {
+      "address": 4295135072,
+      "dataAddress": 4295124155,
+      "size": 47
+    },
+    {
+      "address": 4295135104,
+      "dataAddress": 4295124203,
+      "size": 47
+    },
+    {
+      "address": 4295135136,
+      "dataAddress": 4295124251,
+      "size": 40
+    },
+    {
+      "address": 4295135168,
+      "dataAddress": 4295124292,
+      "size": 40
+    },
+    {
+      "address": 4295135200,
+      "dataAddress": 4295124333,
+      "size": 40
+    },
+    {
+      "address": 4295135232,
+      "dataAddress": 4295124374,
+      "size": 40
+    },
+    {
+      "address": 4295135264,
+      "dataAddress": 4295124415,
+      "size": 40
+    },
+    {
+      "address": 4295135296,
+      "dataAddress": 4295124456,
+      "size": 40
+    },
+    {
+      "address": 4295135328,
+      "dataAddress": 4295124497,
+      "size": 40
+    },
+    {
+      "address": 4295135360,
+      "dataAddress": 4295124538,
+      "size": 40
+    },
+    {
+      "address": 4295135392,
+      "dataAddress": 4295124579,
+      "size": 40
+    },
+    {
+      "address": 4295135424,
+      "dataAddress": 4295124620,
+      "size": 40
+    },
+    {
+      "address": 4295135456,
+      "dataAddress": 4295124661,
+      "size": 40
+    },
+    {
+      "address": 4295135488,
+      "dataAddress": 4295124702,
+      "size": 40
+    },
+    {
+      "address": 4295135520,
+      "dataAddress": 4295124743,
+      "size": 40
+    },
+    {
+      "address": 4295135552,
+      "dataAddress": 4295124784,
+      "size": 40
+    },
+    {
+      "address": 4295135584,
+      "dataAddress": 4295124825,
+      "size": 40
+    },
+    {
+      "address": 4295135616,
+      "dataAddress": 4295124866,
+      "size": 40
+    },
+    {
+      "address": 4295135648,
+      "dataAddress": 4295124907,
+      "size": 41
+    },
+    {
+      "address": 4295135680,
+      "dataAddress": 4295124949,
+      "size": 41
+    },
+    {
+      "address": 4295135712,
+      "dataAddress": 4295124991,
+      "size": 42
+    },
+    {
+      "address": 4295135744,
+      "dataAddress": 4295125034,
+      "size": 43
+    },
+    {
+      "address": 4295135776,
+      "dataAddress": 4295125078,
+      "size": 41
+    },
+    {
+      "address": 4295135808,
+      "dataAddress": 4295125120,
+      "size": 41
+    },
+    {
+      "address": 4295135840,
+      "dataAddress": 4295125162,
+      "size": 49
+    },
+    {
+      "address": 4295135872,
+      "dataAddress": 4295125212,
+      "size": 35
+    },
+    {
+      "address": 4295135904,
+      "dataAddress": 4295125248,
+      "size": 24
+    },
+    {
+      "address": 4295135936,
+      "dataAddress": 4295125273,
+      "size": 23
+    },
+    {
+      "address": 4295135968,
+      "dataAddress": 4295125297,
+      "size": 20
+    },
+    {
+      "address": 4295136000,
+      "dataAddress": 4295125318,
+      "size": 26
+    },
+    {
+      "address": 4295136032,
+      "dataAddress": 4295125345,
+      "size": 32
+    },
+    {
+      "address": 4295136064,
+      "dataAddress": 4295125378,
+      "size": 29
+    },
+    {
+      "address": 4295136096,
+      "dataAddress": 4295125408,
+      "size": 26
+    },
+    {
+      "address": 4295136128,
+      "dataAddress": 4295125435,
+      "size": 21
+    },
+    {
+      "address": 4295136160,
+      "dataAddress": 4295125457,
+      "size": 20
+    },
+    {
+      "address": 4295136192,
+      "dataAddress": 4295125478,
+      "size": 21
+    },
+    {
+      "address": 4295136224,
+      "dataAddress": 4295125500,
+      "size": 21
+    },
+    {
+      "address": 4295136256,
+      "dataAddress": 4295125522,
+      "size": 31
+    },
+    {
+      "address": 4295136288,
+      "dataAddress": 4295125554,
+      "size": 30
+    },
+    {
+      "address": 4295136320,
+      "dataAddress": 4295125585,
+      "size": 29
+    },
+    {
+      "address": 4295136352,
+      "dataAddress": 4295125615,
+      "size": 28
+    },
+    {
+      "address": 4295136384,
+      "dataAddress": 4295125644,
+      "size": 27
+    },
+    {
+      "address": 4295136416,
+      "dataAddress": 4295125672,
+      "size": 27
+    },
+    {
+      "address": 4295136448,
+      "dataAddress": 4295125700,
+      "size": 22
+    },
+    {
+      "address": 4295136480,
+      "dataAddress": 4295125723,
+      "size": 21
+    },
+    {
+      "address": 4295136512,
+      "dataAddress": 4295125745,
+      "size": 21
+    },
+    {
+      "address": 4295136544,
+      "dataAddress": 4295125767,
+      "size": 23
+    },
+    {
+      "address": 4295136576,
+      "dataAddress": 4295125791,
+      "size": 22
+    },
+    {
+      "address": 4295136608,
+      "dataAddress": 4295125814,
+      "size": 22
+    },
+    {
+      "address": 4295136640,
+      "dataAddress": 4295125837,
+      "size": 21
+    },
+    {
+      "address": 4295136672,
+      "dataAddress": 4295125859,
+      "size": 23
+    },
+    {
+      "address": 4295136704,
+      "dataAddress": 4295125883,
+      "size": 23
+    },
+    {
+      "address": 4295136736,
+      "dataAddress": 4295125907,
+      "size": 22
+    },
+    {
+      "address": 4295136768,
+      "dataAddress": 4295125930,
+      "size": 19
+    },
+    {
+      "address": 4295136800,
+      "dataAddress": 4295125950,
+      "size": 19
+    },
+    {
+      "address": 4295136832,
+      "dataAddress": 4295125970,
+      "size": 19
+    },
+    {
+      "address": 4295136864,
+      "dataAddress": 4295125990,
+      "size": 19
+    },
+    {
+      "address": 4295136896,
+      "dataAddress": 4295126010,
+      "size": 23
+    },
+    {
+      "address": 4295136928,
+      "dataAddress": 4295126034,
+      "size": 19
+    },
+    {
+      "address": 4295136960,
+      "dataAddress": 4295126054,
+      "size": 20
+    },
+    {
+      "address": 4295136992,
+      "dataAddress": 4295126075,
+      "size": 20
+    },
+    {
+      "address": 4295137024,
+      "dataAddress": 4295126096,
+      "size": 21
+    },
+    {
+      "address": 4295137056,
+      "dataAddress": 4295126118,
+      "size": 21
+    },
+    {
+      "address": 4295137088,
+      "dataAddress": 4295126140,
+      "size": 31
+    },
+    {
+      "address": 4295137120,
+      "dataAddress": 4295126172,
+      "size": 31
+    },
+    {
+      "address": 4295137152,
+      "dataAddress": 4295126204,
+      "size": 32
+    },
+    {
+      "address": 4295137184,
+      "dataAddress": 4295126237,
+      "size": 32
+    },
+    {
+      "address": 4295137216,
+      "dataAddress": 4295126270,
+      "size": 35
+    },
+    {
+      "address": 4295137248,
+      "dataAddress": 4295126306,
+      "size": 35
+    },
+    {
+      "address": 4295137280,
+      "dataAddress": 4295126342,
+      "size": 41
+    },
+    {
+      "address": 4295137312,
+      "dataAddress": 4295126384,
+      "size": 38
+    },
+    {
+      "address": 4295137344,
+      "dataAddress": 4295126423,
+      "size": 35
+    },
+    {
+      "address": 4295137376,
+      "dataAddress": 4295126499,
+      "size": 27
+    },
+    {
+      "address": 4295137408,
+      "dataAddress": 4295126527,
+      "size": 24
+    },
+    {
+      "address": 4295137440,
+      "dataAddress": 4295126552,
+      "size": 8
+    },
+    {
+      "address": 4295137472,
+      "dataAddress": 4295126561,
+      "size": 5
+    },
+    {
+      "address": 4295137504,
+      "dataAddress": 4295126567,
+      "size": 1
+    },
+    {
+      "address": 4295137536,
+      "dataAddress": 4295126569,
+      "size": 1
+    },
+    {
+      "address": 4295137568,
+      "dataAddress": 4295126571,
+      "size": 1
+    },
+    {
+      "address": 4295137600,
+      "dataAddress": 4295126573,
+      "size": 1
+    },
+    {
+      "address": 4295137632,
+      "dataAddress": 4295126584,
+      "size": 8
+    },
+    {
+      "address": 4295137664,
+      "dataAddress": 4295126593,
+      "size": 8
+    },
+    {
+      "address": 4295137696,
+      "dataAddress": 4295126602,
+      "size": 1
+    },
+    {
+      "address": 4295137728,
+      "dataAddress": 4295126604,
+      "size": 3
+    },
+    {
+      "address": 4295137760,
+      "dataAddress": 4295126608,
+      "size": 7
+    },
+    {
+      "address": 4295137792,
+      "dataAddress": 4295126616,
+      "size": 2
+    },
+    {
+      "address": 4295137824,
+      "dataAddress": 4295126619,
+      "size": 5
+    },
+    {
+      "address": 4295137856,
+      "dataAddress": 4295126625,
+      "size": 24
+    },
+    {
+      "address": 4295137888,
+      "dataAddress": 4295126650,
+      "size": 30
+    },
+    {
+      "address": 4295137920,
+      "dataAddress": 4295126681,
+      "size": 66
+    },
+    {
+      "address": 4295137952,
+      "dataAddress": 4295126748,
+      "size": 15
+    },
+    {
+      "address": 4295137984,
+      "dataAddress": 4295126764,
+      "size": 17
+    },
+    {
+      "address": 4295138016,
+      "dataAddress": 4295126782,
+      "size": 5
+    },
+    {
+      "address": 4295138048,
+      "dataAddress": 4295126788,
+      "size": 19
+    },
+    {
+      "address": 4295138080,
+      "dataAddress": 4295126808,
+      "size": 20
+    },
+    {
+      "address": 4295138112,
+      "dataAddress": 4295126829,
+      "size": 11
+    },
+    {
+      "address": 4295138144,
+      "dataAddress": 4295126841,
+      "size": 12
+    },
+    {
+      "address": 4295138176,
+      "dataAddress": 4295126854,
+      "size": 2
+    },
+    {
+      "address": 4295138208,
+      "dataAddress": 4295126857,
+      "size": 3
+    },
+    {
+      "address": 4295138240,
+      "dataAddress": 4295126861,
+      "size": 4
+    },
+    {
+      "address": 4295138272,
+      "dataAddress": 4295126878,
+      "size": 22
+    },
+    {
+      "address": 4295138304,
+      "dataAddress": 4295126901,
+      "size": 30
+    },
+    {
+      "address": 4295138336,
+      "dataAddress": 4295126932,
+      "size": 2
+    },
+    {
+      "address": 4295138368,
+      "dataAddress": 4295126935,
+      "size": 12
+    },
+    {
+      "address": 4295138400,
+      "dataAddress": 4295126948,
+      "size": 14
+    },
+    {
+      "address": 4295138432,
+      "dataAddress": 4295126963,
+      "size": 9
+    },
+    {
+      "address": 4295138464,
+      "dataAddress": 4295126975,
+      "size": 3
+    },
+    {
+      "address": 4295138496,
+      "dataAddress": 4295126979,
+      "size": 2
+    },
+    {
+      "address": 4295138528,
+      "dataAddress": 4295126982,
+      "size": 2
+    },
+    {
+      "address": 4295138560,
+      "dataAddress": 4295126985,
+      "size": 2
+    },
+    {
+      "address": 4295138592,
+      "dataAddress": 4295126988,
+      "size": 2
+    },
+    {
+      "address": 4295138624,
+      "dataAddress": 4295126991,
+      "size": 2
+    },
+    {
+      "address": 4295138656,
+      "dataAddress": 4295126994,
+      "size": 2
+    },
+    {
+      "address": 4295138688,
+      "dataAddress": 4295126997,
+      "size": 3
+    },
+    {
+      "address": 4295138720,
+      "dataAddress": 4295129716,
+      "size": 5
+    },
+    {
+      "address": 4295138752,
+      "dataAddress": 4295129728,
+      "size": 5
+    },
+    {
+      "address": 4295138784,
+      "dataAddress": 4295129740,
+      "size": 5
+    },
+    {
+      "address": 4295138816,
+      "dataAddress": 4295129752,
+      "size": 6
+    },
+    {
+      "address": 4295138848,
+      "dataAddress": 4295129766,
+      "size": 6
+    },
+    {
+      "address": 4295138880,
+      "dataAddress": 4295129780,
+      "size": 6
+    },
+    {
+      "address": 4295138912,
+      "dataAddress": 4295127001,
+      "size": 4
+    },
+    {
+      "address": 4295138944,
+      "dataAddress": 4295127006,
+      "size": 5
+    },
+    {
+      "address": 4295138976,
+      "dataAddress": 4295127012,
+      "size": 4
+    },
+    {
+      "address": 4295139008,
+      "dataAddress": 4295129794,
+      "size": 2
+    },
+    {
+      "address": 4295139040,
+      "dataAddress": 4295129800,
+      "size": 2
+    },
+    {
+      "address": 4295139072,
+      "dataAddress": 4295129806,
+      "size": 3
+    },
+    {
+      "address": 4295139104,
+      "dataAddress": 4295129814,
+      "size": 3
+    },
+    {
+      "address": 4295139136,
+      "dataAddress": 4295127017,
+      "size": 3
+    },
+    {
+      "address": 4295139168,
+      "dataAddress": 4295129822,
+      "size": 3
+    },
+    {
+      "address": 4295139200,
+      "dataAddress": 4295127063,
+      "size": 26
+    },
+    {
+      "address": 4295139232,
+      "dataAddress": 4295127090,
+      "size": 29
+    },
+    {
+      "address": 4295139264,
+      "dataAddress": 4295127120,
+      "size": 40
+    },
+    {
+      "address": 4295139296,
+      "dataAddress": 4295127161,
+      "size": 39
+    },
+    {
+      "address": 4295139328,
+      "dataAddress": 4295127201,
+      "size": 40
+    },
+    {
+      "address": 4295139360,
+      "dataAddress": 4295127242,
+      "size": 40
+    },
+    {
+      "address": 4295139392,
+      "dataAddress": 4295127283,
+      "size": 41
+    },
+    {
+      "address": 4295139424,
+      "dataAddress": 4295127325,
+      "size": 41
+    },
+    {
+      "address": 4295139456,
+      "dataAddress": 4295127367,
+      "size": 42
+    },
+    {
+      "address": 4295139488,
+      "dataAddress": 4295127410,
+      "size": 41
+    },
+    {
+      "address": 4295139520,
+      "dataAddress": 4295127452,
+      "size": 39
+    },
+    {
+      "address": 4295139552,
+      "dataAddress": 4295127492,
+      "size": 40
+    },
+    {
+      "address": 4295139584,
+      "dataAddress": 4295127533,
+      "size": 42
+    },
+    {
+      "address": 4295139616,
+      "dataAddress": 4295127576,
+      "size": 43
+    },
+    {
+      "address": 4295139648,
+      "dataAddress": 4295127620,
+      "size": 41
+    },
+    {
+      "address": 4295139680,
+      "dataAddress": 4295127662,
+      "size": 43
+    },
+    {
+      "address": 4295139712,
+      "dataAddress": 4295127706,
+      "size": 41
+    },
+    {
+      "address": 4295139744,
+      "dataAddress": 4295127748,
+      "size": 40
+    },
+    {
+      "address": 4295139776,
+      "dataAddress": 4295127789,
+      "size": 44
+    },
+    {
+      "address": 4295139808,
+      "dataAddress": 4295127834,
+      "size": 37
+    },
+    {
+      "address": 4295139840,
+      "dataAddress": 4295127872,
+      "size": 39
+    },
+    {
+      "address": 4295139872,
+      "dataAddress": 4295127912,
+      "size": 40
+    },
+    {
+      "address": 4295139904,
+      "dataAddress": 4295127953,
+      "size": 42
+    },
+    {
+      "address": 4295139936,
+      "dataAddress": 4295127996,
+      "size": 44
+    },
+    {
+      "address": 4295139968,
+      "dataAddress": 4295128041,
+      "size": 45
+    },
+    {
+      "address": 4295140000,
+      "dataAddress": 4295128087,
+      "size": 36
+    },
+    {
+      "address": 4295140032,
+      "dataAddress": 4295128124,
+      "size": 35
+    },
+    {
+      "address": 4295140064,
+      "dataAddress": 4295128160,
+      "size": 35
+    },
+    {
+      "address": 4295140096,
+      "dataAddress": 4295128196,
+      "size": 34
+    },
+    {
+      "address": 4295140128,
+      "dataAddress": 4295128231,
+      "size": 37
+    },
+    {
+      "address": 4295140160,
+      "dataAddress": 4295128269,
+      "size": 43
+    },
+    {
+      "address": 4295140192,
+      "dataAddress": 4295128313,
+      "size": 42
+    },
+    {
+      "address": 4295140224,
+      "dataAddress": 4295128356,
+      "size": 47
+    },
+    {
+      "address": 4295140256,
+      "dataAddress": 4295128404,
+      "size": 45
+    },
+    {
+      "address": 4295140288,
+      "dataAddress": 4295128450,
+      "size": 35
+    },
+    {
+      "address": 4295140320,
+      "dataAddress": 4295128486,
+      "size": 38
+    },
+    {
+      "address": 4295140352,
+      "dataAddress": 4295128525,
+      "size": 43
+    },
+    {
+      "address": 4295140384,
+      "dataAddress": 4295128569,
+      "size": 30
+    },
+    {
+      "address": 4295140416,
+      "dataAddress": 4295128600,
+      "size": 35
+    },
+    {
+      "address": 4295140448,
+      "dataAddress": 4295128636,
+      "size": 35
+    },
+    {
+      "address": 4295140480,
+      "dataAddress": 4295128672,
+      "size": 24
+    },
+    {
+      "address": 4295140512,
+      "dataAddress": 4295128697,
+      "size": 25
+    },
+    {
+      "address": 4295140544,
+      "dataAddress": 4295128723,
+      "size": 29
+    },
+    {
+      "address": 4295140576,
+      "dataAddress": 4295128753,
+      "size": 30
+    },
+    {
+      "address": 4295140608,
+      "dataAddress": 4295128784,
+      "size": 30
+    },
+    {
+      "address": 4295140640,
+      "dataAddress": 4295128815,
+      "size": 31
+    },
+    {
+      "address": 4295140672,
+      "dataAddress": 4295128847,
+      "size": 27
+    },
+    {
+      "address": 4295140704,
+      "dataAddress": 4295128875,
+      "size": 25
+    },
+    {
+      "address": 4295140736,
+      "dataAddress": 4295128901,
+      "size": 28
+    },
+    {
+      "address": 4295140768,
+      "dataAddress": 4295128930,
+      "size": 30
+    },
+    {
+      "address": 4295140800,
+      "dataAddress": 4295128961,
+      "size": 29
+    },
+    {
+      "address": 4295140832,
+      "dataAddress": 4295128991,
+      "size": 28
+    },
+    {
+      "address": 4295140864,
+      "dataAddress": 4295129020,
+      "size": 29
+    },
+    {
+      "address": 4295140896,
+      "dataAddress": 4295129050,
+      "size": 27
+    },
+    {
+      "address": 4295140928,
+      "dataAddress": 4295129078,
+      "size": 26
+    },
+    {
+      "address": 4295140960,
+      "dataAddress": 4295129105,
+      "size": 29
+    },
+    {
+      "address": 4295140992,
+      "dataAddress": 4295129135,
+      "size": 22
+    },
+    {
+      "address": 4295141024,
+      "dataAddress": 4295129158,
+      "size": 24
+    },
+    {
+      "address": 4295141056,
+      "dataAddress": 4295129183,
+      "size": 25
+    },
+    {
+      "address": 4295141088,
+      "dataAddress": 4295129209,
+      "size": 27
+    },
+    {
+      "address": 4295141120,
+      "dataAddress": 4295129237,
+      "size": 26
+    },
+    {
+      "address": 4295141152,
+      "dataAddress": 4295129264,
+      "size": 26
+    },
+    {
+      "address": 4295141184,
+      "dataAddress": 4295129291,
+      "size": 24
+    },
+    {
+      "address": 4295141216,
+      "dataAddress": 4295129316,
+      "size": 20
+    },
+    {
+      "address": 4295141248,
+      "dataAddress": 4295129337,
+      "size": 20
+    },
+    {
+      "address": 4295141280,
+      "dataAddress": 4295129358,
+      "size": 28
+    },
+    {
+      "address": 4295141312,
+      "dataAddress": 4295129387,
+      "size": 33
+    },
+    {
+      "address": 4295141344,
+      "dataAddress": 4295129421,
+      "size": 35
+    },
+    {
+      "address": 4295141376,
+      "dataAddress": 4295129457,
+      "size": 34
+    },
+    {
+      "address": 4295141408,
+      "dataAddress": 4295129492,
+      "size": 37
+    },
+    {
+      "address": 4295141440,
+      "dataAddress": 4295129530,
+      "size": 31
+    },
+    {
+      "address": 4295141472,
+      "dataAddress": 4295129562,
+      "size": 29
+    },
+    {
+      "address": 4295141504,
+      "dataAddress": 4295129592,
+      "size": 31
+    },
+    {
+      "address": 4295141536,
+      "dataAddress": 4295129624,
+      "size": 44
+    },
+    {
+      "address": 4295141568,
+      "dataAddress": 4295129669,
+      "size": 45
+    }
+  ],
+  "classes": [
+    {
+      "address": 4295176608,
+      "dataAddress": 4295147592,
+      "listPointer": 4295141600,
+      "methodList": {
+        "address": 4295095216,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295095224,
+            "implAddress": 4295001740,
+            "nameAddress": 4295170128,
+            "selector": "initWithFrame:",
+            "type": "@48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120161
+          },
+          {
+            "address": 4295095236,
+            "implAddress": 4295001796,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095248,
+            "implAddress": 4295001928,
+            "nameAddress": 4295170160,
+            "selector": "drawRect:",
+            "type": "v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120211
+          },
+          {
+            "address": 4295095260,
+            "implAddress": 4295001984,
+            "nameAddress": 4295170120,
+            "selector": "allowsVibrancy",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          }
+        ]
+      },
+      "methodListAddress": 4295095216,
+      "name": "BitFieldBox",
+      "nameAddress": 4295119355
+    },
+    {
+      "address": 4295176688,
+      "dataAddress": 4295147992,
+      "listPointer": 4295141608,
+      "methodList": {
+        "address": 4295095272,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295095280,
+            "implAddress": 4295001992,
+            "nameAddress": 4295170168,
+            "selector": "initWithCoder:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295095292,
+            "implAddress": 4295002084,
+            "nameAddress": 4295170176,
+            "selector": "loadColors",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095304,
+            "implAddress": 4295002600,
+            "nameAddress": 4295170272,
+            "selector": "initTextCell:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295095316,
+            "implAddress": 4295002692,
+            "nameAddress": 4295170112,
+            "selector": "drawBezelWithFrame:inView:",
+            "type": "v56@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16@48",
+            "typeAddress": 4295120272
+          },
+          {
+            "address": 4295095328,
+            "implAddress": 4295003688,
+            "nameAddress": 4295170104,
+            "selector": "drawFocusRingMaskWithFrame:inView:",
+            "type": "v56@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16@48",
+            "typeAddress": 4295120272
+          },
+          {
+            "address": 4295095340,
+            "implAddress": 4295003884,
+            "nameAddress": 4295170320,
+            "selector": "isActiveOperation",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295095352,
+            "implAddress": 4295003904,
+            "nameAddress": 4295170096,
+            "selector": "setIsActiveOperation:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295095364,
+            "implAddress": 4295003920,
+            "nameAddress": 4295170232,
+            "selector": "textColor",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295095376,
+            "implAddress": 4295003936,
+            "nameAddress": 4295170216,
+            "selector": "setTextColor:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295095388,
+            "implAddress": 4295003956,
+            "nameAddress": 4295170088,
+            "selector": "textFont",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295095400,
+            "implAddress": 4295003972,
+            "nameAddress": 4295170080,
+            "selector": "setTextFont:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295095412,
+            "implAddress": 4295003992,
+            "nameAddress": 4295170072,
+            "selector": "normalButtonImage",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295095424,
+            "implAddress": 4295004008,
+            "nameAddress": 4295170248,
+            "selector": "setNormalButtonImage:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295095436,
+            "implAddress": 4295004028,
+            "nameAddress": 4295170064,
+            "selector": "disabledButtonImage",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295095448,
+            "implAddress": 4295004044,
+            "nameAddress": 4295170264,
+            "selector": "setDisabledButtonImage:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295095460,
+            "implAddress": 4295004064,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295095272,
+      "name": "CalcButtonCell",
+      "nameAddress": 4295119367
+    },
+    {
+      "address": 4295176728,
+      "dataAddress": 4295148136,
+      "listPointer": 4295141616,
+      "methodList": {
+        "address": 4295095472,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295095480,
+            "implAddress": 4295004188,
+            "nameAddress": 4295170176,
+            "selector": "loadColors",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295095472,
+      "name": "CalcDigitCell",
+      "nameAddress": 4295119384
+    },
+    {
+      "address": 4295176928,
+      "dataAddress": 4295148280,
+      "listPointer": 4295141624,
+      "methodList": {
+        "address": 0,
+        "flags": 0,
+        "methods": []
+      },
+      "methodListAddress": 0,
+      "name": "CalcZeroCell",
+      "nameAddress": 4295119398
+    },
+    {
+      "address": 4295176768,
+      "dataAddress": 4295148424,
+      "listPointer": 4295141632,
+      "methodList": {
+        "address": 4295095496,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295095504,
+            "implAddress": 4295004316,
+            "nameAddress": 4295170176,
+            "selector": "loadColors",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295095496,
+      "name": "CalcFunctionCell",
+      "nameAddress": 4295119411
+    },
+    {
+      "address": 4295177008,
+      "dataAddress": 4295148568,
+      "listPointer": 4295141640,
+      "methodList": {
+        "address": 4295095520,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295095528,
+            "implAddress": 4295004444,
+            "nameAddress": 4295170176,
+            "selector": "loadColors",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295095520,
+      "name": "CalcRPNOperationCell",
+      "nameAddress": 4295119428
+    },
+    {
+      "address": 4295177088,
+      "dataAddress": 4295150904,
+      "listPointer": 4295141648,
+      "methodList": {
+        "address": 4295095544,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295095552,
+            "implAddress": 4295011176,
+            "nameAddress": 4295171248,
+            "selector": "_showRPNViews",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095564,
+            "implAddress": 4295012092,
+            "nameAddress": 4295170760,
+            "selector": "_hideRPNViews",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095576,
+            "implAddress": 4295012736,
+            "nameAddress": 4295171504,
+            "selector": "_hideRegRPNView",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095588,
+            "implAddress": 4295013204,
+            "nameAddress": 4295171496,
+            "selector": "_hideWideRPNView",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095600,
+            "implAddress": 4294988184,
+            "nameAddress": 4295170920,
+            "selector": "_reload",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095612,
+            "implAddress": 4295013692,
+            "nameAddress": 4295171416,
+            "selector": "_showWideRPNView",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095624,
+            "implAddress": 4295014200,
+            "nameAddress": 4295171424,
+            "selector": "_showRegRPNView",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095636,
+            "implAddress": 4294988656,
+            "nameAddress": 4295170872,
+            "selector": "_restoreRightLCD:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295095648,
+            "implAddress": 4295004588,
+            "nameAddress": 4295170456,
+            "selector": "init",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295095660,
+            "implAddress": 4294993628,
+            "nameAddress": 4295171888,
+            "selector": "setRPNStack:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295095672,
+            "implAddress": 4295005000,
+            "nameAddress": 4295171816,
+            "selector": "setShowSeparators:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295095684,
+            "implAddress": 4294994456,
+            "nameAddress": 4295170936,
+            "selector": "stringWithSeparators:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295095696,
+            "implAddress": 4295005016,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095708,
+            "implAddress": 4295005432,
+            "nameAddress": 4295170784,
+            "selector": "dealloc",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095720,
+            "implAddress": 4294984224,
+            "nameAddress": 4295170896,
+            "selector": "setExponent:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295095732,
+            "implAddress": 4294991740,
+            "nameAddress": 4295170696,
+            "selector": "setCalcModeText:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295095744,
+            "implAddress": 4294994436,
+            "nameAddress": 4295170048,
+            "selector": "showMemoryIndicator:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295095756,
+            "implAddress": 4294984132,
+            "nameAddress": 4295170888,
+            "selector": "showParenIndicator:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295095768,
+            "implAddress": 4295005524,
+            "nameAddress": 4295170040,
+            "selector": "showParenError",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095780,
+            "implAddress": 4295005712,
+            "nameAddress": 4295170032,
+            "selector": "clearParenError",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095792,
+            "implAddress": 4294992436,
+            "nameAddress": 4295172656,
+            "selector": "showLCDModeIndicator:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295095804,
+            "implAddress": 4294995668,
+            "nameAddress": 4295170024,
+            "selector": "changeDisplayedNumber:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295095816,
+            "implAddress": 4294988476,
+            "nameAddress": 4295170904,
+            "selector": "setLCDDoubleValue:input:",
+            "type": "v28@0:8d16B24",
+            "typeAddress": 4295120408
+          },
+          {
+            "address": 4295095828,
+            "implAddress": 4294995564,
+            "nameAddress": 4295172344,
+            "selector": "setLCDStringValue:input:",
+            "type": "v28@0:8@16B24",
+            "typeAddress": 4295120422
+          },
+          {
+            "address": 4295095840,
+            "implAddress": 4294994256,
+            "nameAddress": 4295170016,
+            "selector": "setLCDIntValue:input:",
+            "type": "v28@0:8Q16B24",
+            "typeAddress": 4295120559
+          },
+          {
+            "address": 4295095852,
+            "implAddress": 4295005736,
+            "nameAddress": 4295170008,
+            "selector": "message:",
+            "type": "v20@0:8i16",
+            "typeAddress": 4295120397
+          },
+          {
+            "address": 4295095864,
+            "implAddress": 4294997508,
+            "nameAddress": 4295170000,
+            "selector": "setErrorCondition:",
+            "type": "v24@0:8Q16",
+            "typeAddress": 4295120436
+          },
+          {
+            "address": 4295095876,
+            "implAddress": 4294983584,
+            "nameAddress": 4295169992,
+            "selector": "blink",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095888,
+            "implAddress": 4294997524,
+            "nameAddress": 4295170912,
+            "selector": "localizedStringForError:",
+            "type": "@24@0:8Q16",
+            "typeAddress": 4295120573
+          },
+          {
+            "address": 4295095900,
+            "implAddress": 4294984028,
+            "nameAddress": 4295169984,
+            "selector": "clear",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095912,
+            "implAddress": 4294984332,
+            "nameAddress": 4295170528,
+            "selector": "showValue",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095924,
+            "implAddress": 4294988040,
+            "nameAddress": 4295170568,
+            "selector": "localizeDecimalSeparator:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295095936,
+            "implAddress": 4295005808,
+            "nameAddress": 4295171072,
+            "selector": "revertSeparators:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295095948,
+            "implAddress": 4295005952,
+            "nameAddress": 4295171000,
+            "selector": "showLeftValue",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295095960,
+            "implAddress": 4294997288,
+            "nameAddress": 4295173048,
+            "selector": "actualValue",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295095972,
+            "implAddress": 4294993532,
+            "nameAddress": 4295170816,
+            "selector": "doubleValue",
+            "type": "d16@0:8",
+            "typeAddress": 4295120389
+          },
+          {
+            "address": 4295095984,
+            "implAddress": 4294986292,
+            "nameAddress": 4295170928,
+            "selector": "actualValuePeriodDecimal",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295095996,
+            "implAddress": 4294995996,
+            "nameAddress": 4295169976,
+            "selector": "actualValueWithThousandsSeparators",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096008,
+            "implAddress": 4294998452,
+            "nameAddress": 4295170984,
+            "selector": "intValue",
+            "type": "Q16@0:8",
+            "typeAddress": 4295120381
+          },
+          {
+            "address": 4295096020,
+            "implAddress": 4295006636,
+            "nameAddress": 4295172528,
+            "selector": "localizedStringValue",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096032,
+            "implAddress": 4294994244,
+            "nameAddress": 4295170832,
+            "selector": "stringValue",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096044,
+            "implAddress": 4295006768,
+            "nameAddress": 4295169968,
+            "selector": "displayedString",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096056,
+            "implAddress": 4294998320,
+            "nameAddress": 4295171056,
+            "selector": "hexString",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096068,
+            "implAddress": 4295006888,
+            "nameAddress": 4295171064,
+            "selector": "octString",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096080,
+            "implAddress": 4295007020,
+            "nameAddress": 4295170968,
+            "selector": "binaryStringRepresentationOfSize:",
+            "type": "@20@0:8i16",
+            "typeAddress": 4295120584
+          },
+          {
+            "address": 4295096092,
+            "implAddress": 4295007312,
+            "nameAddress": 4295170744,
+            "selector": "setPrecision:",
+            "type": "v24@0:8Q16",
+            "typeAddress": 4295120436
+          },
+          {
+            "address": 4295096104,
+            "implAddress": 4295007328,
+            "nameAddress": 4295171744,
+            "selector": "precision",
+            "type": "Q16@0:8",
+            "typeAddress": 4295120381
+          },
+          {
+            "address": 4295096116,
+            "implAddress": 4294992568,
+            "nameAddress": 4295172664,
+            "selector": "setLCDMode:",
+            "type": "v24@0:8Q16",
+            "typeAddress": 4295120436
+          },
+          {
+            "address": 4295096128,
+            "implAddress": 4294993808,
+            "nameAddress": 4295169960,
+            "selector": "setLeftLCDMode:",
+            "type": "v24@0:8Q16",
+            "typeAddress": 4295120436
+          },
+          {
+            "address": 4295096140,
+            "implAddress": 4295007336,
+            "nameAddress": 4295171048,
+            "selector": "lcdMode",
+            "type": "Q16@0:8",
+            "typeAddress": 4295120381
+          },
+          {
+            "address": 4295096152,
+            "implAddress": 4295007344,
+            "nameAddress": 4295169952,
+            "selector": "leftLCDMode",
+            "type": "Q16@0:8",
+            "typeAddress": 4295120381
+          },
+          {
+            "address": 4295096164,
+            "implAddress": 4294992652,
+            "nameAddress": 4295171104,
+            "selector": "setLCDModeIndicatorText:",
+            "type": "v24@0:8Q16",
+            "typeAddress": 4295120436
+          },
+          {
+            "address": 4295096176,
+            "implAddress": 4295007380,
+            "nameAddress": 4295169944,
+            "selector": "validateMenuItem:",
+            "type": "B24@0:8@16",
+            "typeAddress": 4295120595
+          },
+          {
+            "address": 4295096188,
+            "implAddress": 4295007564,
+            "nameAddress": 4295171120,
+            "selector": "drawLargeType:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096200,
+            "implAddress": 4295007840,
+            "nameAddress": 4295171144,
+            "selector": "contentRectForString:",
+            "type": "{CGRect={CGPoint=dd}{CGSize=dd}}24@0:8@16",
+            "typeAddress": 4295120606
+          },
+          {
+            "address": 4295096212,
+            "implAddress": 4295008516,
+            "nameAddress": 4295171848,
+            "selector": "setRPNState:",
+            "type": "v20@0:8i16",
+            "typeAddress": 4295120397
+          },
+          {
+            "address": 4295096224,
+            "implAddress": 4294985688,
+            "nameAddress": 4295170944,
+            "selector": "displayStringForActualValue",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096236,
+            "implAddress": 4295008812,
+            "nameAddress": 4295171304,
+            "selector": "displayStringForString:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295096248,
+            "implAddress": 4294993724,
+            "nameAddress": 4295169936,
+            "selector": "numberOfRowsInTableView:",
+            "type": "q24@0:8@16",
+            "typeAddress": 4295120648
+          },
+          {
+            "address": 4295096260,
+            "implAddress": 4295009148,
+            "nameAddress": 4295169928,
+            "selector": "tableView:objectValueForTableColumn:row:",
+            "type": "@40@0:8@16@24q32",
+            "typeAddress": 4295120659
+          },
+          {
+            "address": 4295096272,
+            "implAddress": 4295009684,
+            "nameAddress": 4295169920,
+            "selector": "tableView:shouldSelectRow:",
+            "type": "B32@0:8@16q24",
+            "typeAddress": 4295120676
+          },
+          {
+            "address": 4295096284,
+            "implAddress": 4294993620,
+            "nameAddress": 4295171872,
+            "selector": "setRPNIsWide:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295096296,
+            "implAddress": 4294991728,
+            "nameAddress": 4295171896,
+            "selector": "setCurrentView:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096308,
+            "implAddress": 4295009692,
+            "nameAddress": 4295172696,
+            "selector": "setLCDWidthForMode",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295096320,
+            "implAddress": 4295009780,
+            "nameAddress": 4295172632,
+            "selector": "displayHeight",
+            "type": "i16@0:8",
+            "typeAddress": 4295120690
+          },
+          {
+            "address": 4295096332,
+            "implAddress": 4295009832,
+            "nameAddress": 4295169912,
+            "selector": "rpnRollUp:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096344,
+            "implAddress": 4295009848,
+            "nameAddress": 4295169904,
+            "selector": "rpnRollDown:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096356,
+            "implAddress": 4295009864,
+            "nameAddress": 4295169896,
+            "selector": "rpnDrop:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096368,
+            "implAddress": 4295009880,
+            "nameAddress": 4295169888,
+            "selector": "rpnExchange:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096380,
+            "implAddress": 4295009896,
+            "nameAddress": 4295172600,
+            "selector": "switchRPNRegToWide",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295096392,
+            "implAddress": 4295010088,
+            "nameAddress": 4295172608,
+            "selector": "switchRPNWideToReg",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295096404,
+            "implAddress": 4295010276,
+            "nameAddress": 4295171384,
+            "selector": "pinLCDRight",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295096416,
+            "implAddress": 4295010392,
+            "nameAddress": 4295171376,
+            "selector": "setHeightConstraint:",
+            "type": "v20@0:8f16",
+            "typeAddress": 4295120698
+          },
+          {
+            "address": 4295096428,
+            "implAddress": 4295010548,
+            "nameAddress": 4295171512,
+            "selector": "setModeIndicatorsTopConstraint:",
+            "type": "v20@0:8f16",
+            "typeAddress": 4295120698
+          },
+          {
+            "address": 4295096440,
+            "implAddress": 4295010704,
+            "nameAddress": 4295172640,
+            "selector": "isInRPNMode",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295096452,
+            "implAddress": 4295010712,
+            "nameAddress": 4295169880,
+            "selector": "isInWideMode",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295096464,
+            "implAddress": 4295010720,
+            "nameAddress": 4295169872,
+            "selector": "currentView",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096476,
+            "implAddress": 4295010728,
+            "nameAddress": 4295171320,
+            "selector": "lcdToRPNButtonsSpacer",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096488,
+            "implAddress": 4295010740,
+            "nameAddress": 4295169864,
+            "selector": "setLcdToRPNButtonsSpacer:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096500,
+            "implAddress": 4295010748,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295095544,
+      "name": "LCDController",
+      "nameAddress": 4295119449
+    },
+    {
+      "address": 4295177168,
+      "dataAddress": 4295151320,
+      "listPointer": 4295141656,
+      "methodList": {
+        "address": 4295096568,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295096576,
+            "implAddress": 4295015272,
+            "nameAddress": 4295171632,
+            "selector": "initWithType:fromUnit:toUnit:",
+            "type": "@40@0:8@16@24@32",
+            "typeAddress": 4295120984
+          },
+          {
+            "address": 4295096588,
+            "implAddress": 4295015452,
+            "nameAddress": 4295174280,
+            "selector": "dictionaryRepresentation",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096600,
+            "implAddress": 4295015708,
+            "nameAddress": 4295172136,
+            "selector": "localizedTitle",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096612,
+            "implAddress": 4295016424,
+            "nameAddress": 4295174184,
+            "selector": "localizedFrom",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096624,
+            "implAddress": 4295016728,
+            "nameAddress": 4295174192,
+            "selector": "localizedTo",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096636,
+            "implAddress": 4295017032,
+            "nameAddress": 4295171680,
+            "selector": "isOfType:",
+            "type": "B24@0:8@16",
+            "typeAddress": 4295120595
+          },
+          {
+            "address": 4295096648,
+            "implAddress": 4295017160,
+            "nameAddress": 4295174248,
+            "selector": "isEqual:",
+            "type": "B24@0:8@16",
+            "typeAddress": 4295120595
+          },
+          {
+            "address": 4295096660,
+            "implAddress": 4295017596,
+            "nameAddress": 4295171656,
+            "selector": "type",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096672,
+            "implAddress": 4295017608,
+            "nameAddress": 4295171664,
+            "selector": "from",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096684,
+            "implAddress": 4295017620,
+            "nameAddress": 4295171672,
+            "selector": "to",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096696,
+            "implAddress": 4295017632,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295096568,
+      "name": "CalcConversion",
+      "nameAddress": 4295119511
+    },
+    {
+      "address": 4295177288,
+      "dataAddress": 4295151624,
+      "listPointer": 4295141664,
+      "methodList": {
+        "address": 4295096712,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295096720,
+            "implAddress": 4295017712,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295096732,
+            "implAddress": 4295017812,
+            "nameAddress": 4295169856,
+            "selector": "parentLCDView",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096744,
+            "implAddress": 4295017828,
+            "nameAddress": 4295169848,
+            "selector": "setParentLCDView:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096756,
+            "implAddress": 4295017848,
+            "nameAddress": 4295169840,
+            "selector": "sciRPNButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096768,
+            "implAddress": 4295017864,
+            "nameAddress": 4295169832,
+            "selector": "setSciRPNButtons:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096780,
+            "implAddress": 4295017884,
+            "nameAddress": 4295169824,
+            "selector": "lcdController",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096792,
+            "implAddress": 4295017900,
+            "nameAddress": 4295169816,
+            "selector": "setLcdController:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096804,
+            "implAddress": 4295017920,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295096712,
+      "name": "BackgroundView",
+      "nameAddress": 4295119528
+    },
+    {
+      "address": 4295177328,
+      "dataAddress": 4295154976,
+      "listPointer": 4295141672,
+      "methodList": {
+        "address": 4295096840,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295096848,
+            "implAddress": 4295018024,
+            "nameAddress": 4295170456,
+            "selector": "init",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295096860,
+            "implAddress": 4295018164,
+            "nameAddress": 4295170744,
+            "selector": "setPrecision:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096872,
+            "implAddress": 4295018556,
+            "nameAddress": 4295172008,
+            "selector": "convert:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096884,
+            "implAddress": 4295018664,
+            "nameAddress": 4295172016,
+            "selector": "clearRecentConversionsMenu:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096896,
+            "implAddress": 4295018748,
+            "nameAddress": 4295172040,
+            "selector": "toggleSeparators:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096908,
+            "implAddress": 4295019004,
+            "nameAddress": 4295172032,
+            "selector": "toggleRPNMode:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096920,
+            "implAddress": 4294989544,
+            "nameAddress": 4295172080,
+            "selector": "menuViewSelectionDidChange:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096932,
+            "implAddress": 4295019592,
+            "nameAddress": 4295171904,
+            "selector": "prepareConversion:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096944,
+            "implAddress": 4295019616,
+            "nameAddress": 4295171944,
+            "selector": "showAbout:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096956,
+            "implAddress": 4295019716,
+            "nameAddress": 4295171952,
+            "selector": "dumpStack:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295096968,
+            "implAddress": 4294988676,
+            "nameAddress": 4295169944,
+            "selector": "validateMenuItem:",
+            "type": "B24@0:8@16",
+            "typeAddress": 4295120595
+          },
+          {
+            "address": 4295096980,
+            "implAddress": 4295019740,
+            "nameAddress": 4295171800,
+            "selector": "updateRecentConversionsMenu",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295096992,
+            "implAddress": 4295020516,
+            "nameAddress": 4295172776,
+            "selector": "populateConvertMenu",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097004,
+            "implAddress": 4295021248,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097016,
+            "implAddress": 4295021624,
+            "nameAddress": 4295172888,
+            "selector": "initItemsWithStoredDefaults",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097028,
+            "implAddress": 4295022996,
+            "nameAddress": 4295172904,
+            "selector": "pathsToPlugins",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097040,
+            "implAddress": 4295023316,
+            "nameAddress": 4295172328,
+            "selector": "loadView:asPrefetch:",
+            "type": "v28@0:8@16B24",
+            "typeAddress": 4295120422
+          },
+          {
+            "address": 4295097052,
+            "implAddress": 4295024348,
+            "nameAddress": 4295172936,
+            "selector": "populateViewsMenu",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097064,
+            "implAddress": 4295024912,
+            "nameAddress": 4295172336,
+            "selector": "populatePrecisionMenu",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097076,
+            "implAddress": 4294993792,
+            "nameAddress": 4295169808,
+            "selector": "setBackEndMode:",
+            "type": "v20@0:8i16",
+            "typeAddress": 4295120397
+          },
+          {
+            "address": 4295097088,
+            "implAddress": 4294998548,
+            "nameAddress": 4295169800,
+            "selector": "sendDataToCalcEngine:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097100,
+            "implAddress": 4294993776,
+            "nameAddress": 4295169792,
+            "selector": "lcd:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295097112,
+            "implAddress": 4294993400,
+            "nameAddress": 4295169784,
+            "selector": "previousView:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295097124,
+            "implAddress": 4295025404,
+            "nameAddress": 4295171968,
+            "selector": "copy:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097136,
+            "implAddress": 4295025564,
+            "nameAddress": 4295172536,
+            "selector": "writeObject:toPasteboard:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 4295121432
+          },
+          {
+            "address": 4295097148,
+            "implAddress": 4295025788,
+            "nameAddress": 4295169776,
+            "selector": "localizedValueForString:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295097160,
+            "implAddress": 4294993416,
+            "nameAddress": 4295172712,
+            "selector": "adjustWindowPosition",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097172,
+            "implAddress": 4295025964,
+            "nameAddress": 4295172560,
+            "selector": "adjustedWindowPosition",
+            "type": "{CGRect={CGPoint=dd}{CGSize=dd}}16@0:8",
+            "typeAddress": 4295121446
+          },
+          {
+            "address": 4295097184,
+            "implAddress": 4294989556,
+            "nameAddress": 4295171896,
+            "selector": "setCurrentView:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097196,
+            "implAddress": 4295026924,
+            "nameAddress": 4295174104,
+            "selector": "recentConversionsHaveChanged",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097208,
+            "implAddress": 4295026936,
+            "nameAddress": 4295174160,
+            "selector": "conversionCategoriesHaveChanged",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097220,
+            "implAddress": 4295026948,
+            "nameAddress": 4295171936,
+            "selector": "readyForConversion",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295097232,
+            "implAddress": 4295027048,
+            "nameAddress": 4295172784,
+            "selector": "handleConversion:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097244,
+            "implAddress": 4295027072,
+            "nameAddress": 4295169768,
+            "selector": "applicationShouldOpenUntitledFile:",
+            "type": "B24@0:8@16",
+            "typeAddress": 4295120595
+          },
+          {
+            "address": 4295097256,
+            "implAddress": 4295027320,
+            "nameAddress": 4295169760,
+            "selector": "applicationShouldHandleReopen:hasVisibleWindows:",
+            "type": "B28@0:8@16B24",
+            "typeAddress": 4295121485
+          },
+          {
+            "address": 4295097268,
+            "implAddress": 4295027576,
+            "nameAddress": 4295172816,
+            "selector": "processHandoffFromSpotlight:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097280,
+            "implAddress": 4295027832,
+            "nameAddress": 4295169752,
+            "selector": "applicationDidFinishLaunching:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097292,
+            "implAddress": 4295028536,
+            "nameAddress": 4295172320,
+            "selector": "_loadPlugins",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097304,
+            "implAddress": 4295029232,
+            "nameAddress": 4295169744,
+            "selector": "applicationShouldTerminateAfterLastWindowClosed:",
+            "type": "B24@0:8@16",
+            "typeAddress": 4295120595
+          },
+          {
+            "address": 4295097316,
+            "implAddress": 4295029436,
+            "nameAddress": 4295174024,
+            "selector": "toggleZoom:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097328,
+            "implAddress": 4295029712,
+            "nameAddress": 4295169736,
+            "selector": "windowShouldZoom:toFrame:",
+            "type": "B56@0:8@16{CGRect={CGPoint=dd}{CGSize=dd}}24",
+            "typeAddress": 4295121499
+          },
+          {
+            "address": 4295097340,
+            "implAddress": 4294983336,
+            "nameAddress": 4295169728,
+            "selector": "windowDidUpdate:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097352,
+            "implAddress": 4295029820,
+            "nameAddress": 4295169720,
+            "selector": "windowDidMove:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097364,
+            "implAddress": 4294998200,
+            "nameAddress": 4295172208,
+            "selector": "windowDidBecomeKey:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097376,
+            "implAddress": 4295029912,
+            "nameAddress": 4295169712,
+            "selector": "windowWillClose:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097388,
+            "implAddress": 4295030116,
+            "nameAddress": 4295169704,
+            "selector": "windowDidLoad",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097400,
+            "implAddress": 4294997076,
+            "nameAddress": 4295169696,
+            "selector": "window:willEncodeRestorableState:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 4295121432
+          },
+          {
+            "address": 4295097412,
+            "implAddress": 4295030288,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295096840,
+      "name": "CalculatorController",
+      "nameAddress": 4295119567
+    },
+    {
+      "address": 4295177408,
+      "dataAddress": 4295155120,
+      "listPointer": 4295141680,
+      "methodList": {
+        "address": 4295097424,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295097432,
+            "implAddress": 4295030892,
+            "nameAddress": 4295170128,
+            "selector": "initWithFrame:",
+            "type": "@48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120161
+          },
+          {
+            "address": 4295097444,
+            "implAddress": 4295031028,
+            "nameAddress": 4295170160,
+            "selector": "drawRect:",
+            "type": "v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120211
+          },
+          {
+            "address": 4295097456,
+            "implAddress": 4295031084,
+            "nameAddress": 4295170120,
+            "selector": "allowsVibrancy",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          }
+        ]
+      },
+      "methodListAddress": 4295097424,
+      "name": "OctetIndicatorField",
+      "nameAddress": 4295119613
+    },
+    {
+      "address": 4295177488,
+      "dataAddress": 4295155264,
+      "listPointer": 4295141688,
+      "methodList": {
+        "address": 4295097472,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295097480,
+            "implAddress": 4295031092,
+            "nameAddress": 4295170128,
+            "selector": "initWithFrame:",
+            "type": "@48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120161
+          },
+          {
+            "address": 4295097492,
+            "implAddress": 4295031148,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097504,
+            "implAddress": 4295031572,
+            "nameAddress": 4295170160,
+            "selector": "drawRect:",
+            "type": "v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120211
+          },
+          {
+            "address": 4295097516,
+            "implAddress": 4295031628,
+            "nameAddress": 4295170120,
+            "selector": "allowsVibrancy",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          }
+        ]
+      },
+      "methodListAddress": 4295097472,
+      "name": "BitButtonCell",
+      "nameAddress": 4295119633
+    },
+    {
+      "address": 4295177568,
+      "dataAddress": 4295155504,
+      "listPointer": 4295141696,
+      "methodList": {
+        "address": 4295097528,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295097536,
+            "implAddress": 4295031636,
+            "nameAddress": 4295170128,
+            "selector": "initWithFrame:",
+            "type": "@48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120161
+          },
+          {
+            "address": 4295097548,
+            "implAddress": 4295031768,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097560,
+            "implAddress": 4295031812,
+            "nameAddress": 4295173208,
+            "selector": "heightOfString:withFont:",
+            "type": "d32@0:8@16@24",
+            "typeAddress": 4295121729
+          },
+          {
+            "address": 4295097572,
+            "implAddress": 4295032032,
+            "nameAddress": 4295173152,
+            "selector": "widthOfString:withFont:",
+            "type": "d32@0:8@16@24",
+            "typeAddress": 4295121729
+          },
+          {
+            "address": 4295097584,
+            "implAddress": 4295032252,
+            "nameAddress": 4295173192,
+            "selector": "fontSizeForString:",
+            "type": "i24@0:8@16",
+            "typeAddress": 4295121743
+          },
+          {
+            "address": 4295097596,
+            "implAddress": 4295032860,
+            "nameAddress": 4295171376,
+            "selector": "setHeightConstraint:",
+            "type": "v20@0:8f16",
+            "typeAddress": 4295120698
+          },
+          {
+            "address": 4295097608,
+            "implAddress": 4295033076,
+            "nameAddress": 4295170736,
+            "selector": "setStringValue:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097620,
+            "implAddress": 4295033324,
+            "nameAddress": 4295173176,
+            "selector": "fieldHeightConstraint",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097632,
+            "implAddress": 4295033340,
+            "nameAddress": 4295173184,
+            "selector": "setFieldHeightConstraint:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295097644,
+            "implAddress": 4295033360,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295097528,
+      "name": "RightLCDField",
+      "nameAddress": 4295119647
+    },
+    {
+      "address": 4295177648,
+      "dataAddress": 4295155720,
+      "listPointer": 4295141704,
+      "methodList": {
+        "address": 4295097656,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295097664,
+            "implAddress": 4295033444,
+            "nameAddress": 4295170128,
+            "selector": "initWithFrame:",
+            "type": "@48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120161
+          },
+          {
+            "address": 4295097676,
+            "implAddress": 4295033744,
+            "nameAddress": 4295170160,
+            "selector": "drawRect:",
+            "type": "v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120211
+          },
+          {
+            "address": 4295097688,
+            "implAddress": 4295033932,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295097656,
+      "name": "PaperTapeView",
+      "nameAddress": 4295119663
+    },
+    {
+      "address": 4295177768,
+      "dataAddress": 4295158136,
+      "listPointer": 4295141712,
+      "methodList": {
+        "address": 4295097704,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295097712,
+            "implAddress": 4295034016,
+            "nameAddress": 4295169680,
+            "selector": "setInputMode:",
+            "type": "v20@0:8i16",
+            "typeAddress": 4295120397
+          },
+          {
+            "address": 4295097724,
+            "implAddress": 4295034600,
+            "nameAddress": 4295173344,
+            "selector": "touchBar",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097736,
+            "implAddress": 4295034880,
+            "nameAddress": 4295169672,
+            "selector": "setRPNActive:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295097748,
+            "implAddress": 4295035064,
+            "nameAddress": 4295173336,
+            "selector": "setClearActive:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295097760,
+            "implAddress": 4295035264,
+            "nameAddress": 4295173544,
+            "selector": "touchBar:makeItemForIdentifier:",
+            "type": "@32@0:8@16@24",
+            "typeAddress": 4295121754
+          },
+          {
+            "address": 4295097772,
+            "implAddress": 4295040316,
+            "nameAddress": 4295173376,
+            "selector": "hexadecimalGroup",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097784,
+            "implAddress": 4295040568,
+            "nameAddress": 4295173304,
+            "selector": "hexadecimalDefaultIdentifierSet",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097796,
+            "implAddress": 4295040788,
+            "nameAddress": 4295173320,
+            "selector": "hexadecimalAllowedIdentifiers",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097808,
+            "implAddress": 4295041148,
+            "nameAddress": 4295169664,
+            "selector": "allGroupIdentifiers",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097820,
+            "implAddress": 4295041284,
+            "nameAddress": 4295173424,
+            "selector": "allButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097832,
+            "implAddress": 4295041976,
+            "nameAddress": 4295173416,
+            "selector": "operatorButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097844,
+            "implAddress": 4295042188,
+            "nameAddress": 4295169656,
+            "selector": "escapeButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097856,
+            "implAddress": 4295042340,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295097704,
+      "name": "HexadecimalTouchBarController",
+      "nameAddress": 4295119677
+    },
+    {
+      "address": 4295177808,
+      "dataAddress": 4295159384,
+      "listPointer": 4295141720,
+      "methodList": {
+        "address": 4295097872,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295097880,
+            "implAddress": 4295043204,
+            "nameAddress": 4295170456,
+            "selector": "init",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097892,
+            "implAddress": 4295043260,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097904,
+            "implAddress": 4295043396,
+            "nameAddress": 4295173432,
+            "selector": "setupButtonAppearance",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295097916,
+            "implAddress": 4295044176,
+            "nameAddress": 4295173480,
+            "selector": "convertImage:toColor:",
+            "type": "@32@0:8@16@24",
+            "typeAddress": 4295121754
+          },
+          {
+            "address": 4295097928,
+            "implAddress": 4295044820,
+            "nameAddress": 4295173408,
+            "selector": "groupItemWithIdentifier:itemIdentifiers:",
+            "type": "@32@0:8@16@24",
+            "typeAddress": 4295121754
+          },
+          {
+            "address": 4295097940,
+            "implAddress": 4295045348,
+            "nameAddress": 4295169648,
+            "selector": "allTouchBarSpaces",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097952,
+            "implAddress": 4295045488,
+            "nameAddress": 4295173344,
+            "selector": "touchBar",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097964,
+            "implAddress": 4295045496,
+            "nameAddress": 4295173336,
+            "selector": "setClearActive:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295097976,
+            "implAddress": 4295045500,
+            "nameAddress": 4295173416,
+            "selector": "operatorButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295097988,
+            "implAddress": 4295045508,
+            "nameAddress": 4295173424,
+            "selector": "allButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295098000,
+            "implAddress": 4295045516,
+            "nameAddress": 4295169656,
+            "selector": "escapeButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295098012,
+            "implAddress": 4295045524,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295097872,
+      "name": "TouchBarController",
+      "nameAddress": 4295119730
+    },
+    {
+      "address": 4295177928,
+      "dataAddress": 4295159600,
+      "listPointer": 4295141728,
+      "methodList": {
+        "address": 4295098024,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295098032,
+            "implAddress": 4295045604,
+            "nameAddress": 4295171152,
+            "selector": "setValueString:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098044,
+            "implAddress": 4295045624,
+            "nameAddress": 4295171240,
+            "selector": "setAttributes:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098056,
+            "implAddress": 4295045644,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098068,
+            "implAddress": 4295045676,
+            "nameAddress": 4295170160,
+            "selector": "drawRect:",
+            "type": "v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120211
+          },
+          {
+            "address": 4295098080,
+            "implAddress": 4295046036,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295098024,
+      "name": "CustomView",
+      "nameAddress": 4295119768
+    },
+    {
+      "address": 4295178008,
+      "dataAddress": 4295159744,
+      "listPointer": 4295141736,
+      "methodList": {
+        "address": 4295098096,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295098104,
+            "implAddress": 4295046120,
+            "nameAddress": 4295170160,
+            "selector": "drawRect:",
+            "type": "v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120211
+          }
+        ]
+      },
+      "methodListAddress": 4295098096,
+      "name": "CalcWindowBackgroundView",
+      "nameAddress": 4295119779
+    },
+    {
+      "address": 4295178048,
+      "dataAddress": 4295159888,
+      "listPointer": 4295141744,
+      "methodList": {
+        "address": 4295098120,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295098128,
+            "implAddress": 4295046284,
+            "nameAddress": 4295170128,
+            "selector": "initWithFrame:",
+            "type": "@48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120161
+          },
+          {
+            "address": 4295098140,
+            "implAddress": 4295046340,
+            "nameAddress": 4295170160,
+            "selector": "drawRect:",
+            "type": "v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120211
+          },
+          {
+            "address": 4295098152,
+            "implAddress": 4295046396,
+            "nameAddress": 4295170120,
+            "selector": "allowsVibrancy",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          }
+        ]
+      },
+      "methodListAddress": 4295098120,
+      "name": "KeyboardBackingBox",
+      "nameAddress": 4295119804
+    },
+    {
+      "address": 4295178128,
+      "dataAddress": 4295160032,
+      "listPointer": 4295141752,
+      "methodList": {
+        "address": 4295098168,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295098176,
+            "implAddress": 4295046404,
+            "nameAddress": 4295173600,
+            "selector": "initWithContentRect:styleMask:backing:defer:",
+            "type": "@68@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16Q48Q56B64",
+            "typeAddress": 4295121854
+          },
+          {
+            "address": 4295098188,
+            "implAddress": 4295046660,
+            "nameAddress": 4295169640,
+            "selector": "canBecomeKeyWindow",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295098200,
+            "implAddress": 4295046668,
+            "nameAddress": 4295173640,
+            "selector": "resignKeyWindow",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098212,
+            "implAddress": 4295046752,
+            "nameAddress": 4295169632,
+            "selector": "keyDown:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098224,
+            "implAddress": 4295046768,
+            "nameAddress": 4295169624,
+            "selector": "mouseDown:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          }
+        ]
+      },
+      "methodListAddress": 4295098168,
+      "name": "CustomWindow",
+      "nameAddress": 4295119823
+    },
+    {
+      "address": 4295178248,
+      "dataAddress": 4295160656,
+      "listPointer": 4295141760,
+      "methodList": {
+        "address": 4295098264,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295098272,
+            "implAddress": 4295046784,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098284,
+            "implAddress": 4295001608,
+            "nameAddress": 4295173928,
+            "selector": "setBasicEquation:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098296,
+            "implAddress": 4294998168,
+            "nameAddress": 4295173648,
+            "selector": "clearTape:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098308,
+            "implAddress": 4295047256,
+            "nameAddress": 4295169616,
+            "selector": "savePanelDidEnd:returnCode:contextInfo:",
+            "type": "v36@0:8@16i24^v28",
+            "typeAddress": 4295121905
+          },
+          {
+            "address": 4295098320,
+            "implAddress": 4295047456,
+            "nameAddress": 4295172048,
+            "selector": "saveTape:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098332,
+            "implAddress": 4295047972,
+            "nameAddress": 4295169608,
+            "selector": "validateTapeMenuItems",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098344,
+            "implAddress": 4295048204,
+            "nameAddress": 4295172056,
+            "selector": "printTape:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098356,
+            "implAddress": 4295048844,
+            "nameAddress": 4295172072,
+            "selector": "pageSetup:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098368,
+            "implAddress": 4295049208,
+            "nameAddress": 4295173848,
+            "selector": "pageSetupDidEnd:returnCode:contextInfo:",
+            "type": "v36@0:8@16i24^v28",
+            "typeAddress": 4295121905
+          },
+          {
+            "address": 4295098380,
+            "implAddress": 4295049212,
+            "nameAddress": 4295173824,
+            "selector": "printOperationDidRun:success:contextInfo:",
+            "type": "v36@0:8@16B24^v28",
+            "typeAddress": 4295121923
+          },
+          {
+            "address": 4295098392,
+            "implAddress": 4295049216,
+            "nameAddress": 4295173872,
+            "selector": "hideTape:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098404,
+            "implAddress": 4295049456,
+            "nameAddress": 4295173880,
+            "selector": "showTape:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098416,
+            "implAddress": 4295049628,
+            "nameAddress": 4295172728,
+            "selector": "adjustTapeWindowPosition:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295098428,
+            "implAddress": 4295049904,
+            "nameAddress": 4295172064,
+            "selector": "toggleTape:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098440,
+            "implAddress": 4295050600,
+            "nameAddress": 4295171992,
+            "selector": "close:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098452,
+            "implAddress": 4295050612,
+            "nameAddress": 4295169600,
+            "selector": "windowShouldClose:",
+            "type": "B24@0:8@16",
+            "typeAddress": 4295120595
+          },
+          {
+            "address": 4295098464,
+            "implAddress": 4295050812,
+            "nameAddress": 4295169720,
+            "selector": "windowDidMove:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098476,
+            "implAddress": 4295050904,
+            "nameAddress": 4295169704,
+            "selector": "windowDidLoad",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098488,
+            "implAddress": 4295051008,
+            "nameAddress": 4295169592,
+            "selector": "setAdvancedEquation:total:atEquals:",
+            "type": "v36@0:8@16@24B32",
+            "typeAddress": 4295121941
+          },
+          {
+            "address": 4295098500,
+            "implAddress": 4294999216,
+            "nameAddress": 4295169584,
+            "selector": "setCurrentEquation:total:atEquals:",
+            "type": "v36@0:8@16@24B32",
+            "typeAddress": 4295121941
+          },
+          {
+            "address": 4295098512,
+            "implAddress": 4295052172,
+            "nameAddress": 4295169576,
+            "selector": "_getSpaceArray",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295098524,
+            "implAddress": 4294999664,
+            "nameAddress": 4295173896,
+            "selector": "setBasicEquation:total:atEquals:",
+            "type": "v36@0:8@16@24B32",
+            "typeAddress": 4295121941
+          },
+          {
+            "address": 4295098536,
+            "implAddress": 4295001368,
+            "nameAddress": 4295173912,
+            "selector": "operatorIntForString:",
+            "type": "i24@0:8@16",
+            "typeAddress": 4295121743
+          },
+          {
+            "address": 4295098548,
+            "implAddress": 4295001584,
+            "nameAddress": 4295173920,
+            "selector": "appendOperation:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098560,
+            "implAddress": 4295052684,
+            "nameAddress": 4295169568,
+            "selector": "insertSpace",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098572,
+            "implAddress": 4294996888,
+            "nameAddress": 4295173944,
+            "selector": "startNewEquation",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098584,
+            "implAddress": 4294996116,
+            "nameAddress": 4295169560,
+            "selector": "setCurrentEquation:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098596,
+            "implAddress": 4294996512,
+            "nameAddress": 4295169552,
+            "selector": "completeEquationWithResult:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098608,
+            "implAddress": 4294997296,
+            "nameAddress": 4295169696,
+            "selector": "window:willEncodeRestorableState:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 4295121432
+          },
+          {
+            "address": 4295098620,
+            "implAddress": 4295052964,
+            "nameAddress": 4295169544,
+            "selector": "parentWindow",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295098632,
+            "implAddress": 4295053016,
+            "nameAddress": 4295172848,
+            "selector": "setParentWindow:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098644,
+            "implAddress": 4295053036,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295098264,
+      "name": "PaperTapeController",
+      "nameAddress": 4295119836
+    },
+    {
+      "address": 4295178288,
+      "dataAddress": 4295160800,
+      "listPointer": 4295141768,
+      "methodList": {
+        "address": 4295098656,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295098664,
+            "implAddress": 4295053256,
+            "nameAddress": 4295170456,
+            "selector": "init",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295098676,
+            "implAddress": 4295053372,
+            "nameAddress": 4295170160,
+            "selector": "drawRect:",
+            "type": "v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+            "typeAddress": 4295120211
+          }
+        ]
+      },
+      "methodListAddress": 4295098656,
+      "name": "FunctionRowCalcFunctionButton",
+      "nameAddress": 4295119872
+    },
+    {
+      "address": 4295178408,
+      "dataAddress": 4295160944,
+      "listPointer": 4295141776,
+      "methodList": {
+        "address": 4295098688,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295098696,
+            "implAddress": 4295053940,
+            "nameAddress": 4295169536,
+            "selector": "accessibilityHitTest:",
+            "type": "@32@0:8{CGPoint=dd}16",
+            "typeAddress": 4295121987
+          },
+          {
+            "address": 4295098708,
+            "implAddress": 4295053948,
+            "nameAddress": 4295169528,
+            "selector": "accessibilityAttributeValue:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295098720,
+            "implAddress": 4295053956,
+            "nameAddress": 4295169520,
+            "selector": "accessibilityIsIgnored",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          }
+        ]
+      },
+      "methodListAddress": 4295098688,
+      "name": "NoVOImageView",
+      "nameAddress": 4295119902
+    },
+    {
+      "address": 4295178448,
+      "dataAddress": 4295161152,
+      "listPointer": 4295141784,
+      "methodList": {
+        "address": 4295098736,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295098744,
+            "implAddress": 4295053964,
+            "nameAddress": 4295173600,
+            "selector": "initWithContentRect:styleMask:backing:defer:",
+            "type": "@68@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16Q48Q56B64",
+            "typeAddress": 4295121854
+          },
+          {
+            "address": 4295098756,
+            "implAddress": 4295054076,
+            "nameAddress": 4295174008,
+            "selector": "updatedFrame",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098768,
+            "implAddress": 4295054196,
+            "nameAddress": 4295171160,
+            "selector": "setFrame:display:",
+            "type": "v52@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16B48",
+            "typeAddress": 4295122009
+          },
+          {
+            "address": 4295098780,
+            "implAddress": 4295054280,
+            "nameAddress": 4295171544,
+            "selector": "setFrame:display:animate:",
+            "type": "v56@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16B48B52",
+            "typeAddress": 4295122054
+          },
+          {
+            "address": 4295098792,
+            "implAddress": 4295054364,
+            "nameAddress": 4295172720,
+            "selector": "setFrameUsingName:",
+            "type": "B24@0:8@16",
+            "typeAddress": 4295120595
+          },
+          {
+            "address": 4295098804,
+            "implAddress": 4295054456,
+            "nameAddress": 4295174040,
+            "selector": "zoom:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098816,
+            "implAddress": 4295054640,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098828,
+            "implAddress": 4295054752,
+            "nameAddress": 4295174048,
+            "selector": "setContentView:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098840,
+            "implAddress": 4295054876,
+            "nameAddress": 4295169640,
+            "selector": "canBecomeKeyWindow",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295098852,
+            "implAddress": 4295054884,
+            "nameAddress": 4295169512,
+            "selector": "canBecomeMainWindow",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295098864,
+            "implAddress": 4295054892,
+            "nameAddress": 4295169504,
+            "selector": "isMovableByWindowBackground",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295098876,
+            "implAddress": 4295054900,
+            "nameAddress": 4295172976,
+            "selector": "isZooming",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          }
+        ]
+      },
+      "methodListAddress": 4295098736,
+      "name": "CalcWindow",
+      "nameAddress": 4295119916
+    },
+    {
+      "address": 4295178568,
+      "dataAddress": 4295161408,
+      "listPointer": 4295141792,
+      "methodList": {
+        "address": 4295099280,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295099288,
+            "implAddress": 4295054920,
+            "nameAddress": 4295174408,
+            "selector": "ISOCode",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099300,
+            "implAddress": 4295054928,
+            "nameAddress": 4295174592,
+            "selector": "setISOCode:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099312,
+            "implAddress": 4295054940,
+            "nameAddress": 4295174200,
+            "selector": "rate",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099324,
+            "implAddress": 4295054948,
+            "nameAddress": 4295174608,
+            "selector": "setRate:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099336,
+            "implAddress": 4295054960,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295099280,
+      "name": "CurrencyUnit",
+      "nameAddress": 4295119927
+    },
+    {
+      "address": 4295178608,
+      "dataAddress": 4295163712,
+      "listPointer": 4295141800,
+      "methodList": {
+        "address": 4295098888,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295098896,
+            "implAddress": 4295055028,
+            "nameAddress": 4295172864,
+            "selector": "initWithDelegate:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295098908,
+            "implAddress": 4295055544,
+            "nameAddress": 4295174056,
+            "selector": "_loadRecentConversions",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098920,
+            "implAddress": 4295056220,
+            "nameAddress": 4295172096,
+            "selector": "recentConversions",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295098932,
+            "implAddress": 4295056284,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098944,
+            "implAddress": 4295057548,
+            "nameAddress": 4295174120,
+            "selector": "_loadBaseDicts",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098956,
+            "implAddress": 4295057868,
+            "nameAddress": 4295171784,
+            "selector": "executeConversion:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098968,
+            "implAddress": 4295059424,
+            "nameAddress": 4295174240,
+            "selector": "addRecentConversion:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295098980,
+            "implAddress": 4295059884,
+            "nameAddress": 4295174272,
+            "selector": "saveRecentConversions",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295098992,
+            "implAddress": 4295060420,
+            "nameAddress": 4295171792,
+            "selector": "clearRecentConversions",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099004,
+            "implAddress": 4295060492,
+            "nameAddress": 4295174384,
+            "selector": "attributedStringFromDateString:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295099016,
+            "implAddress": 4295061148,
+            "nameAddress": 4295172024,
+            "selector": "recentConversionsAreClearable",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295099028,
+            "implAddress": 4295061232,
+            "nameAddress": 4295174584,
+            "selector": "updateCurrencyRefreshedDate",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099040,
+            "implAddress": 4295061496,
+            "nameAddress": 4295174488,
+            "selector": "populateConvertPopupsForKey:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099052,
+            "implAddress": 4295063724,
+            "nameAddress": 4295174480,
+            "selector": "showOrHideCaveatsForKey:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099064,
+            "implAddress": 4295063868,
+            "nameAddress": 4295169944,
+            "selector": "validateMenuItem:",
+            "type": "B24@0:8@16",
+            "typeAddress": 4295120595
+          },
+          {
+            "address": 4295099076,
+            "implAddress": 4295064208,
+            "nameAddress": 4295172176,
+            "selector": "sortedCategoryNames",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099088,
+            "implAddress": 4295064324,
+            "nameAddress": 4295171904,
+            "selector": "prepareConversion:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099100,
+            "implAddress": 4295065216,
+            "nameAddress": 4295169496,
+            "selector": "cancelConvertSheet:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099112,
+            "implAddress": 4295065308,
+            "nameAddress": 4295169488,
+            "selector": "okayConvertSheet:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099124,
+            "implAddress": 4295065796,
+            "nameAddress": 4295169480,
+            "selector": "conversionTypePopupDidChange:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099136,
+            "implAddress": 4295066004,
+            "nameAddress": 4295174424,
+            "selector": "conversionFromPopupDidChange:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099148,
+            "implAddress": 4295066176,
+            "nameAddress": 4295174432,
+            "selector": "conversionToPopupDidChange:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099160,
+            "implAddress": 4295066180,
+            "nameAddress": 4295174496,
+            "selector": "updateCurrencyRates:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099172,
+            "implAddress": 4295066664,
+            "nameAddress": 4295169472,
+            "selector": "browseRatesWebsite:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099184,
+            "implAddress": 4295066812,
+            "nameAddress": 4295174176,
+            "selector": "updateCurrencyData",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099196,
+            "implAddress": 4295067464,
+            "nameAddress": 4295173344,
+            "selector": "touchBar",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099208,
+            "implAddress": 4295067568,
+            "nameAddress": 4295169464,
+            "selector": "categories",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099220,
+            "implAddress": 4295067580,
+            "nameAddress": 4295169456,
+            "selector": "mConversionSheet",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099232,
+            "implAddress": 4295067588,
+            "nameAddress": 4295169448,
+            "selector": "setMConversionSheet:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099244,
+            "implAddress": 4295067600,
+            "nameAddress": 4295174616,
+            "selector": "touchBarController",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099256,
+            "implAddress": 4295067612,
+            "nameAddress": 4295169440,
+            "selector": "setTouchBarController:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099268,
+            "implAddress": 4295067620,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295098888,
+      "name": "ConversionController",
+      "nameAddress": 4295119940
+    },
+    {
+      "address": 4295178728,
+      "dataAddress": 4295164240,
+      "listPointer": 4295141808,
+      "methodList": {
+        "address": 4295099352,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295099360,
+            "implAddress": 4295068508,
+            "nameAddress": 4295169432,
+            "selector": "_languageIsEnglish",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295099372,
+            "implAddress": 4295068748,
+            "nameAddress": 4295174648,
+            "selector": "_speakStrings",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099384,
+            "implAddress": 4295068924,
+            "nameAddress": 4295174664,
+            "selector": "_speakString:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099396,
+            "implAddress": 4295069136,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099408,
+            "implAddress": 4295069524,
+            "nameAddress": 4295174672,
+            "selector": "_loadSpeakableItems",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099420,
+            "implAddress": 4295069872,
+            "nameAddress": 4295169944,
+            "selector": "validateMenuItem:",
+            "type": "B24@0:8@16",
+            "typeAddress": 4295120595
+          },
+          {
+            "address": 4295099432,
+            "implAddress": 4295069908,
+            "nameAddress": 4295169424,
+            "selector": "speechMenu:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099444,
+            "implAddress": 4294983740,
+            "nameAddress": 4295169416,
+            "selector": "speakButton:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099456,
+            "implAddress": 4294996008,
+            "nameAddress": 4295169408,
+            "selector": "speakTotal:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099468,
+            "implAddress": 4295070452,
+            "nameAddress": 4295172872,
+            "selector": "enabled",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295099480,
+            "implAddress": 4295070464,
+            "nameAddress": 4295172880,
+            "selector": "setEnabled:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295099492,
+            "implAddress": 4295070472,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295099352,
+      "name": "SpeechController",
+      "nameAddress": 4295119987
+    },
+    {
+      "address": 4295178808,
+      "dataAddress": 4295164384,
+      "listPointer": 4295141816,
+      "methodList": {
+        "address": 0,
+        "flags": 0,
+        "methods": []
+      },
+      "methodListAddress": 0,
+      "name": "RPNTableView",
+      "nameAddress": 4295120022
+    },
+    {
+      "address": 4295178888,
+      "dataAddress": 4295164592,
+      "listPointer": 4295141824,
+      "methodList": {
+        "address": 0,
+        "flags": 0,
+        "methods": []
+      },
+      "methodListAddress": 0,
+      "name": "CalcHelper",
+      "nameAddress": 4295120043
+    },
+    {
+      "address": 4295178968,
+      "dataAddress": 4295164736,
+      "listPointer": 4295141832,
+      "methodList": {
+        "address": 4295099624,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295099632,
+            "implAddress": 4295073456,
+            "nameAddress": 4295170120,
+            "selector": "allowsVibrancy",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          }
+        ]
+      },
+      "methodListAddress": 4295099624,
+      "name": "CalcSegmentedControl",
+      "nameAddress": 4295120054
+    },
+    {
+      "address": 4295179008,
+      "dataAddress": 4295164944,
+      "listPointer": 4295141840,
+      "methodList": {
+        "address": 4295099648,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295099656,
+            "implAddress": 4295073464,
+            "nameAddress": 4295174816,
+            "selector": "displayString",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099668,
+            "implAddress": 4295073928,
+            "nameAddress": 4295173152,
+            "selector": "widthOfString:withFont:",
+            "type": "d32@0:8@16@24",
+            "typeAddress": 4295121729
+          },
+          {
+            "address": 4295099680,
+            "implAddress": 4295074172,
+            "nameAddress": 4295174752,
+            "selector": "fontSizeForWidth:ofString:withFont:",
+            "type": "i40@0:8d16@24@32",
+            "typeAddress": 4295122727
+          },
+          {
+            "address": 4295099692,
+            "implAddress": 4295074508,
+            "nameAddress": 4295174768,
+            "selector": "adjustedFontWithFont:andTitle:",
+            "type": "@32@0:8@16@24",
+            "typeAddress": 4295121754
+          },
+          {
+            "address": 4295099704,
+            "implAddress": 4295074832,
+            "nameAddress": 4295171480,
+            "selector": "setTitle:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099716,
+            "implAddress": 4295075148,
+            "nameAddress": 4295174808,
+            "selector": "adjustedAttributedStringFromAtrributedTitle:",
+            "type": "@24@0:8@16",
+            "typeAddress": 4295120261
+          },
+          {
+            "address": 4295099728,
+            "implAddress": 4295076280,
+            "nameAddress": 4295173080,
+            "selector": "setAttributedTitle:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099740,
+            "implAddress": 4295076532,
+            "nameAddress": 4295169400,
+            "selector": "updateSubscriptTitle",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099752,
+            "implAddress": 4295077088,
+            "nameAddress": 4295169392,
+            "selector": "updateSuperscriptTitle",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099764,
+            "implAddress": 4295077756,
+            "nameAddress": 4295169384,
+            "selector": "updateInvertTitle",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099776,
+            "implAddress": 4295078088,
+            "nameAddress": 4295169376,
+            "selector": "updateRootTitle",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099788,
+            "implAddress": 4295078420,
+            "nameAddress": 4295169368,
+            "selector": "updateAdvancedButtonTitle:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099800,
+            "implAddress": 4295078584,
+            "nameAddress": 4295169360,
+            "selector": "updateDefaultOperationButtonTitle:",
+            "type": "v24@0:8@16",
+            "typeAddress": 4295120336
+          },
+          {
+            "address": 4295099812,
+            "implAddress": 4295078748,
+            "nameAddress": 4295170120,
+            "selector": "allowsVibrancy",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          },
+          {
+            "address": 4295099824,
+            "implAddress": 4295078756,
+            "nameAddress": 4295174728,
+            "selector": "currentType",
+            "type": "i16@0:8",
+            "typeAddress": 4295120690
+          },
+          {
+            "address": 4295099836,
+            "implAddress": 4295078772,
+            "nameAddress": 4295169352,
+            "selector": "setCurrentType:",
+            "type": "v20@0:8i16",
+            "typeAddress": 4295120397
+          }
+        ]
+      },
+      "methodListAddress": 4295099648,
+      "name": "CalcButton",
+      "nameAddress": 4295120075
+    },
+    {
+      "address": 4295179128,
+      "dataAddress": 4295165088,
+      "listPointer": 4295141848,
+      "methodList": {
+        "address": 4295099848,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295099856,
+            "implAddress": 4295078788,
+            "nameAddress": 4295170120,
+            "selector": "allowsVibrancy",
+            "type": "B16@0:8",
+            "typeAddress": 4295120253
+          }
+        ]
+      },
+      "methodListAddress": 4295099848,
+      "name": "CalcBox",
+      "nameAddress": 4295120086
+    },
+    {
+      "address": 4295179168,
+      "dataAddress": 4295168112,
+      "listPointer": 4295141856,
+      "methodList": {
+        "address": 4295099872,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295099880,
+            "implAddress": 4295078796,
+            "nameAddress": 4295169344,
+            "selector": "setMode:",
+            "type": "v20@0:8i16",
+            "typeAddress": 4295120397
+          },
+          {
+            "address": 4295099892,
+            "implAddress": 4295078812,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295099904,
+            "implAddress": 4295079056,
+            "nameAddress": 4295173344,
+            "selector": "touchBar",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099916,
+            "implAddress": 4295079144,
+            "nameAddress": 4295174896,
+            "selector": "basicTouchBar",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099928,
+            "implAddress": 4295079432,
+            "nameAddress": 4295174888,
+            "selector": "advancedTouchBar",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295099940,
+            "implAddress": 4295079720,
+            "nameAddress": 4295169336,
+            "selector": "setSecondaryActive:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295099952,
+            "implAddress": 4295081520,
+            "nameAddress": 4295169672,
+            "selector": "setRPNActive:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295099964,
+            "implAddress": 4295082212,
+            "nameAddress": 4295173336,
+            "selector": "setClearActive:",
+            "type": "v20@0:8B16",
+            "typeAddress": 4295120317
+          },
+          {
+            "address": 4295099976,
+            "implAddress": 4295082456,
+            "nameAddress": 4295173544,
+            "selector": "touchBar:makeItemForIdentifier:",
+            "type": "@32@0:8@16@24",
+            "typeAddress": 4295121754
+          },
+          {
+            "address": 4295099988,
+            "implAddress": 4295088776,
+            "nameAddress": 4295174944,
+            "selector": "memoryGroup",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100000,
+            "implAddress": 4295089008,
+            "nameAddress": 4295174952,
+            "selector": "parenthesesGroup",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100012,
+            "implAddress": 4295089220,
+            "nameAddress": 4295174904,
+            "selector": "basicDefaultIdentifierSet",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100024,
+            "implAddress": 4295089440,
+            "nameAddress": 4295174928,
+            "selector": "advancedDefaultIdentifierSet",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100036,
+            "implAddress": 4295089660,
+            "nameAddress": 4295169328,
+            "selector": "basicRequiredIdentifiers",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100048,
+            "implAddress": 4295089836,
+            "nameAddress": 4295174920,
+            "selector": "advancedAllowedIdentifiers",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100060,
+            "implAddress": 4295090324,
+            "nameAddress": 4295169320,
+            "selector": "allButtonIdentifiers",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100072,
+            "implAddress": 4295090856,
+            "nameAddress": 4295169664,
+            "selector": "allGroupIdentifiers",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100084,
+            "implAddress": 4295091000,
+            "nameAddress": 4295173424,
+            "selector": "allButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100096,
+            "implAddress": 4295091860,
+            "nameAddress": 4295173416,
+            "selector": "operatorButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100108,
+            "implAddress": 4295092072,
+            "nameAddress": 4295169656,
+            "selector": "escapeButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100120,
+            "implAddress": 4295092224,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295099872,
+      "name": "BasicAdvancedTouchBarController",
+      "nameAddress": 4295120094
+    },
+    {
+      "address": 4295179288,
+      "dataAddress": 4295169248,
+      "listPointer": 4295141864,
+      "methodList": {
+        "address": 4295100136,
+        "flags": 2147483660,
+        "methods": [
+          {
+            "address": 4295100144,
+            "implAddress": 4295093388,
+            "nameAddress": 4295173344,
+            "selector": "touchBar",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100156,
+            "implAddress": 4295093592,
+            "nameAddress": 4295174872,
+            "selector": "awakeFromNib",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          },
+          {
+            "address": 4295100168,
+            "implAddress": 4295093860,
+            "nameAddress": 4295173544,
+            "selector": "touchBar:makeItemForIdentifier:",
+            "type": "@32@0:8@16@24",
+            "typeAddress": 4295121754
+          },
+          {
+            "address": 4295100180,
+            "implAddress": 4295094072,
+            "nameAddress": 4295174960,
+            "selector": "conversionDefaultIdentifierSet",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100192,
+            "implAddress": 4295094248,
+            "nameAddress": 4295173424,
+            "selector": "allButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100204,
+            "implAddress": 4295094400,
+            "nameAddress": 4295173416,
+            "selector": "operatorButtons",
+            "type": "@16@0:8",
+            "typeAddress": 4295120328
+          },
+          {
+            "address": 4295100216,
+            "implAddress": 4295094408,
+            "nameAddress": 4295170056,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 4295120203
+          }
+        ]
+      },
+      "methodListAddress": 4295100136,
+      "name": "ConversionTouchBarController",
+      "nameAddress": 4295120132
+    }
+  ]
+}
