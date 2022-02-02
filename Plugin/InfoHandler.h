@@ -9,11 +9,8 @@
 
 #include <ObjectiveNinjaCore/AnalysisInfo.h>
 
-#include <binaryninjaapi.h>
+#include "BinaryNinja.h"
 
-using BinaryViewRef = BinaryNinja::Ref<BinaryNinja::BinaryView>;
-using TypeRef = BinaryNinja::Ref<BinaryNinja::Type>;
-using SymbolRef = BinaryNinja::Ref<BinaryNinja::Symbol>;
 using SharedAnalysisInfo = std::shared_ptr<ObjectiveNinja::AnalysisInfo>;
 
 /**

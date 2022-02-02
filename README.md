@@ -16,7 +16,7 @@ useful features.
 
 ### Method Call Cleanup
 
-![Before and After](docs/Comparison.png)
+![Before and After](Docs/Comparison.png)
 
 > Before/after method call cleanup & symbol creation.
 

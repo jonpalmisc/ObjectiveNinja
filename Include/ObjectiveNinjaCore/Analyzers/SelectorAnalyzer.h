@@ -13,9 +13,6 @@ namespace ObjectiveNinja {
 
 /**
  * Analyzer for parsing Objective-C selectors and selector references.
- *
- * SelectorAnalyzer processes the `__objc_selrefs` section to build a list of
- * selectors and associated data.
  */
 class SelectorAnalyzer : public Analyzer {
 public:

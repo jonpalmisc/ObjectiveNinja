@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 project(ObjectiveNinja)
 
 # Add subdirectory for the Binary Ninja C++ API
-add_subdirectory(vendor/api)
+add_subdirectory(Vendor/BinaryNinjaAPI)
 
 # Core library -----------------------------------------------------------------
 
@@ -42,19 +42,19 @@ endif()
 # Binary Ninja plugin ----------------------------------------------------------
 
 set(PLUGIN_SOURCE
+  Plugin/Commands.h
+  Plugin/Commands.cpp
+  Plugin/CustomTypes.h
   Plugin/CustomTypes.cpp
-  Plugin/CustomTypes.hpp
-  Plugin/DataRenderers.hpp
+  Plugin/DataRenderers.h
   Plugin/DataRenderers.cpp
+  Plugin/GlobalState.h
   Plugin/GlobalState.cpp
-  Plugin/GlobalState.hpp
   Plugin/InfoHandler.h
   Plugin/InfoHandler.cpp
-  Plugin/OneShot.cpp
-  Plugin/OneShot.hpp
   Plugin/Plugin.cpp
-  Plugin/Workflow.cpp
-  Plugin/Workflow.hpp)
+  Plugin/Workflow/Workflow.h
+  Plugin/Workflow/Workflow.cpp)
 
 # Used to enable some debugging actions, etc.
 option(DEV_MODE "Enable developer features" OFF)

@@ -17,6 +17,9 @@ using BinaryViewRef = BinaryNinja::Ref<BinaryNinja::BinaryView>;
 
 namespace ObjectiveNinja {
 
+/**
+ * AbstractFile implementation that wraps a BinaryView.
+ */
 class BinaryViewFile : public ObjectiveNinja::AbstractFile {
     BinaryViewRef m_bv;
     BinaryNinja::BinaryReader m_reader;

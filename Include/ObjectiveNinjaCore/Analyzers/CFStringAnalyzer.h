@@ -13,9 +13,6 @@ namespace ObjectiveNinja {
 
 /**
  * Basic analyzer for identifying and recording CFString instances.
- *
- * CFStringAnalyzer processes the `__cfstring` section in the binary and records
- * information about all the CFString instances present.
  */
 class CFStringAnalyzer : public Analyzer {
 public:

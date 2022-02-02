@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "../vendor/json/json.hpp"
+#include "../Vendor/ModernJSON/JSON.hpp"
 
 namespace ObjectiveNinja {
 
