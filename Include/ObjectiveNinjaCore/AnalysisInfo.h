@@ -90,7 +90,10 @@ struct ClassInfo {
  */
 struct AnalysisInfo {
     std::vector<CFStringInfo> cfStrings {};
-    std::unordered_map<uint64_t, SharedSelectorRefInfo> selectorRefs {};
+
+    std::vector<SharedSelectorRefInfo> selectorRefs {};
+    std::unordered_map<uint64_t, SharedSelectorRefInfo> selectorRefsByKey {};
+
     std::vector<ClassInfo> classes {};
     std::unordered_map<uint64_t, uint64_t> methodImpls;
 

@@ -70,7 +70,7 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
     auto methodListType = bv->GetTypeByName(std::string("objc_method_list_t"));
 
     // Create data variables and symbols for all CFString instances.
-    for (auto csi : info->cfStrings) {
+    for (const auto& csi : info->cfStrings) {
         reader.Seek(csi.dataAddress);
         auto text = reader.ReadString(csi.size + 1);
         auto sanitizedText = sanitizeText(text);
@@ -81,8 +81,18 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
         defineSymbol(bv, csi.dataAddress, sanitizedText, "as_");
     }
 
+    // Create data variables and symbols for selectors and selector references.
+    for (const auto& ssr : info->selectorRefs) {
+        auto sanitizedSelector = sanitizeSelector(ssr->name);
+
+        defineVariable(bv, ssr->address, taggedPointerType);
+        defineVariable(bv, ssr->nameAddress, stringType(ssr->name.size()));
+        defineSymbol(bv, ssr->address, sanitizedSelector, "sr_");
+        defineSymbol(bv, ssr->nameAddress, sanitizedSelector, "sl_");
+    }
+
     // Create data variables and symbols for the analyzed classes.
-    for (auto ci : info->classes) {
+    for (const auto& ci : info->classes) {
         defineVariable(bv, ci.listPointer, taggedPointerType);
         defineVariable(bv, ci.address, classType);
         defineVariable(bv, ci.dataAddress, classDataType);

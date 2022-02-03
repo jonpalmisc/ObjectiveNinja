@@ -29,7 +29,9 @@ void SelectorAnalyzer::run()
         ssri->nameAddress = arp(ssri->rawSelector);
         ssri->name = m_file->readString(ssri->nameAddress);
 
-        m_info->selectorRefs[ssri->rawSelector] = ssri;
-        m_info->selectorRefs[ssri->address] = ssri;
+        m_info->selectorRefs.emplace_back(ssri);
+
+        m_info->selectorRefsByKey[ssri->rawSelector] = ssri;
+        m_info->selectorRefsByKey[ssri->address] = ssri;
     }
 }
