@@ -17,7 +17,7 @@ std::string InfoHandler::sanitizeText(const std::string& text)
     std::string result;
     std::string input = text.substr(0, 24);
 
-    std::regex re("[a-zA-Z]+");
+    std::regex re("[a-zA-Z0-9]+");
     std::smatch sm;
     while (std::regex_search(input, sm, re)) {
         std::string part = sm[0];
