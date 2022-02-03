@@ -27,9 +27,11 @@ MethodListInfo ClassAnalyzer::analyzeMethodList(uint64_t address)
     mli.flags = m_file->readInt(mli.address);
 
     auto methodCount = m_file->readInt(mli.address + 0x4);
+    auto methodSize = mli.hasRelativeOffsets() ? 12 : 24;
+
     for (auto i = 0; i < methodCount; ++i) {
         MethodInfo mi;
-        mi.address = mli.address + 8 + (i * 12);
+        mi.address = mli.address + 8 + (i * methodSize);
 
         m_file->seek(mi.address);
 
@@ -43,7 +45,7 @@ MethodListInfo ClassAnalyzer::analyzeMethodList(uint64_t address)
             mi.implAddress = m_file->readLong();
         }
 
-        if (mli.hasDirectSelectors()) {
+        if (!mli.hasRelativeOffsets() || mli.hasDirectSelectors()) {
             mi.selector = m_file->readString(mi.nameAddress);
         } else {
             auto selectorNamePointer = arp(m_file->readLong(mi.nameAddress));
