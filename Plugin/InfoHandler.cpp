@@ -59,6 +59,59 @@ void InfoHandler::defineSymbol(BinaryViewRef bv, uint64_t address, const std::st
     bv->DefineUserSymbol(new Symbol(symbolType, prefix + name, address));
 }
 
+void InfoHandler::applyMethodType(BinaryViewRef bv, const ObjectiveNinja::ClassInfo& ci,
+    const ObjectiveNinja::MethodInfo& mi)
+{
+    auto selectorTokens = mi.selectorTokens();
+    auto typeTokens = mi.decodedTypeTokens();
+
+    // Shorthand for formatting an individual "part" of the type signature.
+    auto partForIndex = [selectorTokens, typeTokens](size_t i) {
+        std::string argName;
+
+        if (i == 0)
+            argName = "";
+        else if (i == 1)
+            argName = "self";
+        else if (i == 2)
+            argName = "sel";
+        else
+            argName = selectorTokens[i - 3];
+
+        return typeTokens[i] + " " + argName;
+    };
+
+    // Build the type string for the method.
+    std::string typeString;
+    for (size_t i = 0; i < typeTokens.size(); ++i) {
+        auto part = partForIndex(i);
+
+        std::string suffix;
+        if (i == 0)
+            suffix = " (";
+        else if (i == typeTokens.size() - 1)
+            suffix = ")";
+        else
+            suffix = ", ";
+
+        typeString += part + suffix;
+    }
+
+    // Attempt to parse the type string that was just built.
+    QualifiedNameAndType functionNat;
+    std::string errors;
+    if (!bv->ParseTypeString(typeString, functionNat, errors))
+        return;
+
+    // Search for the method's implementation function; apply the type if found.
+    auto f = bv->GetAnalysisFunction(bv->GetDefaultPlatform(), mi.implAddress);
+    if (f)
+        f->SetUserType(functionNat.type);
+
+    auto name = ci.name + "_" + sanitizeSelector(mi.selector);
+    defineSymbol(bv, mi.implAddress, name, "", FunctionSymbol);
+}
+
 void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
 {
     BinaryReader reader(bv);
@@ -111,12 +164,11 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
 
         // Create data variables for each method in the method list.
         for (const auto& mi : ci.methodList.methods) {
-            auto sanitizedSelector = sanitizeSelector(mi.selector);
-            auto methodName = ci.name + "::" + sanitizedSelector;
-
             defineVariable(bv, mi.address, methodType);
-            defineSymbol(bv, mi.address, sanitizedSelector, "mt_");
-            defineSymbol(bv, mi.implAddress, methodName, "", FunctionSymbol);
+            defineSymbol(bv, mi.address, sanitizeSelector(mi.selector), "mt_");
+            defineVariable(bv, mi.typeAddress, stringType(mi.type.size()));
+
+            applyMethodType(bv, ci, mi);
         }
 
         // Create a data variable and symbol for the method list header.

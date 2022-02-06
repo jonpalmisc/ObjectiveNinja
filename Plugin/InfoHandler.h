@@ -55,6 +55,12 @@ class InfoHandler {
         const std::string& name, const std::string& prefix = "",
         BNSymbolType type = DataSymbol);
 
+    /**
+     * Create a symbol and apply return/argument types for a method.
+     */
+    static void applyMethodType(BinaryViewRef, const ObjectiveNinja::ClassInfo&,
+        const ObjectiveNinja::MethodInfo&);
+
 public:
     /**
      * Apply AnalysisInfo to a BinaryView.

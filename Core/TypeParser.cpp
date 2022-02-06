@@ -23,8 +23,8 @@ static const std::map<char, std::string> TypeEncodingMap = {
     { 'L', "unsigned long" },
     { 'f', "float" },
     { 'A', "uint8_t" },
-    { 'b', "bool" },
-    { 'B', "bool" },
+    { 'b', "BOOL" },
+    { 'B', "BOOL" },
 
     { 'q', "NSInteger" },
     { 'Q', "NSUInteger" },

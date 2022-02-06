@@ -19,6 +19,11 @@ struct rptr_t {
 typedef void* id;
 typedef char* SEL;
 
+typedef char BOOL;
+typedef int64_t NSInteger;
+typedef uint64_t NSUInteger;
+typedef double CGFloat;
+
 struct CFString {
     const tptr_t isa;
     uint64_t flags;
