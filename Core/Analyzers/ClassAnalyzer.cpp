@@ -6,6 +6,7 @@
  */
 
 #include <ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h>
+#include <ObjectiveNinjaCore/TypeParser.h>
 
 using namespace ObjectiveNinja;
 
@@ -51,6 +52,8 @@ MethodListInfo ClassAnalyzer::analyzeMethodList(uint64_t address)
             auto selectorNamePointer = arp(m_file->readLong(mi.nameAddress));
             mi.selector = m_file->readString(selectorNamePointer);
         }
+
+        mi.type = m_file->readString(mi.typeAddress);
 
         m_info->methodImpls[mi.nameAddress] = mi.implAddress;
 

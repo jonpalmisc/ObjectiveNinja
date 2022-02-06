@@ -7,9 +7,28 @@
 
 #include <ObjectiveNinjaCore/AnalysisInfo.h>
 
+#include <ObjectiveNinjaCore/TypeParser.h>
+
 namespace ObjectiveNinja {
 
 constexpr auto FlagsMask = 0xFFFF0000;
+
+std::vector<std::string> MethodInfo::selectorTokens() const
+{
+    std::stringstream r(selector);
+
+    std::string token;
+    std::vector<std::string> result;
+    while (std::getline(r, token, ':'))
+        result.push_back(token);
+
+    return result;
+}
+
+std::vector<std::string> MethodInfo::decodedTypeTokens() const
+{
+    return TypeParser::parseEncodedType(type);
+}
 
 bool MethodListInfo::hasRelativeOffsets() const
 {

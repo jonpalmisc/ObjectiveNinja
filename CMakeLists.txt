@@ -16,6 +16,7 @@ set(CORE_SOURCE
   Include/ObjectiveNinjaCore/AnalysisInfo.h
   Include/ObjectiveNinjaCore/AnalysisProvider.h
   Include/ObjectiveNinjaCore/Analyzer.h
+  Include/ObjectiveNinjaCore/TypeParser.h
   Core/Analyzers/CFStringAnalyzer.cpp
   Core/Analyzers/ClassAnalyzer.cpp
   Core/Analyzers/SelectorAnalyzer.cpp
@@ -23,7 +24,8 @@ set(CORE_SOURCE
   Core/AbstractFile.cpp
   Core/AnalysisInfo.cpp
   Core/AnalysisProvider.cpp
-  Core/Analyzer.cpp)
+  Core/Analyzer.cpp
+  Core/TypeParser.cpp)
 
 add_library(ObjectiveNinjaCore STATIC ${CORE_SOURCE})
 target_compile_features(ObjectiveNinjaCore PRIVATE cxx_std_17)
