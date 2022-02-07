@@ -20,4 +20,7 @@ clang-format -i --style=WebKit <file>
 maximum line length, but use some judgement and don't split lines just because a
 semicolon exceeds the length limit, etc.
 
-- Documentation comments should start with `///`.
+## Testing
+
+If you are making changes to the core analysis library, run the test suite and
+ensure that there are no unexpected changes to analysis behavior.
