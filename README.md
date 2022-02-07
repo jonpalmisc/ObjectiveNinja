@@ -3,11 +3,9 @@
 Objective Ninja is a Binary Ninja plugin to assist in reverse engineering
 Objective-C code.
 
-**NOTICE: Objective Ninja is a work-in-progress and is not production-ready.**
-There are known issues with the current Objective-C structure analysis, and a
-rewrite is planned for the near future to addresss these issues. For more
-details and the latest information, see
-https://github.com/jonpalmisc/ObjectiveNinja/issues/25.
+**NOTICE: Objective Ninja is a work-in-progress.** The important stuff works,
+but there are certainly areas for improvement. If you find it to be lacking or
+run into any bugs, please file an issue on GitHub.
 
 ## Features
 
