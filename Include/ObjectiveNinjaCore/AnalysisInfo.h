@@ -48,7 +48,7 @@ struct MethodInfo {
     uint64_t implAddress {};
 
     /**
-     * Get the seelctor as a series of tokens, split at ':' characters.
+     * Get the selector as a series of tokens, split at ':' characters.
      */
     std::vector<std::string> selectorTokens() const;
 
@@ -111,12 +111,16 @@ struct AnalysisInfo {
     std::string dump() const;
 };
 
-NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(CFStringInfo, address, dataAddress, size);
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(CFStringInfo, address, dataAddress, size)
+
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(SelectorRefInfo, address, name, rawSelector,
-    nameAddress);
+    nameAddress)
+
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(MethodInfo, address, selector, type,
-    nameAddress, typeAddress, implAddress);
-NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(MethodListInfo, address, flags, methods);
+    nameAddress, typeAddress, implAddress)
+
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(MethodListInfo, address, flags, methods)
+
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(ClassInfo, listPointer, address, dataAddress,
-    nameAddress, name, methodListAddress, methodList);
+    nameAddress, name, methodListAddress, methodList)
 }

@@ -16,7 +16,7 @@ namespace ActivityID {
 
 constexpr auto InlineMethodCalls = "objectiveNinja.function.inlineMethodCalls";
 
-};
+}
 
 /**
  * Workflow-related procedures.

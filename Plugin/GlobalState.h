@@ -14,7 +14,7 @@
 using SharedAnalysisInfo = std::shared_ptr<ObjectiveNinja::AnalysisInfo>;
 
 /**
- * Namepace to hold metadata flag key constants.
+ * Namespace to hold metadata flag key constants.
  */
 namespace Flag {
 

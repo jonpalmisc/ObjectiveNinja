@@ -95,7 +95,7 @@ void Workflow::rewriteMethodCall(LLILFunctionRef ssa, size_t insnIndex)
         return;
     const auto selectorRef = info->selectorRefsByKey[rawSelector];
 
-    // Attempt to lookup the implementation for the given selector, first by
+    // Attempt to look up the implementation for the given selector, first by
     // using the raw selector, then by the address of the selector reference. If
     // the lookup fails in both cases, abort.
     uint64_t implAddress = info->methodImpls[selectorRef->rawSelector];

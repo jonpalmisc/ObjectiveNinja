@@ -7,6 +7,8 @@
 
 #include "InfoHandler.h"
 
+#include "CustomTypes.h"
+
 #include <algorithm>
 #include <regex>
 
@@ -116,11 +118,11 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
 {
     BinaryReader reader(bv);
 
-    auto taggedPointerType = namedType(bv, "tptr_t");
-    auto cfStringType = namedType(bv, "CFString");
-    auto classType = namedType(bv, "objc_class_t");
-    auto classDataType = namedType(bv, "objc_class_ro_t");
-    auto methodListType = bv->GetTypeByName(std::string("objc_method_list_t"));
+    auto taggedPointerType = namedType(bv, CustomTypes::TaggedPointer);
+    auto cfStringType = namedType(bv, CustomTypes::CFString);
+    auto classType = namedType(bv, CustomTypes::Class);
+    auto classDataType = namedType(bv, CustomTypes::ClassRO);
+    auto methodListType = namedType(bv, CustomTypes::MethodListEntry);
 
     // Create data variables and symbols for all CFString instances.
     for (const auto& csi : info->cfStrings) {
