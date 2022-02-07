@@ -1,0 +1,5033 @@
+{
+  "cfStrings": [
+    {
+      "address": 8042917792,
+      "dataAddress": 7255656148,
+      "size": 13
+    },
+    {
+      "address": 8042917824,
+      "dataAddress": 7255656162,
+      "size": 0
+    },
+    {
+      "address": 8042917856,
+      "dataAddress": 7255656163,
+      "size": 72
+    },
+    {
+      "address": 8042917888,
+      "dataAddress": 7255656376,
+      "size": 27
+    },
+    {
+      "address": 8042917920,
+      "dataAddress": 7255656404,
+      "size": 12
+    },
+    {
+      "address": 8042917952,
+      "dataAddress": 7255656417,
+      "size": 33
+    },
+    {
+      "address": 8042917984,
+      "dataAddress": 7255656451,
+      "size": 36
+    },
+    {
+      "address": 8042918016,
+      "dataAddress": 7255656488,
+      "size": 25
+    },
+    {
+      "address": 8042918048,
+      "dataAddress": 7255656514,
+      "size": 29
+    },
+    {
+      "address": 8042918080,
+      "dataAddress": 7255656544,
+      "size": 40
+    },
+    {
+      "address": 8042918112,
+      "dataAddress": 7255656585,
+      "size": 42
+    },
+    {
+      "address": 8042918144,
+      "dataAddress": 7255656628,
+      "size": 34
+    },
+    {
+      "address": 8042918176,
+      "dataAddress": 7255656663,
+      "size": 37
+    },
+    {
+      "address": 8042918208,
+      "dataAddress": 7255656701,
+      "size": 43
+    },
+    {
+      "address": 8042918240,
+      "dataAddress": 7255656745,
+      "size": 37
+    },
+    {
+      "address": 8042918272,
+      "dataAddress": 7255656783,
+      "size": 14
+    },
+    {
+      "address": 8042918304,
+      "dataAddress": 7255656798,
+      "size": 22
+    },
+    {
+      "address": 8042918336,
+      "dataAddress": 7255656821,
+      "size": 41
+    },
+    {
+      "address": 8042918368,
+      "dataAddress": 7255656863,
+      "size": 41
+    },
+    {
+      "address": 8042918400,
+      "dataAddress": 7255656905,
+      "size": 45
+    },
+    {
+      "address": 8042918432,
+      "dataAddress": 7255656951,
+      "size": 21
+    },
+    {
+      "address": 8042918464,
+      "dataAddress": 7255656973,
+      "size": 37
+    },
+    {
+      "address": 8042918496,
+      "dataAddress": 7255657011,
+      "size": 34
+    },
+    {
+      "address": 8042918528,
+      "dataAddress": 7255657046,
+      "size": 26
+    },
+    {
+      "address": 8042918560,
+      "dataAddress": 7255657073,
+      "size": 38
+    },
+    {
+      "address": 8042918592,
+      "dataAddress": 7255657112,
+      "size": 22
+    },
+    {
+      "address": 8042918624,
+      "dataAddress": 7255657135,
+      "size": 23
+    },
+    {
+      "address": 8042918656,
+      "dataAddress": 7255657159,
+      "size": 21
+    },
+    {
+      "address": 8042918688,
+      "dataAddress": 7255657181,
+      "size": 22
+    },
+    {
+      "address": 8042918720,
+      "dataAddress": 7255657204,
+      "size": 22
+    },
+    {
+      "address": 8042918752,
+      "dataAddress": 7255657227,
+      "size": 23
+    },
+    {
+      "address": 8042918784,
+      "dataAddress": 7255657251,
+      "size": 19
+    },
+    {
+      "address": 8042918816,
+      "dataAddress": 7255657271,
+      "size": 27
+    },
+    {
+      "address": 8042918848,
+      "dataAddress": 7255657299,
+      "size": 41
+    },
+    {
+      "address": 8042918880,
+      "dataAddress": 7255657341,
+      "size": 35
+    },
+    {
+      "address": 8042918912,
+      "dataAddress": 7255657377,
+      "size": 32
+    },
+    {
+      "address": 8042918944,
+      "dataAddress": 7255657410,
+      "size": 48
+    },
+    {
+      "address": 8042918976,
+      "dataAddress": 7255657459,
+      "size": 56
+    },
+    {
+      "address": 8042919008,
+      "dataAddress": 7255657516,
+      "size": 36
+    },
+    {
+      "address": 8042919040,
+      "dataAddress": 7255657553,
+      "size": 45
+    },
+    {
+      "address": 8042919072,
+      "dataAddress": 7255657599,
+      "size": 45
+    },
+    {
+      "address": 8042919104,
+      "dataAddress": 7255657645,
+      "size": 47
+    },
+    {
+      "address": 8042919136,
+      "dataAddress": 7255657693,
+      "size": 48
+    },
+    {
+      "address": 8042919168,
+      "dataAddress": 7255657742,
+      "size": 41
+    },
+    {
+      "address": 8042919200,
+      "dataAddress": 7255657784,
+      "size": 31
+    },
+    {
+      "address": 8042919232,
+      "dataAddress": 7255657816,
+      "size": 31
+    },
+    {
+      "address": 8042919264,
+      "dataAddress": 7255657848,
+      "size": 52
+    },
+    {
+      "address": 8042919296,
+      "dataAddress": 7255657901,
+      "size": 17
+    },
+    {
+      "address": 8042919328,
+      "dataAddress": 7255657974,
+      "size": 28
+    },
+    {
+      "address": 8042919360,
+      "dataAddress": 7255658003,
+      "size": 36
+    },
+    {
+      "address": 8042919392,
+      "dataAddress": 7255658040,
+      "size": 13
+    },
+    {
+      "address": 8042919424,
+      "dataAddress": 7255658103,
+      "size": 16
+    },
+    {
+      "address": 8042919456,
+      "dataAddress": 7255658120,
+      "size": 16
+    },
+    {
+      "address": 8042919488,
+      "dataAddress": 7255658137,
+      "size": 17
+    },
+    {
+      "address": 8042919520,
+      "dataAddress": 7255658155,
+      "size": 18
+    },
+    {
+      "address": 8042919552,
+      "dataAddress": 7255658180,
+      "size": 54
+    },
+    {
+      "address": 8042919584,
+      "dataAddress": 7255658235,
+      "size": 56
+    },
+    {
+      "address": 8042919616,
+      "dataAddress": 7255658292,
+      "size": 46
+    },
+    {
+      "address": 8042919648,
+      "dataAddress": 7255658339,
+      "size": 48
+    },
+    {
+      "address": 8042919680,
+      "dataAddress": 7255658388,
+      "size": 47
+    },
+    {
+      "address": 8042919712,
+      "dataAddress": 7255658513,
+      "size": 34
+    },
+    {
+      "address": 8042919744,
+      "dataAddress": 7255658548,
+      "size": 32
+    },
+    {
+      "address": 8042919776,
+      "dataAddress": 7255658581,
+      "size": 11
+    },
+    {
+      "address": 8042919808,
+      "dataAddress": 7255658593,
+      "size": 48
+    },
+    {
+      "address": 8042919840,
+      "dataAddress": 7255658642,
+      "size": 63
+    },
+    {
+      "address": 8042919872,
+      "dataAddress": 7255658706,
+      "size": 82
+    },
+    {
+      "address": 8042919904,
+      "dataAddress": 7255658789,
+      "size": 151
+    },
+    {
+      "address": 8042919936,
+      "dataAddress": 7255659100,
+      "size": 30
+    },
+    {
+      "address": 8042919968,
+      "dataAddress": 7255659131,
+      "size": 17
+    },
+    {
+      "address": 8042920000,
+      "dataAddress": 7255659149,
+      "size": 48
+    },
+    {
+      "address": 8042920032,
+      "dataAddress": 7255659198,
+      "size": 79
+    },
+    {
+      "address": 8042920064,
+      "dataAddress": 7255659278,
+      "size": 35
+    },
+    {
+      "address": 8042920096,
+      "dataAddress": 7255659314,
+      "size": 34
+    },
+    {
+      "address": 8042920128,
+      "dataAddress": 7255659349,
+      "size": 83
+    },
+    {
+      "address": 8042920160,
+      "dataAddress": 7255659496,
+      "size": 81
+    },
+    {
+      "address": 8042920192,
+      "dataAddress": 7255659578,
+      "size": 102
+    },
+    {
+      "address": 8042920224,
+      "dataAddress": 7255659743,
+      "size": 29
+    },
+    {
+      "address": 8042920256,
+      "dataAddress": 7255659851,
+      "size": 32
+    },
+    {
+      "address": 8042920288,
+      "dataAddress": 7255659884,
+      "size": 25
+    },
+    {
+      "address": 8042920320,
+      "dataAddress": 7255659910,
+      "size": 37
+    },
+    {
+      "address": 8042920352,
+      "dataAddress": 7255659948,
+      "size": 63
+    },
+    {
+      "address": 8042920384,
+      "dataAddress": 7255660103,
+      "size": 42
+    },
+    {
+      "address": 8042920416,
+      "dataAddress": 7255660146,
+      "size": 42
+    },
+    {
+      "address": 8042920448,
+      "dataAddress": 7255660189,
+      "size": 28
+    },
+    {
+      "address": 8042920480,
+      "dataAddress": 7255660282,
+      "size": 44
+    },
+    {
+      "address": 8042920512,
+      "dataAddress": 7255660327,
+      "size": 41
+    },
+    {
+      "address": 8042920544,
+      "dataAddress": 7255660424,
+      "size": 35
+    },
+    {
+      "address": 8042920576,
+      "dataAddress": 7255660460,
+      "size": 60
+    },
+    {
+      "address": 8042920608,
+      "dataAddress": 7255660574,
+      "size": 51
+    },
+    {
+      "address": 8042920640,
+      "dataAddress": 7255660696,
+      "size": 20
+    },
+    {
+      "address": 8042920672,
+      "dataAddress": 7255660717,
+      "size": 43
+    },
+    {
+      "address": 8042920704,
+      "dataAddress": 7255660761,
+      "size": 19
+    },
+    {
+      "address": 8042920736,
+      "dataAddress": 7255660781,
+      "size": 2
+    },
+    {
+      "address": 8042920768,
+      "dataAddress": 7255660784,
+      "size": 3
+    },
+    {
+      "address": 8042920800,
+      "dataAddress": 7255660788,
+      "size": 83
+    },
+    {
+      "address": 8042920832,
+      "dataAddress": 7255660872,
+      "size": 105
+    },
+    {
+      "address": 8042920864,
+      "dataAddress": 7255661042,
+      "size": 84
+    },
+    {
+      "address": 8042920896,
+      "dataAddress": 7255661127,
+      "size": 63
+    },
+    {
+      "address": 8042920928,
+      "dataAddress": 7255661191,
+      "size": 38
+    },
+    {
+      "address": 8042920960,
+      "dataAddress": 7255661230,
+      "size": 69
+    },
+    {
+      "address": 8042920992,
+      "dataAddress": 7255661300,
+      "size": 39
+    },
+    {
+      "address": 8042921024,
+      "dataAddress": 7255661340,
+      "size": 83
+    },
+    {
+      "address": 8042921056,
+      "dataAddress": 7255661478,
+      "size": 51
+    },
+    {
+      "address": 8042921088,
+      "dataAddress": 7255661530,
+      "size": 80
+    },
+    {
+      "address": 8042921120,
+      "dataAddress": 7255661611,
+      "size": 51
+    },
+    {
+      "address": 8042921152,
+      "dataAddress": 7255661663,
+      "size": 42
+    },
+    {
+      "address": 8042921184,
+      "dataAddress": 7255661706,
+      "size": 37
+    },
+    {
+      "address": 8042921216,
+      "dataAddress": 7255661744,
+      "size": 11
+    },
+    {
+      "address": 8042921248,
+      "dataAddress": 7255661756,
+      "size": 17
+    },
+    {
+      "address": 8042921280,
+      "dataAddress": 7255661774,
+      "size": 28
+    },
+    {
+      "address": 8042921312,
+      "dataAddress": 7255661803,
+      "size": 32
+    },
+    {
+      "address": 8042921344,
+      "dataAddress": 7255661836,
+      "size": 64
+    },
+    {
+      "address": 8042921376,
+      "dataAddress": 7255661910,
+      "size": 75
+    },
+    {
+      "address": 8042921408,
+      "dataAddress": 7255661986,
+      "size": 45
+    },
+    {
+      "address": 8042921440,
+      "dataAddress": 7255662032,
+      "size": 75
+    },
+    {
+      "address": 8042921472,
+      "dataAddress": 7255662108,
+      "size": 61
+    },
+    {
+      "address": 8042921504,
+      "dataAddress": 7255662170,
+      "size": 52
+    },
+    {
+      "address": 8042921536,
+      "dataAddress": 7255662223,
+      "size": 81
+    },
+    {
+      "address": 8042921568,
+      "dataAddress": 7255662305,
+      "size": 119
+    },
+    {
+      "address": 8042921600,
+      "dataAddress": 7255662425,
+      "size": 9
+    },
+    {
+      "address": 8042921632,
+      "dataAddress": 7255662435,
+      "size": 24
+    },
+    {
+      "address": 8042921664,
+      "dataAddress": 7255662460,
+      "size": 77
+    },
+    {
+      "address": 8042921696,
+      "dataAddress": 7255662538,
+      "size": 32
+    },
+    {
+      "address": 8042921728,
+      "dataAddress": 7255662571,
+      "size": 4
+    },
+    {
+      "address": 8042921760,
+      "dataAddress": 7255662576,
+      "size": 85
+    },
+    {
+      "address": 8042921792,
+      "dataAddress": 7255662901,
+      "size": 41
+    },
+    {
+      "address": 8042921824,
+      "dataAddress": 7255662943,
+      "size": 51
+    },
+    {
+      "address": 8042921856,
+      "dataAddress": 7255662995,
+      "size": 42
+    },
+    {
+      "address": 8042921888,
+      "dataAddress": 7255663038,
+      "size": 49
+    },
+    {
+      "address": 8042921920,
+      "dataAddress": 7255663088,
+      "size": 43
+    },
+    {
+      "address": 8042921952,
+      "dataAddress": 7255663132,
+      "size": 50
+    },
+    {
+      "address": 8042921984,
+      "dataAddress": 7255663183,
+      "size": 41
+    },
+    {
+      "address": 8042922016,
+      "dataAddress": 7255663225,
+      "size": 51
+    },
+    {
+      "address": 8042922048,
+      "dataAddress": 7255663277,
+      "size": 16
+    },
+    {
+      "address": 8042922080,
+      "dataAddress": 7255663294,
+      "size": 38
+    },
+    {
+      "address": 8042922112,
+      "dataAddress": 7255663333,
+      "size": 69
+    },
+    {
+      "address": 8042922144,
+      "dataAddress": 7255663539,
+      "size": 55
+    },
+    {
+      "address": 8042922176,
+      "dataAddress": 7255663595,
+      "size": 79
+    },
+    {
+      "address": 8042922208,
+      "dataAddress": 7255663675,
+      "size": 59
+    },
+    {
+      "address": 8042922240,
+      "dataAddress": 7255663771,
+      "size": 61
+    },
+    {
+      "address": 8042922272,
+      "dataAddress": 7255663958,
+      "size": 64
+    },
+    {
+      "address": 8042922304,
+      "dataAddress": 7255664054,
+      "size": 124
+    },
+    {
+      "address": 8042922336,
+      "dataAddress": 7255664179,
+      "size": 27
+    },
+    {
+      "address": 8042922368,
+      "dataAddress": 7255664207,
+      "size": 26
+    },
+    {
+      "address": 8042922400,
+      "dataAddress": 7255664234,
+      "size": 15
+    },
+    {
+      "address": 8042922432,
+      "dataAddress": 7255664250,
+      "size": 69
+    },
+    {
+      "address": 8042922464,
+      "dataAddress": 7255664355,
+      "size": 34
+    },
+    {
+      "address": 8042922496,
+      "dataAddress": 7255664390,
+      "size": 22
+    },
+    {
+      "address": 8042922528,
+      "dataAddress": 7255664413,
+      "size": 56
+    },
+    {
+      "address": 8042922560,
+      "dataAddress": 7255664470,
+      "size": 75
+    },
+    {
+      "address": 8042922592,
+      "dataAddress": 7255664546,
+      "size": 73
+    },
+    {
+      "address": 8042922624,
+      "dataAddress": 7255664648,
+      "size": 24
+    },
+    {
+      "address": 8042922656,
+      "dataAddress": 7255664673,
+      "size": 31
+    },
+    {
+      "address": 8042922688,
+      "dataAddress": 7255664705,
+      "size": 32
+    },
+    {
+      "address": 8042922720,
+      "dataAddress": 7255664738,
+      "size": 51
+    },
+    {
+      "address": 8042922752,
+      "dataAddress": 7255664790,
+      "size": 30
+    },
+    {
+      "address": 8042922784,
+      "dataAddress": 7255664821,
+      "size": 55
+    },
+    {
+      "address": 8042922816,
+      "dataAddress": 7255664877,
+      "size": 78
+    },
+    {
+      "address": 8042922848,
+      "dataAddress": 7255665073,
+      "size": 46
+    },
+    {
+      "address": 8042922880,
+      "dataAddress": 7255665120,
+      "size": 48
+    },
+    {
+      "address": 8042922912,
+      "dataAddress": 7255665169,
+      "size": 77
+    },
+    {
+      "address": 8042922944,
+      "dataAddress": 7255665247,
+      "size": 2
+    },
+    {
+      "address": 8042922976,
+      "dataAddress": 7255665250,
+      "size": 47
+    },
+    {
+      "address": 8042923008,
+      "dataAddress": 7255665308,
+      "size": 45
+    },
+    {
+      "address": 8042923040,
+      "dataAddress": 7255665354,
+      "size": 50
+    },
+    {
+      "address": 8042923072,
+      "dataAddress": 7255665405,
+      "size": 45
+    },
+    {
+      "address": 8042923104,
+      "dataAddress": 7255665451,
+      "size": 45
+    },
+    {
+      "address": 8042923136,
+      "dataAddress": 7255665497,
+      "size": 58
+    },
+    {
+      "address": 8042923168,
+      "dataAddress": 7255665556,
+      "size": 40
+    },
+    {
+      "address": 8042923200,
+      "dataAddress": 7255665597,
+      "size": 28
+    },
+    {
+      "address": 8042923232,
+      "dataAddress": 7255665626,
+      "size": 33
+    },
+    {
+      "address": 8042923264,
+      "dataAddress": 7255665660,
+      "size": 29
+    },
+    {
+      "address": 8042923296,
+      "dataAddress": 7255665690,
+      "size": 32
+    },
+    {
+      "address": 8042923328,
+      "dataAddress": 7255665723,
+      "size": 32
+    },
+    {
+      "address": 8042923360,
+      "dataAddress": 7255665756,
+      "size": 33
+    },
+    {
+      "address": 8042923392,
+      "dataAddress": 7255665790,
+      "size": 9
+    },
+    {
+      "address": 8042923424,
+      "dataAddress": 7255665800,
+      "size": 9
+    },
+    {
+      "address": 8042923456,
+      "dataAddress": 7255665810,
+      "size": 8
+    },
+    {
+      "address": 8042923488,
+      "dataAddress": 7255665819,
+      "size": 9
+    },
+    {
+      "address": 8042923520,
+      "dataAddress": 7255665829,
+      "size": 7
+    },
+    {
+      "address": 8042923552,
+      "dataAddress": 7255665837,
+      "size": 14
+    },
+    {
+      "address": 8042923584,
+      "dataAddress": 7255665852,
+      "size": 13
+    },
+    {
+      "address": 8042923616,
+      "dataAddress": 7255665866,
+      "size": 35
+    },
+    {
+      "address": 8042923648,
+      "dataAddress": 7255665902,
+      "size": 6
+    },
+    {
+      "address": 8042923680,
+      "dataAddress": 7255665909,
+      "size": 4
+    },
+    {
+      "address": 8042923712,
+      "dataAddress": 7255665914,
+      "size": 11
+    },
+    {
+      "address": 8042923744,
+      "dataAddress": 7255665926,
+      "size": 5
+    },
+    {
+      "address": 8042923776,
+      "dataAddress": 7255665932,
+      "size": 8
+    },
+    {
+      "address": 8042923808,
+      "dataAddress": 7255665941,
+      "size": 5
+    },
+    {
+      "address": 8042923840,
+      "dataAddress": 7255665947,
+      "size": 11
+    },
+    {
+      "address": 8042923872,
+      "dataAddress": 7255665959,
+      "size": 10
+    },
+    {
+      "address": 8042923904,
+      "dataAddress": 7255665970,
+      "size": 11
+    },
+    {
+      "address": 8042923936,
+      "dataAddress": 7255665982,
+      "size": 10
+    },
+    {
+      "address": 8042923968,
+      "dataAddress": 7255665993,
+      "size": 17
+    },
+    {
+      "address": 8042924000,
+      "dataAddress": 7255666011,
+      "size": 12
+    },
+    {
+      "address": 8042924032,
+      "dataAddress": 7255666024,
+      "size": 10
+    },
+    {
+      "address": 8042924064,
+      "dataAddress": 7255666035,
+      "size": 10
+    },
+    {
+      "address": 8042924096,
+      "dataAddress": 7255666046,
+      "size": 3
+    },
+    {
+      "address": 8042924128,
+      "dataAddress": 7255666050,
+      "size": 9
+    },
+    {
+      "address": 8042924160,
+      "dataAddress": 7255666060,
+      "size": 39
+    },
+    {
+      "address": 8042924192,
+      "dataAddress": 7255666100,
+      "size": 34
+    },
+    {
+      "address": 8042924224,
+      "dataAddress": 7255666135,
+      "size": 41
+    },
+    {
+      "address": 8042924256,
+      "dataAddress": 7255666177,
+      "size": 19
+    },
+    {
+      "address": 8042924288,
+      "dataAddress": 7255666197,
+      "size": 18
+    },
+    {
+      "address": 8042924320,
+      "dataAddress": 7255666216,
+      "size": 15
+    },
+    {
+      "address": 8042924352,
+      "dataAddress": 7255666232,
+      "size": 35
+    },
+    {
+      "address": 8042924384,
+      "dataAddress": 7255666268,
+      "size": 37
+    },
+    {
+      "address": 8042924416,
+      "dataAddress": 7255666306,
+      "size": 29
+    },
+    {
+      "address": 8042924448,
+      "dataAddress": 7255666336,
+      "size": 33
+    },
+    {
+      "address": 8042924480,
+      "dataAddress": 7255666370,
+      "size": 20
+    },
+    {
+      "address": 8042924512,
+      "dataAddress": 7255666391,
+      "size": 20
+    },
+    {
+      "address": 8042924544,
+      "dataAddress": 7255666412,
+      "size": 21
+    },
+    {
+      "address": 8042924576,
+      "dataAddress": 7255666434,
+      "size": 27
+    },
+    {
+      "address": 8042924608,
+      "dataAddress": 7255666462,
+      "size": 31
+    },
+    {
+      "address": 8042924640,
+      "dataAddress": 7255666494,
+      "size": 24
+    },
+    {
+      "address": 8042924672,
+      "dataAddress": 7255666519,
+      "size": 35
+    },
+    {
+      "address": 8042924704,
+      "dataAddress": 7255666555,
+      "size": 50
+    },
+    {
+      "address": 8042924736,
+      "dataAddress": 7255666606,
+      "size": 41
+    },
+    {
+      "address": 8042924768,
+      "dataAddress": 7255666648,
+      "size": 41
+    },
+    {
+      "address": 8042924800,
+      "dataAddress": 7255666690,
+      "size": 42
+    },
+    {
+      "address": 8042924832,
+      "dataAddress": 7255666733,
+      "size": 44
+    },
+    {
+      "address": 8042924864,
+      "dataAddress": 7255666778,
+      "size": 45
+    },
+    {
+      "address": 8042924896,
+      "dataAddress": 7255666824,
+      "size": 43
+    },
+    {
+      "address": 8042924928,
+      "dataAddress": 7255666868,
+      "size": 43
+    },
+    {
+      "address": 8042924960,
+      "dataAddress": 7255666912,
+      "size": 42
+    },
+    {
+      "address": 8042924992,
+      "dataAddress": 7255666955,
+      "size": 21
+    },
+    {
+      "address": 8042925024,
+      "dataAddress": 7255666977,
+      "size": 34
+    },
+    {
+      "address": 8042925056,
+      "dataAddress": 7255667012,
+      "size": 33
+    },
+    {
+      "address": 8042925088,
+      "dataAddress": 7255667046,
+      "size": 35
+    },
+    {
+      "address": 8042925120,
+      "dataAddress": 7255667082,
+      "size": 31
+    },
+    {
+      "address": 8042925152,
+      "dataAddress": 7255667114,
+      "size": 44
+    },
+    {
+      "address": 8042925184,
+      "dataAddress": 7255667159,
+      "size": 29
+    },
+    {
+      "address": 8042925216,
+      "dataAddress": 7255667189,
+      "size": 27
+    },
+    {
+      "address": 8042925248,
+      "dataAddress": 7255667217,
+      "size": 29
+    },
+    {
+      "address": 8042925280,
+      "dataAddress": 7255667247,
+      "size": 24
+    },
+    {
+      "address": 8042925312,
+      "dataAddress": 7255667272,
+      "size": 43
+    },
+    {
+      "address": 8042925344,
+      "dataAddress": 7255667316,
+      "size": 41
+    },
+    {
+      "address": 8042925376,
+      "dataAddress": 7255667358,
+      "size": 43
+    },
+    {
+      "address": 8042925408,
+      "dataAddress": 7255667402,
+      "size": 38
+    },
+    {
+      "address": 8042925440,
+      "dataAddress": 7255667441,
+      "size": 45
+    },
+    {
+      "address": 8042925472,
+      "dataAddress": 7255667487,
+      "size": 46
+    },
+    {
+      "address": 8042925504,
+      "dataAddress": 7255667534,
+      "size": 46
+    },
+    {
+      "address": 8042925536,
+      "dataAddress": 7255667581,
+      "size": 46
+    },
+    {
+      "address": 8042925568,
+      "dataAddress": 7255667628,
+      "size": 41
+    },
+    {
+      "address": 8042925600,
+      "dataAddress": 7255667670,
+      "size": 32
+    },
+    {
+      "address": 8042925632,
+      "dataAddress": 7255667703,
+      "size": 36
+    },
+    {
+      "address": 8042925664,
+      "dataAddress": 7255667740,
+      "size": 32
+    },
+    {
+      "address": 8042925696,
+      "dataAddress": 7255667773,
+      "size": 42
+    },
+    {
+      "address": 8042925728,
+      "dataAddress": 7255667816,
+      "size": 26
+    },
+    {
+      "address": 8042925760,
+      "dataAddress": 7255667843,
+      "size": 33
+    },
+    {
+      "address": 8042925792,
+      "dataAddress": 7255667877,
+      "size": 36
+    },
+    {
+      "address": 8042925824,
+      "dataAddress": 7255667914,
+      "size": 31
+    },
+    {
+      "address": 8042925856,
+      "dataAddress": 7255667946,
+      "size": 32
+    },
+    {
+      "address": 8042925888,
+      "dataAddress": 7255667979,
+      "size": 32
+    },
+    {
+      "address": 8042925920,
+      "dataAddress": 7255668012,
+      "size": 30
+    },
+    {
+      "address": 8042925952,
+      "dataAddress": 7255668043,
+      "size": 27
+    },
+    {
+      "address": 8042925984,
+      "dataAddress": 7255668071,
+      "size": 38
+    },
+    {
+      "address": 8042926016,
+      "dataAddress": 7255668110,
+      "size": 17
+    },
+    {
+      "address": 8042926048,
+      "dataAddress": 7255668128,
+      "size": 33
+    },
+    {
+      "address": 8042926080,
+      "dataAddress": 7255668162,
+      "size": 49
+    },
+    {
+      "address": 8042926112,
+      "dataAddress": 7255668212,
+      "size": 50
+    },
+    {
+      "address": 8042926144,
+      "dataAddress": 7255668263,
+      "size": 40
+    },
+    {
+      "address": 8042926176,
+      "dataAddress": 7255668304,
+      "size": 18
+    },
+    {
+      "address": 8042926208,
+      "dataAddress": 7255668323,
+      "size": 12
+    },
+    {
+      "address": 8042926240,
+      "dataAddress": 7255668336,
+      "size": 35
+    },
+    {
+      "address": 8042926272,
+      "dataAddress": 7255668372,
+      "size": 34
+    },
+    {
+      "address": 8042926304,
+      "dataAddress": 7255668407,
+      "size": 28
+    },
+    {
+      "address": 8042926336,
+      "dataAddress": 7255668436,
+      "size": 26
+    },
+    {
+      "address": 8042926368,
+      "dataAddress": 7255668463,
+      "size": 16
+    },
+    {
+      "address": 8042926400,
+      "dataAddress": 7255668480,
+      "size": 13
+    },
+    {
+      "address": 8042926432,
+      "dataAddress": 7255668494,
+      "size": 18
+    },
+    {
+      "address": 8042926464,
+      "dataAddress": 7255668513,
+      "size": 18
+    },
+    {
+      "address": 8042926496,
+      "dataAddress": 7255668532,
+      "size": 28
+    },
+    {
+      "address": 8042926528,
+      "dataAddress": 7255668561,
+      "size": 30
+    },
+    {
+      "address": 8042926560,
+      "dataAddress": 7255668592,
+      "size": 37
+    },
+    {
+      "address": 8042926592,
+      "dataAddress": 7255668630,
+      "size": 36
+    },
+    {
+      "address": 8042926624,
+      "dataAddress": 7255668667,
+      "size": 20
+    },
+    {
+      "address": 8042926656,
+      "dataAddress": 7255668688,
+      "size": 30
+    },
+    {
+      "address": 8042926688,
+      "dataAddress": 7255668719,
+      "size": 17
+    },
+    {
+      "address": 8042926720,
+      "dataAddress": 7255668737,
+      "size": 27
+    },
+    {
+      "address": 8042926752,
+      "dataAddress": 7255668765,
+      "size": 11
+    },
+    {
+      "address": 8042926784,
+      "dataAddress": 7255668777,
+      "size": 20
+    },
+    {
+      "address": 8042926816,
+      "dataAddress": 7255668798,
+      "size": 24
+    },
+    {
+      "address": 8042926848,
+      "dataAddress": 7255668823,
+      "size": 22
+    },
+    {
+      "address": 8042926880,
+      "dataAddress": 7255668846,
+      "size": 13
+    },
+    {
+      "address": 8042926912,
+      "dataAddress": 7255668860,
+      "size": 14
+    },
+    {
+      "address": 8042926944,
+      "dataAddress": 7255668875,
+      "size": 28
+    },
+    {
+      "address": 8042926976,
+      "dataAddress": 7255668904,
+      "size": 31
+    },
+    {
+      "address": 8042927008,
+      "dataAddress": 7255668936,
+      "size": 34
+    },
+    {
+      "address": 8042927040,
+      "dataAddress": 7255668971,
+      "size": 33
+    },
+    {
+      "address": 8042927072,
+      "dataAddress": 7255669005,
+      "size": 36
+    },
+    {
+      "address": 8042927104,
+      "dataAddress": 7255669042,
+      "size": 35
+    },
+    {
+      "address": 8042927136,
+      "dataAddress": 7255669078,
+      "size": 24
+    },
+    {
+      "address": 8042927168,
+      "dataAddress": 7255669103,
+      "size": 80
+    },
+    {
+      "address": 8042927200,
+      "dataAddress": 7255669184,
+      "size": 308
+    },
+    {
+      "address": 8042927232,
+      "dataAddress": 7255669493,
+      "size": 16
+    },
+    {
+      "address": 8042927264,
+      "dataAddress": 7255669510,
+      "size": 43
+    },
+    {
+      "address": 8042927296,
+      "dataAddress": 7255669706,
+      "size": 56
+    },
+    {
+      "address": 8042927328,
+      "dataAddress": 7255669796,
+      "size": 25
+    },
+    {
+      "address": 8042927360,
+      "dataAddress": 7255669822,
+      "size": 17
+    },
+    {
+      "address": 8042927392,
+      "dataAddress": 7255669840,
+      "size": 27
+    },
+    {
+      "address": 8042927424,
+      "dataAddress": 7255669868,
+      "size": 35
+    },
+    {
+      "address": 8042927456,
+      "dataAddress": 7255669944,
+      "size": 58
+    },
+    {
+      "address": 8042927488,
+      "dataAddress": 7255670003,
+      "size": 31
+    },
+    {
+      "address": 8042927520,
+      "dataAddress": 7255670035,
+      "size": 86
+    },
+    {
+      "address": 8042927552,
+      "dataAddress": 7255670122,
+      "size": 59
+    },
+    {
+      "address": 8042927584,
+      "dataAddress": 7255670182,
+      "size": 32
+    },
+    {
+      "address": 8042927616,
+      "dataAddress": 7255670215,
+      "size": 31
+    },
+    {
+      "address": 8042927648,
+      "dataAddress": 7255670310,
+      "size": 28
+    },
+    {
+      "address": 8042927680,
+      "dataAddress": 7255670339,
+      "size": 23
+    },
+    {
+      "address": 8042927712,
+      "dataAddress": 7255670398,
+      "size": 2
+    },
+    {
+      "address": 8042927744,
+      "dataAddress": 7255670568,
+      "size": 33
+    },
+    {
+      "address": 8042927776,
+      "dataAddress": 7255670602,
+      "size": 18
+    },
+    {
+      "address": 8042927808,
+      "dataAddress": 7255670621,
+      "size": 18
+    },
+    {
+      "address": 8042927840,
+      "dataAddress": 7255670640,
+      "size": 18
+    },
+    {
+      "address": 8042927872,
+      "dataAddress": 7255670659,
+      "size": 83
+    },
+    {
+      "address": 8042927904,
+      "dataAddress": 7255670743,
+      "size": 53
+    },
+    {
+      "address": 8042927936,
+      "dataAddress": 7255670797,
+      "size": 6
+    },
+    {
+      "address": 8042927968,
+      "dataAddress": 7255670804,
+      "size": 42
+    },
+    {
+      "address": 8042928000,
+      "dataAddress": 7255670847,
+      "size": 41
+    },
+    {
+      "address": 8042928032,
+      "dataAddress": 7255670889,
+      "size": 36
+    },
+    {
+      "address": 8042928064,
+      "dataAddress": 7255670926,
+      "size": 46
+    },
+    {
+      "address": 8042928096,
+      "dataAddress": 7255670973,
+      "size": 51
+    },
+    {
+      "address": 8042928128,
+      "dataAddress": 7255671025,
+      "size": 55
+    },
+    {
+      "address": 8042928160,
+      "dataAddress": 7255671081,
+      "size": 65
+    },
+    {
+      "address": 8042928192,
+      "dataAddress": 7255671147,
+      "size": 51
+    },
+    {
+      "address": 8042928224,
+      "dataAddress": 7255671199,
+      "size": 90
+    },
+    {
+      "address": 8042928256,
+      "dataAddress": 7255671290,
+      "size": 15
+    },
+    {
+      "address": 8042928288,
+      "dataAddress": 7255671306,
+      "size": 7
+    },
+    {
+      "address": 8042928320,
+      "dataAddress": 7255671314,
+      "size": 13
+    },
+    {
+      "address": 8042928352,
+      "dataAddress": 7255671328,
+      "size": 12
+    },
+    {
+      "address": 8042928384,
+      "dataAddress": 7255671341,
+      "size": 19
+    },
+    {
+      "address": 8042928416,
+      "dataAddress": 7255671361,
+      "size": 18
+    },
+    {
+      "address": 8042928448,
+      "dataAddress": 7255671380,
+      "size": 17
+    },
+    {
+      "address": 8042928480,
+      "dataAddress": 7255671398,
+      "size": 20
+    },
+    {
+      "address": 8042928512,
+      "dataAddress": 7255671419,
+      "size": 11
+    },
+    {
+      "address": 8042928544,
+      "dataAddress": 7255671431,
+      "size": 51
+    },
+    {
+      "address": 8042928576,
+      "dataAddress": 7255671483,
+      "size": 33
+    },
+    {
+      "address": 8042928608,
+      "dataAddress": 7255671517,
+      "size": 46
+    },
+    {
+      "address": 8042928640,
+      "dataAddress": 7255671564,
+      "size": 48
+    },
+    {
+      "address": 8042928672,
+      "dataAddress": 7255671613,
+      "size": 48
+    },
+    {
+      "address": 8042928704,
+      "dataAddress": 7255671662,
+      "size": 74
+    },
+    {
+      "address": 8042928736,
+      "dataAddress": 7255671737,
+      "size": 53
+    },
+    {
+      "address": 8042928768,
+      "dataAddress": 7255671791,
+      "size": 39
+    },
+    {
+      "address": 8042928800,
+      "dataAddress": 7255671831,
+      "size": 46
+    },
+    {
+      "address": 8042928832,
+      "dataAddress": 7255671878,
+      "size": 53
+    },
+    {
+      "address": 8042928864,
+      "dataAddress": 7255671932,
+      "size": 37
+    },
+    {
+      "address": 8042928896,
+      "dataAddress": 7255671970,
+      "size": 26
+    },
+    {
+      "address": 8042928928,
+      "dataAddress": 7255671997,
+      "size": 6
+    },
+    {
+      "address": 8042928960,
+      "dataAddress": 7255672004,
+      "size": 7
+    },
+    {
+      "address": 8042928992,
+      "dataAddress": 7255672012,
+      "size": 10
+    },
+    {
+      "address": 8042929024,
+      "dataAddress": 7255672023,
+      "size": 15
+    },
+    {
+      "address": 8042929056,
+      "dataAddress": 7255672039,
+      "size": 5
+    },
+    {
+      "address": 8042929088,
+      "dataAddress": 7255672045,
+      "size": 28
+    },
+    {
+      "address": 8042929120,
+      "dataAddress": 7255672074,
+      "size": 18
+    },
+    {
+      "address": 8042929152,
+      "dataAddress": 7255672093,
+      "size": 17
+    },
+    {
+      "address": 8042929184,
+      "dataAddress": 7255672111,
+      "size": 29
+    },
+    {
+      "address": 8042929216,
+      "dataAddress": 7255672141,
+      "size": 19
+    },
+    {
+      "address": 8042929248,
+      "dataAddress": 7255672161,
+      "size": 28
+    },
+    {
+      "address": 8042929280,
+      "dataAddress": 7255672190,
+      "size": 18
+    },
+    {
+      "address": 8042929312,
+      "dataAddress": 7255672209,
+      "size": 16
+    },
+    {
+      "address": 8042929344,
+      "dataAddress": 7255672226,
+      "size": 6
+    },
+    {
+      "address": 8042929376,
+      "dataAddress": 7255672233,
+      "size": 25
+    },
+    {
+      "address": 8042929408,
+      "dataAddress": 7255672259,
+      "size": 15
+    },
+    {
+      "address": 8042929440,
+      "dataAddress": 7255672275,
+      "size": 25
+    },
+    {
+      "address": 8042929472,
+      "dataAddress": 7255672301,
+      "size": 15
+    },
+    {
+      "address": 8042929504,
+      "dataAddress": 7255672317,
+      "size": 15
+    }
+  ],
+  "classes": [
+    {
+      "address": 7902344824,
+      "dataAddress": 8042929736,
+      "listPointer": 8042929536,
+      "methodList": {
+        "address": 0,
+        "flags": 0,
+        "methods": []
+      },
+      "methodListAddress": 0,
+      "name": "EAPostAlert",
+      "nameAddress": 8042938368
+    },
+    {
+      "address": 7826424880,
+      "dataAddress": 8042931544,
+      "listPointer": 8042929544,
+      "methodList": {
+        "address": 7255651448,
+        "flags": 3221225487,
+        "methods": [
+          {
+            "address": 7255651456,
+            "implAddress": 7255615664,
+            "nameAddress": 8042942168,
+            "selector": "authCertForLegacyConnectionID:",
+            "type": "@20@0:8I16",
+            "typeAddress": 8042942200
+          },
+          {
+            "address": 7255651468,
+            "implAddress": 7255596380,
+            "nameAddress": 8042941680,
+            "selector": "stopDestinationSharingForUUID:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651480,
+            "implAddress": 7255610084,
+            "nameAddress": 8042942216,
+            "selector": "appDeclaresProtocol:",
+            "type": "B24@0:8@16",
+            "typeAddress": 8042939096
+          },
+          {
+            "address": 7255651492,
+            "implAddress": 7255608880,
+            "nameAddress": 8042942240,
+            "selector": "_cameraInfoUpdated:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651504,
+            "implAddress": 7255612300,
+            "nameAddress": 8042942264,
+            "selector": "pointOfInterestSelection:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651516,
+            "implAddress": 7255598636,
+            "nameAddress": 8042942296,
+            "selector": "_applicationDidEnterBackground:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651528,
+            "implAddress": 7255595072,
+            "nameAddress": 8042941480,
+            "selector": "EAAccessoryLeft:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651540,
+            "implAddress": 7255599248,
+            "nameAddress": 8042942328,
+            "selector": "_findExtraAccessoriesContainedOnlyIniAP:",
+            "type": "@24@0:8@16",
+            "typeAddress": 8042938408
+          },
+          {
+            "address": 7255651552,
+            "implAddress": 7255607404,
+            "nameAddress": 8042942376,
+            "selector": "_externalAccessoryDisconnected:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651564,
+            "implAddress": 7255597200,
+            "nameAddress": 8042942408,
+            "selector": "showBluetoothAccessoryPickerWithNameFilter:completion:",
+            "type": "v32@0:8@16@?24",
+            "typeAddress": 8042942464
+          },
+          {
+            "address": 7255651576,
+            "implAddress": 7255588316,
+            "nameAddress": 8042939016,
+            "selector": "init",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255651588,
+            "implAddress": 7255615896,
+            "nameAddress": 8042942480,
+            "selector": "currentVehicleInformation:",
+            "type": "@24@0:8@16",
+            "typeAddress": 8042938408
+          },
+          {
+            "address": 7255651600,
+            "implAddress": 7255614692,
+            "nameAddress": 8042942512,
+            "selector": "openSessionFromAppToAccessory:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651612,
+            "implAddress": 7255610528,
+            "nameAddress": 8042942544,
+            "selector": "_connectedAccessories",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255651624,
+            "implAddress": 7255606856,
+            "nameAddress": 8042942568,
+            "selector": "_pointOfInterestStatusReceived:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651636,
+            "implAddress": 7255600312,
+            "nameAddress": 8042942600,
+            "selector": "_findExtraAccessoriesContainedOnlyInEA:",
+            "type": "@24@0:8@16",
+            "typeAddress": 8042938408
+          },
+          {
+            "address": 7255651648,
+            "implAddress": 7255608688,
+            "nameAddress": 8042942640,
+            "selector": "_gpsTimeRequested:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651660,
+            "implAddress": 7255606552,
+            "nameAddress": 8042942664,
+            "selector": "_externalAccessoryUpdated:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651672,
+            "implAddress": 7255603392,
+            "nameAddress": 8042942696,
+            "selector": "_applicationWillEnterForeground:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651684,
+            "implAddress": 7255612188,
+            "nameAddress": 8042942736,
+            "selector": "sendGPRMCDataStatus:ValueV:ValueX:forUUID:",
+            "type": "v36@0:8B16B20B24@28",
+            "typeAddress": 8042942784
+          },
+          {
+            "address": 7255651696,
+            "implAddress": 7255610824,
+            "nameAddress": 8042942808,
+            "selector": "accessibilityContextChange:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651708,
+            "implAddress": 7255597648,
+            "nameAddress": 8042942840,
+            "selector": "registerForLocalNotifications",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255651720,
+            "implAddress": 7255610560,
+            "nameAddress": 8042942872,
+            "selector": "shouldAllowCppRuntime",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255651732,
+            "implAddress": 7255598248,
+            "nameAddress": 8042942896,
+            "selector": "_notifyObserversThatAccessoryDisconnectedWithUserInfo:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651744,
+            "implAddress": 7255598520,
+            "nameAddress": 8042942952,
+            "selector": "_iapServerDied:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651756,
+            "implAddress": 7255595316,
+            "nameAddress": 8042941712,
+            "selector": "initialEAAccessoriesAttachedAfterClientConnection:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651768,
+            "implAddress": 7255611440,
+            "nameAddress": 8042942968,
+            "selector": "accessibilitySystemPropertyChange:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651780,
+            "implAddress": 7255616000,
+            "nameAddress": 8042943008,
+            "selector": "sendDeviceIdentifierNotification:usbIdentifier:forUUID:",
+            "type": "v40@0:8@16@24@32",
+            "typeAddress": 8042943064
+          },
+          {
+            "address": 7255651792,
+            "implAddress": 7255597964,
+            "nameAddress": 8042943088,
+            "selector": "unregisterForLocalNotifications",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255651804,
+            "implAddress": 7255612516,
+            "nameAddress": 8042943120,
+            "selector": "disconnectIPAccessory:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651816,
+            "implAddress": 7255604124,
+            "nameAddress": 8042943144,
+            "selector": "_externalAccessoryConnectedNotificationHandler:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651828,
+            "implAddress": 7255608996,
+            "nameAddress": 8042943192,
+            "selector": "_integrateSequesteredAccessories",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255651840,
+            "implAddress": 7255609972,
+            "nameAddress": 8042943232,
+            "selector": "wakeAccessoryWithToken:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651852,
+            "implAddress": 7255612612,
+            "nameAddress": 8042941272,
+            "selector": "devicePicker:didSelectAddress:errorCode:",
+            "type": "v40@0:8@16@24q32",
+            "typeAddress": 8042941320
+          },
+          {
+            "address": 7255651864,
+            "implAddress": 7255613988,
+            "nameAddress": 8042943256,
+            "selector": "closeEASessionForEASessionUUID:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651876,
+            "implAddress": 7255614712,
+            "nameAddress": 8042943288,
+            "selector": "startLocationForConnectedAccessories",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255651888,
+            "implAddress": 7255597608,
+            "nameAddress": 8042943328,
+            "selector": "connectedAccessories",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255651900,
+            "implAddress": 7255588372,
+            "nameAddress": 8042943352,
+            "selector": "_initFromSingletonCreationMethod",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255651912,
+            "implAddress": 7255616132,
+            "nameAddress": 8042943392,
+            "selector": "sendWiredCarPlayAvailable:usbIdentifier:wirelessCarPlayAvailable:bluetoothIdentifier:forUUID:",
+            "type": "v56@0:8@16@24@32@40@48",
+            "typeAddress": 8042943488
+          },
+          {
+            "address": 7255651924,
+            "implAddress": 7255595740,
+            "nameAddress": 8042941768,
+            "selector": "startDestinationSharingForUUID:options:",
+            "type": "v32@0:8@16Q24",
+            "typeAddress": 8042941808
+          },
+          {
+            "address": 7255651936,
+            "implAddress": 7255612472,
+            "nameAddress": 8042943512,
+            "selector": "destinationInformation:forAccessoryUUID:",
+            "type": "B32@0:8@16@24",
+            "typeAddress": 8042943560
+          },
+          {
+            "address": 7255651948,
+            "implAddress": 7255612524,
+            "nameAddress": 8042943576,
+            "selector": "stopIPAccessoryDiscovery",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255651960,
+            "implAddress": 7255608764,
+            "nameAddress": 8042943608,
+            "selector": "_vehicleDataUpdated:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255651972,
+            "implAddress": 7255612088,
+            "nameAddress": 8042943632,
+            "selector": "setAreLocationAccessoriesEnabled:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255651984,
+            "implAddress": 7255612520,
+            "nameAddress": 8042943688,
+            "selector": "startIPAccessoryDiscovery",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255651996,
+            "implAddress": 7255614672,
+            "nameAddress": 8042943720,
+            "selector": "openSessionFromAccessoryToApp:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652008,
+            "implAddress": 7255594084,
+            "nameAddress": 8042939376,
+            "selector": "dealloc",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652020,
+            "implAddress": 7255612512,
+            "nameAddress": 8042943752,
+            "selector": "initiateConnectionToIPAccessory:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652032,
+            "implAddress": 7255610536,
+            "nameAddress": 8042943792,
+            "selector": "shouldAllowInternalProtocols",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255652044,
+            "implAddress": 7255607164,
+            "nameAddress": 8042943824,
+            "selector": "_OOBBTPairingCompletionStatusReceived:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652056,
+            "implAddress": 7255609508,
+            "nameAddress": 8042943864,
+            "selector": "_handleAccessoryNotificationTimeout:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652068,
+            "implAddress": 7255615792,
+            "nameAddress": 8042943904,
+            "selector": "requestIAPAccessoryWiFiCredentials:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652080,
+            "implAddress": 7255614528,
+            "nameAddress": 8042943944,
+            "selector": "sendOutgoingEAData:forSessionUUID:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255652092,
+            "implAddress": 7255604232,
+            "nameAddress": 8042943984,
+            "selector": "_externalAccessoryConnected:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652104,
+            "implAddress": 7255596788,
+            "nameAddress": 8042941824,
+            "selector": "nmeaSentenceArrived:forAccessoryUUID:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255652116,
+            "implAddress": 7255609732,
+            "nameAddress": 8042944016,
+            "selector": "_timeSyncInfoUpdated:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652128,
+            "implAddress": 7255597116,
+            "nameAddress": 8042941880,
+            "selector": "updateAccessoryInfo:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652140,
+            "implAddress": 7255608612,
+            "nameAddress": 8042944040,
+            "selector": "_nmeaFilteringSupportChanged:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652152,
+            "implAddress": 7255594940,
+            "nameAddress": 8042941504,
+            "selector": "EAAccessoryArrived:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652164,
+            "implAddress": 7255614440,
+            "nameAddress": 8042941528,
+            "selector": "resumeEASessionData:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652176,
+            "implAddress": 7255611672,
+            "nameAddress": 8042944072,
+            "selector": "accessibilitySystemPropertyRequest:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652188,
+            "implAddress": 7255614444,
+            "nameAddress": 8042944112,
+            "selector": "saveEASession:forEASessionUUID:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255652200,
+            "implAddress": 7255596564,
+            "nameAddress": 8042941904,
+            "selector": "destinationSharingStatus:forDestinationUUID:supportedParams:forUUID:",
+            "type": "v44@0:8B16@20@28@36",
+            "typeAddress": 8042941976
+          },
+          {
+            "address": 7255652212,
+            "implAddress": 7255613968,
+            "nameAddress": 8042944144,
+            "selector": "createEASessionForProtocol:accessoryUUID:withReply:",
+            "type": "v40@0:8@16@24@?32",
+            "typeAddress": 8042941656
+          },
+          {
+            "address": 7255652224,
+            "implAddress": 7255615152,
+            "nameAddress": 8042944200,
+            "selector": "sendNMEAFilterList:forUUID:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255652236,
+            "implAddress": 7255615276,
+            "nameAddress": 8042944232,
+            "selector": "stopLocationForConnectedAccessories",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652248,
+            "implAddress": 7255601140,
+            "nameAddress": 8042944272,
+            "selector": "_checkForConnectedAccessories:backgroundTaskIdentifier:",
+            "type": "v28@0:8B16Q20",
+            "typeAddress": 8042944328
+          },
+          {
+            "address": 7255652260,
+            "implAddress": 7255608384,
+            "nameAddress": 8042944344,
+            "selector": "_locationNmeaDataAvailable:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652272,
+            "implAddress": 7255615728,
+            "nameAddress": 8042944376,
+            "selector": "authCertSerialNumberForLegacyConnectionID:",
+            "type": "@20@0:8I16",
+            "typeAddress": 8042942200
+          },
+          {
+            "address": 7255652284,
+            "implAddress": 7255610592,
+            "nameAddress": 8042944424,
+            "selector": "accessibilityAction:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652296,
+            "implAddress": 7255608372,
+            "nameAddress": 8042944448,
+            "selector": "availableAccessories",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255652308,
+            "implAddress": 7255609868,
+            "nameAddress": 8042944472,
+            "selector": "openCompleteForSession:connectionID:",
+            "type": "v24@0:8I16I20",
+            "typeAddress": 8042944512
+          },
+          {
+            "address": 7255652320,
+            "implAddress": 7255602520,
+            "nameAddress": 8042944528,
+            "selector": "_cleanUpForTaskSuspendWithTaskIdentifier:",
+            "type": "v24@0:8Q16",
+            "typeAddress": 8042944576
+          },
+          {
+            "address": 7255652332,
+            "implAddress": 7255614088,
+            "nameAddress": 8042941552,
+            "selector": "accessoryClosedEASession:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652344,
+            "implAddress": 7255603696,
+            "nameAddress": 8042944592,
+            "selector": "_externalAccessoryReconnected:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652356,
+            "implAddress": 7255609920,
+            "nameAddress": 8042944624,
+            "selector": "endSession:forConnectionID:",
+            "type": "v24@0:8I16I20",
+            "typeAddress": 8042944512
+          },
+          {
+            "address": 7255652368,
+            "implAddress": 7255608536,
+            "nameAddress": 8042944656,
+            "selector": "_ephemerisURLAvailable:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652380,
+            "implAddress": 7255615656,
+            "nameAddress": 8042944680,
+            "selector": "processIDIsUsingAccessory:",
+            "type": "B24@0:8^{__CFString=}16",
+            "typeAddress": 8042944712
+          },
+          {
+            "address": 7255652392,
+            "implAddress": 7255603832,
+            "nameAddress": 8042944736,
+            "selector": "_removeAlliAPAccessoriesFromArray:notifyClients:",
+            "type": "v28@0:8@16B24",
+            "typeAddress": 8042944792
+          },
+          {
+            "address": 7255652404,
+            "implAddress": 7255608460,
+            "nameAddress": 8042944808,
+            "selector": "_locationPointDataAvailable:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652416,
+            "implAddress": 7255610572,
+            "nameAddress": 8042944840,
+            "selector": "setShouldAllowCppRuntime:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255652428,
+            "implAddress": 7255596880,
+            "nameAddress": 8042942000,
+            "selector": "vehicleStatusUpdate:forAccessoryUUID:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255652440,
+            "implAddress": 7255611052,
+            "nameAddress": 8042944872,
+            "selector": "accessibilityItemPropertyRequest:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652452,
+            "implAddress": 7255614256,
+            "nameAddress": 8042941584,
+            "selector": "handleIncomingExternalAccessoryData:forEASessionIdentifier:withReply:",
+            "type": "v40@0:8@16@24@?32",
+            "typeAddress": 8042941656
+          },
+          {
+            "address": 7255652464,
+            "implAddress": 7255610548,
+            "nameAddress": 8042944912,
+            "selector": "setShouldAllowInternalProtocols:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255652476,
+            "implAddress": 7255612076,
+            "nameAddress": 8042944952,
+            "selector": "areLocationAccessoriesEnabled",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255652488,
+            "implAddress": 7255614360,
+            "nameAddress": 8042944984,
+            "selector": "closeInputStreamForEASessionUUID:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          }
+        ]
+      },
+      "methodListAddress": 7255651448,
+      "name": "EAAccessoryManager",
+      "nameAddress": 8042941024
+    },
+    {
+      "address": 7902344904,
+      "dataAddress": 8042932208,
+      "listPointer": 8042929552,
+      "methodList": {
+        "address": 7255652504,
+        "flags": 3221225487,
+        "methods": [
+          {
+            "address": 7255652512,
+            "implAddress": 7255618620,
+            "nameAddress": 8042945648,
+            "selector": "removeFromRunLoop:forMode:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255652524,
+            "implAddress": 7255618212,
+            "nameAddress": 8042945680,
+            "selector": "scheduleInRunLoop:forMode:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255652536,
+            "implAddress": 7255618196,
+            "nameAddress": 8042945712,
+            "selector": "propertyForKey:",
+            "type": "@24@0:8@16",
+            "typeAddress": 8042938408
+          },
+          {
+            "address": 7255652548,
+            "implAddress": 7255618916,
+            "nameAddress": 8042945728,
+            "selector": "write:maxLength:",
+            "type": "q32@0:8r*16Q24",
+            "typeAddress": 8042945752
+          },
+          {
+            "address": 7255652560,
+            "implAddress": 7255618204,
+            "nameAddress": 8042945768,
+            "selector": "setProperty:forKey:",
+            "type": "B32@0:8@16@24",
+            "typeAddress": 8042943560
+          },
+          {
+            "address": 7255652572,
+            "implAddress": 7255617856,
+            "nameAddress": 8042945792,
+            "selector": "close",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652584,
+            "implAddress": 7255618804,
+            "nameAddress": 8042945800,
+            "selector": "streamStatus",
+            "type": "Q16@0:8",
+            "typeAddress": 8042939200
+          },
+          {
+            "address": 7255652596,
+            "implAddress": 7255618152,
+            "nameAddress": 8042945816,
+            "selector": "delegate",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255652608,
+            "implAddress": 7255618168,
+            "nameAddress": 8042945832,
+            "selector": "setDelegate:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652620,
+            "implAddress": 7255619492,
+            "nameAddress": 8042945480,
+            "selector": "hasSpaceAvailable",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255652632,
+            "implAddress": 7255617480,
+            "nameAddress": 8042945848,
+            "selector": "open",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652644,
+            "implAddress": 7255617284,
+            "nameAddress": 8042939376,
+            "selector": "dealloc",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652656,
+            "implAddress": 7255619840,
+            "nameAddress": 8042945856,
+            "selector": "_accessoryDidDisconnect:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652668,
+            "implAddress": 7255618908,
+            "nameAddress": 8042945888,
+            "selector": "streamError",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255652680,
+            "implAddress": 7255620444,
+            "nameAddress": 8042945904,
+            "selector": "_scheduleCallback",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652692,
+            "implAddress": 7255620024,
+            "nameAddress": 8042945928,
+            "selector": "_streamEventTrigger",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652704,
+            "implAddress": 7255619620,
+            "nameAddress": 8042945952,
+            "selector": "openCompleted",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652716,
+            "implAddress": 7255619852,
+            "nameAddress": 8042945968,
+            "selector": "_performAtEndOfStreamValidation",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652728,
+            "implAddress": 7255616604,
+            "nameAddress": 8042946000,
+            "selector": "initWithAccessory:forSession:socket:",
+            "type": "@36@0:8@16@24i32",
+            "typeAddress": 8042946040
+          },
+          {
+            "address": 7255652740,
+            "implAddress": 7255616976,
+            "nameAddress": 8042946064,
+            "selector": "initWithAccessoryWithoutSocket:forSession:",
+            "type": "@32@0:8@16@24",
+            "typeAddress": 8042946112
+          },
+          {
+            "address": 7255652752,
+            "implAddress": 7255619728,
+            "nameAddress": 8042946128,
+            "selector": "endStream",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652764,
+            "implAddress": 7255619996,
+            "nameAddress": 8042946144,
+            "selector": "_streamWriteable",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          }
+        ]
+      },
+      "methodListAddress": 7255652504,
+      "name": "EAOutputStream",
+      "nameAddress": 8042945376
+    },
+    {
+      "address": 7902344984,
+      "dataAddress": 8042932992,
+      "listPointer": 8042929560,
+      "methodList": {
+        "address": 7255652776,
+        "flags": 3221225487,
+        "methods": [
+          {
+            "address": 7255652784,
+            "implAddress": 7255623780,
+            "nameAddress": 8042945648,
+            "selector": "removeFromRunLoop:forMode:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255652796,
+            "implAddress": 7255623464,
+            "nameAddress": 8042945680,
+            "selector": "scheduleInRunLoop:forMode:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255652808,
+            "implAddress": 7255623448,
+            "nameAddress": 8042945712,
+            "selector": "propertyForKey:",
+            "type": "@24@0:8@16",
+            "typeAddress": 8042938408
+          },
+          {
+            "address": 7255652820,
+            "implAddress": 7255623456,
+            "nameAddress": 8042945768,
+            "selector": "setProperty:forKey:",
+            "type": "B32@0:8@16@24",
+            "typeAddress": 8042943560
+          },
+          {
+            "address": 7255652832,
+            "implAddress": 7255624052,
+            "nameAddress": 8042946824,
+            "selector": "read:maxLength:",
+            "type": "q32@0:8*16Q24",
+            "typeAddress": 8042946840
+          },
+          {
+            "address": 7255652844,
+            "implAddress": 7255622880,
+            "nameAddress": 8042945792,
+            "selector": "close",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652856,
+            "implAddress": 7255623940,
+            "nameAddress": 8042945800,
+            "selector": "streamStatus",
+            "type": "Q16@0:8",
+            "typeAddress": 8042939200
+          },
+          {
+            "address": 7255652868,
+            "implAddress": 7255623404,
+            "nameAddress": 8042945816,
+            "selector": "delegate",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255652880,
+            "implAddress": 7255623420,
+            "nameAddress": 8042945832,
+            "selector": "setDelegate:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652892,
+            "implAddress": 7255621520,
+            "nameAddress": 8042945848,
+            "selector": "open",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652904,
+            "implAddress": 7255624372,
+            "nameAddress": 8042946664,
+            "selector": "hasBytesAvailable",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255652916,
+            "implAddress": 7255621232,
+            "nameAddress": 8042939376,
+            "selector": "dealloc",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652928,
+            "implAddress": 7255625188,
+            "nameAddress": 8042945856,
+            "selector": "_accessoryDidDisconnect:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255652940,
+            "implAddress": 7255624364,
+            "nameAddress": 8042946856,
+            "selector": "getBuffer:length:",
+            "type": "B32@0:8^*16^Q24",
+            "typeAddress": 8042946880
+          },
+          {
+            "address": 7255652952,
+            "implAddress": 7255624044,
+            "nameAddress": 8042945888,
+            "selector": "streamError",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255652964,
+            "implAddress": 7255625848,
+            "nameAddress": 8042945904,
+            "selector": "_scheduleCallback",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652976,
+            "implAddress": 7255625344,
+            "nameAddress": 8042945928,
+            "selector": "_streamEventTrigger",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255652988,
+            "implAddress": 7255624892,
+            "nameAddress": 8042945952,
+            "selector": "openCompleted",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255653000,
+            "implAddress": 7255625200,
+            "nameAddress": 8042945968,
+            "selector": "_performAtEndOfStreamValidation",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255653012,
+            "implAddress": 7255620600,
+            "nameAddress": 8042946000,
+            "selector": "initWithAccessory:forSession:socket:",
+            "type": "@36@0:8@16@24i32",
+            "typeAddress": 8042946040
+          },
+          {
+            "address": 7255653024,
+            "implAddress": 7255620924,
+            "nameAddress": 8042946064,
+            "selector": "initWithAccessoryWithoutSocket:forSession:",
+            "type": "@32@0:8@16@24",
+            "typeAddress": 8042946112
+          },
+          {
+            "address": 7255653036,
+            "implAddress": 7255625000,
+            "nameAddress": 8042946128,
+            "selector": "endStream",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255653048,
+            "implAddress": 7255624560,
+            "nameAddress": 8042946896,
+            "selector": "processIncomingAccessoryData:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255653060,
+            "implAddress": 7255626020,
+            "nameAddress": 8042946928,
+            "selector": "zeroBytesReadCount",
+            "type": "i16@0:8",
+            "typeAddress": 8042946952
+          },
+          {
+            "address": 7255653072,
+            "implAddress": 7255626036,
+            "nameAddress": 8042946960,
+            "selector": "setZeroBytesReadCount:",
+            "type": "v20@0:8i16",
+            "typeAddress": 8042946984
+          }
+        ]
+      },
+      "methodListAddress": 7255652776,
+      "name": "EAInputStream",
+      "nameAddress": 8042946584
+    },
+    {
+      "address": 7902345064,
+      "dataAddress": 8042933504,
+      "listPointer": 8042929568,
+      "methodList": {
+        "address": 7255653088,
+        "flags": 3221225487,
+        "methods": [
+          {
+            "address": 7255653096,
+            "implAddress": 7255628296,
+            "nameAddress": 8042947288,
+            "selector": "_sessionID",
+            "type": "I16@0:8",
+            "typeAddress": 8042947304
+          },
+          {
+            "address": 7255653108,
+            "implAddress": 7255626052,
+            "nameAddress": 8042939016,
+            "selector": "init",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653120,
+            "implAddress": 7255628680,
+            "nameAddress": 8042947312,
+            "selector": "accessory",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653132,
+            "implAddress": 7255628688,
+            "nameAddress": 8042947328,
+            "selector": "protocolString",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653144,
+            "implAddress": 7255626108,
+            "nameAddress": 8042947344,
+            "selector": "initWithAccessory:forProtocol:",
+            "type": "@32@0:8@16@24",
+            "typeAddress": 8042946112
+          },
+          {
+            "address": 7255653156,
+            "implAddress": 7255628200,
+            "nameAddress": 8042947376,
+            "selector": "_shortDescription",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653168,
+            "implAddress": 7255628704,
+            "nameAddress": 8042947400,
+            "selector": "outputStream",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653180,
+            "implAddress": 7255627696,
+            "nameAddress": 8042939376,
+            "selector": "dealloc",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255653192,
+            "implAddress": 7255628056,
+            "nameAddress": 8042939384,
+            "selector": "description",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653204,
+            "implAddress": 7255628696,
+            "nameAddress": 8042947416,
+            "selector": "inputStream",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653216,
+            "implAddress": 7255628664,
+            "nameAddress": 8042947432,
+            "selector": "_handleIncomingEAData:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255653228,
+            "implAddress": 7255628656,
+            "nameAddress": 8042947456,
+            "selector": "EASessionUUID",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653240,
+            "implAddress": 7255628304,
+            "nameAddress": 8042947472,
+            "selector": "_streamClosed",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255653252,
+            "implAddress": 7255628476,
+            "nameAddress": 8042947488,
+            "selector": "_endStreams",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255653264,
+            "implAddress": 7255628532,
+            "nameAddress": 8042947504,
+            "selector": "isOpenCompleted",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653276,
+            "implAddress": 7255628540,
+            "nameAddress": 8042947520,
+            "selector": "setOpenCompleted:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          }
+        ]
+      },
+      "methodListAddress": 7255653088,
+      "name": "EASession",
+      "nameAddress": 8042947272
+    },
+    {
+      "address": 7826424960,
+      "dataAddress": 8042933872,
+      "listPointer": 8042929576,
+      "methodList": {
+        "address": 7255653288,
+        "flags": 3221225487,
+        "methods": [
+          {
+            "address": 7255653296,
+            "implAddress": 7255632780,
+            "nameAddress": 8042947904,
+            "selector": "ppid",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653308,
+            "implAddress": 7255629560,
+            "nameAddress": 8042947912,
+            "selector": "transportType",
+            "type": "q16@0:8",
+            "typeAddress": 8042947928
+          },
+          {
+            "address": 7255653320,
+            "implAddress": 7255629500,
+            "nameAddress": 8042947936,
+            "selector": "firmwareRevision",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653332,
+            "implAddress": 7255629384,
+            "nameAddress": 8042947960,
+            "selector": "isConnected",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653344,
+            "implAddress": 7255634420,
+            "nameAddress": 8042947976,
+            "selector": "supportsLocation",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653356,
+            "implAddress": 7255628712,
+            "nameAddress": 8042939016,
+            "selector": "init",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653368,
+            "implAddress": 7255629544,
+            "nameAddress": 8042948000,
+            "selector": "hardwareRevision",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653380,
+            "implAddress": 7255630380,
+            "nameAddress": 8042948024,
+            "selector": "accessoryCapabilities",
+            "type": "I16@0:8",
+            "typeAddress": 8042947304
+          },
+          {
+            "address": 7255653392,
+            "implAddress": 7255637368,
+            "nameAddress": 8042948048,
+            "selector": "vehicleInfoInitialData",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653404,
+            "implAddress": 7255634372,
+            "nameAddress": 8042948072,
+            "selector": "destinationSharingOptions",
+            "type": "Q16@0:8",
+            "typeAddress": 8042939200
+          },
+          {
+            "address": 7255653416,
+            "implAddress": 7255636668,
+            "nameAddress": 8042948104,
+            "selector": "beginOOBBTPairingWithCompletionBlock:",
+            "type": "v24@0:8@?16",
+            "typeAddress": 8042948144
+          },
+          {
+            "address": 7255653428,
+            "implAddress": 7255636860,
+            "nameAddress": 8042948160,
+            "selector": "requestIAPAccessoryWiFiCredentials",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255653440,
+            "implAddress": 7255629400,
+            "nameAddress": 8042948200,
+            "selector": "connectionID",
+            "type": "Q16@0:8",
+            "typeAddress": 8042939200
+          },
+          {
+            "address": 7255653452,
+            "implAddress": 7255636992,
+            "nameAddress": 8042948216,
+            "selector": "sendDeviceIdentifierNotification:usbIdentifier:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255653464,
+            "implAddress": 7255637204,
+            "nameAddress": 8042948264,
+            "selector": "sendWiredCarPlayAvailable:usbIdentifier:wirelessCarPlayAvailable:bluetoothIdentifier:",
+            "type": "v48@0:8@16@24@32@40",
+            "typeAddress": 8042948352
+          },
+          {
+            "address": 7255653476,
+            "implAddress": 7255629620,
+            "nameAddress": 8042948376,
+            "selector": "protocolStrings",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653488,
+            "implAddress": 7255632764,
+            "nameAddress": 8042948392,
+            "selector": "certData",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653500,
+            "implAddress": 7255630104,
+            "nameAddress": 8042948408,
+            "selector": "supportsOOBBTPairing",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653512,
+            "implAddress": 7255630140,
+            "nameAddress": 8042948432,
+            "selector": "supportsOOBBTPairing2",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653524,
+            "implAddress": 7255630248,
+            "nameAddress": 8042948456,
+            "selector": "supportsCarPlayAppLinks",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653536,
+            "implAddress": 7255637400,
+            "nameAddress": 8042948480,
+            "selector": "getVehicleInfoData",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653548,
+            "implAddress": 7255630028,
+            "nameAddress": 8042945816,
+            "selector": "delegate",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653560,
+            "implAddress": 7255630176,
+            "nameAddress": 8042948504,
+            "selector": "supportsUSBCarPlay",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653572,
+            "implAddress": 7255630212,
+            "nameAddress": 8042948528,
+            "selector": "supportsWirelessCarPlay",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653584,
+            "implAddress": 7255630284,
+            "nameAddress": 8042948552,
+            "selector": "supportsCarPlayConnectionRequest",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653596,
+            "implAddress": 7255629604,
+            "nameAddress": 8042945832,
+            "selector": "setDelegate:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255653608,
+            "implAddress": 7255630068,
+            "nameAddress": 8042948592,
+            "selector": "supportsCarPlay",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653620,
+            "implAddress": 7255631484,
+            "nameAddress": 8042947376,
+            "selector": "_shortDescription",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653632,
+            "implAddress": 7255629484,
+            "nameAddress": 8042948608,
+            "selector": "serialNumber",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653644,
+            "implAddress": 7255632732,
+            "nameAddress": 8042948624,
+            "selector": "macAddress",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653656,
+            "implAddress": 7255629452,
+            "nameAddress": 8042948640,
+            "selector": "name",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653668,
+            "implAddress": 7255628768,
+            "nameAddress": 8042939376,
+            "selector": "dealloc",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255653680,
+            "implAddress": 7255628840,
+            "nameAddress": 8042939384,
+            "selector": "description",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653692,
+            "implAddress": 7255629468,
+            "nameAddress": 8042948648,
+            "selector": "modelNumber",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653704,
+            "implAddress": 7255629436,
+            "nameAddress": 8042948664,
+            "selector": "manufacturer",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653716,
+            "implAddress": 7255634224,
+            "nameAddress": 8042948680,
+            "selector": "eqNames",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653728,
+            "implAddress": 7255634308,
+            "nameAddress": 8042948688,
+            "selector": "eqIndex",
+            "type": "I16@0:8",
+            "typeAddress": 8042947304
+          },
+          {
+            "address": 7255653740,
+            "implAddress": 7255633028,
+            "nameAddress": 8042948696,
+            "selector": "classType",
+            "type": "i16@0:8",
+            "typeAddress": 8042946952
+          },
+          {
+            "address": 7255653752,
+            "implAddress": 7255629512,
+            "nameAddress": 8042948712,
+            "selector": "firmwareRevisionActive",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653764,
+            "implAddress": 7255629528,
+            "nameAddress": 8042948736,
+            "selector": "firmwareRevisionPending",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653776,
+            "implAddress": 7255634356,
+            "nameAddress": 8042948760,
+            "selector": "setDestinationSharingOptions:",
+            "type": "v24@0:8Q16",
+            "typeAddress": 8042944576
+          },
+          {
+            "address": 7255653788,
+            "implAddress": 7255632252,
+            "nameAddress": 8042948792,
+            "selector": "_endSession:",
+            "type": "v20@0:8I16",
+            "typeAddress": 8042941192
+          },
+          {
+            "address": 7255653800,
+            "implAddress": 7255632748,
+            "nameAddress": 8042948808,
+            "selector": "certSerial",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653812,
+            "implAddress": 7255638256,
+            "nameAddress": 8042948824,
+            "selector": "supportsAccessibility",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653824,
+            "implAddress": 7255630516,
+            "nameAddress": 8042948848,
+            "selector": "_initWithAccessory:",
+            "type": "@24@0:8@16",
+            "typeAddress": 8042938408
+          },
+          {
+            "address": 7255653836,
+            "implAddress": 7255634324,
+            "nameAddress": 8042948872,
+            "selector": "setPointOfInterestHandoffEnabled:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255653848,
+            "implAddress": 7255634932,
+            "nameAddress": 8042948912,
+            "selector": "addNMEASentence:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255653860,
+            "implAddress": 7255630336,
+            "nameAddress": 8042948936,
+            "selector": "coreAccessoriesPrimaryUUID",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255653872,
+            "implAddress": 7255634104,
+            "nameAddress": 8042948968,
+            "selector": "containsSameProtocolsAsiAPAccessoryProtocols:",
+            "type": "B24@0:8@16",
+            "typeAddress": 8042939096
+          },
+          {
+            "address": 7255653884,
+            "implAddress": 7255630320,
+            "nameAddress": 8042949016,
+            "selector": "createdByCoreAccessories",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653896,
+            "implAddress": 7255632700,
+            "nameAddress": 8042949048,
+            "selector": "_internalConnectionID",
+            "type": "I16@0:8",
+            "typeAddress": 8042947304
+          },
+          {
+            "address": 7255653908,
+            "implAddress": 7255631536,
+            "nameAddress": 8042949072,
+            "selector": "_setConnected:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255653920,
+            "implAddress": 7255631552,
+            "nameAddress": 8042949088,
+            "selector": "_setNotPresentInIAPAccessoriesArray:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255653932,
+            "implAddress": 7255632716,
+            "nameAddress": 8042949128,
+            "selector": "_internalNotPresentInIAPAccessoriesArray",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255653944,
+            "implAddress": 7255630604,
+            "nameAddress": 8042949176,
+            "selector": "_updateAccessoryInfo:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255653956,
+            "implAddress": 7255636728,
+            "nameAddress": 8042949200,
+            "selector": "_OOBBTPairingCompletedWithStatus:forAccessoryWithMACAddress:",
+            "type": "v28@0:8C16@20",
+            "typeAddress": 8042949264
+          },
+          {
+            "address": 7255653968,
+            "implAddress": 7255631932,
+            "nameAddress": 8042949280,
+            "selector": "_openCompleteForSession:",
+            "type": "v20@0:8I16",
+            "typeAddress": 8042941192
+          },
+          {
+            "address": 7255653980,
+            "implAddress": 7255634208,
+            "nameAddress": 8042949312,
+            "selector": "setEqNames:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255653992,
+            "implAddress": 7255634240,
+            "nameAddress": 8042949328,
+            "selector": "setEqIndex:",
+            "type": "v20@0:8I16",
+            "typeAddress": 8042941192
+          },
+          {
+            "address": 7255654004,
+            "implAddress": 7255634404,
+            "nameAddress": 8042949344,
+            "selector": "setLocationSentenceTypesMask:",
+            "type": "v20@0:8i16",
+            "typeAddress": 8042946984
+          },
+          {
+            "address": 7255654016,
+            "implAddress": 7255637352,
+            "nameAddress": 8042949376,
+            "selector": "setVehicleInfoSupportedTypes:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654028,
+            "implAddress": 7255637500,
+            "nameAddress": 8042949408,
+            "selector": "setCameraComponents:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654040,
+            "implAddress": 7255631568,
+            "nameAddress": 8042949432,
+            "selector": "_protocolIDForProtocolString:",
+            "type": "@24@0:8@16",
+            "typeAddress": 8042938408
+          },
+          {
+            "address": 7255654052,
+            "implAddress": 7255631900,
+            "nameAddress": 8042949464,
+            "selector": "_addSession:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654064,
+            "implAddress": 7255631916,
+            "nameAddress": 8042949480,
+            "selector": "_removeSession:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654076,
+            "implAddress": 7255629576,
+            "nameAddress": 8042949496,
+            "selector": "dockType",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654088,
+            "implAddress": 7255632592,
+            "nameAddress": 8042949512,
+            "selector": "_createWakeToken",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654100,
+            "implAddress": 7255632796,
+            "nameAddress": 8042949536,
+            "selector": "protocolDetails",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654112,
+            "implAddress": 7255633060,
+            "nameAddress": 8042949552,
+            "selector": "allPublicProtocolStrings",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654124,
+            "implAddress": 7255633012,
+            "nameAddress": 8042949584,
+            "selector": "preferredApp",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654136,
+            "implAddress": 7255633044,
+            "nameAddress": 8042949600,
+            "selector": "audioPorts",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654148,
+            "implAddress": 7255633724,
+            "nameAddress": 8042949616,
+            "selector": "dictionaryWithLowercaseKeys:",
+            "type": "@24@0:8@16",
+            "typeAddress": 8042938408
+          },
+          {
+            "address": 7255654160,
+            "implAddress": 7255634340,
+            "nameAddress": 8042949648,
+            "selector": "pointOfInterestHandoffEnabled",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255654172,
+            "implAddress": 7255634388,
+            "nameAddress": 8042949680,
+            "selector": "locationSentenceTypesMask",
+            "type": "i16@0:8",
+            "typeAddress": 8042946952
+          },
+          {
+            "address": 7255654184,
+            "implAddress": 7255637336,
+            "nameAddress": 8042949712,
+            "selector": "vehicleInfoSupportedTypes",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654196,
+            "implAddress": 7255637484,
+            "nameAddress": 8042949744,
+            "selector": "cameraComponents",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654208,
+            "implAddress": 7255638156,
+            "nameAddress": 8042949768,
+            "selector": "startCameraUpdates:forCameraIds:withProperties:withCapabilities:",
+            "type": "i44@0:8I16@20@28@36",
+            "typeAddress": 8042949840
+          },
+          {
+            "address": 7255654220,
+            "implAddress": 7255638176,
+            "nameAddress": 8042949864,
+            "selector": "stopCameraUpdates:forCameraIds:",
+            "type": "i28@0:8I16@20",
+            "typeAddress": 8042949896
+          },
+          {
+            "address": 7255654232,
+            "implAddress": 7255629592,
+            "nameAddress": 8042949912,
+            "selector": "wakeToken",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654244,
+            "implAddress": 7255630044,
+            "nameAddress": 8042949928,
+            "selector": "bonjourName",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654256,
+            "implAddress": 7255630052,
+            "nameAddress": 8042949944,
+            "selector": "hasIPConnection",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255654268,
+            "implAddress": 7255630060,
+            "nameAddress": 8042949960,
+            "selector": "isAvailableOverBonjour",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255654280,
+            "implAddress": 7255632812,
+            "nameAddress": 8042949984,
+            "selector": "supportsPublicIap",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255654292,
+            "implAddress": 7255632976,
+            "nameAddress": 8042950008,
+            "selector": "shouldBeHiddenFromUI",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255654304,
+            "implAddress": 7255634456,
+            "nameAddress": 8042950032,
+            "selector": "supportsCamera",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255654316,
+            "implAddress": 7255634492,
+            "nameAddress": 8042950048,
+            "selector": "accessoryHasNMEASentencesAvailable",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255654328,
+            "implAddress": 7255634652,
+            "nameAddress": 8042950088,
+            "selector": "getNMEASentence:",
+            "type": "B24@0:8^@16",
+            "typeAddress": 8042950112
+          },
+          {
+            "address": 7255654340,
+            "implAddress": 7255635064,
+            "nameAddress": 8042950128,
+            "selector": "setNMEASentencesToFilter:",
+            "type": "B24@0:8@16",
+            "typeAddress": 8042939096
+          },
+          {
+            "address": 7255654352,
+            "implAddress": 7255635248,
+            "nameAddress": 8042950160,
+            "selector": "setIAPTimeSyncParams:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654364,
+            "implAddress": 7255635412,
+            "nameAddress": 8042950184,
+            "selector": "getIAPTimeSyncInfo:completionHandler:",
+            "type": "v32@0:8@16@?24",
+            "typeAddress": 8042942464
+          },
+          {
+            "address": 7255654376,
+            "implAddress": 7255635468,
+            "nameAddress": 8042950224,
+            "selector": "resetIAPTimeSyncKalmanFilter",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255654388,
+            "implAddress": 7255635500,
+            "nameAddress": 8042950256,
+            "selector": "getEphemerisURL:",
+            "type": "B24@0:8^@16",
+            "typeAddress": 8042950112
+          },
+          {
+            "address": 7255654400,
+            "implAddress": 7255635604,
+            "nameAddress": 8042950280,
+            "selector": "getEphemerisRecommendRefreshInterval:",
+            "type": "B24@0:8^d16",
+            "typeAddress": 8042950320
+          },
+          {
+            "address": 7255654412,
+            "implAddress": 7255635728,
+            "nameAddress": 8042950336,
+            "selector": "getEphemerisExpirationInterval:",
+            "type": "B24@0:8^d16",
+            "typeAddress": 8042950320
+          },
+          {
+            "address": 7255654424,
+            "implAddress": 7255635852,
+            "nameAddress": 8042950368,
+            "selector": "sendGpsWeek:gpsTOW:",
+            "type": "B32@0:8Q16d24",
+            "typeAddress": 8042950392
+          },
+          {
+            "address": 7255654436,
+            "implAddress": 7255635956,
+            "nameAddress": 8042950408,
+            "selector": "sendEphemerisPointDataGpsWeek:gpsTOW:latitude:longitude:accuracy:",
+            "type": "B52@0:8Q16d24d32d40S48",
+            "typeAddress": 8042950480
+          },
+          {
+            "address": 7255654448,
+            "implAddress": 7255636100,
+            "nameAddress": 8042950504,
+            "selector": "sendEphemeris:",
+            "type": "B24@0:8@16",
+            "typeAddress": 8042939096
+          },
+          {
+            "address": 7255654460,
+            "implAddress": 7255636188,
+            "nameAddress": 8042950520,
+            "selector": "sendGPRMCDataStatusValueA:ValueV:ValueX:",
+            "type": "B28@0:8B16B20B24",
+            "typeAddress": 8042950568
+          },
+          {
+            "address": 7255654472,
+            "implAddress": 7255636380,
+            "nameAddress": 8042950592,
+            "selector": "sendPointOfInterestInformation:identifier:",
+            "type": "B28@0:8@16S24",
+            "typeAddress": 8042950640
+          },
+          {
+            "address": 7255654484,
+            "implAddress": 7255636412,
+            "nameAddress": 8042950656,
+            "selector": "sendDestinationInformation:identifier:",
+            "type": "B32@0:8@16@24",
+            "typeAddress": 8042943560
+          },
+          {
+            "address": 7255654496,
+            "implAddress": 7255637384,
+            "nameAddress": 8042950696,
+            "selector": "setVehicleInfovehicleInfoInitialData:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654508,
+            "implAddress": 7255637516,
+            "nameAddress": 8042950736,
+            "selector": "startCameraInfo:forCameraIds:",
+            "type": "i28@0:8I16@20",
+            "typeAddress": 8042949896
+          },
+          {
+            "address": 7255654520,
+            "implAddress": 7255638080,
+            "nameAddress": 8042950768,
+            "selector": "stopCameraInfo:forCameraIds:",
+            "type": "i28@0:8I16@20",
+            "typeAddress": 8042949896
+          },
+          {
+            "address": 7255654532,
+            "implAddress": 7255638192,
+            "nameAddress": 8042950800,
+            "selector": "setCameraProperties:forCameraId:withProperties:",
+            "type": "i32@0:8I16S20@24",
+            "typeAddress": 8042950848
+          },
+          {
+            "address": 7255654544,
+            "implAddress": 7255638208,
+            "nameAddress": 8042950872,
+            "selector": "startLivePreview:forCameraIds:",
+            "type": "i28@0:8I16@20",
+            "typeAddress": 8042949896
+          },
+          {
+            "address": 7255654556,
+            "implAddress": 7255638224,
+            "nameAddress": 8042950904,
+            "selector": "stopLivePreview:forCameraIds:",
+            "type": "i28@0:8I16@20",
+            "typeAddress": 8042949896
+          },
+          {
+            "address": 7255654568,
+            "implAddress": 7255638240,
+            "nameAddress": 8042950936,
+            "selector": "captureStillImage:forCameraIds:",
+            "type": "i28@0:8I16@20",
+            "typeAddress": 8042949896
+          },
+          {
+            "address": 7255654580,
+            "implAddress": 7255638292,
+            "nameAddress": 8042950968,
+            "selector": "updateSystemProperty:withValue:",
+            "type": "v28@0:8i16@20",
+            "typeAddress": 8042951000
+          },
+          {
+            "address": 7255654592,
+            "implAddress": 7255638460,
+            "nameAddress": 8042951016,
+            "selector": "updateItemProperty:withValue:",
+            "type": "v28@0:8i16@20",
+            "typeAddress": 8042951000
+          },
+          {
+            "address": 7255654604,
+            "implAddress": 7255638628,
+            "nameAddress": 8042951048,
+            "selector": "supportsPointOfInterest",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255654616,
+            "implAddress": 7255638664,
+            "nameAddress": 8042951072,
+            "selector": "supportsDestinationSharing",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          }
+        ]
+      },
+      "methodListAddress": 7255653288,
+      "name": "EAAccessory",
+      "nameAddress": 8042947888
+    },
+    {
+      "address": 7902345144,
+      "dataAddress": 8042935984,
+      "listPointer": 8042929584,
+      "methodList": {
+        "address": 7255654632,
+        "flags": 3221225487,
+        "methods": [
+          {
+            "address": 7255654640,
+            "implAddress": 7255639336,
+            "nameAddress": 8042951144,
+            "selector": "connected",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255654652,
+            "implAddress": 7255639684,
+            "nameAddress": 8042951272,
+            "selector": "setCapabilities:",
+            "type": "v20@0:8I16",
+            "typeAddress": 8042941192
+          },
+          {
+            "address": 7255654664,
+            "implAddress": 7255639676,
+            "nameAddress": 8042951296,
+            "selector": "capabilities",
+            "type": "I16@0:8",
+            "typeAddress": 8042947304
+          },
+          {
+            "address": 7255654676,
+            "implAddress": 7255639624,
+            "nameAddress": 8042947904,
+            "selector": "ppid",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654688,
+            "implAddress": 7255639528,
+            "nameAddress": 8042947912,
+            "selector": "transportType",
+            "type": "q16@0:8",
+            "typeAddress": 8042947928
+          },
+          {
+            "address": 7255654700,
+            "implAddress": 7255638700,
+            "nameAddress": 8042939016,
+            "selector": "init",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654712,
+            "implAddress": 7255639488,
+            "nameAddress": 8042948000,
+            "selector": "hardwareRevision",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654724,
+            "implAddress": 7255639756,
+            "nameAddress": 8042948048,
+            "selector": "vehicleInfoInitialData",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654736,
+            "implAddress": 7255639856,
+            "nameAddress": 8042948072,
+            "selector": "destinationSharingOptions",
+            "type": "Q16@0:8",
+            "typeAddress": 8042939200
+          },
+          {
+            "address": 7255654748,
+            "implAddress": 7255639352,
+            "nameAddress": 8042948200,
+            "selector": "connectionID",
+            "type": "I16@0:8",
+            "typeAddress": 8042947304
+          },
+          {
+            "address": 7255654760,
+            "implAddress": 7255639360,
+            "nameAddress": 8042951312,
+            "selector": "setConnectionID:",
+            "type": "v20@0:8I16",
+            "typeAddress": 8042941192
+          },
+          {
+            "address": 7255654772,
+            "implAddress": 7255639380,
+            "nameAddress": 8042951336,
+            "selector": "setManufacturer:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654784,
+            "implAddress": 7255639604,
+            "nameAddress": 8042948392,
+            "selector": "certData",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654796,
+            "implAddress": 7255639788,
+            "nameAddress": 8042951360,
+            "selector": "protocols",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654808,
+            "implAddress": 7255639804,
+            "nameAddress": 8042945816,
+            "selector": "delegate",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654820,
+            "implAddress": 7255639812,
+            "nameAddress": 8042945832,
+            "selector": "setDelegate:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654832,
+            "implAddress": 7255639400,
+            "nameAddress": 8042951376,
+            "selector": "setName:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654844,
+            "implAddress": 7255639428,
+            "nameAddress": 8042948608,
+            "selector": "serialNumber",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654856,
+            "implAddress": 7255639344,
+            "nameAddress": 8042951392,
+            "selector": "setConnected:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255654868,
+            "implAddress": 7255639544,
+            "nameAddress": 8042948624,
+            "selector": "macAddress",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654880,
+            "implAddress": 7255639184,
+            "nameAddress": 8042951408,
+            "selector": "addSession:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654892,
+            "implAddress": 7255639536,
+            "nameAddress": 8042951424,
+            "selector": "setTransportType:",
+            "type": "v24@0:8q16",
+            "typeAddress": 8042951448
+          },
+          {
+            "address": 7255654904,
+            "implAddress": 7255639388,
+            "nameAddress": 8042948640,
+            "selector": "name",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654916,
+            "implAddress": 7255638900,
+            "nameAddress": 8042939376,
+            "selector": "dealloc",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255654928,
+            "implAddress": 7255639636,
+            "nameAddress": 8042951464,
+            "selector": "setPpid:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654940,
+            "implAddress": 7255639408,
+            "nameAddress": 8042948648,
+            "selector": "modelNumber",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654952,
+            "implAddress": 7255639556,
+            "nameAddress": 8042951480,
+            "selector": "setMacAddress:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654964,
+            "implAddress": 7255639368,
+            "nameAddress": 8042948664,
+            "selector": "manufacturer",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255654976,
+            "implAddress": 7255639252,
+            "nameAddress": 8042951496,
+            "selector": "removeSession:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255654988,
+            "implAddress": 7255639420,
+            "nameAddress": 8042951512,
+            "selector": "setModelNumber:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655000,
+            "implAddress": 7255639708,
+            "nameAddress": 8042948680,
+            "selector": "eqNames",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655012,
+            "implAddress": 7255639724,
+            "nameAddress": 8042948688,
+            "selector": "eqIndex",
+            "type": "I16@0:8",
+            "typeAddress": 8042947304
+          },
+          {
+            "address": 7255655024,
+            "implAddress": 7255639440,
+            "nameAddress": 8042951528,
+            "selector": "setSerialNumber:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655036,
+            "implAddress": 7255639644,
+            "nameAddress": 8042948696,
+            "selector": "classType",
+            "type": "i16@0:8",
+            "typeAddress": 8042946952
+          },
+          {
+            "address": 7255655048,
+            "implAddress": 7255639616,
+            "nameAddress": 8042951552,
+            "selector": "setCertData:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655060,
+            "implAddress": 7255639796,
+            "nameAddress": 8042951568,
+            "selector": "setProtocols:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655072,
+            "implAddress": 7255639448,
+            "nameAddress": 8042948712,
+            "selector": "firmwareRevisionActive",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655084,
+            "implAddress": 7255639460,
+            "nameAddress": 8042951584,
+            "selector": "setFirmwareRevisionActive:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655096,
+            "implAddress": 7255639468,
+            "nameAddress": 8042948736,
+            "selector": "firmwareRevisionPending",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655108,
+            "implAddress": 7255639480,
+            "nameAddress": 8042951616,
+            "selector": "setFirmwareRevisionPending:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655120,
+            "implAddress": 7255639500,
+            "nameAddress": 8042951648,
+            "selector": "setHardwareRevision:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655132,
+            "implAddress": 7255639864,
+            "nameAddress": 8042948760,
+            "selector": "setDestinationSharingOptions:",
+            "type": "v24@0:8Q16",
+            "typeAddress": 8042944576
+          },
+          {
+            "address": 7255655144,
+            "implAddress": 7255639584,
+            "nameAddress": 8042948808,
+            "selector": "certSerial",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655156,
+            "implAddress": 7255639596,
+            "nameAddress": 8042951672,
+            "selector": "setCertSerial:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655168,
+            "implAddress": 7255639832,
+            "nameAddress": 8042948872,
+            "selector": "setPointOfInterestHandoffEnabled:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255655180,
+            "implAddress": 7255639980,
+            "nameAddress": 8042949016,
+            "selector": "createdByCoreAccessories",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255655192,
+            "implAddress": 7255639520,
+            "nameAddress": 8042951688,
+            "selector": "setDockType:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655204,
+            "implAddress": 7255639884,
+            "nameAddress": 8042951704,
+            "selector": "setProtocolDetails:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655216,
+            "implAddress": 7255639576,
+            "nameAddress": 8042951728,
+            "selector": "setPreferredApp:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655228,
+            "implAddress": 7255639652,
+            "nameAddress": 8042951752,
+            "selector": "setClassType:",
+            "type": "v20@0:8i16",
+            "typeAddress": 8042946984
+          },
+          {
+            "address": 7255655240,
+            "implAddress": 7255639716,
+            "nameAddress": 8042949312,
+            "selector": "setEqNames:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655252,
+            "implAddress": 7255639732,
+            "nameAddress": 8042949328,
+            "selector": "setEqIndex:",
+            "type": "v20@0:8I16",
+            "typeAddress": 8042941192
+          },
+          {
+            "address": 7255655264,
+            "implAddress": 7255639920,
+            "nameAddress": 8042949344,
+            "selector": "setLocationSentenceTypesMask:",
+            "type": "v20@0:8i16",
+            "typeAddress": 8042946984
+          },
+          {
+            "address": 7255655276,
+            "implAddress": 7255639748,
+            "nameAddress": 8042949376,
+            "selector": "setVehicleInfoSupportedTypes:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655288,
+            "implAddress": 7255639764,
+            "nameAddress": 8042951768,
+            "selector": "setVehicleInfoInitialData:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655300,
+            "implAddress": 7255639780,
+            "nameAddress": 8042949408,
+            "selector": "setCameraComponents:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655312,
+            "implAddress": 7255639668,
+            "nameAddress": 8042951800,
+            "selector": "setAudioPorts:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655324,
+            "implAddress": 7255639904,
+            "nameAddress": 8042951816,
+            "selector": "setCoreAccessoryPrimaryUUID:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655336,
+            "implAddress": 7255639892,
+            "nameAddress": 8042951848,
+            "selector": "coreAccessoryPrimaryUUID",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655348,
+            "implAddress": 7255639992,
+            "nameAddress": 8042951880,
+            "selector": "setCreatedByCoreAccessories:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255655360,
+            "implAddress": 7255639508,
+            "nameAddress": 8042949496,
+            "selector": "dockType",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655372,
+            "implAddress": 7255639700,
+            "nameAddress": 8042951912,
+            "selector": "setNotPresentInIAPAccessoriesArray:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255655384,
+            "implAddress": 7255639328,
+            "nameAddress": 8042951952,
+            "selector": "sessionsList",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655396,
+            "implAddress": 7255639692,
+            "nameAddress": 8042951968,
+            "selector": "notPresentInIAPAccessoriesArray",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255655408,
+            "implAddress": 7255639872,
+            "nameAddress": 8042949536,
+            "selector": "protocolDetails",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655420,
+            "implAddress": 7255639564,
+            "nameAddress": 8042949584,
+            "selector": "preferredApp",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655432,
+            "implAddress": 7255639660,
+            "nameAddress": 8042949600,
+            "selector": "audioPorts",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655444,
+            "implAddress": 7255639820,
+            "nameAddress": 8042949648,
+            "selector": "pointOfInterestHandoffEnabled",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255655456,
+            "implAddress": 7255639912,
+            "nameAddress": 8042949680,
+            "selector": "locationSentenceTypesMask",
+            "type": "i16@0:8",
+            "typeAddress": 8042946952
+          },
+          {
+            "address": 7255655468,
+            "implAddress": 7255639840,
+            "nameAddress": 8042952000,
+            "selector": "enqueuedNMEASentences",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655480,
+            "implAddress": 7255640012,
+            "nameAddress": 8042952024,
+            "selector": "setPairingCompletionBlock:",
+            "type": "v24@0:8@?16",
+            "typeAddress": 8042948144
+          },
+          {
+            "address": 7255655492,
+            "implAddress": 7255640000,
+            "nameAddress": 8042952056,
+            "selector": "pairingCompletionBlock",
+            "type": "@?16@0:8",
+            "typeAddress": 8042952080
+          },
+          {
+            "address": 7255655504,
+            "implAddress": 7255639740,
+            "nameAddress": 8042949712,
+            "selector": "vehicleInfoSupportedTypes",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655516,
+            "implAddress": 7255639772,
+            "nameAddress": 8042949744,
+            "selector": "cameraComponents",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655528,
+            "implAddress": 7255639928,
+            "nameAddress": 8042949928,
+            "selector": "bonjourName",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655540,
+            "implAddress": 7255639948,
+            "nameAddress": 8042949944,
+            "selector": "hasIPConnection",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255655552,
+            "implAddress": 7255639964,
+            "nameAddress": 8042949960,
+            "selector": "isAvailableOverBonjour",
+            "type": "B16@0:8",
+            "typeAddress": 8042939048
+          },
+          {
+            "address": 7255655564,
+            "implAddress": 7255639848,
+            "nameAddress": 8042952096,
+            "selector": "setEnqueuedNMEASentences:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655576,
+            "implAddress": 7255639940,
+            "nameAddress": 8042952128,
+            "selector": "setBonjourName:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655588,
+            "implAddress": 7255639956,
+            "nameAddress": 8042952144,
+            "selector": "setHasIPConnection:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255655600,
+            "implAddress": 7255639972,
+            "nameAddress": 8042952168,
+            "selector": "setIsAvailableOverBonjour:",
+            "type": "v20@0:8B16",
+            "typeAddress": 8042943672
+          },
+          {
+            "address": 7255655612,
+            "implAddress": 7255640020,
+            "nameAddress": 8042952200,
+            "selector": "WiFiCredentialsCompletionBlock",
+            "type": "@?16@0:8",
+            "typeAddress": 8042952080
+          },
+          {
+            "address": 7255655624,
+            "implAddress": 7255640032,
+            "nameAddress": 8042952232,
+            "selector": "setWiFiCredentialsCompletionBlock:",
+            "type": "v24@0:8@?16",
+            "typeAddress": 8042948144
+          }
+        ]
+      },
+      "methodListAddress": 7255654632,
+      "name": "EAAccessoryInternal",
+      "nameAddress": 8042951248
+    },
+    {
+      "address": 7902345224,
+      "dataAddress": 8042937104,
+      "listPointer": 8042929592,
+      "methodList": {
+        "address": 7255655664,
+        "flags": 3221225487,
+        "methods": [
+          {
+            "address": 7255655672,
+            "implAddress": 7255640628,
+            "nameAddress": 8042954848,
+            "selector": "show",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255655684,
+            "implAddress": 7255640068,
+            "nameAddress": 8042954856,
+            "selector": "initWithPredicate:",
+            "type": "@24@0:8@16",
+            "typeAddress": 8042938408
+          },
+          {
+            "address": 7255655696,
+            "implAddress": 7255640892,
+            "nameAddress": 8042945816,
+            "selector": "delegate",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655708,
+            "implAddress": 7255640900,
+            "nameAddress": 8042945832,
+            "selector": "setDelegate:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655720,
+            "implAddress": 7255640528,
+            "nameAddress": 8042939376,
+            "selector": "dealloc",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255655732,
+            "implAddress": 7255640688,
+            "nameAddress": 8042954880,
+            "selector": "dismissPicker",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255655744,
+            "implAddress": 7255640768,
+            "nameAddress": 8042954672,
+            "selector": "devicePicker:didDismissWithResult:deviceAddress:",
+            "type": "v40@0:8@16q24@32",
+            "typeAddress": 8042954728
+          }
+        ]
+      },
+      "methodListAddress": 7255655664,
+      "name": "EABluetoothAccessoryPicker",
+      "nameAddress": 8042954576
+    },
+    {
+      "address": 7902345304,
+      "dataAddress": 8042937488,
+      "listPointer": 8042929600,
+      "methodList": {
+        "address": 7255655760,
+        "flags": 3221225487,
+        "methods": [
+          {
+            "address": 7255655768,
+            "implAddress": 7255641176,
+            "nameAddress": 8042955064,
+            "selector": "initWithDelegate:queue:",
+            "type": "@32@0:8@16@24",
+            "typeAddress": 8042946112
+          },
+          {
+            "address": 7255655780,
+            "implAddress": 7255641156,
+            "nameAddress": 8042939016,
+            "selector": "init",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655792,
+            "implAddress": 7255645464,
+            "nameAddress": 8042955088,
+            "selector": "setDelegateQueue:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655804,
+            "implAddress": 7255645404,
+            "nameAddress": 8042945816,
+            "selector": "delegate",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655816,
+            "implAddress": 7255645428,
+            "nameAddress": 8042945832,
+            "selector": "setDelegate:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655828,
+            "implAddress": 7255642300,
+            "nameAddress": 8042939376,
+            "selector": "dealloc",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255655840,
+            "implAddress": 7255645452,
+            "nameAddress": 8042955112,
+            "selector": "delegateQueue",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655852,
+            "implAddress": 7255645492,
+            "nameAddress": 8042955128,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255655864,
+            "implAddress": 7255642960,
+            "nameAddress": 8042955144,
+            "selector": "_handleBrowserDidUpdateState:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655876,
+            "implAddress": 7255643324,
+            "nameAddress": 8042955176,
+            "selector": "_handleNewAccessoriesNotification:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655888,
+            "implAddress": 7255643976,
+            "nameAddress": 8042955216,
+            "selector": "_handleRemovedAccessoriesNotification:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655900,
+            "implAddress": 7255644548,
+            "nameAddress": 8042955256,
+            "selector": "_handlePurgeAccessoriesSetNotification:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655912,
+            "implAddress": 7255642620,
+            "nameAddress": 8042955296,
+            "selector": "stopSearchingForUnconfiguredAccessories",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255655924,
+            "implAddress": 7255645484,
+            "nameAddress": 8042955336,
+            "selector": "setAccessorySearchPredicate:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655936,
+            "implAddress": 7255644832,
+            "nameAddress": 8042955368,
+            "selector": "_handleBrowserFinishedConfiguring:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          },
+          {
+            "address": 7255655948,
+            "implAddress": 7255642712,
+            "nameAddress": 8042955408,
+            "selector": "configureAccessory:withConfigurationUIOnViewController:",
+            "type": "v32@0:8@16@24",
+            "typeAddress": 8042941864
+          },
+          {
+            "address": 7255655960,
+            "implAddress": 7255645472,
+            "nameAddress": 8042955464,
+            "selector": "accessorySearchPredicate",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655972,
+            "implAddress": 7255645440,
+            "nameAddress": 8042955496,
+            "selector": "unconfiguredAccessories",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255655984,
+            "implAddress": 7255642484,
+            "nameAddress": 8042955520,
+            "selector": "startSearchingForUnconfiguredAccessoriesMatchingPredicate:",
+            "type": "v24@0:8@16",
+            "typeAddress": 8042939536
+          }
+        ]
+      },
+      "methodListAddress": 7255655760,
+      "name": "EAWiFiUnconfiguredAccessoryBrowser",
+      "nameAddress": 8042955016
+    },
+    {
+      "address": 7902345384,
+      "dataAddress": 8042937936,
+      "listPointer": 8042929608,
+      "methodList": {
+        "address": 7255656000,
+        "flags": 3221225487,
+        "methods": [
+          {
+            "address": 7255656008,
+            "implAddress": 7255646888,
+            "nameAddress": 8042956016,
+            "selector": "model",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255656020,
+            "implAddress": 7255646356,
+            "nameAddress": 8042939080,
+            "selector": "isEqual:",
+            "type": "B24@0:8@16",
+            "typeAddress": 8042939096
+          },
+          {
+            "address": 7255656032,
+            "implAddress": 7255646900,
+            "nameAddress": 8042956024,
+            "selector": "ssid",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255656044,
+            "implAddress": 7255646912,
+            "nameAddress": 8042948624,
+            "selector": "macAddress",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255656056,
+            "implAddress": 7255646864,
+            "nameAddress": 8042948640,
+            "selector": "name",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255656068,
+            "implAddress": 7255646276,
+            "nameAddress": 8042939384,
+            "selector": "description",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255656080,
+            "implAddress": 7255646924,
+            "nameAddress": 8042956032,
+            "selector": "properties",
+            "type": "Q16@0:8",
+            "typeAddress": 8042939200
+          },
+          {
+            "address": 7255656092,
+            "implAddress": 7255646876,
+            "nameAddress": 8042948664,
+            "selector": "manufacturer",
+            "type": "@16@0:8",
+            "typeAddress": 8042938768
+          },
+          {
+            "address": 7255656104,
+            "implAddress": 7255646932,
+            "nameAddress": 8042955128,
+            "selector": ".cxx_destruct",
+            "type": "v16@0:8",
+            "typeAddress": 8042939264
+          },
+          {
+            "address": 7255656116,
+            "implAddress": 7255645640,
+            "nameAddress": 8042956048,
+            "selector": "initWithAirPortAssistantWACDevice:",
+            "type": "@24@0:8@16",
+            "typeAddress": 8042938408
+          }
+        ]
+      },
+      "methodListAddress": 7255656000,
+      "name": "EAWiFiUnconfiguredAccessory",
+      "nameAddress": 8042955976
+    },
+    {
+      "address": 7902345504,
+      "dataAddress": 8042938080,
+      "listPointer": 8042929616,
+      "methodList": {
+        "address": 0,
+        "flags": 0,
+        "methods": []
+      },
+      "methodListAddress": 0,
+      "name": "WACLogging",
+      "nameAddress": 8042956312
+    }
+  ]
+}
