@@ -77,7 +77,7 @@ void InfoHandler::applyMethodType(BinaryViewRef bv, const ObjectiveNinja::ClassI
             argName = "self";
         else if (i == 2)
             argName = "sel";
-        else
+        else if (i - 3 < selectorTokens.size())
             argName = selectorTokens[i - 3];
 
         return typeTokens[i] + " " + argName;
@@ -106,8 +106,7 @@ void InfoHandler::applyMethodType(BinaryViewRef bv, const ObjectiveNinja::ClassI
         return;
 
     // Search for the method's implementation function; apply the type if found.
-    auto f = bv->GetAnalysisFunction(bv->GetDefaultPlatform(), mi.implAddress);
-    if (f)
+    if (auto f = bv->GetAnalysisFunction(bv->GetDefaultPlatform(), mi.implAddress))
         f->SetUserType(functionNat.type);
 
     auto name = ci.name + "_" + sanitizeSelector(mi.selector);
