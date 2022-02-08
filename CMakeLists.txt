@@ -68,6 +68,11 @@ target_compile_definitions(ObjectiveNinja PRIVATE
   DEV_MODE=${DEV_MODE}
   BUILD_TYPE="${CMAKE_BUILD_TYPE}")
 
+# Plugins need to compile with position independent code on Linux.
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+  target_compile_options(ObjectiveNinja PRIVATE "-fPIC")
+endif()
+
 # Option to automatically install the plugin after successful builds.
 option(AUTO_INSTALL_PLUGIN "Install the plugin after building (macOS only)" OFF)
 if(AUTO_INSTALL_PLUGIN)
