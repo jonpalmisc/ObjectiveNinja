@@ -9,6 +9,10 @@
 #include "DataRenderers.h"
 #include "Workflow/Workflow.h"
 
+#ifndef BUILD_TYPE
+#define BUILD_TYPE "Unknown"
+#endif
+
 extern "C" {
 
 BN_DECLARE_CORE_ABI_VERSION
@@ -20,6 +24,8 @@ BINARYNINJAPLUGIN bool CorePluginInit()
 
     Workflow::registerActivities();
     Commands::registerCommands();
+
+    BinaryNinja::LogInfo("ObjectiveNinja (%s) loaded successfully.", BUILD_TYPE);
 
     return true;
 }

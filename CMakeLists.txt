@@ -64,7 +64,9 @@ option(DEV_MODE "Enable developer features" OFF)
 add_library(ObjectiveNinja SHARED ${PLUGIN_SOURCE})
 target_link_libraries(ObjectiveNinja ObjectiveNinjaCore binaryninjaapi)
 target_compile_features(ObjectiveNinja PRIVATE cxx_std_17 c_std_99)
-target_compile_definitions(ObjectiveNinja PRIVATE DEV_MODE=${DEV_MODE})
+target_compile_definitions(ObjectiveNinja PRIVATE
+  DEV_MODE=${DEV_MODE}
+  BUILD_TYPE="${CMAKE_BUILD_TYPE}")
 
 # Option to automatically install the plugin after successful builds.
 option(AUTO_INSTALL_PLUGIN "Install the plugin after building (macOS only)" OFF)
