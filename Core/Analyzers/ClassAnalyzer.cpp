@@ -47,13 +47,13 @@ MethodListInfo ClassAnalyzer::analyzeMethodList(uint64_t address)
         }
 
         if (!mli.hasRelativeOffsets() || mli.hasDirectSelectors()) {
-            mi.selector = m_file->readString(mi.nameAddress);
+            mi.selector = m_file->readStringAt(mi.nameAddress);
         } else {
             auto selectorNamePointer = arp(m_file->readLong(mi.nameAddress));
-            mi.selector = m_file->readString(selectorNamePointer);
+            mi.selector = m_file->readStringAt(selectorNamePointer);
         }
 
-        mi.type = m_file->readString(mi.typeAddress);
+        mi.type = m_file->readStringAt(mi.typeAddress);
 
         m_info->methodImpls[mi.nameAddress] = mi.implAddress;
 
@@ -82,7 +82,7 @@ void ClassAnalyzer::run()
         ci.dataAddress &= ~SwiftClassDataPointerFlagsMask;
 
         ci.nameAddress = arp(m_file->readLong(ci.dataAddress + 0x18));
-        ci.name = m_file->readString(ci.nameAddress);
+        ci.name = m_file->readStringAt(ci.nameAddress);
 
         ci.methodListAddress = arp(m_file->readLong(ci.dataAddress + 0x20));
         if (ci.methodListAddress)

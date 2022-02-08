@@ -66,7 +66,7 @@ public:
      * Read a string starting at the given offset. If no max length is
      * specified, a null-terminated string will be read.
      */
-    std::string readString(uint64_t, size_t maxLength = 0);
+    std::string readStringAt(uint64_t, size_t maxLength = 0);
 
     /**
      * Get the base offset of the image/file.
