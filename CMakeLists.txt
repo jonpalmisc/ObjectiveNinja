@@ -2,6 +2,27 @@ cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
 project(ObjectiveNinja)
 
+# Default the build type to "release with debug info".
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE RelWithDebInfo)
+endif()
+
+# Get the current Git branch
+execute_process(
+  COMMAND git rev-parse --abbrev-ref HEAD
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  OUTPUT_VARIABLE GIT_BRANCH
+  OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+# Get the current Git commit hash
+execute_process(
+  COMMAND git describe --always --dirty
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  OUTPUT_VARIABLE GIT_COMMIT
+  OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
 # Add subdirectory for the Binary Ninja C++ API
 add_subdirectory(Vendor/BinaryNinjaAPI)
 
@@ -45,6 +66,8 @@ endif()
 
 # Binary Ninja plugin ----------------------------------------------------------
 
+configure_file(Plugin/BuildInfo.h.in ${CMAKE_SOURCE_DIR}/Plugin/BuildInfo.h @ONLY)
+
 set(PLUGIN_SOURCE
   Plugin/Commands.h
   Plugin/Commands.cpp
@@ -67,8 +90,7 @@ add_library(ObjectiveNinja SHARED ${PLUGIN_SOURCE})
 target_link_libraries(ObjectiveNinja ObjectiveNinjaCore binaryninjaapi)
 target_compile_features(ObjectiveNinja PRIVATE cxx_std_17 c_std_99)
 target_compile_definitions(ObjectiveNinja PRIVATE
-  DEV_MODE=${DEV_MODE}
-  BUILD_TYPE="${CMAKE_BUILD_TYPE}")
+  DEV_MODE=${DEV_MODE})
 
 # Plugins need to compile with position independent code on Linux.
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
@@ -100,3 +122,5 @@ add_custom_target(format
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
   COMMAND clang-format -i --style=WebKit
   ${CORE_SOURCE} ${PLUGIN_SOURCE} ${TOOLS_SOURCE})
+
+unset(CMAKE_BUILD_TYPE CACHE)

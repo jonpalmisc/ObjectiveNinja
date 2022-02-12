@@ -5,13 +5,10 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
+#include "BuildInfo.h"
 #include "Commands.h"
 #include "DataRenderers.h"
 #include "Workflow/Workflow.h"
-
-#ifndef BUILD_TYPE
-#define BUILD_TYPE "Unknown"
-#endif
 
 extern "C" {
 
@@ -25,7 +22,8 @@ BINARYNINJAPLUGIN bool CorePluginInit()
     Workflow::registerActivities();
     Commands::registerCommands();
 
-    BinaryNinja::LogInfo("ObjectiveNinja (%s) loaded successfully.", BUILD_TYPE);
+    BinaryNinja::LogInfo("ObjectiveNinja loaded successfully (%s-%s/%s)",
+        GitBranch, GitCommit, BuildType);
 
     return true;
 }
