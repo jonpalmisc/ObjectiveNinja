@@ -9,6 +9,8 @@
 
 #include "CustomTypes.h"
 
+#include <ObjectiveNinjaCore/ABI.h>
+
 #include <cstdio>
 
 using namespace BinaryNinja;
@@ -92,7 +94,7 @@ std::vector<DisassemblyTextLine> TaggedPointerDataRenderer::GetLinesForData(
     BinaryReader reader(bv);
     reader.Seek(address);
 
-    auto pointer = (reader.Read64() & 0xFFFFFFFF) + bv->GetStart();
+    auto pointer = ObjectiveNinja::ABI::decodePointer(reader.Read64(), bv->GetStart());
 
     return { lineForPointer(bv, pointer, address, prefix) };
 }

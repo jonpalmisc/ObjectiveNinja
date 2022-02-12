@@ -12,6 +12,7 @@ set(CORE_SOURCE
   Include/ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h
   Include/ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h
   Include/ObjectiveNinjaCore/Support/BinaryViewFile.h
+  Include/ObjectiveNinjaCore/ABI.h
   Include/ObjectiveNinjaCore/AbstractFile.h
   Include/ObjectiveNinjaCore/AnalysisInfo.h
   Include/ObjectiveNinjaCore/AnalysisProvider.h
@@ -21,6 +22,7 @@ set(CORE_SOURCE
   Core/Analyzers/ClassAnalyzer.cpp
   Core/Analyzers/SelectorAnalyzer.cpp
   Core/Support/BinaryViewFile.cpp
+  Core/ABI.cpp
   Core/AbstractFile.cpp
   Core/AnalysisInfo.cpp
   Core/AnalysisProvider.cpp
