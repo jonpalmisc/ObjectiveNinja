@@ -121,7 +121,7 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
     auto cfStringType = namedType(bv, CustomTypes::CFString);
     auto classType = namedType(bv, CustomTypes::Class);
     auto classDataType = namedType(bv, CustomTypes::ClassRO);
-    auto methodListType = namedType(bv, CustomTypes::MethodListEntry);
+    auto methodListType = namedType(bv, CustomTypes::MethodList);
 
     // Create data variables and symbols for all CFString instances.
     for (const auto& csi : info->cfStrings) {
