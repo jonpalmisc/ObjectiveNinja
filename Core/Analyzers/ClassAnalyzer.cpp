@@ -10,11 +10,6 @@
 
 using namespace ObjectiveNinja;
 
-/**
- * Mask used to extract the flags from a Swift class data structure pointer.
- */
-constexpr uint64_t SwiftClassDataPointerFlagsMask = 0b11;
-
 ClassAnalyzer::ClassAnalyzer(SharedAnalysisInfo info,
     SharedAbstractFile file)
     : Analyzer(std::move(info), std::move(file))
@@ -79,7 +74,7 @@ void ClassAnalyzer::run()
         // Sometimes the lower two bits of the data address are used as flags
         // for Swift/Objective-C classes. They should be ignored, unless you
         // want incorrect analysis...
-        ci.dataAddress &= ~SwiftClassDataPointerFlagsMask;
+        ci.dataAddress &= ~ABI::FastPointerDataMask;
 
         ci.nameAddress = arp(m_file->readLong(ci.dataAddress + 0x18));
         ci.name = m_file->readStringAt(ci.nameAddress);

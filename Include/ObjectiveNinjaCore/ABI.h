@@ -12,15 +12,19 @@
 namespace ObjectiveNinja {
 
 /**
- * Bitmask used to remove the tags from a tagged pointer.
- */
-constexpr uint64_t PointerMask = 0xFFFFFFFFF;
-
-/**
  * Common functionality related to the Objective-C ABI.
  */
-class ABI {
-public:
+namespace ABI {
+    /**
+     * Bitmask used to remove the tags from a tagged pointer.
+     */
+    constexpr uint64_t PointerMask = 0xFFFFFFFFF;
+
+    /**
+     * Mask used to extract the flags from a Swift class data structure pointer.
+     */
+    constexpr uint64_t FastPointerDataMask = 0b11;
+
     /**
      * Automatically resolve a pointer.
      *
@@ -30,7 +34,7 @@ public:
      *   2. direct and tagged (macOS 11, arm64e); and
      *   3. direct and image-relative (macOS 12+, arm64e).
      */
-    static uint64_t decodePointer(uint64_t pointer, uint64_t imageBase);
+    uint64_t decodePointer(uint64_t pointer, uint64_t imageBase);
 };
 
 }
