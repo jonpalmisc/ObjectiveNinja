@@ -15,6 +15,7 @@
 namespace CustomTypes {
 
 const std::string TaggedPointer = "tptr_t";
+const std::string FastPointer = "fptr_t";
 const std::string RelativePointer = "rptr_t";
 
 const std::string ID = "id";

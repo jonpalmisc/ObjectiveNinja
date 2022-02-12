@@ -17,6 +17,7 @@ BN_DECLARE_CORE_ABI_VERSION
 BINARYNINJAPLUGIN bool CorePluginInit()
 {
     TaggedPointerDataRenderer::Register();
+    FastPointerDataRenderer::Register();
     RelativePointerDataRenderer::Register();
 
     Workflow::registerActivities();

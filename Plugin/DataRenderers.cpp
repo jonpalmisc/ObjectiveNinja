@@ -80,6 +80,8 @@ bool isType(BinaryView* bv, Type* type, const std::string& name)
     return type->GetRegisteredName() == targetType->GetRegisteredName();
 }
 
+/* ---- Tagged Pointer ------------------------------------------------------ */
+
 bool TaggedPointerDataRenderer::IsValidForData(BinaryView* bv, uint64_t,
     Type* type, std::vector<std::pair<Type*, size_t>>&)
 {
@@ -103,6 +105,35 @@ void TaggedPointerDataRenderer::Register()
 {
     DataRendererContainer::RegisterTypeSpecificDataRenderer(new TaggedPointerDataRenderer());
 }
+
+/* ---- Fast Pointer -------------------------------------------------------- */
+
+bool FastPointerDataRenderer::IsValidForData(BinaryView* bv, uint64_t,
+    Type* type, std::vector<std::pair<Type*, size_t>>&)
+{
+    return isType(bv, type, CustomTypes::FastPointer);
+}
+
+std::vector<DisassemblyTextLine> FastPointerDataRenderer::GetLinesForData(
+    BinaryView* bv, uint64_t address, Type*,
+    const std::vector<InstructionTextToken>& prefix, size_t,
+    std::vector<std::pair<Type*, size_t>>&)
+{
+    BinaryReader reader(bv);
+    reader.Seek(address);
+
+    auto pointer = ObjectiveNinja::ABI::decodePointer(reader.Read64(), bv->GetStart());
+    pointer &= ~ObjectiveNinja::ABI::FastPointerDataMask;
+
+    return { lineForPointer(bv, pointer, address, prefix) };
+}
+
+void FastPointerDataRenderer::Register()
+{
+    DataRendererContainer::RegisterTypeSpecificDataRenderer(new FastPointerDataRenderer());
+}
+
+/* ---- Relative Pointer ---------------------------------------------------- */
 
 bool RelativePointerDataRenderer::IsValidForData(BinaryView* bv, uint64_t,
     Type* type, std::vector<std::pair<Type*, size_t>>&)

@@ -12,6 +12,10 @@ struct tptr_t {
     uint64_t raw;
 };
 
+struct fptr_t {
+    uint64_t raw;
+};
+
 struct rptr_t {
     int32_t raw;
 };
@@ -67,7 +71,7 @@ struct objc_class_t {
     const tptr_t super;
     void* cache;
     void* vtable;
-    const tptr_t data;
+    const fptr_t data;
 };
 )";
 
