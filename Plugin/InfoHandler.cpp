@@ -61,6 +61,11 @@ void InfoHandler::defineSymbol(BinaryViewRef bv, uint64_t address, const std::st
     bv->DefineUserSymbol(new Symbol(symbolType, prefix + name, address));
 }
 
+void InfoHandler::defineReference(BinaryViewRef bv, uint64_t from, uint64_t to)
+{
+    bv->AddUserDataReference(from, to);
+}
+
 void InfoHandler::applyMethodType(BinaryViewRef bv, const ObjectiveNinja::ClassInfo& ci,
     const ObjectiveNinja::MethodInfo& mi)
 {
@@ -133,16 +138,20 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
         defineVariable(bv, csi.dataAddress, stringType(csi.size));
         defineSymbol(bv, csi.address, sanitizedText, "cf_");
         defineSymbol(bv, csi.dataAddress, sanitizedText, "as_");
+
+        defineReference(bv, csi.address, csi.dataAddress);
     }
 
     // Create data variables and symbols for selectors and selector references.
-    for (const auto& ssr : info->selectorRefs) {
-        auto sanitizedSelector = sanitizeSelector(ssr->name);
+    for (const auto& sr : info->selectorRefs) {
+        auto sanitizedSelector = sanitizeSelector(sr->name);
 
-        defineVariable(bv, ssr->address, taggedPointerType);
-        defineVariable(bv, ssr->nameAddress, stringType(ssr->name.size()));
-        defineSymbol(bv, ssr->address, sanitizedSelector, "sr_");
-        defineSymbol(bv, ssr->nameAddress, sanitizedSelector, "sl_");
+        defineVariable(bv, sr->address, taggedPointerType);
+        defineVariable(bv, sr->nameAddress, stringType(sr->name.size()));
+        defineSymbol(bv, sr->address, sanitizedSelector, "sr_");
+        defineSymbol(bv, sr->nameAddress, sanitizedSelector, "sl_");
+
+        defineReference(bv, sr->address, sr->nameAddress);
     }
 
     // Create data variables and symbols for the analyzed classes.
@@ -155,6 +164,11 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
         defineSymbol(bv, ci.address, ci.name, "cl_");
         defineSymbol(bv, ci.dataAddress, ci.name, "ro_");
         defineSymbol(bv, ci.nameAddress, ci.name, "nm_");
+
+        defineReference(bv, ci.listPointer, ci.address);
+        defineReference(bv, ci.address, ci.dataAddress);
+        defineReference(bv, ci.dataAddress, ci.nameAddress);
+        defineReference(bv, ci.dataAddress, ci.methodListAddress);
 
         if (ci.methodList.address == 0 || ci.methodList.methods.empty())
             continue;
@@ -169,13 +183,15 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
             defineSymbol(bv, mi.address, sanitizeSelector(mi.selector), "mt_");
             defineVariable(bv, mi.typeAddress, stringType(mi.type.size()));
 
+            defineReference(bv, ci.methodList.address, mi.address);
+            defineReference(bv, mi.address, mi.nameAddress);
+            defineReference(bv, mi.address, mi.typeAddress);
+            defineReference(bv, mi.address, mi.implAddress);
+
             applyMethodType(bv, ci, mi);
         }
 
         // Create a data variable and symbol for the method list header.
-        //
-        // TODO: Create an anonymous structure for the entire method list rather
-        // than creating separate variables for the header and each method.
         defineVariable(bv, ci.methodListAddress, methodListType);
         defineSymbol(bv, ci.methodListAddress, ci.name, "ml_");
     }
