@@ -11,6 +11,7 @@
 
 #include <ObjectiveNinjaCore/ABI.h>
 
+#include <cinttypes>
 #include <cstdio>
 
 using namespace BinaryNinja;
@@ -54,7 +55,7 @@ DisassemblyTextLine lineForPointer(BinaryView* bv, uint64_t pointer,
         tokenType = tokenTypeForSymbol(symbol);
     } else {
         char addressBuffer[32];
-        sprintf(addressBuffer, "0x%llx", pointer);
+        sprintf(addressBuffer, "0x%" PRIx64, pointer);
 
         tokenText = std::string(addressBuffer);
         tokenType = CodeRelativeAddressToken;

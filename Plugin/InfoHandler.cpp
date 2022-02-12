@@ -174,8 +174,8 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
             continue;
 
         auto methodType = ci.methodList.hasRelativeOffsets()
-            ? bv->GetTypeByName(std::string("objc_method_entry_t"))
-            : bv->GetTypeByName(std::string("objc_method_t"));
+            ? bv->GetTypeByName(CustomTypes::MethodListEntry)
+            : bv->GetTypeByName(CustomTypes::Method);
 
         // Create data variables for each method in the method list.
         for (const auto& mi : ci.methodList.methods) {

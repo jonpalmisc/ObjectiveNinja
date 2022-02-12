@@ -9,32 +9,27 @@
 
 #include <cstdint>
 
-namespace ObjectiveNinja {
+namespace ObjectiveNinja::ABI {
 
 /**
- * Common functionality related to the Objective-C ABI.
+ * Bitmask used to remove the tags from a tagged pointer.
  */
-namespace ABI {
-    /**
-     * Bitmask used to remove the tags from a tagged pointer.
-     */
-    constexpr uint64_t PointerMask = 0xFFFFFFFFF;
+constexpr uint64_t PointerMask = 0xFFFFFFFFF;
 
-    /**
-     * Mask used to extract the flags from a Swift class data structure pointer.
-     */
-    constexpr uint64_t FastPointerDataMask = 0b11;
+/**
+ * Mask used to extract the flags from a Swift class data structure pointer.
+ */
+constexpr uint64_t FastPointerDataMask = 0b11;
 
-    /**
-     * Automatically resolve a pointer.
-     *
-     * This procedure supports pointers that are
-     *
-     *   1. direct and untagged (x86_64);
-     *   2. direct and tagged (macOS 11, arm64e); and
-     *   3. direct and image-relative (macOS 12+, arm64e).
-     */
-    uint64_t decodePointer(uint64_t pointer, uint64_t imageBase);
-};
+/**
+ * Automatically resolve a pointer.
+ *
+ * This procedure supports pointers that are
+ *
+ *   1. direct and untagged (x86_64);
+ *   2. direct and tagged (macOS 11, arm64e); and
+ *   3. direct and image-relative (macOS 12+, arm64e).
+ */
+uint64_t decodePointer(uint64_t pointer, uint64_t imageBase);
 
 }

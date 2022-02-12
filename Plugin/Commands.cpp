@@ -16,7 +16,7 @@
 
 void Commands::defineTypes(BinaryViewRef bv)
 {
-    CustomTypes::defineAll(bv);
+    CustomTypes::defineAll(std::move(bv));
 }
 
 void Commands::analyzeStructures(BinaryViewRef bv)

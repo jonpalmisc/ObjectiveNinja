@@ -46,7 +46,7 @@ std::string AbstractFile::readString(size_t maxLength)
 std::string AbstractFile::readStringAt(uint64_t address, size_t maxLength)
 {
     seek(address);
-    return readString();
+    return readString(maxLength);
 }
 
 }

@@ -5,17 +5,8 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
-#include <ObjectiveNinjaCore/AnalysisInfo.h>
 #include <ObjectiveNinjaCore/AnalysisProvider.h>
-#include <ObjectiveNinjaCore/Analyzer.h>
-
-#include <ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h>
-#include <ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h>
-#include <ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h>
-
 #include <ObjectiveNinjaCore/Support/BinaryViewFile.h>
-
-#include <binaryninjaapi.h>
 
 #include <iostream>
 #include <string>

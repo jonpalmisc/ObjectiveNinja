@@ -7,26 +7,23 @@
 
 #include <ObjectiveNinjaCore/ABI.h>
 
-namespace ObjectiveNinja {
+namespace ObjectiveNinja::ABI {
 
-namespace ABI {
+uint64_t decodePointer(uint64_t pointer, uint64_t imageBase)
+{
+    pointer &= PointerMask;
+    if (!pointer)
+        return 0;
 
-    uint64_t decodePointer(uint64_t pointer, uint64_t imageBase)
-    {
-        pointer &= PointerMask;
-        if (!pointer)
-            return 0;
-
-        // If the pointer --- after removing the tags --- is greater than the
-        // image base, it is likely a direct pointer.
-        if (pointer > imageBase) {
-            return pointer;
-        }
-
-        // Otherwise, it is likely to be an offset from the image base, meaning
-        // the absolute pointer needs to be calculated.
-        return pointer + imageBase;
+    // If the pointer --- after removing the tags --- is greater than the
+    // image base, it is likely a direct pointer.
+    if (pointer > imageBase) {
+        return pointer;
     }
+
+    // Otherwise, it is likely to be an offset from the image base, meaning
+    // the absolute pointer needs to be calculated.
+    return pointer + imageBase;
 }
 
 }

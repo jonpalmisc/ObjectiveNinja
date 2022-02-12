@@ -25,7 +25,7 @@ MethodListInfo ClassAnalyzer::analyzeMethodList(uint64_t address)
     auto methodCount = m_file->readInt(mli.address + 0x4);
     auto methodSize = mli.hasRelativeOffsets() ? 12 : 24;
 
-    for (auto i = 0; i < methodCount; ++i) {
+    for (unsigned i = 0; i < methodCount; ++i) {
         MethodInfo mi;
         mi.address = mli.address + 8 + (i * methodSize);
 
