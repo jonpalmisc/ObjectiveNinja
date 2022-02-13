@@ -75,22 +75,21 @@ sure where your user plugins folder is.
 
 ### Troubleshooting
 
+If you have Binary Ninja installed in a non-standard location, you may encounter
+an error that looks like this:
+
 ```
 CMake Error at vendor/api/CMakeLists.txt:58 (find_library):
   Could not find BN_CORE_LIBRARY using the following names: binaryninjacore,
   libbinaryninjacore.so.1
 ```
 
-If you encounter an error that looks like the one above, you may have to
-explicitly set the `BN_CORE_LIBRARY` option when invoking CMake, done as
-follows:
+In this case, you will likely have have to explicitly set the `BN_CORE_LIBRARY`
+option when invoking CMake, done as follows:
 
 ```sh
 cmake ... -DBN_CORE_LIBRARY="PATH_HERE"
 ```
-
-However, this should be determined automatically and not have to be
-configured by hand.
 
 ## Contributing
 
