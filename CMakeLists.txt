@@ -94,8 +94,10 @@ target_compile_features(ObjectiveNinja PRIVATE cxx_std_17 c_std_99)
 target_compile_definitions(ObjectiveNinja PRIVATE
   DEV_MODE=${DEV_MODE})
 
-# Plugins need to compile with position independent code on Linux.
+# Library targets linking against the Binary Ninja API need to be compiled with
+# position-independent code on Linux.
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+  target_compile_options(ObjectiveNinjaCore PRIVATE "-fPIC")
   target_compile_options(ObjectiveNinja PRIVATE "-fPIC")
 endif()
 
