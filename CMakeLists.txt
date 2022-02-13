@@ -23,7 +23,9 @@ execute_process(
   OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-# Add subdirectory for the Binary Ninja C++ API
+# Add subdirectory for the Binary Ninja C++ API; skip linking against the UI
+# library since it isn't needed for this plugin
+set(HEADLESS ON CACHE BOOL "Skip building UI functionality")
 add_subdirectory(Vendor/BinaryNinjaAPI)
 
 # Core library -----------------------------------------------------------------
