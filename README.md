@@ -84,11 +84,11 @@ CMake Error at vendor/api/CMakeLists.txt:58 (find_library):
   libbinaryninjacore.so.1
 ```
 
-In this case, you will likely have have to explicitly set the `BN_CORE_LIBRARY`
+In this case, you will likely have have to explicitly set the `BN_INSTALL_DIR`
 option when invoking CMake, done as follows:
 
 ```sh
-cmake ... -DBN_CORE_LIBRARY="PATH_HERE"
+cmake ... -DBN_INSTALL_DIR="BINARY_NINJA_INSTALL_PATH_HERE"
 ```
 
 ## Contributing
