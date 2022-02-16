@@ -36,9 +36,9 @@ MethodListInfo ClassAnalyzer::analyzeMethodList(uint64_t address)
             mi.typeAddress = mi.address + 4 + static_cast<int32_t>(m_file->readInt());
             mi.implAddress = mi.address + 8 + static_cast<int32_t>(m_file->readInt());
         } else {
-            mi.nameAddress = m_file->readLong();
-            mi.typeAddress = m_file->readLong();
-            mi.implAddress = m_file->readLong();
+            mi.nameAddress = arp(m_file->readLong());
+            mi.typeAddress = arp(m_file->readLong());
+            mi.implAddress = arp(m_file->readLong());
         }
 
         if (!mli.hasRelativeOffsets() || mli.hasDirectSelectors()) {

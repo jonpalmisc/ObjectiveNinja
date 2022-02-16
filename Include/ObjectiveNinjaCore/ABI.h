@@ -14,7 +14,7 @@ namespace ObjectiveNinja::ABI {
 /**
  * Bitmask used to remove the tags from a tagged pointer.
  */
-constexpr uint64_t PointerMask = 0xFFFFFFFFF;
+constexpr uint64_t PointerMask = 0x7FFFFFFFF;
 
 /**
  * Mask used to extract the flags from a Swift class data structure pointer.
