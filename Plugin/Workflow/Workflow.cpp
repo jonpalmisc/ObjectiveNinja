@@ -144,12 +144,17 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
         std::scoped_lock<std::mutex> lock(g_initialAnalysisMutex);
 
         if (!GlobalState::hasAnalysisInfo(bv)) {
+            SharedAnalysisInfo info;
             CustomTypes::defineAll(bv);
 
-            auto file = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
-            auto info = ObjectiveNinja::AnalysisProvider::infoForFile(file);
+            try {
+                auto file = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
+                info = ObjectiveNinja::AnalysisProvider::infoForFile(file);
 
-            InfoHandler::applyInfoToView(info, bv);
+                InfoHandler::applyInfoToView(info, bv);
+            } catch (...) {
+                BinaryNinja::LogError("[Objective Ninja]: Error during analysis. Please report this bug!");
+            }
 
             GlobalState::setFlag(bv, Flag::DidRunStructureAnalysis);
             GlobalState::storeAnalysisInfo(bv, info);
