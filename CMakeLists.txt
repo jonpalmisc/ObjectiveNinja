@@ -2,11 +2,6 @@ cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
 project(ObjectiveNinja)
 
-# Default the build type to "release with debug info".
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE RelWithDebInfo)
-endif()
-
 # Get the current Git branch
 execute_process(
   COMMAND git rev-parse --abbrev-ref HEAD
@@ -126,5 +121,3 @@ add_custom_target(format
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
   COMMAND clang-format -i --style=WebKit
   ${CORE_SOURCE} ${PLUGIN_SOURCE} ${TOOLS_SOURCE})
-
-unset(CMAKE_BUILD_TYPE CACHE)
