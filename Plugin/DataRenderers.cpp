@@ -159,3 +159,42 @@ void RelativePointerDataRenderer::Register()
 {
     DataRendererContainer::RegisterTypeSpecificDataRenderer(new RelativePointerDataRenderer());
 }
+
+/* ---- CFString ------------------------------------------------------------ */
+
+bool CFStringDataRenderer::IsValidForData(BinaryView* bv, uint64_t,
+    Type* type, std::vector<std::pair<Type*, size_t>>&)
+{
+    return isType(bv, type, CustomTypes::CFString);
+}
+
+std::vector<DisassemblyTextLine> CFStringDataRenderer::GetLinesForData(
+    BinaryView* bv, uint64_t address, Type*,
+    const std::vector<InstructionTextToken>& prefix, size_t,
+    std::vector<std::pair<Type*, size_t>>&)
+{
+    BinaryReader reader(bv);
+    reader.Seek(address + 0x10);
+
+    auto dataPointer = reader.Read64();
+    auto size = reader.Read64();
+
+    // Data pointer can be tagged, need to decode it before jumping to it.
+    dataPointer = ObjectiveNinja::ABI::decodePointer(dataPointer, bv->GetStart());
+    reader.Seek(dataPointer);
+    auto string = reader.ReadString(size);
+
+    DisassemblyTextLine line;
+    line.addr = address;
+    line.tokens = prefix;
+    line.tokens.emplace_back(StringToken, "@\"" + string + "\"", dataPointer);
+    line.tokens.emplace_back(TextToken, ", ");
+    line.tokens.emplace_back(IntegerToken, std::to_string(size), dataPointer);
+
+    return { line };
+}
+
+void CFStringDataRenderer::Register()
+{
+    DataRendererContainer::RegisterTypeSpecificDataRenderer(new CFStringDataRenderer());
+}

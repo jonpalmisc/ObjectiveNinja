@@ -62,3 +62,21 @@ public:
 
     static void Register();
 };
+
+/**
+ * Data renderer for CFString data variables.
+ */
+class CFStringDataRenderer : public BinaryNinja::DataRenderer {
+    CFStringDataRenderer() = default;
+
+public:
+    bool IsValidForData(BinaryViewPtr, uint64_t address,
+        TypePtr, std::vector<std::pair<TypePtr, size_t>>& context) override;
+
+    std::vector<BinaryNinja::DisassemblyTextLine> GetLinesForData(
+        BinaryViewPtr, uint64_t address, TypePtr,
+        const std::vector<BinaryNinja::InstructionTextToken>& prefix,
+        size_t width, std::vector<std::pair<TypePtr, size_t>>& context) override;
+
+    static void Register();
+};

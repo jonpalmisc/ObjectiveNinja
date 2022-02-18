@@ -19,6 +19,7 @@ BINARYNINJAPLUGIN bool CorePluginInit()
     TaggedPointerDataRenderer::Register();
     FastPointerDataRenderer::Register();
     RelativePointerDataRenderer::Register();
+    CFStringDataRenderer::Register();
 
     Workflow::registerActivities();
     Commands::registerCommands();
