@@ -120,6 +120,8 @@ void InfoHandler::applyMethodType(BinaryViewRef bv, const ObjectiveNinja::ClassI
 
 void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
 {
+    bv->BeginUndoActions();
+
     BinaryReader reader(bv);
 
     auto taggedPointerType = namedType(bv, CustomTypes::TaggedPointer);
@@ -195,4 +197,7 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
         defineVariable(bv, ci.methodListAddress, methodListType);
         defineSymbol(bv, ci.methodListAddress, ci.name, "ml_");
     }
+
+    bv->CommitUndoActions();
+    bv->UpdateAnalysis();
 }
