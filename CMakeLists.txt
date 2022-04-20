@@ -96,13 +96,8 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
   target_compile_options(ObjectiveNinja PRIVATE "-fPIC")
 endif()
 
-# Option to automatically install the plugin after successful builds.
-option(AUTO_INSTALL_PLUGIN "Install the plugin after building (macOS only)" OFF)
-if(AUTO_INSTALL_PLUGIN)
-  add_custom_command(TARGET ObjectiveNinja POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:ObjectiveNinja>
-    "~/Library/Application Support/Binary Ninja/plugins/")
-endif()
+# Support cmake --install
+bn_install_plugin(ObjectiveNinja)
 
 # Internal tools ---------------------------------------------------------------
 
