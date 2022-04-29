@@ -9,6 +9,7 @@
 
 #include <ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h>
 #include <ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h>
+#include <ObjectiveNinjaCore/Analyzers/CategoryAnalyzer.h>
 #include <ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h>
 
 namespace ObjectiveNinja {
@@ -20,6 +21,7 @@ SharedAnalysisInfo AnalysisProvider::infoForFile(SharedAbstractFile file)
     std::vector<std::unique_ptr<ObjectiveNinja::Analyzer>> analyzers;
     analyzers.emplace_back(new SelectorAnalyzer(info, file));
     analyzers.emplace_back(new ClassAnalyzer(info, file));
+    analyzers.emplace_back(new CategoryAnalyzer(info, file));
     analyzers.emplace_back(new CFStringAnalyzer(info, file));
 
     for (const auto& analyzer : analyzers)

@@ -73,6 +73,15 @@ struct objc_class_t {
     void* vtable;
     const fptr_t data;
 };
+
+struct objc_category_t {
+    const char* name;
+    void* class;
+    const tptr_t instance_methods;
+    const tptr_t class_methods;
+    const tptr_t protocols;
+    const tptr_t instance_properties;
+}
 )";
 
 namespace CustomTypes {

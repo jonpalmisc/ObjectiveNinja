@@ -125,6 +125,7 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
     BinaryReader reader(bv);
 
     auto taggedPointerType = namedType(bv, CustomTypes::TaggedPointer);
+    auto categoryType = namedType(bv, CustomTypes::Category);
     auto cfStringType = namedType(bv, CustomTypes::CFString);
     auto classType = namedType(bv, CustomTypes::Class);
     auto classDataType = namedType(bv, CustomTypes::ClassRO);
@@ -196,6 +197,62 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
         // Create a data variable and symbol for the method list header.
         defineVariable(bv, ci.methodListAddress, methodListType);
         defineSymbol(bv, ci.methodListAddress, ci.name, "ml_");
+    }
+
+    // Create data variables and symbols for the analyzed Categories.
+    for (const auto& ci : info->categories) {
+        defineVariable(bv, ci.listPointer, taggedPointerType);
+        defineVariable(bv, ci.address, categoryType);
+
+        defineSymbol(bv, ci.listPointer, ci.name, "catp_");
+        defineSymbol(bv, ci.address, ci.name, "cat_");
+
+        defineReference(bv, ci.listPointer, ci.address);
+
+        if (ci.instanceMethods.address && !ci.instanceMethods.methods.empty()) {
+            auto methodType = ci.instanceMethods.hasRelativeOffsets()
+                ? bv->GetTypeByName(CustomTypes::MethodListEntry)
+                : bv->GetTypeByName(CustomTypes::Method);
+
+            // Create data variables for each method in the method list.
+            for (const auto& mi : ci.instanceMethods.methods) {
+                defineVariable(bv, mi.address, methodType);
+                defineSymbol(bv, mi.address, sanitizeSelector(mi.selector), "mt_");
+                defineVariable(bv, mi.typeAddress, stringType(mi.type.size()));
+
+                defineReference(bv, ci.instanceMethods.address, mi.address);
+                defineReference(bv, mi.address, mi.nameAddress);
+                defineReference(bv, mi.address, mi.typeAddress);
+                defineReference(bv, mi.address, mi.implAddress);
+            }
+
+            // Create a data variable and symbol for the method list header.
+            defineVariable(bv, ci.instanceMethodListAddress, methodListType);
+            defineSymbol(bv, ci.instanceMethodListAddress, ci.name, "mli_");
+        }
+
+
+        if (ci.classMethods.address && !ci.classMethods.methods.empty()) {
+            auto methodType = ci.classMethods.hasRelativeOffsets()
+                ? bv->GetTypeByName(CustomTypes::MethodListEntry)
+                : bv->GetTypeByName(CustomTypes::Method);
+
+            // Create data variables for each method in the method list.
+            for (const auto& mi : ci.classMethods.methods) {
+                defineVariable(bv, mi.address, methodType);
+                defineSymbol(bv, mi.address, sanitizeSelector(mi.selector), "mt_");
+                defineVariable(bv, mi.typeAddress, stringType(mi.type.size()));
+
+                defineReference(bv, ci.classMethods.address, mi.address);
+                defineReference(bv, mi.address, mi.nameAddress);
+                defineReference(bv, mi.address, mi.typeAddress);
+                defineReference(bv, mi.address, mi.implAddress);
+            }
+
+            // Create a data variable and symbol for the method list header.
+            defineVariable(bv, ci.classMethodListAddress, methodListType);
+            defineSymbol(bv, ci.classMethodListAddress, ci.name, "mlc_");
+        }
     }
 
     bv->CommitUndoActions();

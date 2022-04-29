@@ -93,6 +93,21 @@ struct ClassInfo {
 };
 
 /**
+ * A description of an Objective-C category.
+ */
+struct CategoryInfo {
+    uint64_t address {};
+    std::string name {};
+    MethodListInfo instanceMethods {};
+    MethodListInfo classMethods {};
+
+    uint64_t listPointer {};
+    uint64_t nameAddress {};
+    uint64_t instanceMethodListAddress {};
+    uint64_t classMethodListAddress {};
+};
+
+/**
  * Analysis info storage.
  *
  * AnalysisInfo is intended to be a common structure for persisting information
@@ -106,6 +121,7 @@ struct AnalysisInfo {
     std::unordered_map<uint64_t, SharedSelectorRefInfo> selectorRefsByKey {};
 
     std::vector<ClassInfo> classes {};
+    std::vector<CategoryInfo> categories {};
     std::unordered_map<uint64_t, uint64_t> methodImpls;
 
     std::string dump() const;
@@ -123,4 +139,8 @@ NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(MethodListInfo, address, flags, methods)
 
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(ClassInfo, listPointer, address, dataAddress,
     nameAddress, name, methodListAddress, methodList)
+
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(CategoryInfo, listPointer, address, nameAddress,
+    name, instanceMethodListAddress, instanceMethods, classMethodListAddress,
+    classMethods)
 }
