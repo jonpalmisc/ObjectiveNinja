@@ -114,7 +114,7 @@ void InfoHandler::applyMethodType(BinaryViewRef bv, const ObjectiveNinja::ClassI
     if (auto f = bv->GetAnalysisFunction(bv->GetDefaultPlatform(), mi.implAddress))
         f->SetUserType(functionNat.type);
 
-    auto name = ci.name + "_" + sanitizeSelector(mi.selector);
+    auto name = "[" + ci.name + " " + mi.selector + "]";
     defineSymbol(bv, mi.implAddress, name, "", FunctionSymbol);
 }
 
