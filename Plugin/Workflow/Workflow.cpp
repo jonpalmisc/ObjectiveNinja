@@ -126,11 +126,12 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
     if (GlobalState::viewIsIgnored(bv))
         return;
 
+    const auto log = BinaryNinja::LogRegistry::GetLogger("ObjectiveNinja");
+
     // Ignore the view if it has an unsupported architecture.
     auto archName = arch->GetName();
     if (archName != "aarch64" && archName != "x86_64") {
-        BinaryNinja::LogError("Architecture '%s' not supported by Objective Ninja",
-            archName.c_str());
+        log->LogError("Architecture '%s' is not supported", archName.c_str());
         GlobalState::addIgnoredView(bv);
         return;
     }
@@ -153,7 +154,7 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
 
                 InfoHandler::applyInfoToView(info, bv);
             } catch (...) {
-                BinaryNinja::LogError("[Objective Ninja]: Error during analysis. Please report this bug!");
+                log->LogError("Analysis failed. Please report this bug!");
             }
 
             GlobalState::setFlag(bv, Flag::DidRunStructureAnalysis);
@@ -167,19 +168,19 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
     // repeatedly search for all the usable function addresses.
     const auto msgSendFunctions = findMsgSendFunctions(bv);
     if (msgSendFunctions.empty()) {
-        BinaryNinja::LogError("Cannot perform Objective-C IL cleanup; no objc_msgSend candidates found");
+        log->LogError("Cannot perform Objective-C IL cleanup; no objc_msgSend candidates found");
         GlobalState::addIgnoredView(bv);
         return;
     }
 
     const auto llil = ac->GetLowLevelILFunction();
     if (!llil) {
-        BinaryNinja::LogError("Bad result from `ac->GetLowLevelILFunction()`");
+        log->LogError("(Workflow) Failed to get LLIL for 0x%llx", func->GetStart());
         return;
     }
     const auto ssa = llil->GetSSAForm();
     if (!ssa) {
-        BinaryNinja::LogError("Bad result from `llil->GetSSAForm()`");
+        log->LogError("(Workflow) Failed to get LLIL SSA form for 0x%llx", func->GetStart());
         return;
     }
 

@@ -37,7 +37,8 @@ void Commands::analyzeStructures(BinaryViewRef bv)
 
         InfoHandler::applyInfoToView(info, bv);
     } catch (...) {
-        BinaryNinja::LogError("[Objective Ninja]: Error during analysis. Please report this bug!");
+        const auto log = BinaryNinja::LogRegistry::GetLogger("ObjectiveNinja");
+        log->LogError("Analysis failed. Please report this bug!");
     }
 
     GlobalState::setFlag(bv, Flag::DidRunWorkflow);

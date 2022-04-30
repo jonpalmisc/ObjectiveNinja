@@ -23,7 +23,8 @@ BINARYNINJAPLUGIN bool CorePluginInit()
     Workflow::registerActivities();
     Commands::registerCommands();
 
-    BinaryNinja::LogInfo("Objective Ninja loaded successfully (%s-%s/%s)",
+    const auto log = BinaryNinja::LogRegistry::CreateLogger("ObjectiveNinja");
+    log->LogInfo("Plugin loaded successfully (%s-%s/%s)",
         GitBranch, GitCommit, BuildType);
 
     return true;
