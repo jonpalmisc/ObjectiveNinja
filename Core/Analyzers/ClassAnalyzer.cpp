@@ -6,7 +6,6 @@
  */
 
 #include <ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h>
-#include <ObjectiveNinjaCore/TypeParser.h>
 
 using namespace ObjectiveNinja;
 
