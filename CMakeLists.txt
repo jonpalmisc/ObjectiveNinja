@@ -26,6 +26,7 @@ add_subdirectory(Vendor/BinaryNinjaAPI)
 # Core library -----------------------------------------------------------------
 
 set(CORE_SOURCE
+  Include/ObjectiveNinjaCore/Analyzers/CategoryAnalyzer.h
   Include/ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h
   Include/ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h
   Include/ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h
@@ -36,6 +37,7 @@ set(CORE_SOURCE
   Include/ObjectiveNinjaCore/AnalysisProvider.h
   Include/ObjectiveNinjaCore/Analyzer.h
   Include/ObjectiveNinjaCore/TypeParser.h
+  Core/Analyzers/CategoryAnalyzer.cpp
   Core/Analyzers/CFStringAnalyzer.cpp
   Core/Analyzers/ClassAnalyzer.cpp
   Core/Analyzers/SelectorAnalyzer.cpp
