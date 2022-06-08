@@ -156,6 +156,8 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
         defineReference(bv, sr->address, sr->nameAddress);
     }
 
+    unsigned totalMethods = 0;
+
     // Create data variables and symbols for the analyzed classes.
     for (const auto& ci : info->classes) {
         defineVariable(bv, ci.listPointer, taggedPointerType);
@@ -181,6 +183,8 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
 
         // Create data variables for each method in the method list.
         for (const auto& mi : ci.methodList.methods) {
+            ++totalMethods;
+
             defineVariable(bv, mi.address, methodType);
             defineSymbol(bv, mi.address, sanitizeSelector(mi.selector), "mt_");
             defineVariable(bv, mi.typeAddress, stringType(mi.type.size()));
@@ -200,4 +204,10 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
 
     bv->CommitUndoActions();
     bv->UpdateAnalysis();
+
+    const auto log = BinaryNinja::LogRegistry::GetLogger("ObjectiveNinja");
+    log->LogInfo("Structure analysis complete");
+    log->LogInfo("Found %d classes, %d methods, %d selector references",
+        info->classes.size(), totalMethods, info->selectorRefs.size());
+    log->LogInfo("Found %d CFString instances", info->cfStrings.size());
 }
