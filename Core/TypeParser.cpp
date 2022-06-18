@@ -35,8 +35,8 @@ static const std::map<char, std::string> TypeEncodingMap = {
     { ':', "SEL" },
     { '#', "objc_class_t" },
 
-    { '?', "void" },
-    { 'T', "void" },
+    { '?', "void*" },
+    { 'T', "void*" },
 };
 
 std::vector<std::string> TypeParser::parseEncodedType(const std::string& encodedType)
