@@ -91,11 +91,16 @@ void InfoHandler::applyMethodType(BinaryViewRef bv, const ObjectiveNinja::ClassI
     // Build the type string for the method.
     std::string typeString;
     for (size_t i = 0; i < typeTokens.size(); ++i) {
+        std::string suffix;
         auto part = partForIndex(i);
 
-        std::string suffix;
+        // The underscore being used as the function name here is critically
+        // important as Clang will not parse the type string correctly---unlike
+        // the old type parser---if there is no function name. The underscore
+        // itself isn't special, and will not end up being used as the function
+        // name in either case.
         if (i == 0)
-            suffix = " (";
+            suffix = " _(";
         else if (i == typeTokens.size() - 1)
             suffix = ")";
         else
