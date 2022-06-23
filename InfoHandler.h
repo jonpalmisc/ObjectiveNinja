@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "../Core/AnalysisInfo.h"
+#include "Core/AnalysisInfo.h"
 
 #include "BinaryNinja.h"
 

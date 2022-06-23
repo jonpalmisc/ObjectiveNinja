@@ -9,7 +9,7 @@
 
 #include "BinaryNinja.h"
 
-#include "../Core/AnalysisInfo.h"
+#include "Core/AnalysisInfo.h"
 
 using SharedAnalysisInfo = std::shared_ptr<ObjectiveNinja::AnalysisInfo>;
 

@@ -11,8 +11,8 @@
 #include "GlobalState.h"
 #include "InfoHandler.h"
 
-#include "../Core/AnalysisProvider.h"
-#include "../Core/BinaryViewFile.h"
+#include "Core/AnalysisProvider.h"
+#include "Core/BinaryViewFile.h"
 
 void Commands::defineTypes(BinaryViewRef bv)
 {

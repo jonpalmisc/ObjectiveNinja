@@ -50,19 +50,19 @@ endif()
 # Binary Ninja plugin ----------------------------------------------------------
 
 set(PLUGIN_SOURCE
-  Plugin/Commands.h
-  Plugin/Commands.cpp
-  Plugin/CustomTypes.h
-  Plugin/CustomTypes.cpp
-  Plugin/DataRenderers.h
-  Plugin/DataRenderers.cpp
-  Plugin/GlobalState.h
-  Plugin/GlobalState.cpp
-  Plugin/InfoHandler.h
-  Plugin/InfoHandler.cpp
-  Plugin/Plugin.cpp
-  Plugin/Workflow.h
-  Plugin/Workflow.cpp)
+  Commands.h
+  Commands.cpp
+  CustomTypes.h
+  CustomTypes.cpp
+  DataRenderers.h
+  DataRenderers.cpp
+  GlobalState.h
+  GlobalState.cpp
+  InfoHandler.h
+  InfoHandler.cpp
+  Plugin.cpp
+  Workflow.h
+  Workflow.cpp)
 
 # Used to enable some debugging actions, etc.
 option(DEV_MODE "Enable developer features" OFF)
