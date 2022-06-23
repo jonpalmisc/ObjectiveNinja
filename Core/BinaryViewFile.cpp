@@ -7,7 +7,7 @@
 
 #ifdef ONC_BN_SUPPORT
 
-#include <ObjectiveNinjaCore/Support/BinaryViewFile.h>
+#include "BinaryViewFile.h"
 
 namespace ObjectiveNinja {
 

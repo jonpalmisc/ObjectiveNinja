@@ -7,7 +7,7 @@
 
 #include "Commands.h"
 #include "DataRenderers.h"
-#include "Workflow/Workflow.h"
+#include "Workflow.h"
 
 extern "C" {
 

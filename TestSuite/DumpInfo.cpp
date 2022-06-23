@@ -5,8 +5,8 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
-#include <ObjectiveNinjaCore/AnalysisProvider.h>
-#include <ObjectiveNinjaCore/Support/BinaryViewFile.h>
+#include "../Core/AnalysisProvider.h"
+#include "../Core/BinaryViewFile.h"
 
 #include <iostream>
 #include <string>

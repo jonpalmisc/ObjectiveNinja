@@ -12,20 +12,20 @@ endif()
 # Core library -----------------------------------------------------------------
 
 set(CORE_SOURCE
-  Include/ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h
-  Include/ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h
-  Include/ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h
-  Include/ObjectiveNinjaCore/Support/BinaryViewFile.h
-  Include/ObjectiveNinjaCore/ABI.h
-  Include/ObjectiveNinjaCore/AbstractFile.h
-  Include/ObjectiveNinjaCore/AnalysisInfo.h
-  Include/ObjectiveNinjaCore/AnalysisProvider.h
-  Include/ObjectiveNinjaCore/Analyzer.h
-  Include/ObjectiveNinjaCore/TypeParser.h
+  Core/Analyzers/CFStringAnalyzer.h
+  Core/Analyzers/ClassAnalyzer.h
+  Core/Analyzers/SelectorAnalyzer.h
+  Core/BinaryViewFile.h
+  Core/ABI.h
+  Core/AbstractFile.h
+  Core/AnalysisInfo.h
+  Core/AnalysisProvider.h
+  Core/Analyzer.h
+  Core/TypeParser.h
   Core/Analyzers/CFStringAnalyzer.cpp
   Core/Analyzers/ClassAnalyzer.cpp
   Core/Analyzers/SelectorAnalyzer.cpp
-  Core/Support/BinaryViewFile.cpp
+  Core/BinaryViewFile.cpp
   Core/ABI.cpp
   Core/AbstractFile.cpp
   Core/AnalysisInfo.cpp
@@ -50,19 +50,19 @@ endif()
 # Binary Ninja plugin ----------------------------------------------------------
 
 set(PLUGIN_SOURCE
-  Plugin/Commands.h
-  Plugin/Commands.cpp
-  Plugin/CustomTypes.h
-  Plugin/CustomTypes.cpp
-  Plugin/DataRenderers.h
-  Plugin/DataRenderers.cpp
-  Plugin/GlobalState.h
-  Plugin/GlobalState.cpp
-  Plugin/InfoHandler.h
-  Plugin/InfoHandler.cpp
-  Plugin/Plugin.cpp
-  Plugin/Workflow/Workflow.h
-  Plugin/Workflow/Workflow.cpp)
+  Commands.h
+  Commands.cpp
+  CustomTypes.h
+  CustomTypes.cpp
+  DataRenderers.h
+  DataRenderers.cpp
+  GlobalState.h
+  GlobalState.cpp
+  InfoHandler.h
+  InfoHandler.cpp
+  Plugin.cpp
+  Workflow.h
+  Workflow.cpp)
 
 # Used to enable some debugging actions, etc.
 option(DEV_MODE "Enable developer features" OFF)
@@ -92,18 +92,15 @@ endif()
 
 # Internal tools ---------------------------------------------------------------
 
-set(DUMP_INFO_SOURCE
-  Tools/DumpInfo.cpp)
+set(DUMP_INFO_SOURCE TestSuite/DumpInfo.cpp)
 
 add_executable(DumpInfo ${DUMP_INFO_SOURCE})
 target_link_libraries(DumpInfo PRIVATE ObjectiveNinjaCore binaryninjaapi)
 target_compile_features(DumpInfo PRIVATE cxx_std_17 c_std_99)
-
-set(TOOLS_SOURCE ${DUMP_INFO_SOURCE})
 
 # Extra targets ----------------------------------------------------------------
 
 add_custom_target(format
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
   COMMAND clang-format -i --style=WebKit
-  ${CORE_SOURCE} ${PLUGIN_SOURCE} ${TOOLS_SOURCE})
+  ${CORE_SOURCE} ${PLUGIN_SOURCE} ${DUMP_INFO_SOURCE})

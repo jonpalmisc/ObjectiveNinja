@@ -9,7 +9,7 @@
 
 #include "CustomTypes.h"
 
-#include <ObjectiveNinjaCore/ABI.h>
+#include "Core/ABI.h"
 
 #include <cinttypes>
 #include <cstdio>

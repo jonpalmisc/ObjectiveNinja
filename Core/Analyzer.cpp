@@ -5,7 +5,7 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
-#include <ObjectiveNinjaCore/Analyzer.h>
+#include "Analyzer.h"
 
 using namespace ObjectiveNinja;
 

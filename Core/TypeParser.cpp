@@ -5,7 +5,7 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
-#include <ObjectiveNinjaCore/TypeParser.h>
+#include "TypeParser.h"
 
 #include <map>
 
