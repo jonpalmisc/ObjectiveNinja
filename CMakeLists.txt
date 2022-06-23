@@ -2,26 +2,12 @@ cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
 project(ObjectiveNinja)
 
-# Get the current Git branch
-execute_process(
-  COMMAND git rev-parse --abbrev-ref HEAD
-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-  OUTPUT_VARIABLE GIT_BRANCH
-  OUTPUT_STRIP_TRAILING_WHITESPACE
-)
-
-# Get the current Git commit hash
-execute_process(
-  COMMAND git describe --always --dirty
-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-  OUTPUT_VARIABLE GIT_COMMIT
-  OUTPUT_STRIP_TRAILING_WHITESPACE
-)
-
-# Add subdirectory for the Binary Ninja C++ API; skip linking against the UI
-# library since it isn't needed for this plugin
-set(HEADLESS ON CACHE BOOL "Skip building UI functionality")
-add_subdirectory(Vendor/BinaryNinjaAPI)
+# Add subdirectory for the Binary Ninja C++ API if performing a public build,
+# and skip linking against the UI library since it isn't needed for this plugin.
+if(NOT BN_INTERNAL_BUILD)
+  set(HEADLESS ON CACHE BOOL "")
+  add_subdirectory(Vendor/BinaryNinjaAPI)
+endif()
 
 # Core library -----------------------------------------------------------------
 
@@ -63,8 +49,6 @@ endif()
 
 # Binary Ninja plugin ----------------------------------------------------------
 
-configure_file(Plugin/BuildInfo.h.in ${CMAKE_SOURCE_DIR}/Plugin/BuildInfo.h @ONLY)
-
 set(PLUGIN_SOURCE
   Plugin/Commands.h
   Plugin/Commands.cpp
@@ -96,8 +80,15 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
   target_compile_options(ObjectiveNinja PRIVATE "-fPIC")
 endif()
 
-# Support cmake --install
-bn_install_plugin(ObjectiveNinja)
+# Configure plugin output directory for internal builds, otherwise configure
+# plugin installation for public builds.
+if(BN_INTERNAL_BUILD)
+  set_target_properties(ObjectiveNinja PROPERTIES
+    LIBRARY_OUTPUT_DIRECTORY ${BN_CORE_PLUGIN_DIR}
+    RUNTIME_OUTPUT_DIRECTORY ${BN_CORE_PLUGIN_DIR})
+else()
+  bn_install_plugin(ObjectiveNinja)
+endif()
 
 # Internal tools ---------------------------------------------------------------
 

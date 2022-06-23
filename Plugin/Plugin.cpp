@@ -5,7 +5,6 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
-#include "BuildInfo.h"
 #include "Commands.h"
 #include "DataRenderers.h"
 #include "Workflow/Workflow.h"
@@ -23,9 +22,7 @@ BINARYNINJAPLUGIN bool CorePluginInit()
     Workflow::registerActivities();
     Commands::registerCommands();
 
-    const auto log = BinaryNinja::LogRegistry::CreateLogger("ObjectiveNinja");
-    log->LogInfo("Plugin loaded successfully (%s-%s/%s)",
-        GitBranch, GitCommit, BuildType);
+    BinaryNinja::LogRegistry::CreateLogger("ObjectiveNinja");
 
     return true;
 }
