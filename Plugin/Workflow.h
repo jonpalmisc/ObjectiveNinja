@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "../BinaryNinja.h"
+#include "BinaryNinja.h"
 
 /**
  * Namespace to hold activity ID constants.

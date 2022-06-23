@@ -7,9 +7,9 @@
 
 #include "Workflow.h"
 
-#include "../CustomTypes.h"
-#include "../GlobalState.h"
-#include "../InfoHandler.h"
+#include "CustomTypes.h"
+#include "GlobalState.h"
+#include "InfoHandler.h"
 
 #include <ObjectiveNinjaCore/AnalysisProvider.h>
 #include <ObjectiveNinjaCore/Support/BinaryViewFile.h>

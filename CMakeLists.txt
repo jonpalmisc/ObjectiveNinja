@@ -61,8 +61,8 @@ set(PLUGIN_SOURCE
   Plugin/InfoHandler.h
   Plugin/InfoHandler.cpp
   Plugin/Plugin.cpp
-  Plugin/Workflow/Workflow.h
-  Plugin/Workflow/Workflow.cpp)
+  Plugin/Workflow.h
+  Plugin/Workflow.cpp)
 
 # Used to enable some debugging actions, etc.
 option(DEV_MODE "Enable developer features" OFF)
