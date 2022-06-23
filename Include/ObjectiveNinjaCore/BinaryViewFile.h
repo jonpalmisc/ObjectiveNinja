@@ -9,7 +9,7 @@
 
 #ifdef ONC_BN_SUPPORT
 
-#include "../AbstractFile.h"
+#include "AbstractFile.h"
 
 #include <binaryninjaapi.h>
 

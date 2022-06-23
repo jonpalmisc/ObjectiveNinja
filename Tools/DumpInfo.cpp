@@ -6,7 +6,7 @@
  */
 
 #include <ObjectiveNinjaCore/AnalysisProvider.h>
-#include <ObjectiveNinjaCore/Support/BinaryViewFile.h>
+#include <ObjectiveNinjaCore/BinaryViewFile.h>
 
 #include <iostream>
 #include <string>

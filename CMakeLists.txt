@@ -15,7 +15,7 @@ set(CORE_SOURCE
   Include/ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h
   Include/ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h
   Include/ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h
-  Include/ObjectiveNinjaCore/Support/BinaryViewFile.h
+  Include/ObjectiveNinjaCore/BinaryViewFile.h
   Include/ObjectiveNinjaCore/ABI.h
   Include/ObjectiveNinjaCore/AbstractFile.h
   Include/ObjectiveNinjaCore/AnalysisInfo.h
@@ -25,7 +25,7 @@ set(CORE_SOURCE
   Core/Analyzers/CFStringAnalyzer.cpp
   Core/Analyzers/ClassAnalyzer.cpp
   Core/Analyzers/SelectorAnalyzer.cpp
-  Core/Support/BinaryViewFile.cpp
+  Core/BinaryViewFile.cpp
   Core/ABI.cpp
   Core/AbstractFile.cpp
   Core/AnalysisInfo.cpp

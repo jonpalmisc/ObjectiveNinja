@@ -12,7 +12,7 @@
 #include "InfoHandler.h"
 
 #include <ObjectiveNinjaCore/AnalysisProvider.h>
-#include <ObjectiveNinjaCore/Support/BinaryViewFile.h>
+#include <ObjectiveNinjaCore/BinaryViewFile.h>
 
 void Commands::defineTypes(BinaryViewRef bv)
 {
