@@ -11,8 +11,8 @@
 #include "GlobalState.h"
 #include "InfoHandler.h"
 
-#include <ObjectiveNinjaCore/AnalysisProvider.h>
-#include <ObjectiveNinjaCore/BinaryViewFile.h>
+#include "../Core/AnalysisProvider.h"
+#include "../Core/BinaryViewFile.h"
 
 #include <lowlevelilinstruction.h>
 

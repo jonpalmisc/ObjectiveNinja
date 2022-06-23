@@ -7,16 +7,21 @@
 
 #pragma once
 
-#include <ObjectiveNinjaCore/Analyzer.h>
+#include "../Analyzer.h"
 
 namespace ObjectiveNinja {
 
 /**
- * Basic analyzer for identifying and recording CFString instances.
+ * Analyzer for extracting Objective-C class information.
  */
-class CFStringAnalyzer : public Analyzer {
+class ClassAnalyzer : public Analyzer {
+    /**
+     * Analyze a method list.
+     */
+    MethodListInfo analyzeMethodList(uint64_t);
+
 public:
-    CFStringAnalyzer(SharedAnalysisInfo, SharedAbstractFile);
+    ClassAnalyzer(SharedAnalysisInfo, SharedAbstractFile);
 
     void run() override;
 };

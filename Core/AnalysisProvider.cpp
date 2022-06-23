@@ -5,11 +5,11 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
-#include <ObjectiveNinjaCore/AnalysisProvider.h>
+#include "AnalysisProvider.h"
 
-#include <ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h>
-#include <ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h>
-#include <ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h>
+#include "Analyzers/CFStringAnalyzer.h"
+#include "Analyzers/ClassAnalyzer.h"
+#include "Analyzers/SelectorAnalyzer.h"
 
 namespace ObjectiveNinja {
 

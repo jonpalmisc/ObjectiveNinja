@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <ObjectiveNinjaCore/Analyzer.h>
+#include "../Analyzer.h"
 
 namespace ObjectiveNinja {
 

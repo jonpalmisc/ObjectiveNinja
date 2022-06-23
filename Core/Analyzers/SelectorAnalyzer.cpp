@@ -5,7 +5,7 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
-#include <ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h>
+#include "SelectorAnalyzer.h"
 
 using namespace ObjectiveNinja;
 

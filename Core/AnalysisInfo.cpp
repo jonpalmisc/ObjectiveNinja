@@ -5,9 +5,8 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
-#include <ObjectiveNinjaCore/AnalysisInfo.h>
-
-#include <ObjectiveNinjaCore/TypeParser.h>
+#include "AnalysisInfo.h"
+#include "TypeParser.h"
 
 namespace ObjectiveNinja {
 

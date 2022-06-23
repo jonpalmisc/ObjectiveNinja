@@ -12,16 +12,16 @@ endif()
 # Core library -----------------------------------------------------------------
 
 set(CORE_SOURCE
-  Include/ObjectiveNinjaCore/Analyzers/CFStringAnalyzer.h
-  Include/ObjectiveNinjaCore/Analyzers/ClassAnalyzer.h
-  Include/ObjectiveNinjaCore/Analyzers/SelectorAnalyzer.h
-  Include/ObjectiveNinjaCore/BinaryViewFile.h
-  Include/ObjectiveNinjaCore/ABI.h
-  Include/ObjectiveNinjaCore/AbstractFile.h
-  Include/ObjectiveNinjaCore/AnalysisInfo.h
-  Include/ObjectiveNinjaCore/AnalysisProvider.h
-  Include/ObjectiveNinjaCore/Analyzer.h
-  Include/ObjectiveNinjaCore/TypeParser.h
+  Core/Analyzers/CFStringAnalyzer.h
+  Core/Analyzers/ClassAnalyzer.h
+  Core/Analyzers/SelectorAnalyzer.h
+  Core/BinaryViewFile.h
+  Core/ABI.h
+  Core/AbstractFile.h
+  Core/AnalysisInfo.h
+  Core/AnalysisProvider.h
+  Core/Analyzer.h
+  Core/TypeParser.h
   Core/Analyzers/CFStringAnalyzer.cpp
   Core/Analyzers/ClassAnalyzer.cpp
   Core/Analyzers/SelectorAnalyzer.cpp

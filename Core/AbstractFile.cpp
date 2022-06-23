@@ -5,7 +5,7 @@
  * terms of the license can be found in the LICENSE.txt file.
  */
 
-#include <ObjectiveNinjaCore/AbstractFile.h>
+#include "AbstractFile.h"
 
 namespace ObjectiveNinja {
 
