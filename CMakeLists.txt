@@ -92,18 +92,15 @@ endif()
 
 # Internal tools ---------------------------------------------------------------
 
-set(DUMP_INFO_SOURCE
-  Tools/DumpInfo.cpp)
+set(DUMP_INFO_SOURCE TestSuite/DumpInfo.cpp)
 
 add_executable(DumpInfo ${DUMP_INFO_SOURCE})
 target_link_libraries(DumpInfo PRIVATE ObjectiveNinjaCore binaryninjaapi)
 target_compile_features(DumpInfo PRIVATE cxx_std_17 c_std_99)
-
-set(TOOLS_SOURCE ${DUMP_INFO_SOURCE})
 
 # Extra targets ----------------------------------------------------------------
 
 add_custom_target(format
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
   COMMAND clang-format -i --style=WebKit
-  ${CORE_SOURCE} ${PLUGIN_SOURCE} ${TOOLS_SOURCE})
+  ${CORE_SOURCE} ${PLUGIN_SOURCE} ${DUMP_INFO_SOURCE})
