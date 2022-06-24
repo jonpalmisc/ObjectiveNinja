@@ -9,12 +9,6 @@
 
 namespace ObjectiveNinja {
 
-uint8_t AbstractFile::readByte(uint64_t offset)
-{
-    seek(offset);
-    return readByte();
-}
-
 uint32_t AbstractFile::readInt(uint64_t offset)
 {
     seek(offset);
