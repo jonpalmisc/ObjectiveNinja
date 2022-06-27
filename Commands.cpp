@@ -10,6 +10,7 @@
 #include "CustomTypes.h"
 #include "GlobalState.h"
 #include "InfoHandler.h"
+#include "Performance.h"
 
 #include "Core/AnalysisProvider.h"
 #include "Core/BinaryViewFile.h"
@@ -39,7 +40,13 @@ void Commands::analyzeStructures(BinaryViewRef bv)
 
     try {
         auto file = std::make_shared<ObjectiveNinja::BinaryViewFile>(bv);
+
+        auto start = Performance::now();
         info = ObjectiveNinja::AnalysisProvider::infoForFile(file);
+        auto elapsed = Performance::elapsed<std::chrono::milliseconds>(start);
+
+        const auto log = BinaryNinja::LogRegistry::GetLogger("ObjectiveNinja");
+        log->LogInfo("Structures analyzed in %lu ms", elapsed.count());
 
         InfoHandler::applyInfoToView(info, bv);
     } catch (...) {

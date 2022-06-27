@@ -8,6 +8,7 @@
 #include "InfoHandler.h"
 
 #include "CustomTypes.h"
+#include "Performance.h"
 
 #include <algorithm>
 #include <regex>
@@ -129,6 +130,8 @@ void InfoHandler::applyMethodType(BinaryViewRef bv, const ObjectiveNinja::ClassI
 
 void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
 {
+    auto start = Performance::now();
+
     bv->BeginUndoActions();
 
     BinaryReader reader(bv);
@@ -214,8 +217,10 @@ void InfoHandler::applyInfoToView(SharedAnalysisInfo info, BinaryViewRef bv)
     bv->CommitUndoActions();
     bv->UpdateAnalysis();
 
+    auto elapsed = Performance::elapsed<std::chrono::milliseconds>(start);
+
     const auto log = BinaryNinja::LogRegistry::GetLogger("ObjectiveNinja");
-    log->LogInfo("Structure analysis complete");
+    log->LogInfo("Analysis results applied in %lu ms", elapsed.count());
     log->LogInfo("Found %d classes, %d methods, %d selector references",
         info->classes.size(), totalMethods, info->selectorRefs.size());
     log->LogInfo("Found %d CFString instances", info->cfStrings.size());
