@@ -161,7 +161,8 @@ void Workflow::inlineMethodCalls(AnalysisContextRef ac)
 
                 InfoHandler::applyInfoToView(info, bv);
             } catch (...) {
-                log->LogError("Analysis failed. Please report this bug!");
+                log->LogError("Structure analysis failed; binary may be malformed.");
+                log->LogError("Objective-C analysis will not be applied due to previous errors.");
             }
 
             GlobalState::setFlag(bv, Flag::DidRunStructureAnalysis);
