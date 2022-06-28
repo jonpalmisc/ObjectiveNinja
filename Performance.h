@@ -9,6 +9,8 @@
 
 #include <chrono>
 
+using high_res_clock = std::chrono::high_resolution_clock;
+
 /**
  * Utilities for measuring performance.
  */
@@ -17,9 +19,9 @@ public:
     /**
      * Get the current time.
      */
-    static std::chrono::steady_clock::time_point now()
+    static high_res_clock::time_point now()
     {
-        return std::chrono::high_resolution_clock::now();
+        return high_res_clock::now();
     }
 
     /**
@@ -28,9 +30,9 @@ public:
      * Accepts a unit of measure template parameter for the result.
      */
     template <typename T>
-    static T elapsed(std::chrono::steady_clock::time_point start)
+    static T elapsed(high_res_clock::time_point start)
     {
-        auto end = std::chrono::high_resolution_clock::now();
+        auto end = high_res_clock::now();
         return std::chrono::duration_cast<T>(end - start);
     }
 };
