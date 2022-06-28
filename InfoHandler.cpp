@@ -77,6 +77,9 @@ void InfoHandler::applyMethodType(BinaryViewRef bv, const ObjectiveNinja::ClassI
     auto partForIndex = [selectorTokens, typeTokens](size_t i) {
         std::string argName;
 
+        // Indices 0, 1, and 2 are the function return type, self parameter, and
+        // selector parameter, respectively. Indices 3+ are the actual
+        // arguments to the function.
         if (i == 0)
             argName = "";
         else if (i == 1)
