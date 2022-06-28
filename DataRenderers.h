@@ -9,6 +9,8 @@
 
 #include "BinaryNinja.h"
 
+using DataRendererContext = std::vector<std::pair<TypePtr, size_t>>;
+
 /**
  * Data renderer for tagged pointers.
  */
@@ -16,13 +18,13 @@ class TaggedPointerDataRenderer : public BinaryNinja::DataRenderer {
     TaggedPointerDataRenderer() = default;
 
 public:
-    bool IsValidForData(BinaryViewPtr, uint64_t address,
-        TypePtr, std::vector<std::pair<TypePtr, size_t>>& context) override;
+    bool IsValidForData(BinaryViewPtr, uint64_t address, TypePtr,
+        DataRendererContext&) override;
 
     std::vector<BinaryNinja::DisassemblyTextLine> GetLinesForData(
         BinaryViewPtr, uint64_t address, TypePtr,
         const std::vector<BinaryNinja::InstructionTextToken>& prefix,
-        size_t width, std::vector<std::pair<TypePtr, size_t>>& context) override;
+        size_t width, DataRendererContext&) override;
 
     static void Register();
 };
@@ -34,13 +36,13 @@ class FastPointerDataRenderer : public BinaryNinja::DataRenderer {
     FastPointerDataRenderer() = default;
 
 public:
-    bool IsValidForData(BinaryViewPtr, uint64_t address,
-        TypePtr, std::vector<std::pair<TypePtr, size_t>>& context) override;
+    bool IsValidForData(BinaryViewPtr, uint64_t address, TypePtr,
+        DataRendererContext&) override;
 
     std::vector<BinaryNinja::DisassemblyTextLine> GetLinesForData(
         BinaryViewPtr, uint64_t address, TypePtr,
         const std::vector<BinaryNinja::InstructionTextToken>& prefix,
-        size_t width, std::vector<std::pair<TypePtr, size_t>>& context) override;
+        size_t width, DataRendererContext&) override;
 
     static void Register();
 };
@@ -52,13 +54,13 @@ class RelativePointerDataRenderer : public BinaryNinja::DataRenderer {
     RelativePointerDataRenderer() = default;
 
 public:
-    bool IsValidForData(BinaryViewPtr, uint64_t address,
-        TypePtr, std::vector<std::pair<TypePtr, size_t>>& context) override;
+    bool IsValidForData(BinaryViewPtr, uint64_t address, TypePtr,
+        DataRendererContext&) override;
 
     std::vector<BinaryNinja::DisassemblyTextLine> GetLinesForData(
         BinaryViewPtr, uint64_t address, TypePtr,
         const std::vector<BinaryNinja::InstructionTextToken>& prefix,
-        size_t width, std::vector<std::pair<TypePtr, size_t>>& context) override;
+        size_t width, DataRendererContext&) override;
 
     static void Register();
 };

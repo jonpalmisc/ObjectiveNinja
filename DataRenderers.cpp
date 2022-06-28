@@ -70,29 +70,33 @@ DisassemblyTextLine lineForPointer(BinaryView* bv, uint64_t pointer,
 }
 
 /**
- * Tells if a type is a given type.
+ * Checks if the deepest type in the data renderer context is a named type with
+ * the given name.
  */
-bool isType(BinaryView* bv, Type* type, const std::string& name)
+bool isType(const DataRendererContext& context, const std::string& name)
 {
-    auto targetType = bv->GetTypeByName(name);
-    if (!targetType)
+    if (context.empty())
         return false;
 
-    return type->GetRegisteredName() == targetType->GetRegisteredName();
+    auto [deepestType, size] = context.back();
+    if (!deepestType->IsNamedTypeRefer())
+        return false;
+
+    return deepestType->GetTypeName().GetString() == name;
 }
 
 /* ---- Tagged Pointer ------------------------------------------------------ */
 
-bool TaggedPointerDataRenderer::IsValidForData(BinaryView* bv, uint64_t,
-    Type* type, std::vector<std::pair<Type*, size_t>>&)
+bool TaggedPointerDataRenderer::IsValidForData(BinaryView* bv, uint64_t address,
+    Type* type, DataRendererContext& context)
 {
-    return isType(bv, type, CustomTypes::TaggedPointer);
+    return isType(context, CustomTypes::TaggedPointer);
 }
 
 std::vector<DisassemblyTextLine> TaggedPointerDataRenderer::GetLinesForData(
     BinaryView* bv, uint64_t address, Type*,
     const std::vector<InstructionTextToken>& prefix, size_t,
-    std::vector<std::pair<Type*, size_t>>&)
+    DataRendererContext&)
 {
     BinaryReader reader(bv);
     reader.Seek(address);
@@ -109,16 +113,16 @@ void TaggedPointerDataRenderer::Register()
 
 /* ---- Fast Pointer -------------------------------------------------------- */
 
-bool FastPointerDataRenderer::IsValidForData(BinaryView* bv, uint64_t,
-    Type* type, std::vector<std::pair<Type*, size_t>>&)
+bool FastPointerDataRenderer::IsValidForData(BinaryView* bv, uint64_t address,
+    Type* type, DataRendererContext& context)
 {
-    return isType(bv, type, CustomTypes::FastPointer);
+    return isType(context, CustomTypes::FastPointer);
 }
 
 std::vector<DisassemblyTextLine> FastPointerDataRenderer::GetLinesForData(
     BinaryView* bv, uint64_t address, Type*,
     const std::vector<InstructionTextToken>& prefix, size_t,
-    std::vector<std::pair<Type*, size_t>>&)
+    DataRendererContext&)
 {
     BinaryReader reader(bv);
     reader.Seek(address);
@@ -136,16 +140,16 @@ void FastPointerDataRenderer::Register()
 
 /* ---- Relative Pointer ---------------------------------------------------- */
 
-bool RelativePointerDataRenderer::IsValidForData(BinaryView* bv, uint64_t,
-    Type* type, std::vector<std::pair<Type*, size_t>>&)
+bool RelativePointerDataRenderer::IsValidForData(BinaryView* bv, uint64_t address,
+    Type* type, DataRendererContext& context)
 {
-    return isType(bv, type, CustomTypes::RelativePointer);
+    return isType(context, CustomTypes::RelativePointer);
 }
 
 std::vector<DisassemblyTextLine> RelativePointerDataRenderer::GetLinesForData(
     BinaryView* bv, uint64_t address, Type*,
     const std::vector<InstructionTextToken>& prefix, size_t,
-    std::vector<std::pair<Type*, size_t>>&)
+    DataRendererContext&)
 {
     BinaryReader reader(bv);
     reader.Seek(address);

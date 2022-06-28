@@ -8,17 +8,9 @@
 #include "CustomTypes.h"
 
 constexpr const char* AllTypesSource = R"(
-struct tptr_t {
-    uint64_t raw;
-};
-
-struct fptr_t {
-    uint64_t raw;
-};
-
-struct rptr_t {
-    int32_t raw;
-};
+typedef void* tptr_t;
+typedef void* fptr_t;
+typedef int32_t rptr_t;
 
 typedef void* id;
 typedef char* SEL;
