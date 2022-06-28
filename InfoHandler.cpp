@@ -109,20 +109,18 @@ void InfoHandler::applyMethodType(BinaryViewRef bv, const ObjectiveNinja::ClassI
 
         typeString += part + suffix;
     }
+    typeString += ";";
 
-    TypeParserResult result;
     std::string errors;
-    if (!bv->ParseTypesFromSource(typeString, {}, {}, result, errors))
-        return;
+    TypeParserResult tpResult;
+    auto ok = bv->ParseTypesFromSource(typeString, {}, {}, tpResult, errors);
+    if (ok && !tpResult.functions.empty()) {
+        auto functionType = tpResult.functions[0].type;
 
-    if (result.types.empty())
-        return;
-
-    auto functionType = result.types[0].type;
-
-    // Search for the method's implementation function; apply the type if found.
-    if (auto f = bv->GetAnalysisFunction(bv->GetDefaultPlatform(), mi.implAddress))
-        f->SetUserType(functionType);
+        // Search for the method's implementation function; apply the type if found.
+        if (auto f = bv->GetAnalysisFunction(bv->GetDefaultPlatform(), mi.implAddress))
+            f->SetUserType(functionType);
+    }
 
     auto name = "[" + ci.name + " " + mi.selector + "]";
     defineSymbol(bv, mi.implAddress, name, "", FunctionSymbol);
