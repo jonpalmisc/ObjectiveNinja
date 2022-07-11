@@ -1,3 +1,0 @@
-[submodule "vendor/api"]
-	path = Vendor/BinaryNinjaAPI
-	url = https://github.com/Vector35/binaryninja-api.git
